@@ -1,26 +1,31 @@
 "use client"
 
-import { useState, useCallback } from "react"
+import { useState, useEffect, useCallback } from "react"
 import { motion, AnimatePresence } from "framer-motion"
-import { Brain, ChevronRight, BookOpen, Trophy, RotateCcw, AlertTriangle, Lightbulb, Zap } from "lucide-react"
+import {
+  Brain,
+  Zap,
+  Trophy,
+  RotateCcw,
+  BookOpen,
+  ChevronRight,
+  Lock,
+  CheckCircle,
+  ArrowLeft,
+  Award,
+} from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
 import { Progress } from "@/components/ui/progress"
+import { LEVELS, QUESTIONS, BIAS_LIBRARY, type Level, type Question } from "@/lib/data"
 import { BrainProgress } from "./brain-progress"
 import { ScanAnimation } from "./scan-animation"
 import { PricingGridQuestion } from "./pricing-grid-question"
 import { BiasWikiCard } from "./bias-wiki-card"
-import {
-  LEVELS,
-  BIAS_LIBRARY,
-  getQuestionsForLevel,
-  getBiasById,
-  type Question,
-  type Level,
-  type BiasEntry,
-} from "@/lib/data"
+import { OnboardingForm, type UserProfile } from "./onboarding-form"
+import { Certificate } from "./certificate"
 
-type GameState = "menu" | "playing" | "feedback" | "levelComplete" | "wiki"
+type GameState = "onboarding" | "menu" | "playing" | "feedback" | "levelComplete" | "wiki" | "certificate"
 
 interface LevelProgress {
   score: number
@@ -29,7 +34,8 @@ interface LevelProgress {
 }
 
 export function QuizEngine() {
-  const [gameState, setGameState] = useState<GameState>("menu")
+  const [user, setUser] = useState<UserProfile | null>(null)
+  const [gameState, setGameState] = useState<GameState>("onboarding")
   const [currentLevel, setCurrentLevel] = useState<Level>(LEVELS[0])
   const [questions, setQuestions] = useState<Question[]>([])
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0)
@@ -43,12 +49,16 @@ export function QuizEngine() {
     3: { score: 0, total: 20, completed: false },
   })
   const [unlockedBiases, setUnlockedBiases] = useState<Set<string>>(new Set())
-  const [selectedBias, setSelectedBias] = useState<BiasEntry | null>(null)
+  const [selectedBias, setSelectedBias] = useState<Question | null>(null)
+  const [totalScore, setTotalScore] = useState(0)
+  const [totalQuestions, setTotalQuestions] = useState(0)
+  const [allLevelsCompletedStatus, setAllLevelsCompletedStatus] = useState(false)
+  const [showCertificate, setShowCertificate] = useState(false)
 
   const currentQuestion = questions[currentQuestionIndex]
 
   const startLevel = (level: Level) => {
-    const levelQuestions = getQuestionsForLevel(level.id)
+    const levelQuestions = QUESTIONS.filter((q) => q.level_id === level.id)
     setQuestions(levelQuestions)
     setCurrentLevel(level)
     setCurrentQuestionIndex(0)
@@ -147,14 +157,14 @@ export function QuizEngine() {
             </h1>
           </motion.div>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-            Entraînez votre cerveau à détecter les biais cognitifs utilisés en UX Design. Progressez du niveau Novice à
-            Expert.
+            Bienvenue <span className="text-cyan-400 font-semibold">{user?.firstName}</span> ! Entraînez votre cerveau à
+            détecter les biais cognitifs utilisés en UX Design.
           </p>
         </div>
 
         <div className="grid lg:grid-cols-3 gap-8">
           {/* Progression cérébrale */}
-          <div className="lg:col-span-1">
+          <div className="lg:col-span-1 space-y-4">
             <Card className="p-6 bg-gray-900/50 border-gray-800">
               <h2 className="text-lg font-semibold text-white mb-4 flex items-center gap-2">
                 <Zap className="w-5 h-5 text-yellow-500" />
@@ -167,6 +177,27 @@ export function QuizEngine() {
                 currentLevel={currentLevel.id}
               />
             </Card>
+
+            {allLevelsCompletedStatus && (
+              <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
+                <Card className="p-6 bg-gradient-to-br from-yellow-500/10 to-orange-500/10 border-yellow-500/30">
+                  <div className="text-center">
+                    <Award className="w-12 h-12 text-yellow-500 mx-auto mb-3" />
+                    <h3 className="text-lg font-bold text-white mb-2">Formation Terminée !</h3>
+                    <p className="text-gray-400 text-sm mb-4">
+                      Félicitations {user?.firstName} ! Récupérez votre diplôme.
+                    </p>
+                    <Button
+                      onClick={() => setShowCertificate(true)}
+                      className="w-full bg-gradient-to-r from-yellow-500 to-orange-500 hover:from-yellow-600 hover:to-orange-600 text-black font-semibold"
+                    >
+                      <Award className="w-4 h-4 mr-2" />
+                      Obtenir mon diplôme
+                    </Button>
+                  </div>
+                </Card>
+              </motion.div>
+            )}
           </div>
 
           {/* Sélection de niveau */}
@@ -216,7 +247,7 @@ export function QuizEngine() {
 
                         {!unlocked && (
                           <p className="text-sm text-red-400/70 flex items-center gap-2">
-                            <AlertTriangle className="w-4 h-4" />
+                            <Lock className="w-4 h-4" />
                             Requiert {level.unlock_criteria}% au niveau précédent
                           </p>
                         )}
@@ -371,9 +402,9 @@ export function QuizEngine() {
                     >
                       <div className="flex items-start gap-3">
                         {scanResult === "success" ? (
-                          <Lightbulb className="w-6 h-6 text-green-500 flex-shrink-0" />
+                          <CheckCircle className="w-6 h-6 text-green-500 flex-shrink-0" />
                         ) : (
-                          <AlertTriangle className="w-6 h-6 text-red-500 flex-shrink-0" />
+                          <ArrowLeft className="w-6 h-6 text-red-500 flex-shrink-0" />
                         )}
                         <div>
                           <p
@@ -389,7 +420,7 @@ export function QuizEngine() {
                           {(() => {
                             const correctOption = currentQuestion.options.find((o) => o.is_correct)
                             if (correctOption?.bias_id) {
-                              const bias = getBiasById(correctOption.bias_id)
+                              const bias = BIAS_LIBRARY.find((b) => b.bias_id === correctOption.bias_id)
                               if (bias) {
                                 return (
                                   <div className="mt-4 p-3 rounded-lg bg-gray-900/50 border border-gray-700">
@@ -454,7 +485,8 @@ export function QuizEngine() {
             <Trophy className="w-20 h-20 mx-auto mb-6" style={{ color: currentLevel.theme_color }} />
           </motion.div>
 
-          <h2 className="text-3xl font-bold text-white mb-2">Niveau {currentLevel.name_fr} Terminé !</h2>
+          <h2 className="text-3xl font-bold text-white mb-2">Bravo {user?.firstName} !</h2>
+          <p className="text-gray-400 mb-4">Niveau {currentLevel.name_fr} terminé</p>
 
           <div className="my-8">
             <div
@@ -592,7 +624,7 @@ export function QuizEngine() {
 
                   <div className="p-4 rounded-lg bg-gray-800/50 border border-gray-700">
                     <h3 className="text-sm font-semibold text-yellow-500 mb-2 flex items-center gap-2">
-                      <Lightbulb className="w-4 h-4" />
+                      <ArrowLeft className="w-4 h-4" />
                       CONTRE-TACTIQUE UX
                     </h3>
                     <p className="text-gray-300">{selectedBias.counter_tactic}</p>
@@ -610,8 +642,29 @@ export function QuizEngine() {
     </motion.div>
   )
 
+  useEffect(() => {
+    const savedUser = localStorage.getItem("cognitiveLabsUser")
+    if (savedUser) {
+      setUser(JSON.parse(savedUser))
+      setGameState("menu")
+    }
+  }, [])
+
+  useEffect(() => {
+    const totalScore = Object.values(levelProgress).reduce((acc, p) => acc + p.score, 0)
+    const totalQuestions = Object.values(levelProgress).reduce((acc, p) => acc + p.total, 0)
+    setTotalScore(totalScore)
+    setTotalQuestions(totalQuestions)
+    setAllLevelsCompletedStatus(LEVELS.every((level) => levelProgress[level.id]?.completed))
+  }, [levelProgress])
+
+  const handleOnboardingComplete = (profile: UserProfile) => {
+    setUser(profile)
+    setGameState("menu")
+  }
+
   return (
-    <div className="min-h-screen bg-[#0a0a1a] text-white">
+    <div className="min-h-screen bg-gray-950 text-white relative">
       {/* Background effects */}
       <div className="fixed inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-cyan-500/5 rounded-full blur-3xl" />
@@ -627,11 +680,23 @@ export function QuizEngine() {
 
       {/* Content */}
       <div className="relative z-10">
+        {gameState === "onboarding" && <OnboardingForm onComplete={handleOnboardingComplete} />}
         {gameState === "menu" && renderMenu()}
         {gameState === "playing" && renderPlaying()}
         {gameState === "levelComplete" && renderLevelComplete()}
         {gameState === "wiki" && renderWiki()}
       </div>
+
+      <AnimatePresence>
+        {showCertificate && user && (
+          <Certificate
+            user={user}
+            score={totalScore}
+            totalQuestions={totalQuestions}
+            onClose={() => setShowCertificate(false)}
+          />
+        )}
+      </AnimatePresence>
     </div>
   )
 }
