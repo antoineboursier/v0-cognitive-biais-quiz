@@ -152,17 +152,17 @@ export function QuizEngine() {
             className="inline-flex items-center gap-3 mb-4"
           >
             <Brain className="w-12 h-12 text-cyan-400" />
-            <h1 className="text-5xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
+            <h1 className="font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent text-6xl py-4">
               Cognitive Labs
             </h1>
           </motion.div>
-          <p className="text-gray-400 text-lg max-w-2xl mx-auto">
+          <p className="text-gray-400 text-lg max-w-2xl mx-auto mb-0">
             Bienvenue <span className="text-cyan-400 font-semibold">{user?.firstName}</span> ! Entraînez votre cerveau à
             détecter les biais cognitifs utilisés en UX Design.
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-3 gap-8">
+        <div className="grid lg:grid-cols-3 gap-8 mt-0 pt-4">
           {/* Progression cérébrale */}
           <div className="lg:col-span-1 space-y-4">
             <Card className="p-6 bg-gray-900/50 border-gray-800">
@@ -229,24 +229,24 @@ export function QuizEngine() {
                     <div className="flex items-center justify-between">
                       <div className="flex-1">
                         <div className="flex items-center gap-3 mb-2">
-                          <span className="text-2xl font-bold" style={{ color: level.theme_color }}>
+                          <span className="font-bold text-3xl" style={{ color: level.theme_color }}>
                             {level.name_fr}
                           </span>
                           {progress.completed && <Trophy className="w-5 h-5 text-yellow-500" />}
                         </div>
-                        <p className="text-gray-400 text-sm mb-3">{level.description}</p>
+                        <p className="text-gray-400 mb-3 text-lg">{level.description}</p>
 
                         {unlocked && (
                           <div className="flex items-center gap-4">
                             <Progress value={getLevelPercentage(level.id)} className="flex-1 h-2" />
-                            <span className="text-sm text-gray-500 font-mono">
+                            <span className="text-gray-500 font-mono text-base">
                               {progress.score}/{progress.total}
                             </span>
                           </div>
                         )}
 
                         {!unlocked && (
-                          <p className="text-sm text-red-400/70 flex items-center gap-2">
+                          <p className="text-red-400/70 flex items-center gap-2 text-lg">
                             <Lock className="w-4 h-4" />
                             Requiert {level.unlock_criteria}% au niveau précédent
                           </p>
@@ -266,7 +266,7 @@ export function QuizEngine() {
             <Button
               variant="outline"
               size="lg"
-              className="w-full mt-6 border-gray-700 hover:border-purple-500 hover:bg-purple-500/10 bg-transparent"
+              className="w-full mt-6 border-gray-700 hover:border-purple-500 hover:bg-purple-500/10 bg-transparent text-lg py-3"
               onClick={() => setGameState("wiki")}
             >
               <BookOpen className="w-5 h-5 mr-2" />

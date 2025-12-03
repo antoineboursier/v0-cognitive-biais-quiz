@@ -189,21 +189,21 @@ export function BrainProgress({ level1Progress, level2Progress, level3Progress, 
             className="w-3 h-3 rounded-full"
             style={{ backgroundColor: level1Progress > 0 ? "#00FFFF" : "#2a2a4a" }}
           />
-          <span className="text-gray-400">Novice: {Math.round(level1Progress)}%</span>
+          <span className="text-gray-400 text-lg">Novice: {Math.round(level1Progress)}%</span>
         </div>
         <div className="flex items-center gap-2">
           <div
             className="w-3 h-3 rounded-full"
             style={{ backgroundColor: level2Progress > 0 ? "#FF6B35" : "#2a2a4a" }}
           />
-          <span className="text-gray-400">Praticien: {Math.round(level2Progress)}%</span>
+          <span className="text-gray-400 text-lg">Praticien: {Math.round(level2Progress)}%</span>
         </div>
         <div className="flex items-center gap-2">
           <div
             className="w-3 h-3 rounded-full"
             style={{ backgroundColor: level3Progress > 0 ? "#A855F7" : "#2a2a4a" }}
           />
-          <span className="text-gray-400">Expert: {Math.round(level3Progress)}%</span>
+          <span className="text-gray-400 text-lg">Expert: {Math.round(level3Progress)}%</span>
         </div>
       </div>
     </div>
