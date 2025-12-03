@@ -1,0 +1,19 @@
+[00:00:02.707] Server  WARN     ⚠ Minimum recommended TypeScript version is v5.1.0, older versions can potentially be incompatible with Next.js. Detected: 5.0.2
+[00:00:02.710] Server  LOG     
+[00:00:02.710] Server  LOG        We detected TypeScript in your project and reconfigured your tsconfig.json file for you.
+[00:00:02.710] Server  LOG        The following suggested values were added to your tsconfig.json. These values can be changed to fit your project's needs:
+
+[00:00:02.710] Server  LOG        	- include was updated to add '.next/dev/types/**/*.ts'
+[00:00:02.710] Server  LOG     
+[00:00:02.710] Server  LOG        The following mandatory changes were made to your tsconfig.json:
+
+[00:00:02.710] Server  LOG        	- jsx was set to react-jsx (next.js uses the React automatic runtime)
+[00:00:02.710] Server  LOG     
+[00:00:02.805] Server  LOG      ✓ Ready in 2.6s
+[00:15:05.166] Browser ERROR   uncaughtError: ReferenceError: prevLevel is not defined
+[00:15:33.054] Browser ERROR   uncaughtError: ReferenceError: prevLevel is not defined
+[00:15:56.860] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:15:56.943] Server  LOG      ✓ Compiled in 70ms
+[00:18:50.274] Server  LOG      ✓ Compiled in 43ms
+[00:26:20.826] Server  LOG      ✓ Compiled in 59ms
+[01:31:31.903] Server  LOG      ✓ Compiled in 108ms

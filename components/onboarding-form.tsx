@@ -1,15 +1,12 @@
-"use client"
-
 import type React from "react"
 
 import { useState } from "react"
 import { motion } from "framer-motion"
-import { Brain, User, Mail, Briefcase, ArrowRight, Sparkles, Loader2 } from "lucide-react"
+import { Brain, User, Mail, Briefcase, ArrowRight, Sparkles } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Card } from "@/components/ui/card"
-import { createClient } from "@/lib/supabase/client"
 
 export interface UserProfile {
   firstName: string
@@ -30,8 +27,6 @@ export function OnboardingForm({ onComplete }: OnboardingFormProps) {
     job: "",
   })
   const [errors, setErrors] = useState<Partial<UserProfile>>({})
-  const [isSubmitting, setIsSubmitting] = useState(false)
-  const [submitError, setSubmitError] = useState<string | null>(null)
 
   const validate = () => {
     const newErrors: Partial<UserProfile> = {}
@@ -44,56 +39,10 @@ export function OnboardingForm({ onComplete }: OnboardingFormProps) {
     return Object.keys(newErrors).length === 0
   }
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    if (!validate()) return
-
-    setIsSubmitting(true)
-    setSubmitError(null)
-
-    try {
-      const supabase = createClient()
-
-      // Check if email already exists
-      const { data: existingUser } = await supabase
-        .from("participants")
-        .select("id")
-        .eq("email", formData.email.toLowerCase().trim())
-        .single()
-
-      if (existingUser) {
-        // Update existing user
-        const { error } = await supabase
-          .from("participants")
-          .update({
-            first_name: formData.firstName.trim(),
-            last_name: formData.lastName.trim(),
-            job: formData.job.trim(),
-            updated_at: new Date().toISOString(),
-          })
-          .eq("email", formData.email.toLowerCase().trim())
-
-        if (error) throw error
-      } else {
-        // Insert new user
-        const { error } = await supabase.from("participants").insert({
-          first_name: formData.firstName.trim(),
-          last_name: formData.lastName.trim(),
-          email: formData.email.toLowerCase().trim(),
-          job: formData.job.trim(),
-        })
-
-        if (error) throw error
-      }
-
-      // Save to localStorage as backup
-      localStorage.setItem("cognitiveLabsUser", JSON.stringify(formData))
+    if (validate()) {
       onComplete(formData)
-    } catch (error: unknown) {
-      console.error("Error saving to Supabase:", error)
-      setSubmitError("Une erreur est survenue. Veuillez réessayer.")
-    } finally {
-      setIsSubmitting(false)
     }
   }
 
@@ -141,7 +90,6 @@ export function OnboardingForm({ onComplete }: OnboardingFormProps) {
                   onChange={(e) => setFormData({ ...formData, firstName: e.target.value })}
                   className="bg-secondary/50 border-border focus:border-primary text-foreground"
                   placeholder="Jean"
-                  disabled={isSubmitting}
                 />
                 {errors.firstName && <p className="text-destructive text-xs">{errors.firstName}</p>}
               </div>
@@ -156,7 +104,6 @@ export function OnboardingForm({ onComplete }: OnboardingFormProps) {
                   onChange={(e) => setFormData({ ...formData, lastName: e.target.value })}
                   className="bg-secondary/50 border-border focus:border-primary text-foreground"
                   placeholder="Dupont"
-                  disabled={isSubmitting}
                 />
                 {errors.lastName && <p className="text-destructive text-xs">{errors.lastName}</p>}
               </div>
@@ -174,7 +121,6 @@ export function OnboardingForm({ onComplete }: OnboardingFormProps) {
                 onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                 className="bg-secondary/50 border-border focus:border-primary text-foreground"
                 placeholder="jean.dupont@email.com"
-                disabled={isSubmitting}
               />
               {errors.email && <p className="text-destructive text-xs">{errors.email}</p>}
             </div>
@@ -190,33 +136,18 @@ export function OnboardingForm({ onComplete }: OnboardingFormProps) {
                 onChange={(e) => setFormData({ ...formData, job: e.target.value })}
                 className="bg-secondary/50 border-border focus:border-primary text-foreground"
                 placeholder="UX Designer, Product Manager..."
-                disabled={isSubmitting}
               />
               {errors.job && <p className="text-destructive text-xs">{errors.job}</p>}
             </div>
-
-            {submitError && (
-              <p className="text-destructive text-sm text-center bg-destructive/10 p-2 rounded">{submitError}</p>
-            )}
 
             <Button
               type="submit"
               size="lg"
               className="w-full bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90 text-primary-foreground font-semibold"
-              disabled={isSubmitting}
             >
-              {isSubmitting ? (
-                <>
-                  <Loader2 className="w-4 h-4 mr-2 animate-spin" />
-                  Enregistrement...
-                </>
-              ) : (
-                <>
-                  <Sparkles className="w-4 h-4 mr-2" />
-                  Commencer l'aventure
-                  <ArrowRight className="w-4 h-4 ml-2" />
-                </>
-              )}
+              <Sparkles className="w-4 h-4 mr-2" />
+              Commencer l'aventure
+              <ArrowRight className="w-4 h-4 ml-2" />
             </Button>
           </form>
         </Card>

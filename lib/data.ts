@@ -34,7 +34,7 @@ export const LEVELS: Level[] = [
     id: 3,
     name: "Expert",
     name_fr: "Expert",
-    unlock_criteria: 80,
+    unlock_criteria: 70,
     theme_color: "#A855F7", // Violet néon
     glow_color: "0 0 20px #A855F7",
     description: "Maîtrisez les biais avancés et leurs implications stratégiques",

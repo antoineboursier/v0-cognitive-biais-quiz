@@ -1,148 +1,269 @@
 "use client"
 
-import { useState, useEffect, useCallback } from "react"
+import { useReducer, useEffect, useCallback } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import {
-  Brain,
-  Zap,
-  Trophy,
-  RotateCcw,
-  BookOpen,
-  ChevronRight,
-  Lock,
-  CheckCircle,
-  ArrowLeft,
-  Award,
+  Brain, Zap, Trophy, RotateCcw, BookOpen, ChevronRight, Lock, CheckCircle, ArrowLeft, Award,
 } from "lucide-react"
+
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
 import { Progress } from "@/components/ui/progress"
-import { LEVELS, QUESTIONS, BIAS_LIBRARY, type Level, type Question } from "@/lib/data"
 import { BrainProgress } from "./brain-progress"
 import { ScanAnimation } from "./scan-animation"
 import { PricingGridQuestion } from "./pricing-grid-question"
 import { BiasWikiCard } from "./bias-wiki-card"
-import { OnboardingForm, type UserProfile } from "./onboarding-form"
 import { Certificate } from "./certificate"
 
-type GameState = "onboarding" | "menu" | "playing" | "feedback" | "levelComplete" | "wiki" | "certificate"
+import { saveState, type QuizState as BaseQuizState, type UserProfile } from "@/lib/storage"
+import { LEVELS, QUESTIONS, BIAS_LIBRARY, type Level, type Question } from "@/lib/data"
 
-interface LevelProgress {
-  score: number
-  total: number
-  completed: boolean
+// ------------------------------
+// PROPS
+// ------------------------------
+interface QuizEngineProps {
+  initialState: QuizState
+  onReset: () => void
 }
 
-export function QuizEngine() {
-  const [user, setUser] = useState<UserProfile | null>(null)
-  const [gameState, setGameState] = useState<GameState>("onboarding")
-  const [currentLevel, setCurrentLevel] = useState<Level>(LEVELS[0])
-  const [questions, setQuestions] = useState<Question[]>([])
-  const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0)
-  const [selectedAnswer, setSelectedAnswer] = useState<number | null>(null)
-  const [isScanning, setIsScanning] = useState(false)
-  const [scanResult, setScanResult] = useState<"success" | "error" | null>(null)
-  const [showExplanation, setShowExplanation] = useState(false)
-  const [levelProgress, setLevelProgress] = useState<Record<number, LevelProgress>>({
-    1: { score: 0, total: 20, completed: false },
-    2: { score: 0, total: 20, completed: false },
-    3: { score: 0, total: 20, completed: false },
-  })
-  const [unlockedBiases, setUnlockedBiases] = useState<Set<string>>(new Set())
-  const [selectedBias, setSelectedBias] = useState<Question | null>(null)
-  const [totalScore, setTotalScore] = useState(0)
-  const [totalQuestions, setTotalQuestions] = useState(0)
-  const [allLevelsCompletedStatus, setAllLevelsCompletedStatus] = useState(false)
-  const [showCertificate, setShowCertificate] = useState(false)
+// ------------------------------
+// REDUCER AND STATE
+// ------------------------------
+type GameState = "menu" | "playing" | "feedback" | "levelComplete" | "wiki" | "certificate"
 
-  const currentQuestion = questions[currentQuestionIndex]
+// Extend the base state with the volatile, non-persistent UI state
+interface QuizState extends BaseQuizState {
+  selectedAnswer: number | null;
+  isScanning: boolean;
+  scanResult: "success" | "error" | null;
+  showExplanation: boolean;
+  selectedBias: Question | null;
+  showCertificate: boolean;
+}
 
-  const startLevel = (level: Level) => {
-    const levelQuestions = QUESTIONS.filter((q) => q.level_id === level.id)
-    setQuestions(levelQuestions)
-    setCurrentLevel(level)
-    setCurrentQuestionIndex(0)
-    setSelectedAnswer(null)
-    setShowExplanation(false)
-    setGameState("playing")
-  }
 
-  const handleAnswer = (answerIndex: number) => {
-    if (selectedAnswer !== null || isScanning) return
+type Action =
+  | { type: "START_LEVEL"; payload: Level }
+  | { type: "SELECT_ANSWER"; payload: { answerIndex: number; question: Question } }
+  | { type: "SCAN_COMPLETE" }
+  | { type: "NEXT_QUESTION" }
+  | { type: "COMPLETE_LEVEL" }
+  | { type: "CHANGE_GAME_STATE"; payload: GameState }
+  | { type: "SELECT_WIKI_BIAS"; payload: Question | null }
+  | { type: "SHOW_CERTIFICATE"; payload: boolean }
+  | { type: "RESET" }
 
-    setSelectedAnswer(answerIndex)
-    setIsScanning(true)
-
-    const isCorrect = currentQuestion.options[answerIndex].is_correct
-    setScanResult(isCorrect ? "success" : "error")
-  }
-
-  const handleScanComplete = useCallback(() => {
-    setIsScanning(false)
-    setShowExplanation(true)
-
-    const isCorrect = selectedAnswer !== null && currentQuestion?.options[selectedAnswer]?.is_correct
-
-    // Mettre à jour le score
-    if (isCorrect) {
-      setLevelProgress((prev) => ({
-        ...prev,
-        [currentLevel.id]: {
-          ...prev[currentLevel.id],
-          score: prev[currentLevel.id].score + 1,
-        },
-      }))
+// The reducer function handles all state transitions
+function quizReducer(state: QuizState, action: Action): QuizState {
+  switch (action.type) {
+    case "START_LEVEL": {
+      const levelQuestions = QUESTIONS.filter((q) => q.level_id === action.payload.id)
+      return {
+        ...state,
+        gameState: "playing",
+        currentLevelId: action.payload.id,
+        questions: levelQuestions,
+        currentQuestionIndex: 0,
+        // Reset volatile playing state
+        selectedAnswer: null,
+        isScanning: false,
+        scanResult: null,
+        showExplanation: false,
+      }
     }
 
-    // Débloquer le biais associé
-    const correctOption = currentQuestion?.options.find((o) => o.is_correct)
-    if (correctOption?.bias_id) {
-      setUnlockedBiases((prev) => new Set([...prev, correctOption.bias_id!]))
+    case "SELECT_ANSWER": {
+      if (state.selectedAnswer !== null || state.isScanning) return state
+      const { answerIndex, question } = action.payload
+      const isCorrect = question.options[answerIndex].is_correct
+      
+      return {
+        ...state,
+        selectedAnswer: answerIndex,
+        isScanning: true,
+        scanResult: isCorrect ? "success" : "error",
+      }
     }
-  }, [selectedAnswer, currentQuestion, currentLevel.id])
 
-  const nextQuestion = () => {
-    setSelectedAnswer(null)
-    setScanResult(null)
-    setShowExplanation(false)
+    case "SCAN_COMPLETE": {
+        const currentQuestion = state.questions?.[state.currentQuestionIndex];
+        if (!currentQuestion || state.selectedAnswer === null) return state;
 
-    if (currentQuestionIndex < questions.length - 1) {
-      setCurrentQuestionIndex((prev) => prev + 1)
-    } else {
-      // Niveau terminé
-      const finalScore =
-        levelProgress[currentLevel.id].score +
-        (selectedAnswer !== null && currentQuestion?.options[selectedAnswer]?.is_correct ? 1 : 0)
-      const percentage = (finalScore / questions.length) * 100
+        const isCorrect = state.scanResult === 'success';
+        const updatedLevelProgress = { ...state.levelProgress };
+        let newScore = updatedLevelProgress[state.currentLevelId!].score;
 
-      setLevelProgress((prev) => ({
-        ...prev,
-        [currentLevel.id]: {
-          ...prev[currentLevel.id],
-          score: finalScore,
+        if (isCorrect) {
+            newScore += 1;
+        }
+
+        updatedLevelProgress[state.currentLevelId!] = {
+            ...updatedLevelProgress[state.currentLevelId!],
+            score: newScore,
+        };
+
+        const correctOption = currentQuestion.options.find(o => o.is_correct);
+        const unlockedBiases = new Set(state.unlockedBiases);
+        if (correctOption?.bias_id) {
+            unlockedBiases.add(correctOption.bias_id);
+        }
+
+        return {
+            ...state,
+            isScanning: false,
+            showExplanation: true,
+            levelProgress: updatedLevelProgress,
+            unlockedBiases: Array.from(unlockedBiases),
+        };
+    }
+
+    case "NEXT_QUESTION": {
+      if (state.currentQuestionIndex < state.questions.length - 1) {
+        return {
+          ...state,
+          currentQuestionIndex: state.currentQuestionIndex + 1,
+          selectedAnswer: null,
+          scanResult: null,
+          showExplanation: false,
+        }
+      }
+      // If it's the last question, fall through to complete the level
+      return quizReducer(state, { type: "COMPLETE_LEVEL" })
+    }
+
+    case "COMPLETE_LEVEL": {
+      const levelId = state.currentLevelId!
+      const updatedLevelProgress = {
+        ...state.levelProgress,
+        [levelId]: {
+          ...state.levelProgress[levelId],
           completed: true,
         },
-      }))
+      }
 
-      setGameState("levelComplete")
+      const allCompleted = LEVELS.every(
+        (level) => updatedLevelProgress[level.id]?.completed
+      )
+
+      return {
+        ...state,
+        gameState: "levelComplete",
+        levelProgress: updatedLevelProgress,
+        allLevelsCompleted: allCompleted,
+      }
+    }
+
+    case "CHANGE_GAME_STATE":
+      return { ...state, gameState: action.payload, selectedAnswer: null, showExplanation: false, scanResult: null, isScanning: false }
+
+    case "SELECT_WIKI_BIAS":
+      return { ...state, selectedBias: action.payload }
+    
+    case "SHOW_CERTIFICATE":
+        return { ...state, showCertificate: action.payload };
+    
+    case "RESET":
+        // This action is handled by the parent component, but we can reset volatile state here
+        return { ...state, gameState: 'menu' };
+
+    default:
+      return state
+  }
+}
+
+// ------------------------------
+// COMPONENT
+// ------------------------------
+export function QuizEngine({ initialState, onReset }: QuizEngineProps) {
+  // All state is managed by the reducer, initialized by props
+  const [state, dispatch] = useReducer(quizReducer, {
+      ...initialState,
+      // Initialize non-persistent state
+      selectedAnswer: null,
+      isScanning: false,
+      scanResult: null,
+      showExplanation: false,
+      selectedBias: null,
+      showCertificate: false,
+  })
+
+  // Destructure state for easier access in the render methods
+  const {
+    userProfile,
+    gameState,
+    currentLevelId,
+    questions,
+    currentQuestionIndex,
+    selectedAnswer,
+    isScanning,
+    scanResult,
+    showExplanation,
+    levelProgress,
+    unlockedBiases,
+    allLevelsCompleted,
+    selectedBias,
+    showCertificate,
+  } = state;
+  
+  // Persist state to localStorage on every change
+  useEffect(() => {
+    // We only save the "Base" state, not the volatile UI state
+    const stateToSave: BaseQuizState = {
+        userProfile: state.userProfile,
+        gameState: state.gameState,
+        currentLevelId: state.currentLevelId,
+        questions: state.questions,
+        currentQuestionIndex: state.currentQuestionIndex,
+        levelProgress: state.levelProgress,
+        unlockedBiases: state.unlockedBiases,
+        allLevelsCompleted: state.allLevelsCompleted,
+        totalScore: state.totalScore,
+        totalQuestions: state.totalQuestions,
+    }
+    saveState(stateToSave)
+  }, [state])
+  
+  const currentLevel = LEVELS.find(l => l.id === currentLevelId) || LEVELS[0];
+  const currentQuestion = questions?.[currentQuestionIndex];
+
+  // --- Event Handlers ---
+  const handleAnswer = (answerIndex: number) => {
+    if (selectedAnswer === null && !isScanning) {
+      dispatch({ type: "SELECT_ANSWER", payload: { answerIndex, question: currentQuestion! } })
     }
   }
 
+  const handleScanComplete = useCallback(() => dispatch({ type: "SCAN_COMPLETE" }), []);
+  const nextQuestion = () => dispatch({ type: "NEXT_QUESTION" });
+  const startLevel = (level: Level) => dispatch({ type: "START_LEVEL", payload: level });
+  const setGameState = (gameState: GameState) => dispatch({ type: "CHANGE_GAME_STATE", payload: gameState });
+  const setSelectedBias = (bias: Question | null) => dispatch({ type: "SELECT_WIKI_BIAS", payload: bias });
+  const setShowCertificate = (show: boolean) => dispatch({ type: "SHOW_CERTIFICATE", payload: show });
+
+  // --- Computed Values ---
   const getLevelPercentage = (levelId: number) => {
     const progress = levelProgress[levelId]
-    if (!progress.completed && progress.score === 0) return 0
+    if (!progress || progress.total === 0) return 0
     return (progress.score / progress.total) * 100
   }
 
   const isLevelUnlocked = (level: Level) => {
-    if (level.id === 1) return true
-    const prevLevel = LEVELS.find((l) => l.id === level.id - 1)
-    if (!prevLevel) return false
-    return getLevelPercentage(prevLevel.id) >= level.unlock_criteria
-  }
+    if (level.id === 1) return true; // Novice is always unlocked
+    const prevLevel = LEVELS.find((l) => l.id === level.id - 1);
+    if (!prevLevel) return false;
 
+    // Enforce 70% for both Practicien (id: 2) and Expert (id: 3)
+    const requiredScore = 70;
+    
+    return getLevelPercentage(prevLevel.id) >= requiredScore;
+  }
+  
+  const totalScoreCalculated = Object.values(levelProgress).reduce((acc, p) => acc + p.score, 0);
+  const totalQuestionsCalculated = Object.values(levelProgress).reduce((acc, p) => acc + p.total, 0);
+
+  // ... (The rest of the render methods are identical) ...
   const renderMenu = () => (
-    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="min-h-screen p-8">
+     <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="min-h-screen p-8">
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <div className="text-center mb-12">
@@ -157,7 +278,7 @@ export function QuizEngine() {
             </h1>
           </motion.div>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto mb-0">
-            Bienvenue <span className="text-cyan-400 font-semibold">{user?.firstName}</span> ! Entraînez votre cerveau à
+            Bienvenue <span className="text-cyan-400 font-semibold">{userProfile?.firstName}</span> ! Entraînez votre cerveau à
             détecter les biais cognitifs utilisés en UX Design.
           </p>
         </div>
@@ -178,14 +299,14 @@ export function QuizEngine() {
               />
             </Card>
 
-            {allLevelsCompletedStatus && (
+            {allLevelsCompleted && (
               <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
                 <Card className="p-6 bg-gradient-to-br from-yellow-500/10 to-orange-500/10 border-yellow-500/30">
                   <div className="text-center">
                     <Award className="w-12 h-12 text-yellow-500 mx-auto mb-3" />
                     <h3 className="text-lg font-bold text-white mb-2">Formation Terminée !</h3>
                     <p className="text-gray-400 text-sm mb-4">
-                      Félicitations {user?.firstName} ! Récupérez votre diplôme.
+                      Félicitations {userProfile?.firstName} ! Récupérez votre diplôme.
                     </p>
                     <Button
                       onClick={() => setShowCertificate(true)}
@@ -198,6 +319,15 @@ export function QuizEngine() {
                 </Card>
               </motion.div>
             )}
+             <Button
+                variant="outline"
+                size="sm"
+                className="w-full mt-6 border-gray-700 hover:border-red-500 hover:bg-red-500/10 bg-transparent"
+                onClick={onReset}
+              >
+                <RotateCcw className="w-4 h-4 mr-2" />
+                Recommencer le jeu
+              </Button>
           </div>
 
           {/* Sélection de niveau */}
@@ -248,7 +378,7 @@ export function QuizEngine() {
                         {!unlocked && (
                           <p className="text-red-400/70 flex items-center gap-2 text-lg">
                             <Lock className="w-4 h-4" />
-                            Requiert {level.unlock_criteria}% au niveau précédent
+                            Requiert 70% au niveau précédent
                           </p>
                         )}
                       </div>
@@ -270,7 +400,7 @@ export function QuizEngine() {
               onClick={() => setGameState("wiki")}
             >
               <BookOpen className="w-5 h-5 mr-2" />
-              Bibliothèque des Biais ({unlockedBiases.size}/{BIAS_LIBRARY.length})
+              Bibliothèque des Biais ({unlockedBiases.length}/{BIAS_LIBRARY.length})
             </Button>
           </div>
         </div>
@@ -416,7 +546,6 @@ export function QuizEngine() {
                           </p>
                           <p className="text-gray-300">{currentQuestion.explanation}</p>
 
-                          {/* Info sur le biais débloqué */}
                           {(() => {
                             const correctOption = currentQuestion.options.find((o) => o.is_correct)
                             if (correctOption?.bias_id) {
@@ -485,7 +614,7 @@ export function QuizEngine() {
             <Trophy className="w-20 h-20 mx-auto mb-6" style={{ color: currentLevel.theme_color }} />
           </motion.div>
 
-          <h2 className="text-3xl font-bold text-white mb-2">Bravo {user?.firstName} !</h2>
+          <h2 className="text-3xl font-bold text-white mb-2">Bravo {userProfile?.firstName} !</h2>
           <p className="text-gray-400 mb-4">Niveau {currentLevel.name_fr} terminé</p>
 
           <div className="my-8">
@@ -557,7 +686,7 @@ export function QuizEngine() {
               Bibliothèque des Biais
             </h1>
             <p className="text-gray-400 mt-2">
-              {unlockedBiases.size} / {BIAS_LIBRARY.length} concepts débloqués
+              {unlockedBiases.length} / {BIAS_LIBRARY.length} concepts débloqués
             </p>
           </div>
           <Button variant="outline" onClick={() => setGameState("menu")} className="border-gray-700">
@@ -565,7 +694,7 @@ export function QuizEngine() {
           </Button>
         </div>
 
-        <Progress value={(unlockedBiases.size / BIAS_LIBRARY.length) * 100} className="h-2 mb-8" />
+        <Progress value={(unlockedBiases.length / BIAS_LIBRARY.length) * 100} className="h-2 mb-8" />
 
         {/* Filtres par niveau */}
         {LEVELS.map((level) => {
@@ -583,7 +712,7 @@ export function QuizEngine() {
                   <BiasWikiCard
                     key={bias.bias_id}
                     bias={bias}
-                    isUnlocked={unlockedBiases.has(bias.bias_id)}
+                    isUnlocked={unlockedBiases.includes(bias.bias_id)}
                     onClick={() => setSelectedBias(bias)}
                   />
                 ))}
@@ -641,28 +770,8 @@ export function QuizEngine() {
       </AnimatePresence>
     </motion.div>
   )
-
-  useEffect(() => {
-    const savedUser = localStorage.getItem("cognitiveLabsUser")
-    if (savedUser) {
-      setUser(JSON.parse(savedUser))
-      setGameState("menu")
-    }
-  }, [])
-
-  useEffect(() => {
-    const totalScore = Object.values(levelProgress).reduce((acc, p) => acc + p.score, 0)
-    const totalQuestions = Object.values(levelProgress).reduce((acc, p) => acc + p.total, 0)
-    setTotalScore(totalScore)
-    setTotalQuestions(totalQuestions)
-    setAllLevelsCompletedStatus(LEVELS.every((level) => levelProgress[level.id]?.completed))
-  }, [levelProgress])
-
-  const handleOnboardingComplete = (profile: UserProfile) => {
-    setUser(profile)
-    setGameState("menu")
-  }
-
+  
+  // --- Main Render ---
   return (
     <div className="min-h-screen bg-gray-950 text-white relative">
       {/* Background effects */}
@@ -680,7 +789,6 @@ export function QuizEngine() {
 
       {/* Content */}
       <div className="relative z-10">
-        {gameState === "onboarding" && <OnboardingForm onComplete={handleOnboardingComplete} />}
         {gameState === "menu" && renderMenu()}
         {gameState === "playing" && renderPlaying()}
         {gameState === "levelComplete" && renderLevelComplete()}
@@ -688,11 +796,11 @@ export function QuizEngine() {
       </div>
 
       <AnimatePresence>
-        {showCertificate && user && (
+        {showCertificate && userProfile && (
           <Certificate
-            user={user}
-            score={totalScore}
-            totalQuestions={totalQuestions}
+            user={userProfile}
+            score={totalScoreCalculated}
+            totalQuestions={totalQuestionsCalculated}
             onClose={() => setShowCertificate(false)}
           />
         )}

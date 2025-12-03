@@ -25,7 +25,10 @@ export const metadata: Metadata = {
   description:
     "Entraînez votre cerveau à détecter les biais cognitifs utilisés en UX Design. Quiz interactif gamifié pour devenir expert en psychologie cognitive.",
   keywords: ["biais cognitifs", "UX design", "psychologie", "quiz", "gamification", "cognitive bias"],
-    generator: 'v0.app'
+    generator: 'v0.app',
+    icons: {
+      icon: '/icon.svg',
+    },
 }
 
 export const viewport: Viewport = {
