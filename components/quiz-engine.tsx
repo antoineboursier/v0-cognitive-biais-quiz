@@ -449,45 +449,60 @@ export function QuizEngine({ initialState, onReset }: QuizEngineProps) {
                 >
                   <Card
                     className={`p-6 transition-all duration-300 ${unlocked
-                      ? "bg-card/50 border-border hover:border-cyan-500/50 cursor-pointer"
+                      ? "bg-card/50 border-border hover:border-cyan-500/50 cursor-pointer focus-within:border-cyan-500 focus-within:ring-2 focus-within:ring-cyan-500/20"
                       : "bg-card/30 border-border opacity-50"
                       }`}
-                    onClick={() => unlocked && startLevel(level)}
                     style={{
                       borderLeftWidth: "4px",
                       borderLeftColor: unlocked ? level.theme_color : "#333",
                     }}
+                    tabIndex={-1}
                   >
-                    <div className="flex items-center justify-between">
-                      <div className="flex-1">
-                        <div className="flex items-center gap-3 mb-2">
-                          <span className="font-bold text-3xl" style={{ color: level.theme_color }}>
-                            {level.name_fr}
-                          </span>
-                          {progress.completed && <Trophy className="w-5 h-5 text-neon-yellow" />}
+                    <div
+                      role="button"
+                      tabIndex={unlocked ? 0 : -1}
+                      aria-disabled={!unlocked}
+                      aria-label={`${level.name_fr}: ${level.description}. ${unlocked ? `${progress.score} sur ${progress.total} complétés` : 'Niveau verrouillé, requiert 70% au niveau précédent'}`}
+                      onClick={() => unlocked && startLevel(level)}
+                      onKeyDown={(e) => {
+                        if (unlocked && (e.key === 'Enter' || e.key === ' ')) {
+                          e.preventDefault()
+                          startLevel(level)
+                        }
+                      }}
+                      className="outline-none w-full"
+                    >
+                      <div className="flex items-center justify-between">
+                        <div className="flex-1">
+                          <div className="flex items-center gap-3 mb-2">
+                            <span className="font-bold text-3xl" style={{ color: level.theme_color }}>
+                              {level.name_fr}
+                            </span>
+                            {progress.completed && <Trophy className="w-5 h-5 text-neon-yellow" aria-label="Niveau complété" />}
+                          </div>
+                          <p className="text-muted-foreground mb-3 text-lg">{level.description}</p>
+
+                          {unlocked && (
+                            <div className="flex items-center gap-4">
+                              <Progress value={getLevelPercentage(level.id)} className="flex-1 h-2" aria-label={`Progression: ${Math.round(getLevelPercentage(level.id))}%`} />
+                              <span className="text-muted-foreground font-mono text-base" aria-label={`${progress.score} questions réussies sur ${progress.total}`}>
+                                {progress.score}/{progress.total}
+                              </span>
+                            </div>
+                          )}
+
+                          {!unlocked && (
+                            <p className="text-red-400/70 flex items-center gap-2 text-lg">
+                              <Lock className="w-4 h-4" aria-hidden="true" />
+                              Requiert 70% au niveau précédent
+                            </p>
+                          )}
                         </div>
-                        <p className="text-muted-foreground mb-3 text-lg">{level.description}</p>
 
                         {unlocked && (
-                          <div className="flex items-center gap-4">
-                            <Progress value={getLevelPercentage(level.id)} className="flex-1 h-2" />
-                            <span className="text-muted-foreground font-mono text-base">
-                              {progress.score}/{progress.total}
-                            </span>
-                          </div>
-                        )}
-
-                        {!unlocked && (
-                          <p className="text-red-400/70 flex items-center gap-2 text-lg">
-                            <Lock className="w-4 h-4" />
-                            Requiert 70% au niveau précédent
-                          </p>
+                          <ChevronRight className="w-8 h-8 text-muted-foreground" style={{ color: level.theme_color }} aria-hidden="true" />
                         )}
                       </div>
-
-                      {unlocked && (
-                        <ChevronRight className="w-8 h-8 text-muted-foreground" style={{ color: level.theme_color }} />
-                      )}
                     </div>
                   </Card>
                 </motion.div>

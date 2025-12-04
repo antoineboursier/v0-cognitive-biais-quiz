@@ -25,12 +25,21 @@ export function BiasWikiCard({ bias, isUnlocked, onClick }: BiasWikiCardProps) {
 
   return (
     <motion.div
+      role="button"
+      tabIndex={isUnlocked ? 0 : -1}
+      aria-disabled={!isUnlocked}
+      aria-label={`${bias.name}: ${bias.definition}`}
       onClick={isUnlocked ? onClick : undefined}
-      className={`relative p-4 rounded-xl border-2 transition-all duration-300 ${
-        isUnlocked
-          ? "border-border bg-secondary/50 hover:border-primary/50 cursor-pointer"
+      onKeyDown={(e) => {
+        if (isUnlocked && onClick && (e.key === 'Enter' || e.key === ' ')) {
+          e.preventDefault()
+          onClick()
+        }
+      }}
+      className={`relative p-4 rounded-xl border-2 transition-all duration-300 outline-none ${isUnlocked
+          ? "border-border bg-secondary/50 hover:border-primary/50 cursor-pointer focus:border-primary focus:ring-2 focus:ring-primary/20"
           : "border-muted bg-card/50 opacity-50 cursor-not-allowed"
-      }`}
+        }`}
       whileHover={isUnlocked ? { scale: 1.02 } : {}}
     >
       {!isUnlocked && (
@@ -73,7 +82,7 @@ export function BiasWikiCard({ bias, isUnlocked, onClick }: BiasWikiCardProps) {
       </div>
 
       {isUnlocked && (
-         <div onClick={stopPropagation} className="flex items-center space-x-2 mt-4 pt-4 border-t border-muted/50">
+        <div onClick={stopPropagation} className="flex items-center space-x-2 mt-4 pt-4 border-t border-muted/50">
           <Switch id={`learned-${bias.name}`} aria-label="Marquer comme appris" />
           <Label htmlFor={`learned-${bias.name}`} className="text-sm font-medium text-muted-foreground">
             Marqué comme appris
