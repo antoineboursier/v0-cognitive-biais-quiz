@@ -31,6 +31,8 @@ export const metadata: Metadata = {
     },
 }
 
+import { ThemeProvider } from "@/components/theme-provider"
+
 export const viewport: Viewport = {
   themeColor: "#0a0a1a",
   width: "device-width",
@@ -43,8 +45,17 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="fr" className="dark">
-      <body className={`${exo2.variable} ${geistMono.variable} font-sans antialiased`}>{children}</body>
+    <html lang="fr" suppressHydrationWarning>
+      <body className={`${exo2.variable} ${geistMono.variable} font-sans antialiased`}>
+        <ThemeProvider
+            attribute="class"
+            defaultTheme="dark"
+            enableSystem
+            disableTransitionOnChange
+        >
+          {children}
+        </ThemeProvider>
+      </body>
     </html>
   )
 }

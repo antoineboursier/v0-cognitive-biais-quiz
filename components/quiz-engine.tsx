@@ -4,8 +4,9 @@ import { useState, useReducer, useEffect, useRef, useCallback } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import {
   Brain, Zap, Trophy, RotateCcw, ChevronRight, Lock, CheckCircle, ArrowLeft, Award,
-  Library, CheckCircle2, BookOpen
+  Library, CheckCircle2, BookOpen, Settings
 } from "lucide-react"
+import { useTheme } from "next-themes"
 
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
@@ -188,8 +189,7 @@ function quizReducer(state: QuizState, action: Action): QuizState {
 
     case "COMPLETE_LEVEL": {
       const levelId = state.currentLevelId!
-      const updatedLevelProgress = {
-        ...state.levelProgress,
+      const updatedLevelProgress = { ...state.levelProgress,
         [levelId]: {
           ...state.levelProgress[levelId],
           completed: true,
@@ -233,6 +233,11 @@ function quizReducer(state: QuizState, action: Action): QuizState {
 // COMPONENT
 // ------------------------------
 export function QuizEngine({ initialState, onReset }: QuizEngineProps) {
+  const { theme, setTheme } = useTheme()
+  const [settings, setSettings] = useState({
+    animationsEnabled: true,
+  });
+
   // All state is managed by the reducer, initialized by props
   const [state, dispatch] = useReducer(quizReducer, {
     ...initialState,
@@ -657,7 +662,7 @@ export function QuizEngine({ initialState, onReset }: QuizEngineProps) {
                       </div>
                     </Card>
 
-                    <div className="flex justify-end">
+                    <div className="flex justify-center">
                       <Button
                         onClick={nextQuestion}
                         className="w-full sm:max-w-xs"
