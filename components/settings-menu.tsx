@@ -1,6 +1,6 @@
 "use client"
 
-import { Settings, Moon, Sun, Zap, ZapOff, Eye } from "lucide-react"
+import { Settings, Moon, Sun, Zap, ZapOff, Eye, Film } from "lucide-react"
 import { useTheme } from "next-themes"
 import { useSettings } from "@/lib/settings-context"
 import { Button } from "@/components/ui/button"
@@ -12,7 +12,11 @@ import {
 import { Switch } from "@/components/ui/switch"
 import { Label } from "@/components/ui/label"
 
-export function SettingsMenu() {
+interface SettingsMenuProps {
+    onDemoPageRequested?: (page: 'levelComplete' | 'certificate') => void
+}
+
+export function SettingsMenu({ onDemoPageRequested }: SettingsMenuProps = {}) {
     const { theme, setTheme } = useTheme()
     const { animationsEnabled, setAnimationsEnabled, cheatMode, setCheatMode } = useSettings()
 
@@ -98,6 +102,38 @@ export function SettingsMenu() {
                                     onCheckedChange={setCheatMode}
                                     className="data-[state=checked]:bg-destructive"
                                 />
+                            </div>
+                        )}
+
+                        {/* Demo Pages - ONLY in development */}
+                        {process.env.NODE_ENV === 'development' && onDemoPageRequested && (
+                            <div className="space-y-3 border-t border-muted/50 pt-4 mt-2">
+                                <div>
+                                    <h4 className="text-sm font-semibold text-warning mb-2">🎬 Pages de Démo</h4>
+                                    <p className="text-xs text-muted-foreground mb-3">
+                                        Accès rapide aux pages invisibles.
+                                    </p>
+                                </div>
+
+                                <div className="space-y-2">
+                                    <Button
+                                        variant="outline"
+                                        size="sm"
+                                        className="w-full justify-start text-left"
+                                        onClick={() => onDemoPageRequested('levelComplete')}
+                                    >
+                                        🏆 Écran de fin de niveau
+                                    </Button>
+
+                                    <Button
+                                        variant="outline"
+                                        size="sm"
+                                        className="w-full justify-start text-left"
+                                        onClick={() => onDemoPageRequested('certificate')}
+                                    >
+                                        🎓 Certificat de complétion
+                                    </Button>
+                                </div>
                             </div>
                         )}
                     </div>

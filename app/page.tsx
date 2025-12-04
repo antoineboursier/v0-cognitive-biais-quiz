@@ -39,8 +39,17 @@ export default function Home() {
     // This effect runs once on component mount
     try {
       const savedState = loadState()
-      if (savedState) {
-        setQuizState(savedState)
+      if (savedState && savedState.userProfile) {
+        // Ensure backward compatibility by merging with default structure
+        // This fixes issues where old state might be missing new fields like answeredQuestions
+        const defaultState = createInitialState(savedState.userProfile);
+        const migratedState = {
+          ...defaultState,
+          ...savedState,
+          answeredQuestions: savedState.answeredQuestions || [],
+          allLevelsCompleted: savedState.allLevelsCompleted || false,
+        };
+        setQuizState(migratedState)
       }
     } catch (error) {
       console.error("Failed to load state from localStorage", error)
@@ -65,6 +74,45 @@ export default function Home() {
     }
   }
 
+  const handleDemoPage = (page: 'levelComplete' | 'certificate') => {
+    if (!quizState) return;
+
+    if (page === 'levelComplete') {
+      // Navigate to level complete screen with fake data
+      const updatedState: QuizState = {
+        ...quizState,
+        gameState: 'levelComplete',
+        currentLevelId: 1, // Show Novice level completion
+        levelProgress: {
+          ...quizState.levelProgress,
+          1: { score: 18, total: 20, completed: true }
+        }
+      };
+      setQuizState(updatedState);
+      setResetCounter(prev => prev + 1); // Force remount to apply new state
+    } else if (page === 'certificate') {
+      // Navigate to certificate screen with all levels completed
+      const allCompletedProgress = LEVELS.reduce((acc, level) => {
+        acc[level.id] = { score: 20, total: 20, completed: true };
+        return acc;
+      }, {} as Record<number, { score: number, total: number, completed: boolean }>);
+
+      const updatedState: QuizState = {
+        ...quizState,
+        allLevelsCompleted: true,
+        levelProgress: allCompletedProgress,
+        totalScore: 60,
+      };
+      setQuizState(updatedState);
+      setResetCounter(prev => prev + 1); // Force remount to apply new state
+
+      // Trigger certificate display via a state update after a brief delay
+      setTimeout(() => {
+        setQuizState(prev => prev ? { ...prev } : prev);
+      }, 100);
+    }
+  }
+
   if (!isReady) {
     // Render nothing or a loader to avoid a flash of incorrect UI
     return null
@@ -72,14 +120,21 @@ export default function Home() {
 
   return (
     <>
-      {/* Settings Menu - Fixed in top right, hidden during quiz */}
-      {quizState && quizState.gameState !== 'playing' && (
+      {/* Settings Menu - Fixed in top right, ONLY on home/menu screen */}
+      {quizState && quizState.gameState === 'menu' && (
         <div className="fixed top-4 right-4 z-40">
-          <SettingsMenu />
+          <SettingsMenu onDemoPageRequested={handleDemoPage} />
         </div>
       )}
       {quizState && quizState.userProfile ? (
-        <QuizEngine key={resetCounter} initialState={quizState} onReset={handleReset} />
+        <QuizEngine
+          key={resetCounter}
+          initialState={quizState}
+          onReset={handleReset}
+          onGameStateChange={(newState) => {
+            setQuizState(prev => prev ? { ...prev, gameState: newState } : null)
+          }}
+        />
       ) : (
         <OnboardingForm onComplete={handleOnboardingComplete} />
       )}

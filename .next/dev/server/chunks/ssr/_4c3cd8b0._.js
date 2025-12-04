@@ -2182,6 +2182,69 @@ function Certificate({ user, score, totalQuestions, onClose, onReset }) {
     }, this);
 }
 }),
+"[project]/components/logo.tsx [app-ssr] (ecmascript)", ((__turbopack_context__) => {
+"use strict";
+
+__turbopack_context__.s([
+    "Logo",
+    ()=>Logo
+]);
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/.pnpm/next@16.0.3_react-dom@19.2.0_react@19.2.0__react@19.2.0/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react-jsx-dev-runtime.js [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$lucide$2d$react$40$0$2e$454$2e$0_react$40$19$2e$2$2e$0$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$brain$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Brain$3e$__ = __turbopack_context__.i("[project]/node_modules/.pnpm/lucide-react@0.454.0_react@19.2.0/node_modules/lucide-react/dist/esm/icons/brain.js [app-ssr] (ecmascript) <export default as Brain>");
+"use client";
+;
+;
+function Logo({ size = 'large', className = '' }) {
+    const sizes = {
+        small: {
+            icon: 'w-8 h-8',
+            text: 'text-3xl',
+            gap: 'gap-2',
+            padding: 'py-2'
+        },
+        medium: {
+            icon: 'w-10 h-10',
+            text: 'text-4xl',
+            gap: 'gap-2',
+            padding: 'py-3'
+        },
+        large: {
+            icon: 'w-12 h-12',
+            text: 'text-6xl',
+            gap: 'gap-3',
+            padding: 'py-4'
+        }
+    };
+    const currentSize = sizes[size];
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+        className: `inline-flex items-center ${currentSize.gap} ${className}`,
+        children: [
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$lucide$2d$react$40$0$2e$454$2e$0_react$40$19$2e$2$2e$0$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$brain$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Brain$3e$__["Brain"], {
+                className: `${currentSize.icon} text-neon-cyan`
+            }, void 0, false, {
+                fileName: "[project]/components/logo.tsx",
+                lineNumber: 36,
+                columnNumber: 13
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
+                className: `font-bold text-transparent bg-clip-text ${currentSize.text} ${currentSize.padding}`,
+                style: {
+                    backgroundImage: 'linear-gradient(to right, var(--neon-cyan), var(--neon-purple), var(--neon-yellow))'
+                },
+                children: "Cognitive Labs"
+            }, void 0, false, {
+                fileName: "[project]/components/logo.tsx",
+                lineNumber: 37,
+                columnNumber: 13
+            }, this)
+        ]
+    }, void 0, true, {
+        fileName: "[project]/components/logo.tsx",
+        lineNumber: 35,
+        columnNumber: 9
+    }, this);
+}
+}),
 "[project]/lib/storage.ts [app-ssr] (ecmascript)", ((__turbopack_context__) => {
 "use strict";
 
@@ -2311,7 +2374,7 @@ const QUESTIONS = [
     {
         id: "N1-03",
         level_id: 1,
-        scenario: 'Le premier prix vu est de 1000€, le second à 800€ semble alors "pas cher".',
+        scenario: 'Ce produit était à 1000€, et il est à 800% maintenant ! Quelle économie !',
         options: [
             {
                 text: "Biais d'Ancrage",
@@ -4433,6 +4496,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$scan$2d$animat
 var __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$pricing$2d$grid$2d$question$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/components/pricing-grid-question.tsx [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$bias$2d$wiki$2d$card$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/components/bias-wiki-card.tsx [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$certificate$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/components/certificate.tsx [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$logo$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/components/logo.tsx [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$storage$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/lib/storage.ts [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$settings$2d$context$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/lib/settings-context.tsx [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$data$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/lib/data.ts [app-ssr] (ecmascript)");
@@ -4440,6 +4504,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$supabase$2f$score$2d$
 var __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$alert$2d$dialog$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/components/ui/alert-dialog.tsx [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$icons$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/components/ui/icons.tsx [app-ssr] (ecmascript)");
 "use client";
+;
 ;
 ;
 ;
@@ -4632,9 +4697,8 @@ function QuizEngine({ initialState, onReset }) {
         showResetDialog: false
     });
     // Destructure state for easier access in the render methods
-    const { userProfile, gameState, currentLevelId, questions, currentQuestionIndex, selectedAnswer, isScanning, scanResult, showExplanation, levelProgress, unlockedBiases, allLevelsCompleted, selectedBias, showCertificate, showResetDialog } = state;
+    const { userProfile, gameState, currentLevelId, questions, currentQuestionIndex, levelProgress, unlockedBiases, completedQuestionIds, allLevelsCompleted, selectedAnswer, isScanning, scanResult, showExplanation, selectedBias, showCertificate, showResetDialog } = state;
     // Local state for reset dialog and ref for auto-scroll
-    const [showResetDialogLocal, setShowResetDialogLocal] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(showResetDialog);
     const explanationRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useRef"])(null);
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
         if (showExplanation && explanationRef.current) {
@@ -4777,7 +4841,7 @@ function QuizEngine({ initialState, onReset }) {
                                         className: "w-12 h-12 text-neon-cyan"
                                     }, void 0, false, {
                                         fileName: "[project]/components/quiz-engine.tsx",
-                                        lineNumber: 373,
+                                        lineNumber: 376,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
@@ -4788,13 +4852,13 @@ function QuizEngine({ initialState, onReset }) {
                                         children: "Cognitive Labs"
                                     }, void 0, false, {
                                         fileName: "[project]/components/quiz-engine.tsx",
-                                        lineNumber: 374,
+                                        lineNumber: 377,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/quiz-engine.tsx",
-                                lineNumber: 368,
+                                lineNumber: 371,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -4806,20 +4870,20 @@ function QuizEngine({ initialState, onReset }) {
                                         children: userProfile?.firstName
                                     }, void 0, false, {
                                         fileName: "[project]/components/quiz-engine.tsx",
-                                        lineNumber: 384,
+                                        lineNumber: 387,
                                         columnNumber: 23
                                     }, this),
                                     " ! Entraînez votre cerveau à détecter les biais cognitifs utilisés en UX Design."
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/quiz-engine.tsx",
-                                lineNumber: 383,
+                                lineNumber: 386,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/quiz-engine.tsx",
-                        lineNumber: 367,
+                        lineNumber: 370,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4838,14 +4902,14 @@ function QuizEngine({ initialState, onReset }) {
                                                         className: "w-5 h-5 text-neon-yellow"
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/quiz-engine.tsx",
-                                                        lineNumber: 394,
+                                                        lineNumber: 397,
                                                         columnNumber: 17
                                                     }, this),
                                                     "Votre Progression"
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/components/quiz-engine.tsx",
-                                                lineNumber: 393,
+                                                lineNumber: 396,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$brain$2d$progress$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["BrainProgress"], {
@@ -4855,13 +4919,13 @@ function QuizEngine({ initialState, onReset }) {
                                                 currentLevel: currentLevel.id
                                             }, void 0, false, {
                                                 fileName: "[project]/components/quiz-engine.tsx",
-                                                lineNumber: 397,
+                                                lineNumber: 400,
                                                 columnNumber: 15
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/components/quiz-engine.tsx",
-                                        lineNumber: 392,
+                                        lineNumber: 395,
                                         columnNumber: 13
                                     }, this),
                                     allLevelsCompleted && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$framer$2d$motion$40$12$2e$23$2e$25_$40$emotion$2b$is$2d$prop$2d$valid$40$1$2e$4$2e$0_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].div, {
@@ -4882,7 +4946,7 @@ function QuizEngine({ initialState, onReset }) {
                                                         className: "w-12 h-12 text-neon-yellow mx-auto mb-3"
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/quiz-engine.tsx",
-                                                        lineNumber: 409,
+                                                        lineNumber: 412,
                                                         columnNumber: 21
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -4890,7 +4954,7 @@ function QuizEngine({ initialState, onReset }) {
                                                         children: "Formation Terminée !"
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/quiz-engine.tsx",
-                                                        lineNumber: 410,
+                                                        lineNumber: 413,
                                                         columnNumber: 21
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -4902,7 +4966,7 @@ function QuizEngine({ initialState, onReset }) {
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/components/quiz-engine.tsx",
-                                                        lineNumber: 411,
+                                                        lineNumber: 414,
                                                         columnNumber: 21
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Button"], {
@@ -4913,30 +4977,30 @@ function QuizEngine({ initialState, onReset }) {
                                                                 className: "w-4 h-4 mr-2"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/components/quiz-engine.tsx",
-                                                                lineNumber: 418,
+                                                                lineNumber: 421,
                                                                 columnNumber: 23
                                                             }, this),
                                                             "Obtenir mon diplôme"
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/components/quiz-engine.tsx",
-                                                        lineNumber: 414,
+                                                        lineNumber: 417,
                                                         columnNumber: 21
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/components/quiz-engine.tsx",
-                                                lineNumber: 408,
+                                                lineNumber: 411,
                                                 columnNumber: 19
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/components/quiz-engine.tsx",
-                                            lineNumber: 407,
+                                            lineNumber: 410,
                                             columnNumber: 17
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/components/quiz-engine.tsx",
-                                        lineNumber: 406,
+                                        lineNumber: 409,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Button"], {
@@ -4949,20 +5013,20 @@ function QuizEngine({ initialState, onReset }) {
                                                 className: "w-4 h-4 mr-2"
                                             }, void 0, false, {
                                                 fileName: "[project]/components/quiz-engine.tsx",
-                                                lineNumber: 431,
+                                                lineNumber: 434,
                                                 columnNumber: 15
                                             }, this),
                                             "Recommencer le jeu"
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/components/quiz-engine.tsx",
-                                        lineNumber: 425,
+                                        lineNumber: 428,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/quiz-engine.tsx",
-                                lineNumber: 391,
+                                lineNumber: 394,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4973,7 +5037,7 @@ function QuizEngine({ initialState, onReset }) {
                                         children: "Choisissez votre niveau"
                                     }, void 0, false, {
                                         fileName: "[project]/components/quiz-engine.tsx",
-                                        lineNumber: 438,
+                                        lineNumber: 441,
                                         columnNumber: 13
                                     }, this),
                                     __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$data$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["LEVELS"].map((level, index)=>{
@@ -5028,7 +5092,7 @@ function QuizEngine({ initialState, onReset }) {
                                                                                 children: level.name_fr
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/components/quiz-engine.tsx",
-                                                                                lineNumber: 478,
+                                                                                lineNumber: 481,
                                                                                 columnNumber: 29
                                                                             }, this),
                                                                             progress.completed && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$lucide$2d$react$40$0$2e$454$2e$0_react$40$19$2e$2$2e$0$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$trophy$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Trophy$3e$__["Trophy"], {
@@ -5036,13 +5100,13 @@ function QuizEngine({ initialState, onReset }) {
                                                                                 "aria-label": "Niveau complété"
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/components/quiz-engine.tsx",
-                                                                                lineNumber: 481,
+                                                                                lineNumber: 484,
                                                                                 columnNumber: 52
                                                                             }, this)
                                                                         ]
                                                                     }, void 0, true, {
                                                                         fileName: "[project]/components/quiz-engine.tsx",
-                                                                        lineNumber: 477,
+                                                                        lineNumber: 480,
                                                                         columnNumber: 27
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -5050,7 +5114,7 @@ function QuizEngine({ initialState, onReset }) {
                                                                         children: level.description
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/components/quiz-engine.tsx",
-                                                                        lineNumber: 483,
+                                                                        lineNumber: 486,
                                                                         columnNumber: 27
                                                                     }, this),
                                                                     unlocked && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -5062,7 +5126,7 @@ function QuizEngine({ initialState, onReset }) {
                                                                                 "aria-label": `Progression: ${Math.round(getLevelPercentage(level.id))}%`
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/components/quiz-engine.tsx",
-                                                                                lineNumber: 487,
+                                                                                lineNumber: 490,
                                                                                 columnNumber: 31
                                                                             }, this),
                                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -5075,13 +5139,13 @@ function QuizEngine({ initialState, onReset }) {
                                                                                 ]
                                                                             }, void 0, true, {
                                                                                 fileName: "[project]/components/quiz-engine.tsx",
-                                                                                lineNumber: 488,
+                                                                                lineNumber: 491,
                                                                                 columnNumber: 31
                                                                             }, this)
                                                                         ]
                                                                     }, void 0, true, {
                                                                         fileName: "[project]/components/quiz-engine.tsx",
-                                                                        lineNumber: 486,
+                                                                        lineNumber: 489,
                                                                         columnNumber: 29
                                                                     }, this),
                                                                     !unlocked && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -5092,20 +5156,20 @@ function QuizEngine({ initialState, onReset }) {
                                                                                 "aria-hidden": "true"
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/components/quiz-engine.tsx",
-                                                                                lineNumber: 496,
+                                                                                lineNumber: 499,
                                                                                 columnNumber: 31
                                                                             }, this),
                                                                             "Requiert 70% au niveau précédent"
                                                                         ]
                                                                     }, void 0, true, {
                                                                         fileName: "[project]/components/quiz-engine.tsx",
-                                                                        lineNumber: 495,
+                                                                        lineNumber: 498,
                                                                         columnNumber: 29
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/components/quiz-engine.tsx",
-                                                                lineNumber: 476,
+                                                                lineNumber: 479,
                                                                 columnNumber: 25
                                                             }, this),
                                                             unlocked && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$lucide$2d$react$40$0$2e$454$2e$0_react$40$19$2e$2$2e$0$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$chevron$2d$right$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__ChevronRight$3e$__["ChevronRight"], {
@@ -5116,28 +5180,28 @@ function QuizEngine({ initialState, onReset }) {
                                                                 "aria-hidden": "true"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/components/quiz-engine.tsx",
-                                                                lineNumber: 503,
+                                                                lineNumber: 506,
                                                                 columnNumber: 27
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/components/quiz-engine.tsx",
-                                                        lineNumber: 475,
+                                                        lineNumber: 478,
                                                         columnNumber: 23
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/quiz-engine.tsx",
-                                                    lineNumber: 461,
+                                                    lineNumber: 464,
                                                     columnNumber: 21
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/components/quiz-engine.tsx",
-                                                lineNumber: 450,
+                                                lineNumber: 453,
                                                 columnNumber: 19
                                             }, this)
                                         }, level.id, false, {
                                             fileName: "[project]/components/quiz-engine.tsx",
-                                            lineNumber: 444,
+                                            lineNumber: 447,
                                             columnNumber: 17
                                         }, this);
                                     }),
@@ -5151,7 +5215,7 @@ function QuizEngine({ initialState, onReset }) {
                                                 className: "w-5 h-5 mr-2"
                                             }, void 0, false, {
                                                 fileName: "[project]/components/quiz-engine.tsx",
-                                                lineNumber: 519,
+                                                lineNumber: 522,
                                                 columnNumber: 15
                                             }, this),
                                             "Bibliothèque des Biais (",
@@ -5162,30 +5226,30 @@ function QuizEngine({ initialState, onReset }) {
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/components/quiz-engine.tsx",
-                                        lineNumber: 513,
+                                        lineNumber: 516,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/quiz-engine.tsx",
-                                lineNumber: 437,
+                                lineNumber: 440,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/quiz-engine.tsx",
-                        lineNumber: 389,
+                        lineNumber: 392,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/quiz-engine.tsx",
-                lineNumber: 365,
+                lineNumber: 368,
                 columnNumber: 7
             }, this)
         }, void 0, false, {
             fileName: "[project]/components/quiz-engine.tsx",
-            lineNumber: 364,
+            lineNumber: 367,
             columnNumber: 5
         }, this);
     const renderPlaying = ()=>{
@@ -5217,7 +5281,7 @@ function QuizEngine({ initialState, onReset }) {
                                     children: "← Retour"
                                 }, void 0, false, {
                                     fileName: "[project]/components/quiz-engine.tsx",
-                                    lineNumber: 542,
+                                    lineNumber: 545,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -5231,7 +5295,7 @@ function QuizEngine({ initialState, onReset }) {
                                             children: currentLevel.name_fr
                                         }, void 0, false, {
                                             fileName: "[project]/components/quiz-engine.tsx",
-                                            lineNumber: 546,
+                                            lineNumber: 549,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -5243,19 +5307,19 @@ function QuizEngine({ initialState, onReset }) {
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/components/quiz-engine.tsx",
-                                            lineNumber: 549,
+                                            lineNumber: 552,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/quiz-engine.tsx",
-                                    lineNumber: 545,
+                                    lineNumber: 548,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/quiz-engine.tsx",
-                            lineNumber: 541,
+                            lineNumber: 544,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -5265,12 +5329,12 @@ function QuizEngine({ initialState, onReset }) {
                                 className: "h-2"
                             }, void 0, false, {
                                 fileName: "[project]/components/quiz-engine.tsx",
-                                lineNumber: 557,
+                                lineNumber: 560,
                                 columnNumber: 13
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/components/quiz-engine.tsx",
-                            lineNumber: 556,
+                            lineNumber: 559,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$framer$2d$motion$40$12$2e$23$2e$25_$40$emotion$2b$is$2d$prop$2d$valid$40$1$2e$4$2e$0_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$components$2f$AnimatePresence$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["AnimatePresence"], {
@@ -5309,12 +5373,12 @@ function QuizEngine({ initialState, onReset }) {
                                                             }
                                                         }, void 0, false, {
                                                             fileName: "[project]/components/quiz-engine.tsx",
-                                                            lineNumber: 577,
+                                                            lineNumber: 580,
                                                             columnNumber: 21
                                                         }, this)
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/quiz-engine.tsx",
-                                                        lineNumber: 570,
+                                                        lineNumber: 573,
                                                         columnNumber: 19
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -5327,7 +5391,7 @@ function QuizEngine({ initialState, onReset }) {
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/components/quiz-engine.tsx",
-                                                                lineNumber: 580,
+                                                                lineNumber: 583,
                                                                 columnNumber: 21
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -5335,19 +5399,19 @@ function QuizEngine({ initialState, onReset }) {
                                                                 children: currentQuestion.scenario
                                                             }, void 0, false, {
                                                                 fileName: "[project]/components/quiz-engine.tsx",
-                                                                lineNumber: 581,
+                                                                lineNumber: 584,
                                                                 columnNumber: 21
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/components/quiz-engine.tsx",
-                                                        lineNumber: 579,
+                                                        lineNumber: 582,
                                                         columnNumber: 19
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/components/quiz-engine.tsx",
-                                                lineNumber: 569,
+                                                lineNumber: 572,
                                                 columnNumber: 17
                                             }, this),
                                             currentQuestion.ui_interaction === "PRICE_GRID" && currentQuestion.experience_data ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$pricing$2d$grid$2d$question$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["PricingGridQuestion"], {
@@ -5356,7 +5420,7 @@ function QuizEngine({ initialState, onReset }) {
                                                 disabled: selectedAnswer !== null
                                             }, void 0, false, {
                                                 fileName: "[project]/components/quiz-engine.tsx",
-                                                lineNumber: 587,
+                                                lineNumber: 590,
                                                 columnNumber: 19
                                             }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                 className: "space-y-3",
@@ -5395,7 +5459,7 @@ function QuizEngine({ initialState, onReset }) {
                                                                             children: String.fromCharCode(65 + index)
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/components/quiz-engine.tsx",
-                                                                            lineNumber: 622,
+                                                                            lineNumber: 625,
                                                                             columnNumber: 31
                                                                         }, this),
                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -5403,13 +5467,13 @@ function QuizEngine({ initialState, onReset }) {
                                                                             children: option.text
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/components/quiz-engine.tsx",
-                                                                            lineNumber: 632,
+                                                                            lineNumber: 635,
                                                                             columnNumber: 31
                                                                         }, this)
                                                                     ]
                                                                 }, void 0, true, {
                                                                     fileName: "[project]/components/quiz-engine.tsx",
-                                                                    lineNumber: 621,
+                                                                    lineNumber: 624,
                                                                     columnNumber: 29
                                                                 }, this),
                                                                 cheatMode && !showExplanation && isCorrect && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -5418,30 +5482,30 @@ function QuizEngine({ initialState, onReset }) {
                                                                     children: "✓"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/components/quiz-engine.tsx",
-                                                                    lineNumber: 636,
+                                                                    lineNumber: 639,
                                                                     columnNumber: 31
                                                                 }, this)
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/components/quiz-engine.tsx",
-                                                            lineNumber: 620,
+                                                            lineNumber: 623,
                                                             columnNumber: 27
                                                         }, this)
                                                     }, index, false, {
                                                         fileName: "[project]/components/quiz-engine.tsx",
-                                                        lineNumber: 612,
+                                                        lineNumber: 615,
                                                         columnNumber: 25
                                                     }, this);
                                                 })
                                             }, void 0, false, {
                                                 fileName: "[project]/components/quiz-engine.tsx",
-                                                lineNumber: 593,
+                                                lineNumber: 596,
                                                 columnNumber: 19
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/components/quiz-engine.tsx",
-                                        lineNumber: 568,
+                                        lineNumber: 571,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$framer$2d$motion$40$12$2e$23$2e$25_$40$emotion$2b$is$2d$prop$2d$valid$40$1$2e$4$2e$0_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$components$2f$AnimatePresence$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["AnimatePresence"], {
@@ -5469,13 +5533,13 @@ function QuizEngine({ initialState, onReset }) {
                                                                 className: "w-6 h-6 text-green-500 flex-shrink-0"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/components/quiz-engine.tsx",
-                                                                lineNumber: 668,
+                                                                lineNumber: 671,
                                                                 columnNumber: 27
                                                             }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$lucide$2d$react$40$0$2e$454$2e$0_react$40$19$2e$2$2e$0$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$arrow$2d$left$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__ArrowLeft$3e$__["ArrowLeft"], {
                                                                 className: "w-6 h-6 text-red-500 flex-shrink-0"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/components/quiz-engine.tsx",
-                                                                lineNumber: 670,
+                                                                lineNumber: 673,
                                                                 columnNumber: 27
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -5485,7 +5549,7 @@ function QuizEngine({ initialState, onReset }) {
                                                                         children: scanResult === "success" ? "Excellente analyse !" : "Biais détecté dans votre raisonnement"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/components/quiz-engine.tsx",
-                                                                        lineNumber: 673,
+                                                                        lineNumber: 676,
                                                                         columnNumber: 27
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -5493,7 +5557,7 @@ function QuizEngine({ initialState, onReset }) {
                                                                         children: currentQuestion.explanation
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/components/quiz-engine.tsx",
-                                                                        lineNumber: 680,
+                                                                        lineNumber: 683,
                                                                         columnNumber: 27
                                                                     }, this),
                                                                     (()=>{
@@ -5509,7 +5573,7 @@ function QuizEngine({ initialState, onReset }) {
                                                                                             "aria-hidden": "true"
                                                                                         }, void 0, false, {
                                                                                             fileName: "[project]/components/quiz-engine.tsx",
-                                                                                            lineNumber: 689,
+                                                                                            lineNumber: 692,
                                                                                             columnNumber: 37
                                                                                         }, this),
                                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -5517,7 +5581,7 @@ function QuizEngine({ initialState, onReset }) {
                                                                                             children: "Succès"
                                                                                         }, void 0, false, {
                                                                                             fileName: "[project]/components/quiz-engine.tsx",
-                                                                                            lineNumber: 690,
+                                                                                            lineNumber: 693,
                                                                                             columnNumber: 37
                                                                                         }, this),
                                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -5527,7 +5591,7 @@ function QuizEngine({ initialState, onReset }) {
                                                                                                     children: "Ajouté à votre bibliothèque"
                                                                                                 }, void 0, false, {
                                                                                                     fileName: "[project]/components/quiz-engine.tsx",
-                                                                                                    lineNumber: 692,
+                                                                                                    lineNumber: 695,
                                                                                                     columnNumber: 39
                                                                                                 }, this),
                                                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -5535,7 +5599,7 @@ function QuizEngine({ initialState, onReset }) {
                                                                                                     children: bias.name
                                                                                                 }, void 0, false, {
                                                                                                     fileName: "[project]/components/quiz-engine.tsx",
-                                                                                                    lineNumber: 693,
+                                                                                                    lineNumber: 696,
                                                                                                     columnNumber: 39
                                                                                                 }, this),
                                                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -5543,19 +5607,19 @@ function QuizEngine({ initialState, onReset }) {
                                                                                                     children: bias.category
                                                                                                 }, void 0, false, {
                                                                                                     fileName: "[project]/components/quiz-engine.tsx",
-                                                                                                    lineNumber: 694,
+                                                                                                    lineNumber: 697,
                                                                                                     columnNumber: 39
                                                                                                 }, this)
                                                                                             ]
                                                                                         }, void 0, true, {
                                                                                             fileName: "[project]/components/quiz-engine.tsx",
-                                                                                            lineNumber: 691,
+                                                                                            lineNumber: 694,
                                                                                             columnNumber: 37
                                                                                         }, this)
                                                                                     ]
                                                                                 }, void 0, true, {
                                                                                     fileName: "[project]/components/quiz-engine.tsx",
-                                                                                    lineNumber: 688,
+                                                                                    lineNumber: 691,
                                                                                     columnNumber: 35
                                                                                 }, this);
                                                                             }
@@ -5565,18 +5629,18 @@ function QuizEngine({ initialState, onReset }) {
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/components/quiz-engine.tsx",
-                                                                lineNumber: 672,
+                                                                lineNumber: 675,
                                                                 columnNumber: 25
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/components/quiz-engine.tsx",
-                                                        lineNumber: 666,
+                                                        lineNumber: 669,
                                                         columnNumber: 23
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/quiz-engine.tsx",
-                                                    lineNumber: 660,
+                                                    lineNumber: 663,
                                                     columnNumber: 21
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -5595,46 +5659,46 @@ function QuizEngine({ initialState, onReset }) {
                                                                 className: "w-5 h-5 ml-2"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/components/quiz-engine.tsx",
-                                                                lineNumber: 717,
+                                                                lineNumber: 720,
                                                                 columnNumber: 25
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/components/quiz-engine.tsx",
-                                                        lineNumber: 707,
+                                                        lineNumber: 710,
                                                         columnNumber: 23
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/quiz-engine.tsx",
-                                                    lineNumber: 706,
+                                                    lineNumber: 709,
                                                     columnNumber: 21
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/components/quiz-engine.tsx",
-                                            lineNumber: 654,
+                                            lineNumber: 657,
                                             columnNumber: 19
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/components/quiz-engine.tsx",
-                                        lineNumber: 652,
+                                        lineNumber: 655,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, currentQuestion.id, true, {
                                 fileName: "[project]/components/quiz-engine.tsx",
-                                lineNumber: 562,
+                                lineNumber: 565,
                                 columnNumber: 13
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/components/quiz-engine.tsx",
-                            lineNumber: 561,
+                            lineNumber: 564,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/components/quiz-engine.tsx",
-                    lineNumber: 539,
+                    lineNumber: 542,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$scan$2d$animation$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["ScanAnimation"], {
@@ -5643,13 +5707,13 @@ function QuizEngine({ initialState, onReset }) {
                     onComplete: handleScanComplete
                 }, void 0, false, {
                     fileName: "[project]/components/quiz-engine.tsx",
-                    lineNumber: 728,
+                    lineNumber: 731,
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/components/quiz-engine.tsx",
-            lineNumber: 538,
+            lineNumber: 541,
             columnNumber: 7
         }, this);
     };
@@ -5658,61 +5722,7 @@ function QuizEngine({ initialState, onReset }) {
         const percentage = progress.score / progress.total * 100;
         const nextLevel = __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$data$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["LEVELS"].find((l)=>l.id === currentLevel.id + 1);
         const canUnlockNext = nextLevel && percentage >= nextLevel.unlock_criteria;
-        // Confetti effect
-        (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
-            if (!animationsEnabled) return;
-            const shootConfetti = ()=>{
-                // Dynamically import confetti only when needed
-                (()=>{
-                    const e = new Error("Cannot find module 'canvas-confetti'");
-                    e.code = 'MODULE_NOT_FOUND';
-                    throw e;
-                })().then((confetti)=>{
-                    const colors = [
-                        '#00D9FF',
-                        '#9D00FF',
-                        '#FFD700'
-                    ]; // cyan, purple, yellow from logo
-                    // Left side explosion
-                    confetti.default({
-                        particleCount: 50,
-                        angle: 60,
-                        spread: 55,
-                        origin: {
-                            x: 0,
-                            y: 1
-                        },
-                        colors: colors,
-                        ticks: 200,
-                        gravity: 1.2,
-                        decay: 0.94,
-                        startVelocity: 45
-                    });
-                    // Right side explosion
-                    confetti.default({
-                        particleCount: 50,
-                        angle: 120,
-                        spread: 55,
-                        origin: {
-                            x: 1,
-                            y: 1
-                        },
-                        colors: colors,
-                        ticks: 200,
-                        gravity: 1.2,
-                        decay: 0.94,
-                        startVelocity: 45
-                    });
-                });
-            };
-            // Initial confetti
-            shootConfetti();
-            // Repeat every 8 seconds
-            const interval = setInterval(shootConfetti, 8000);
-            return ()=>clearInterval(interval);
-        }, [
-            animationsEnabled
-        ]);
+        // Confetti effect moved to top level component
         return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$framer$2d$motion$40$12$2e$23$2e$25_$40$emotion$2b$is$2d$prop$2d$valid$40$1$2e$4$2e$0_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].div, {
             initial: {
                 opacity: 0
@@ -5725,20 +5735,6 @@ function QuizEngine({ initialState, onReset }) {
                 className: "max-w-3xl mx-auto",
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "flex justify-center mb-12",
-                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(Logo, {
-                            size: "medium"
-                        }, void 0, false, {
-                            fileName: "[project]/components/quiz-engine.tsx",
-                            lineNumber: 794,
-                            columnNumber: 13
-                        }, this)
-                    }, void 0, false, {
-                        fileName: "[project]/components/quiz-engine.tsx",
-                        lineNumber: 793,
-                        columnNumber: 11
-                    }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         className: "mb-8",
                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Button"], {
                             variant: "ghost",
@@ -5747,47 +5743,33 @@ function QuizEngine({ initialState, onReset }) {
                             children: "← Retour à l'accueil"
                         }, void 0, false, {
                             fileName: "[project]/components/quiz-engine.tsx",
-                            lineNumber: 799,
+                            lineNumber: 753,
                             columnNumber: 13
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/components/quiz-engine.tsx",
-                        lineNumber: 798,
+                        lineNumber: 752,
+                        columnNumber: 11
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "flex justify-center mb-12",
+                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$logo$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Logo"], {
+                            size: "medium"
+                        }, void 0, false, {
+                            fileName: "[project]/components/quiz-engine.tsx",
+                            lineNumber: 764,
+                            columnNumber: 13
+                        }, this)
+                    }, void 0, false, {
+                        fileName: "[project]/components/quiz-engine.tsx",
+                        lineNumber: 763,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         className: "text-center",
                         children: [
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$framer$2d$motion$40$12$2e$23$2e$25_$40$emotion$2b$is$2d$prop$2d$valid$40$1$2e$4$2e$0_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].div, {
-                                initial: {
-                                    scale: 0
-                                },
-                                animate: {
-                                    scale: 1
-                                },
-                                transition: {
-                                    type: "spring",
-                                    stiffness: 200,
-                                    delay: 0.2
-                                },
-                                className: "mb-8",
-                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$lucide$2d$react$40$0$2e$454$2e$0_react$40$19$2e$2$2e$0$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$trophy$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Trophy$3e$__["Trophy"], {
-                                    className: "w-24 h-24 mx-auto",
-                                    style: {
-                                        color: currentLevel.theme_color
-                                    }
-                                }, void 0, false, {
-                                    fileName: "[project]/components/quiz-engine.tsx",
-                                    lineNumber: 817,
-                                    columnNumber: 15
-                                }, this)
-                            }, void 0, false, {
-                                fileName: "[project]/components/quiz-engine.tsx",
-                                lineNumber: 811,
-                                columnNumber: 13
-                            }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
-                                className: "text-5xl md:text-6xl font-bold mb-6",
+                                className: "text-4xl md:text-5xl font-bold mb-6",
                                 style: {
                                     color: currentLevel.theme_color
                                 },
@@ -5798,11 +5780,11 @@ function QuizEngine({ initialState, onReset }) {
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/quiz-engine.tsx",
-                                lineNumber: 824,
+                                lineNumber: 772,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                className: "text-4xl md:text-5xl font-bold mb-8",
+                                className: "text-3xl md:text-4xl font-bold mb-8 opacity-80",
                                 style: {
                                     color: currentLevel.theme_color
                                 },
@@ -5814,7 +5796,7 @@ function QuizEngine({ initialState, onReset }) {
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/quiz-engine.tsx",
-                                lineNumber: 832,
+                                lineNumber: 780,
                                 columnNumber: 13
                             }, this),
                             percentage >= 70 ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -5822,21 +5804,21 @@ function QuizEngine({ initialState, onReset }) {
                                 children: "Excellent travail ! Votre cerveau est affûté !"
                             }, void 0, false, {
                                 fileName: "[project]/components/quiz-engine.tsx",
-                                lineNumber: 841,
+                                lineNumber: 789,
                                 columnNumber: 15
                             }, this) : percentage >= 50 ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                 className: "text-foreground text-xl mb-12",
                                 children: "Pas mal ! Continuez à vous entraîner."
                             }, void 0, false, {
                                 fileName: "[project]/components/quiz-engine.tsx",
-                                lineNumber: 845,
+                                lineNumber: 793,
                                 columnNumber: 15
                             }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                 className: "text-foreground text-xl mb-12",
                                 children: "Courage ! La pratique fait le maître."
                             }, void 0, false, {
                                 fileName: "[project]/components/quiz-engine.tsx",
-                                lineNumber: 849,
+                                lineNumber: 797,
                                 columnNumber: 15
                             }, this),
                             canUnlockNext && nextLevel && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -5851,7 +5833,7 @@ function QuizEngine({ initialState, onReset }) {
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/components/quiz-engine.tsx",
-                                        lineNumber: 857,
+                                        lineNumber: 805,
                                         columnNumber: 17
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -5859,7 +5841,7 @@ function QuizEngine({ initialState, onReset }) {
                                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Button"], {
                                             onClick: ()=>startLevel(nextLevel),
                                             size: "lg",
-                                            className: "w-full sm:max-w-xs",
+                                            className: "w-full sm:max-w-xs text-lg py-6",
                                             style: {
                                                 backgroundColor: nextLevel.theme_color,
                                                 color: "#000"
@@ -5870,18 +5852,18 @@ function QuizEngine({ initialState, onReset }) {
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/components/quiz-engine.tsx",
-                                            lineNumber: 861,
+                                            lineNumber: 809,
                                             columnNumber: 19
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/components/quiz-engine.tsx",
-                                        lineNumber: 860,
+                                        lineNumber: 808,
                                         columnNumber: 17
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/quiz-engine.tsx",
-                                lineNumber: 856,
+                                lineNumber: 804,
                                 columnNumber: 15
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -5895,36 +5877,36 @@ function QuizEngine({ initialState, onReset }) {
                                             className: "w-4 h-4 mr-2"
                                         }, void 0, false, {
                                             fileName: "[project]/components/quiz-engine.tsx",
-                                            lineNumber: 884,
+                                            lineNumber: 832,
                                             columnNumber: 19
                                         }, this),
                                         "Refaire ce niveau"
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/quiz-engine.tsx",
-                                    lineNumber: 879,
+                                    lineNumber: 827,
                                     columnNumber: 17
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/components/quiz-engine.tsx",
-                                lineNumber: 877,
+                                lineNumber: 825,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/quiz-engine.tsx",
-                        lineNumber: 809,
+                        lineNumber: 768,
                         columnNumber: 11
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/quiz-engine.tsx",
-                lineNumber: 791,
+                lineNumber: 750,
                 columnNumber: 9
             }, this)
         }, void 0, false, {
             fileName: "[project]/components/quiz-engine.tsx",
-            lineNumber: 786,
+            lineNumber: 745,
             columnNumber: 7
         }, this);
     };
@@ -5950,7 +5932,7 @@ function QuizEngine({ initialState, onReset }) {
                                     children: "← Retour"
                                 }, void 0, false, {
                                     fileName: "[project]/components/quiz-engine.tsx",
-                                    lineNumber: 899,
+                                    lineNumber: 847,
                                     columnNumber: 11
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -5964,7 +5946,7 @@ function QuizEngine({ initialState, onReset }) {
                                                     "aria-hidden": "true"
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/quiz-engine.tsx",
-                                                    lineNumber: 904,
+                                                    lineNumber: 852,
                                                     columnNumber: 15
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -5972,14 +5954,14 @@ function QuizEngine({ initialState, onReset }) {
                                                     children: "Bibliothèque"
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/quiz-engine.tsx",
-                                                    lineNumber: 905,
+                                                    lineNumber: 853,
                                                     columnNumber: 15
                                                 }, this),
                                                 "Bibliothèque des Biais"
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/components/quiz-engine.tsx",
-                                            lineNumber: 903,
+                                            lineNumber: 851,
                                             columnNumber: 13
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -5992,19 +5974,19 @@ function QuizEngine({ initialState, onReset }) {
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/components/quiz-engine.tsx",
-                                            lineNumber: 908,
+                                            lineNumber: 856,
                                             columnNumber: 13
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/quiz-engine.tsx",
-                                    lineNumber: 902,
+                                    lineNumber: 850,
                                     columnNumber: 11
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/quiz-engine.tsx",
-                            lineNumber: 898,
+                            lineNumber: 846,
                             columnNumber: 9
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$progress$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Progress"], {
@@ -6012,7 +5994,7 @@ function QuizEngine({ initialState, onReset }) {
                             className: "h-2 mb-8"
                         }, void 0, false, {
                             fileName: "[project]/components/quiz-engine.tsx",
-                            lineNumber: 914,
+                            lineNumber: 862,
                             columnNumber: 9
                         }, this),
                         __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$data$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["LEVELS"].map((level)=>{
@@ -6033,7 +6015,7 @@ function QuizEngine({ initialState, onReset }) {
                                                 }
                                             }, void 0, false, {
                                                 fileName: "[project]/components/quiz-engine.tsx",
-                                                lineNumber: 923,
+                                                lineNumber: 871,
                                                 columnNumber: 17
                                             }, this),
                                             "Niveau ",
@@ -6041,7 +6023,7 @@ function QuizEngine({ initialState, onReset }) {
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/components/quiz-engine.tsx",
-                                        lineNumber: 922,
+                                        lineNumber: 870,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -6052,25 +6034,25 @@ function QuizEngine({ initialState, onReset }) {
                                                 onClick: ()=>setSelectedBias(bias)
                                             }, bias.bias_id, false, {
                                                 fileName: "[project]/components/quiz-engine.tsx",
-                                                lineNumber: 929,
+                                                lineNumber: 877,
                                                 columnNumber: 19
                                             }, this))
                                     }, void 0, false, {
                                         fileName: "[project]/components/quiz-engine.tsx",
-                                        lineNumber: 927,
+                                        lineNumber: 875,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, level.id, true, {
                                 fileName: "[project]/components/quiz-engine.tsx",
-                                lineNumber: 921,
+                                lineNumber: 869,
                                 columnNumber: 13
                             }, this);
                         })
                     ]
                 }, void 0, true, {
                     fileName: "[project]/components/quiz-engine.tsx",
-                    lineNumber: 897,
+                    lineNumber: 845,
                     columnNumber: 7
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$framer$2d$motion$40$12$2e$23$2e$25_$40$emotion$2b$is$2d$prop$2d$valid$40$1$2e$4$2e$0_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$components$2f$AnimatePresence$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["AnimatePresence"], {
@@ -6109,7 +6091,7 @@ function QuizEngine({ initialState, onReset }) {
                                         children: selectedBias.name
                                     }, void 0, false, {
                                         fileName: "[project]/components/quiz-engine.tsx",
-                                        lineNumber: 960,
+                                        lineNumber: 908,
                                         columnNumber: 17
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -6117,7 +6099,7 @@ function QuizEngine({ initialState, onReset }) {
                                         children: selectedBias.category
                                     }, void 0, false, {
                                         fileName: "[project]/components/quiz-engine.tsx",
-                                        lineNumber: 961,
+                                        lineNumber: 909,
                                         columnNumber: 17
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -6130,7 +6112,7 @@ function QuizEngine({ initialState, onReset }) {
                                                         children: "DÉFINITION"
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/quiz-engine.tsx",
-                                                        lineNumber: 967,
+                                                        lineNumber: 915,
                                                         columnNumber: 21
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -6138,13 +6120,13 @@ function QuizEngine({ initialState, onReset }) {
                                                         children: selectedBias.definition
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/quiz-engine.tsx",
-                                                        lineNumber: 968,
+                                                        lineNumber: 916,
                                                         columnNumber: 21
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/components/quiz-engine.tsx",
-                                                lineNumber: 966,
+                                                lineNumber: 914,
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -6157,14 +6139,14 @@ function QuizEngine({ initialState, onReset }) {
                                                                 className: "w-4 h-4 text-neon-yellow"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/components/quiz-engine.tsx",
-                                                                lineNumber: 973,
+                                                                lineNumber: 921,
                                                                 columnNumber: 23
                                                             }, this),
                                                             "CONTRE-MESURE"
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/components/quiz-engine.tsx",
-                                                        lineNumber: 972,
+                                                        lineNumber: 920,
                                                         columnNumber: 21
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -6172,19 +6154,19 @@ function QuizEngine({ initialState, onReset }) {
                                                         children: selectedBias.counter_tactic
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/quiz-engine.tsx",
-                                                        lineNumber: 976,
+                                                        lineNumber: 924,
                                                         columnNumber: 21
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/components/quiz-engine.tsx",
-                                                lineNumber: 971,
+                                                lineNumber: 919,
                                                 columnNumber: 19
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/components/quiz-engine.tsx",
-                                        lineNumber: 965,
+                                        lineNumber: 913,
                                         columnNumber: 17
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Button"], {
@@ -6193,34 +6175,34 @@ function QuizEngine({ initialState, onReset }) {
                                         children: "Fermer"
                                     }, void 0, false, {
                                         fileName: "[project]/components/quiz-engine.tsx",
-                                        lineNumber: 980,
+                                        lineNumber: 928,
                                         columnNumber: 17
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/quiz-engine.tsx",
-                                lineNumber: 959,
+                                lineNumber: 907,
                                 columnNumber: 15
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/components/quiz-engine.tsx",
-                            lineNumber: 952,
+                            lineNumber: 900,
                             columnNumber: 13
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/components/quiz-engine.tsx",
-                        lineNumber: 945,
+                        lineNumber: 893,
                         columnNumber: 11
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/components/quiz-engine.tsx",
-                    lineNumber: 943,
+                    lineNumber: 891,
                     columnNumber: 7
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/components/quiz-engine.tsx",
-            lineNumber: 896,
+            lineNumber: 844,
             columnNumber: 5
         }, this);
     // --- Main Render ---
@@ -6234,14 +6216,14 @@ function QuizEngine({ initialState, onReset }) {
                         className: "absolute top-0 left-1/4 w-96 h-96 bg-neon-cyan/5 rounded-full blur-3xl"
                     }, void 0, false, {
                         fileName: "[project]/components/quiz-engine.tsx",
-                        lineNumber: 996,
+                        lineNumber: 944,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         className: "absolute bottom-0 right-1/4 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl"
                     }, void 0, false, {
                         fileName: "[project]/components/quiz-engine.tsx",
-                        lineNumber: 997,
+                        lineNumber: 945,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -6252,13 +6234,13 @@ function QuizEngine({ initialState, onReset }) {
                         }
                     }, void 0, false, {
                         fileName: "[project]/components/quiz-engine.tsx",
-                        lineNumber: 998,
+                        lineNumber: 946,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/quiz-engine.tsx",
-                lineNumber: 995,
+                lineNumber: 943,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -6271,7 +6253,7 @@ function QuizEngine({ initialState, onReset }) {
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/quiz-engine.tsx",
-                lineNumber: 1008,
+                lineNumber: 956,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$framer$2d$motion$40$12$2e$23$2e$25_$40$emotion$2b$is$2d$prop$2d$valid$40$1$2e$4$2e$0_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$components$2f$AnimatePresence$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["AnimatePresence"], {
@@ -6283,12 +6265,12 @@ function QuizEngine({ initialState, onReset }) {
                     onReset: onReset
                 }, void 0, false, {
                     fileName: "[project]/components/quiz-engine.tsx",
-                    lineNumber: 1017,
+                    lineNumber: 965,
                     columnNumber: 11
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/components/quiz-engine.tsx",
-                lineNumber: 1015,
+                lineNumber: 963,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$alert$2d$dialog$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["AlertDialog"], {
@@ -6304,7 +6286,7 @@ function QuizEngine({ initialState, onReset }) {
                                     children: "Recommencer le jeu ?"
                                 }, void 0, false, {
                                     fileName: "[project]/components/quiz-engine.tsx",
-                                    lineNumber: 1031,
+                                    lineNumber: 979,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$alert$2d$dialog$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["AlertDialogDescription"], {
@@ -6312,13 +6294,13 @@ function QuizEngine({ initialState, onReset }) {
                                     children: "Êtes-vous sûr de vouloir tout effacer ? Votre progression et vos biais débloqués seront perdus."
                                 }, void 0, false, {
                                     fileName: "[project]/components/quiz-engine.tsx",
-                                    lineNumber: 1032,
+                                    lineNumber: 980,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/quiz-engine.tsx",
-                            lineNumber: 1030,
+                            lineNumber: 978,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$alert$2d$dialog$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["AlertDialogFooter"], {
@@ -6328,7 +6310,7 @@ function QuizEngine({ initialState, onReset }) {
                                     children: "Annuler"
                                 }, void 0, false, {
                                     fileName: "[project]/components/quiz-engine.tsx",
-                                    lineNumber: 1037,
+                                    lineNumber: 985,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$alert$2d$dialog$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["AlertDialogAction"], {
@@ -6340,30 +6322,30 @@ function QuizEngine({ initialState, onReset }) {
                                     children: "Tout effacer"
                                 }, void 0, false, {
                                     fileName: "[project]/components/quiz-engine.tsx",
-                                    lineNumber: 1040,
+                                    lineNumber: 988,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/quiz-engine.tsx",
-                            lineNumber: 1036,
+                            lineNumber: 984,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/components/quiz-engine.tsx",
-                    lineNumber: 1029,
+                    lineNumber: 977,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/components/quiz-engine.tsx",
-                lineNumber: 1028,
+                lineNumber: 976,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/components/quiz-engine.tsx",
-        lineNumber: 993,
+        lineNumber: 941,
         columnNumber: 5
     }, this);
 }
@@ -7287,6 +7269,7 @@ function Home() {
                 }
             };
             setQuizState(updatedState);
+            setResetCounter((prev)=>prev + 1); // Force remount to apply new state
         } else if (page === 'certificate') {
             // Navigate to certificate screen with all levels completed
             const allCompletedProgress = __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$data$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["LEVELS"].reduce((acc, level)=>{
@@ -7304,6 +7287,7 @@ function Home() {
                 totalScore: 60
             };
             setQuizState(updatedState);
+            setResetCounter((prev)=>prev + 1); // Force remount to apply new state
             // Trigger certificate display via a state update after a brief delay
             setTimeout(()=>{
                 setQuizState((prev)=>prev ? {
@@ -7324,26 +7308,32 @@ function Home() {
                     onDemoPageRequested: handleDemoPage
                 }, void 0, false, {
                     fileName: "[project]/app/page.tsx",
-                    lineNumber: 115,
+                    lineNumber: 117,
                     columnNumber: 11
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/app/page.tsx",
-                lineNumber: 114,
+                lineNumber: 116,
                 columnNumber: 9
             }, this),
             quizState && quizState.userProfile ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$quiz$2d$engine$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["QuizEngine"], {
                 initialState: quizState,
-                onReset: handleReset
+                onReset: handleReset,
+                onGameStateChange: (newState)=>{
+                    setQuizState((prev)=>prev ? {
+                            ...prev,
+                            gameState: newState
+                        } : null);
+                }
             }, resetCounter, false, {
                 fileName: "[project]/app/page.tsx",
-                lineNumber: 119,
+                lineNumber: 121,
                 columnNumber: 9
             }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$onboarding$2d$form$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["OnboardingForm"], {
                 onComplete: handleOnboardingComplete
             }, void 0, false, {
                 fileName: "[project]/app/page.tsx",
-                lineNumber: 121,
+                lineNumber: 130,
                 columnNumber: 9
             }, this)
         ]
@@ -7352,4 +7342,4 @@ function Home() {
 }),
 ];
 
-//# sourceMappingURL=_c9701864._.js.map
+//# sourceMappingURL=_4c3cd8b0._.js.map

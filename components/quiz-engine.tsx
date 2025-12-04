@@ -16,11 +16,13 @@ import { ScanAnimation } from "./scan-animation"
 import { PricingGridQuestion } from "./pricing-grid-question"
 import { BiasWikiCard } from "./bias-wiki-card"
 import { Certificate } from "./certificate"
+import { Logo } from "./logo"
 
 import { saveState, type QuizState as BaseQuizState, type UserProfile, type QuestionAnswer } from "@/lib/storage"
 import { useSettings } from "@/lib/settings-context"
 import { LEVELS, QUESTIONS, BIAS_LIBRARY, type Level, type Question, type BiasEntry, shuffleArray } from "@/lib/data"
 import { saveUserScore } from "@/lib/supabase/score-manager"
+import { useConfetti } from "@/hooks/use-confetti"
 import {
   AlertDialog,
   AlertDialogAction,
@@ -39,6 +41,7 @@ import { BiasCategoryIcon, categoryColors } from "@/components/ui/icons"
 interface QuizEngineProps {
   initialState: BaseQuizState
   onReset: () => void
+  onGameStateChange?: (newState: GameState) => void
 }
 
 // ------------------------------
@@ -85,6 +88,21 @@ function quizReducer(state: QuizState, action: Action): QuizState {
       const unansweredQuestions = allLevelQuestions.filter(
         q => !correctlyAnsweredIds.includes(q.id)
       );
+
+      // If all questions are answered correctly, show level complete screen directly
+      if (unansweredQuestions.length === 0) {
+        return {
+          ...state,
+          gameState: "levelComplete",
+          currentLevelId: action.payload.id,
+          questions: allLevelQuestions, // Keep questions for reference
+          currentQuestionIndex: 0,
+          selectedAnswer: null,
+          isScanning: false,
+          scanResult: null,
+          showExplanation: false,
+        }
+      }
 
       // Randomize the filtered questions
       const randomizedQuestions = shuffleArray(unansweredQuestions).map(q => ({
@@ -234,7 +252,7 @@ function quizReducer(state: QuizState, action: Action): QuizState {
 // ------------------------------
 // COMPONENT
 // ------------------------------
-export function QuizEngine({ initialState, onReset }: QuizEngineProps) {
+export function QuizEngine({ initialState, onReset, onGameStateChange }: QuizEngineProps) {
   const { theme, setTheme } = useTheme()
   const { animationsEnabled, cheatMode } = useSettings()
 
@@ -249,7 +267,7 @@ export function QuizEngine({ initialState, onReset }: QuizEngineProps) {
     selectedBias: null,
     showCertificate: false,
     showResetDialog: false,
-  })
+  } as QuizState)
 
   // Destructure state for easier access in the render methods
   const {
@@ -258,21 +276,24 @@ export function QuizEngine({ initialState, onReset }: QuizEngineProps) {
     currentLevelId,
     questions,
     currentQuestionIndex,
+    levelProgress,
+    unlockedBiases,
+    completedQuestionIds,
+    allLevelsCompleted,
     selectedAnswer,
     isScanning,
     scanResult,
     showExplanation,
-    levelProgress,
-    unlockedBiases,
-    allLevelsCompleted,
     selectedBias,
     showCertificate,
-    showResetDialog,
-  } = state;
+    showResetDialog
+  } = state
 
   // Local state for reset dialog and ref for auto-scroll
-  const [showResetDialogLocal, setShowResetDialogLocal] = useState(showResetDialog);
   const explanationRef = useRef<HTMLDivElement>(null);
+
+  // Confetti effect - only active when level is complete and animations are enabled
+  useConfetti(animationsEnabled && gameState === 'levelComplete', 4000)
 
   useEffect(() => {
     if (showExplanation && explanationRef.current) {
@@ -731,85 +752,110 @@ export function QuizEngine({ initialState, onReset }: QuizEngineProps) {
   }
 
   const renderLevelComplete = () => {
-    const progress = levelProgress[currentLevel.id]
-    const percentage = (progress.score / progress.total) * 100
+    if (!currentLevel) return null;
+
+    const progress = levelProgress[currentLevel.id] || { score: 0, total: 20, completed: false };
+    const percentage = progress.total > 0 ? (progress.score / progress.total) * 100 : 0;
     const nextLevel = LEVELS.find((l) => l.id === currentLevel.id + 1)
     const canUnlockNext = nextLevel && percentage >= nextLevel.unlock_criteria
+
+    // Confetti effect moved to top level component
 
     return (
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        className="min-h-screen flex items-center justify-center p-8 pb-20"
+        className="min-h-screen p-8 pb-20"
       >
-        <Card className="max-w-lg w-full p-8 bg-card/50 border-border text-center">
-          <motion.div
-            initial={{ scale: 0 }}
-            animate={{ scale: 1 }}
-            transition={{ type: "spring", stiffness: 200, delay: 0.2 }}
-          >
-            <Trophy className="w-20 h-20 mx-auto mb-6" style={{ color: currentLevel.theme_color }} />
-          </motion.div>
-
-          <h2 className="text-3xl font-bold text-foreground mb-2">Bravo {userProfile?.firstName} !</h2>
-          <p className="text-muted-foreground mb-4">Niveau {currentLevel.name_fr} terminé</p>
-
-          <div className="my-8">
-            <div
-              className="text-6xl font-bold mb-2"
-              style={{ color: percentage >= 70 ? "#00FF88" : percentage >= 50 ? "#FFD700" : "#FF4444" }}
+        <div className="max-w-3xl mx-auto">
+          {/* Back button - top left, BEFORE logo */}
+          <div className="mb-8">
+            <Button
+              variant="ghost"
+              onClick={() => setGameState("menu")}
+              className="text-muted-foreground hover:text-foreground"
             >
-              {Math.round(percentage)}%
-            </div>
-            <p className="text-muted-foreground">
-              {progress.score} / {progress.total} bonnes réponses
-            </p>
+              ← Retour à l'accueil
+            </Button>
           </div>
 
-          {percentage >= 70 ? (
-            <p className="text-green-400 mb-6">🎉 Excellent travail ! Votre cerveau est affûté !</p>
-          ) : percentage >= 50 ? (
-            <p className="text-yellow-400 mb-6">👍 Pas mal ! Continuez à vous entraîner.</p>
-          ) : (
-            <p className="text-red-400 mb-6">💪 Courage ! La pratique fait le maître.</p>
-          )}
+          {/* Logo at top */}
+          <div className="flex justify-center mb-12">
+            <Logo size="medium" />
+          </div>
 
-          {canUnlockNext && nextLevel && (
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.5 }}
-              className="p-4 rounded-lg bg-green-500/10 border border-green-500/50 mb-6"
+          {/* Main content - NO Card wrapper */}
+          <div className="text-center">
+            {/* Trophy REMOVED */}
+
+            {/* Level name - Reduced size by one step */}
+            <h2
+              className="text-4xl md:text-5xl font-bold mb-6"
+              style={{ color: currentLevel.theme_color }}
             >
-              <p className="text-green-400 font-semibold">🔓 Niveau {nextLevel.name_fr} débloqué !</p>
-            </motion.div>
-          )}
+              Niveau {currentLevel.name_fr} terminé
+            </h2>
 
-          <div className="flex flex-col gap-3">
-            {canUnlockNext && nextLevel && (
-              <Button
-                onClick={() => startLevel(nextLevel)}
-                size="lg"
-                className="w-full sm:max-w-xs mx-auto"
-                style={{
-                  backgroundColor: nextLevel.theme_color,
-                  color: "#000",
-                }}
-              >
-                Commencer le niveau {nextLevel.name_fr}
-              </Button>
+            {/* Score - Reduced size by one step & 80% opacity */}
+            <p
+              className="text-3xl md:text-4xl font-bold mb-8 opacity-80"
+              style={{ color: currentLevel.theme_color }}
+            >
+              {progress.score}/{progress.total} bonnes réponses !
+            </p>
+
+            {/* Encouragement message - white, no emoji */}
+            {percentage >= 70 ? (
+              <p className="text-foreground text-xl mb-12">
+                Excellent travail ! Votre cerveau est affûté !
+              </p>
+            ) : percentage >= 50 ? (
+              <p className="text-foreground text-xl mb-12">
+                Pas mal ! Continuez à vous entraîner.
+              </p>
+            ) : (
+              <p className="text-foreground text-xl mb-12">
+                Courage ! La pratique fait le maître.
+              </p>
             )}
 
-            <Button variant="outline" onClick={() => startLevel(currentLevel)} className="border-border w-full sm:max-w-xs mx-auto text-foreground">
-              <RotateCcw className="w-4 h-4 mr-2" />
-              Refaire ce niveau
-            </Button>
+            {/* Next level unlock - simple gray text */}
+            {canUnlockNext && nextLevel && (
+              <div className="mb-8">
+                <p className="text-muted-foreground text-lg mb-4">
+                  Niveau {nextLevel.name_fr} débloqué :
+                </p>
+                <div className="flex flex-col gap-3 items-center">
+                  <Button
+                    onClick={() => startLevel(nextLevel)}
+                    size="lg"
+                    className="w-full sm:max-w-xs text-lg py-6" // Increased text size
+                    style={{
+                      backgroundColor: nextLevel.theme_color,
+                      color: "#000",
+                    }}
+                  >
+                    Commencer le niveau {nextLevel.name_fr}
+                  </Button>
+                </div>
+              </div>
+            )}
 
-            <Button variant="ghost" onClick={() => setGameState("menu")} className="w-full sm:max-w-xs mx-auto text-muted-foreground hover:text-foreground">
-              Retour au menu
-            </Button>
+            {/* Other buttons */}
+            <div className="flex flex-col gap-3 items-center mt-8">
+              {!canUnlockNext && (
+                <Button
+                  variant="outline"
+                  onClick={() => startLevel(currentLevel)}
+                  className="border-border w-full sm:max-w-xs text-foreground"
+                >
+                  <RotateCcw className="w-4 h-4 mr-2" />
+                  Refaire ce niveau
+                </Button>
+              )}
+            </div>
           </div>
-        </Card>
+        </div>
       </motion.div>
     )
   }

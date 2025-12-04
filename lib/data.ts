@@ -91,7 +91,7 @@ export const QUESTIONS: Question[] = [
   {
     id: "N1-03",
     level_id: 1,
-    scenario: 'Le premier prix vu est de 1000€, le second à 800€ semble alors "pas cher".',
+    scenario: 'Ce produit était à 1000€, et il est à 800% maintenant ! Quelle économie !',
     options: [
       { text: "Biais d'Ancrage", is_correct: true, bias_id: "anchoring" },
       { text: "Effet de Leurre", is_correct: false, bias_id: "decoy_effect" },

@@ -36,3 +36,3368 @@ It can also happen if the client has a browser extension installed which messes 
                           >
                   ...
 
+[00:20:37.669] Server  LOG      ✓ Compiled in 42ms
+[00:21:01.459] Server  LOG      ✓ Compiled in 50ms
+[00:21:46.892] Server  LOG      ✓ Compiled in 24ms
+[00:22:04.731] Server  LOG      ✓ Compiled in 22ms
+[00:22:21.369] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head>
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="layout.tsx">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <script>
+                      <RootLayout>
+                        <html lang="fr" suppressHydrationWarning={true}>
+                          <body
++                           className="exo_2_660f6e90-module__vF-6DW__variable geist_mono_d6617093-module__z61v7q__var..."
+-                           className="exo_2_660f6e90-module__vF-6DW__variable geist_mono_d6617093-module__z61v7q__var..."
+                          >
+                  ...
+
+[00:29:35.534] Server  LOG      ✓ Compiled in 27ms
+[00:42:12.906] Server  ERROR    ⨯ ./components/quiz-engine.tsx:745:9
+Module not found: Can't resolve 'canvas-confetti'
+  743 |       const shootConfetti = () => {
+  744 |         // Dynamically import confetti only when needed
+> 745 |         import('canvas-confetti').then((confetti) => {
+      |         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  746 |           const colors = ['#00D9FF', '#9D00FF', '#FFD700']; // cyan, purple, yellow from logo
+  747 |
+  748 |           // Left side explosion
+
+
+
+Import traces:
+  Client Component Browser:
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:42:12.915] Server  ERROR    ⨯ ./components/quiz-engine.tsx:745:9
+Module not found: Can't resolve 'canvas-confetti'
+  743 |       const shootConfetti = () => {
+  744 |         // Dynamically import confetti only when needed
+> 745 |         import('canvas-confetti').then((confetti) => {
+      |         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  746 |           const colors = ['#00D9FF', '#9D00FF', '#FFD700']; // cyan, purple, yellow from logo
+  747 |
+  748 |           // Left side explosion
+
+
+
+Import traces:
+  Client Component Browser:
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:42:12.928] Server  ERROR    ⨯ ./components/quiz-engine.tsx:745:9
+Module not found: Can't resolve 'canvas-confetti'
+  743 |       const shootConfetti = () => {
+  744 |         // Dynamically import confetti only when needed
+> 745 |         import('canvas-confetti').then((confetti) => {
+      |         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  746 |           const colors = ['#00D9FF', '#9D00FF', '#FFD700']; // cyan, purple, yellow from logo
+  747 |
+  748 |           // Left side explosion
+
+
+
+Import traces:
+  Client Component Browser:
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:42:12.937] Server  ERROR    ⨯ ./components/quiz-engine.tsx:745:9
+Module not found: Can't resolve 'canvas-confetti'
+  743 |       const shootConfetti = () => {
+  744 |         // Dynamically import confetti only when needed
+> 745 |         import('canvas-confetti').then((confetti) => {
+      |         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  746 |           const colors = ['#00D9FF', '#9D00FF', '#FFD700']; // cyan, purple, yellow from logo
+  747 |
+  748 |           // Left side explosion
+
+
+
+Import traces:
+  Client Component Browser:
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:42:12.981] Server  ERROR    ⨯ ./components/quiz-engine.tsx:745:9
+Module not found: Can't resolve 'canvas-confetti'
+  743 |       const shootConfetti = () => {
+  744 |         // Dynamically import confetti only when needed
+> 745 |         import('canvas-confetti').then((confetti) => {
+      |         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  746 |           const colors = ['#00D9FF', '#9D00FF', '#FFD700']; // cyan, purple, yellow from logo
+  747 |
+  748 |           // Left side explosion
+
+
+
+Import traces:
+  Client Component Browser:
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:42:13.002] Server  ERROR    ⨯ ./components/quiz-engine.tsx:745:9
+Module not found: Can't resolve 'canvas-confetti'
+  743 |       const shootConfetti = () => {
+  744 |         // Dynamically import confetti only when needed
+> 745 |         import('canvas-confetti').then((confetti) => {
+      |         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  746 |           const colors = ['#00D9FF', '#9D00FF', '#FFD700']; // cyan, purple, yellow from logo
+  747 |
+  748 |           // Left side explosion
+
+
+
+Import traces:
+  Client Component Browser:
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:42:13.018] Server  ERROR    ⨯ ./components/quiz-engine.tsx:745:9
+Module not found: Can't resolve 'canvas-confetti'
+  743 |       const shootConfetti = () => {
+  744 |         // Dynamically import confetti only when needed
+> 745 |         import('canvas-confetti').then((confetti) => {
+      |         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  746 |           const colors = ['#00D9FF', '#9D00FF', '#FFD700']; // cyan, purple, yellow from logo
+  747 |
+  748 |           // Left side explosion
+
+
+
+Import traces:
+  Client Component Browser:
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:42:13.048] Server  ERROR    ⨯ ./components/quiz-engine.tsx:745:9
+Module not found: Can't resolve 'canvas-confetti'
+  743 |       const shootConfetti = () => {
+  744 |         // Dynamically import confetti only when needed
+> 745 |         import('canvas-confetti').then((confetti) => {
+      |         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  746 |           const colors = ['#00D9FF', '#9D00FF', '#FFD700']; // cyan, purple, yellow from logo
+  747 |
+  748 |           // Left side explosion
+
+
+
+Import traces:
+  Client Component Browser:
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:42:13.065] Server  ERROR    ⨯ ./components/quiz-engine.tsx:745:9
+Module not found: Can't resolve 'canvas-confetti'
+  743 |       const shootConfetti = () => {
+  744 |         // Dynamically import confetti only when needed
+> 745 |         import('canvas-confetti').then((confetti) => {
+      |         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  746 |           const colors = ['#00D9FF', '#9D00FF', '#FFD700']; // cyan, purple, yellow from logo
+  747 |
+  748 |           // Left side explosion
+
+
+
+Import traces:
+  Client Component Browser:
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:42:13.077] Server  ERROR    ⨯ ./components/quiz-engine.tsx:745:9
+Module not found: Can't resolve 'canvas-confetti'
+  743 |       const shootConfetti = () => {
+  744 |         // Dynamically import confetti only when needed
+> 745 |         import('canvas-confetti').then((confetti) => {
+      |         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  746 |           const colors = ['#00D9FF', '#9D00FF', '#FFD700']; // cyan, purple, yellow from logo
+  747 |
+  748 |           // Left side explosion
+
+
+
+Import traces:
+  Client Component Browser:
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:42:13.092] Server  ERROR    ⨯ ./components/quiz-engine.tsx:745:9
+Module not found: Can't resolve 'canvas-confetti'
+  743 |       const shootConfetti = () => {
+  744 |         // Dynamically import confetti only when needed
+> 745 |         import('canvas-confetti').then((confetti) => {
+      |         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  746 |           const colors = ['#00D9FF', '#9D00FF', '#FFD700']; // cyan, purple, yellow from logo
+  747 |
+  748 |           // Left side explosion
+
+
+
+Import traces:
+  Client Component Browser:
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:42:13.096] Server  ERROR    ⨯ ./components/quiz-engine.tsx:745:9
+Module not found: Can't resolve 'canvas-confetti'
+  743 |       const shootConfetti = () => {
+  744 |         // Dynamically import confetti only when needed
+> 745 |         import('canvas-confetti').then((confetti) => {
+      |         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  746 |           const colors = ['#00D9FF', '#9D00FF', '#FFD700']; // cyan, purple, yellow from logo
+  747 |
+  748 |           // Left side explosion
+
+
+
+Import traces:
+  Client Component Browser:
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:42:13.102] Server  ERROR    ⨯ ./components/quiz-engine.tsx:745:9
+Module not found: Can't resolve 'canvas-confetti'
+  743 |       const shootConfetti = () => {
+  744 |         // Dynamically import confetti only when needed
+> 745 |         import('canvas-confetti').then((confetti) => {
+      |         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  746 |           const colors = ['#00D9FF', '#9D00FF', '#FFD700']; // cyan, purple, yellow from logo
+  747 |
+  748 |           // Left side explosion
+
+
+
+Import traces:
+  Client Component Browser:
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:42:13.107] Server  ERROR    ⨯ ./components/quiz-engine.tsx:745:9
+Module not found: Can't resolve 'canvas-confetti'
+  743 |       const shootConfetti = () => {
+  744 |         // Dynamically import confetti only when needed
+> 745 |         import('canvas-confetti').then((confetti) => {
+      |         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  746 |           const colors = ['#00D9FF', '#9D00FF', '#FFD700']; // cyan, purple, yellow from logo
+  747 |
+  748 |           // Left side explosion
+
+
+
+Import traces:
+  Client Component Browser:
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:42:13.115] Server  ERROR    ⨯ ./components/quiz-engine.tsx:745:9
+Module not found: Can't resolve 'canvas-confetti'
+  743 |       const shootConfetti = () => {
+  744 |         // Dynamically import confetti only when needed
+> 745 |         import('canvas-confetti').then((confetti) => {
+      |         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  746 |           const colors = ['#00D9FF', '#9D00FF', '#FFD700']; // cyan, purple, yellow from logo
+  747 |
+  748 |           // Left side explosion
+
+
+
+Import traces:
+  Client Component Browser:
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:42:13.122] Server  ERROR    ⨯ ./components/quiz-engine.tsx:745:9
+Module not found: Can't resolve 'canvas-confetti'
+  743 |       const shootConfetti = () => {
+  744 |         // Dynamically import confetti only when needed
+> 745 |         import('canvas-confetti').then((confetti) => {
+      |         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  746 |           const colors = ['#00D9FF', '#9D00FF', '#FFD700']; // cyan, purple, yellow from logo
+  747 |
+  748 |           // Left side explosion
+
+
+
+Import traces:
+  Client Component Browser:
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:42:13.131] Server  ERROR    ⨯ ./components/quiz-engine.tsx:745:9
+Module not found: Can't resolve 'canvas-confetti'
+  743 |       const shootConfetti = () => {
+  744 |         // Dynamically import confetti only when needed
+> 745 |         import('canvas-confetti').then((confetti) => {
+      |         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  746 |           const colors = ['#00D9FF', '#9D00FF', '#FFD700']; // cyan, purple, yellow from logo
+  747 |
+  748 |           // Left side explosion
+
+
+
+Import traces:
+  Client Component Browser:
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:42:13.136] Server  ERROR    ⨯ ./components/quiz-engine.tsx:745:9
+Module not found: Can't resolve 'canvas-confetti'
+  743 |       const shootConfetti = () => {
+  744 |         // Dynamically import confetti only when needed
+> 745 |         import('canvas-confetti').then((confetti) => {
+      |         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  746 |           const colors = ['#00D9FF', '#9D00FF', '#FFD700']; // cyan, purple, yellow from logo
+  747 |
+  748 |           // Left side explosion
+
+
+
+Import traces:
+  Client Component Browser:
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:42:13.142] Server  ERROR    ⨯ ./components/quiz-engine.tsx:745:9
+Module not found: Can't resolve 'canvas-confetti'
+  743 |       const shootConfetti = () => {
+  744 |         // Dynamically import confetti only when needed
+> 745 |         import('canvas-confetti').then((confetti) => {
+      |         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  746 |           const colors = ['#00D9FF', '#9D00FF', '#FFD700']; // cyan, purple, yellow from logo
+  747 |
+  748 |           // Left side explosion
+
+
+
+Import traces:
+  Client Component Browser:
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:42:13.146] Server  ERROR    ⨯ ./components/quiz-engine.tsx:745:9
+Module not found: Can't resolve 'canvas-confetti'
+  743 |       const shootConfetti = () => {
+  744 |         // Dynamically import confetti only when needed
+> 745 |         import('canvas-confetti').then((confetti) => {
+      |         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  746 |           const colors = ['#00D9FF', '#9D00FF', '#FFD700']; // cyan, purple, yellow from logo
+  747 |
+  748 |           // Left side explosion
+
+
+
+Import traces:
+  Client Component Browser:
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:42:13.155] Server  ERROR    ⨯ ./components/quiz-engine.tsx:745:9
+Module not found: Can't resolve 'canvas-confetti'
+  743 |       const shootConfetti = () => {
+  744 |         // Dynamically import confetti only when needed
+> 745 |         import('canvas-confetti').then((confetti) => {
+      |         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  746 |           const colors = ['#00D9FF', '#9D00FF', '#FFD700']; // cyan, purple, yellow from logo
+  747 |
+  748 |           // Left side explosion
+
+
+
+Import traces:
+  Client Component Browser:
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:42:13.160] Server  ERROR    ⨯ ./components/quiz-engine.tsx:745:9
+Module not found: Can't resolve 'canvas-confetti'
+  743 |       const shootConfetti = () => {
+  744 |         // Dynamically import confetti only when needed
+> 745 |         import('canvas-confetti').then((confetti) => {
+      |         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  746 |           const colors = ['#00D9FF', '#9D00FF', '#FFD700']; // cyan, purple, yellow from logo
+  747 |
+  748 |           // Left side explosion
+
+
+
+Import traces:
+  Client Component Browser:
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:42:13.165] Server  ERROR    ⨯ ./components/quiz-engine.tsx:745:9
+Module not found: Can't resolve 'canvas-confetti'
+  743 |       const shootConfetti = () => {
+  744 |         // Dynamically import confetti only when needed
+> 745 |         import('canvas-confetti').then((confetti) => {
+      |         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  746 |           const colors = ['#00D9FF', '#9D00FF', '#FFD700']; // cyan, purple, yellow from logo
+  747 |
+  748 |           // Left side explosion
+
+
+
+Import traces:
+  Client Component Browser:
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:42:13.169] Server  ERROR    ⨯ ./components/quiz-engine.tsx:745:9
+Module not found: Can't resolve 'canvas-confetti'
+  743 |       const shootConfetti = () => {
+  744 |         // Dynamically import confetti only when needed
+> 745 |         import('canvas-confetti').then((confetti) => {
+      |         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  746 |           const colors = ['#00D9FF', '#9D00FF', '#FFD700']; // cyan, purple, yellow from logo
+  747 |
+  748 |           // Left side explosion
+
+
+
+Import traces:
+  Client Component Browser:
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:42:13.174] Server  ERROR    ⨯ ./components/quiz-engine.tsx:745:9
+Module not found: Can't resolve 'canvas-confetti'
+  743 |       const shootConfetti = () => {
+  744 |         // Dynamically import confetti only when needed
+> 745 |         import('canvas-confetti').then((confetti) => {
+      |         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  746 |           const colors = ['#00D9FF', '#9D00FF', '#FFD700']; // cyan, purple, yellow from logo
+  747 |
+  748 |           // Left side explosion
+
+
+
+Import traces:
+  Client Component Browser:
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:42:13.178] Server  ERROR    ⨯ ./components/quiz-engine.tsx:745:9
+Module not found: Can't resolve 'canvas-confetti'
+  743 |       const shootConfetti = () => {
+  744 |         // Dynamically import confetti only when needed
+> 745 |         import('canvas-confetti').then((confetti) => {
+      |         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  746 |           const colors = ['#00D9FF', '#9D00FF', '#FFD700']; // cyan, purple, yellow from logo
+  747 |
+  748 |           // Left side explosion
+
+
+
+Import traces:
+  Client Component Browser:
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:42:13.183] Server  ERROR    ⨯ ./components/quiz-engine.tsx:745:9
+Module not found: Can't resolve 'canvas-confetti'
+  743 |       const shootConfetti = () => {
+  744 |         // Dynamically import confetti only when needed
+> 745 |         import('canvas-confetti').then((confetti) => {
+      |         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  746 |           const colors = ['#00D9FF', '#9D00FF', '#FFD700']; // cyan, purple, yellow from logo
+  747 |
+  748 |           // Left side explosion
+
+
+
+Import traces:
+  Client Component Browser:
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:42:13.187] Server  ERROR    ⨯ ./components/quiz-engine.tsx:745:9
+Module not found: Can't resolve 'canvas-confetti'
+  743 |       const shootConfetti = () => {
+  744 |         // Dynamically import confetti only when needed
+> 745 |         import('canvas-confetti').then((confetti) => {
+      |         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  746 |           const colors = ['#00D9FF', '#9D00FF', '#FFD700']; // cyan, purple, yellow from logo
+  747 |
+  748 |           // Left side explosion
+
+
+
+Import traces:
+  Client Component Browser:
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:42:13.191] Server  ERROR    ⨯ ./components/quiz-engine.tsx:745:9
+Module not found: Can't resolve 'canvas-confetti'
+  743 |       const shootConfetti = () => {
+  744 |         // Dynamically import confetti only when needed
+> 745 |         import('canvas-confetti').then((confetti) => {
+      |         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  746 |           const colors = ['#00D9FF', '#9D00FF', '#FFD700']; // cyan, purple, yellow from logo
+  747 |
+  748 |           // Left side explosion
+
+
+
+Import traces:
+  Client Component Browser:
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:42:13.194] Server  ERROR    ⨯ ./components/quiz-engine.tsx:745:9
+Module not found: Can't resolve 'canvas-confetti'
+  743 |       const shootConfetti = () => {
+  744 |         // Dynamically import confetti only when needed
+> 745 |         import('canvas-confetti').then((confetti) => {
+      |         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  746 |           const colors = ['#00D9FF', '#9D00FF', '#FFD700']; // cyan, purple, yellow from logo
+  747 |
+  748 |           // Left side explosion
+
+
+
+Import traces:
+  Client Component Browser:
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:42:13.199] Server  ERROR    ⨯ ./components/quiz-engine.tsx:745:9
+Module not found: Can't resolve 'canvas-confetti'
+  743 |       const shootConfetti = () => {
+  744 |         // Dynamically import confetti only when needed
+> 745 |         import('canvas-confetti').then((confetti) => {
+      |         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  746 |           const colors = ['#00D9FF', '#9D00FF', '#FFD700']; // cyan, purple, yellow from logo
+  747 |
+  748 |           // Left side explosion
+
+
+
+Import traces:
+  Client Component Browser:
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:42:13.203] Server  ERROR    ⨯ ./components/quiz-engine.tsx:745:9
+Module not found: Can't resolve 'canvas-confetti'
+  743 |       const shootConfetti = () => {
+  744 |         // Dynamically import confetti only when needed
+> 745 |         import('canvas-confetti').then((confetti) => {
+      |         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  746 |           const colors = ['#00D9FF', '#9D00FF', '#FFD700']; // cyan, purple, yellow from logo
+  747 |
+  748 |           // Left side explosion
+
+
+
+Import traces:
+  Client Component Browser:
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:42:13.208] Server  ERROR    ⨯ ./components/quiz-engine.tsx:745:9
+Module not found: Can't resolve 'canvas-confetti'
+  743 |       const shootConfetti = () => {
+  744 |         // Dynamically import confetti only when needed
+> 745 |         import('canvas-confetti').then((confetti) => {
+      |         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  746 |           const colors = ['#00D9FF', '#9D00FF', '#FFD700']; // cyan, purple, yellow from logo
+  747 |
+  748 |           // Left side explosion
+
+
+
+Import traces:
+  Client Component Browser:
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:42:13.211] Server  ERROR    ⨯ ./components/quiz-engine.tsx:745:9
+Module not found: Can't resolve 'canvas-confetti'
+  743 |       const shootConfetti = () => {
+  744 |         // Dynamically import confetti only when needed
+> 745 |         import('canvas-confetti').then((confetti) => {
+      |         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  746 |           const colors = ['#00D9FF', '#9D00FF', '#FFD700']; // cyan, purple, yellow from logo
+  747 |
+  748 |           // Left side explosion
+
+
+
+Import traces:
+  Client Component Browser:
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:42:13.217] Server  ERROR    ⨯ ./components/quiz-engine.tsx:745:9
+Module not found: Can't resolve 'canvas-confetti'
+  743 |       const shootConfetti = () => {
+  744 |         // Dynamically import confetti only when needed
+> 745 |         import('canvas-confetti').then((confetti) => {
+      |         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  746 |           const colors = ['#00D9FF', '#9D00FF', '#FFD700']; // cyan, purple, yellow from logo
+  747 |
+  748 |           // Left side explosion
+
+
+
+Import traces:
+  Client Component Browser:
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:42:13.221] Server  ERROR    ⨯ ./components/quiz-engine.tsx:745:9
+Module not found: Can't resolve 'canvas-confetti'
+  743 |       const shootConfetti = () => {
+  744 |         // Dynamically import confetti only when needed
+> 745 |         import('canvas-confetti').then((confetti) => {
+      |         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  746 |           const colors = ['#00D9FF', '#9D00FF', '#FFD700']; // cyan, purple, yellow from logo
+  747 |
+  748 |           // Left side explosion
+
+
+
+Import traces:
+  Client Component Browser:
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:42:13.226] Server  ERROR    ⨯ ./components/quiz-engine.tsx:745:9
+Module not found: Can't resolve 'canvas-confetti'
+  743 |       const shootConfetti = () => {
+  744 |         // Dynamically import confetti only when needed
+> 745 |         import('canvas-confetti').then((confetti) => {
+      |         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  746 |           const colors = ['#00D9FF', '#9D00FF', '#FFD700']; // cyan, purple, yellow from logo
+  747 |
+  748 |           // Left side explosion
+
+
+
+Import traces:
+  Client Component Browser:
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:42:13.229] Server  ERROR    ⨯ ./components/quiz-engine.tsx:745:9
+Module not found: Can't resolve 'canvas-confetti'
+  743 |       const shootConfetti = () => {
+  744 |         // Dynamically import confetti only when needed
+> 745 |         import('canvas-confetti').then((confetti) => {
+      |         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  746 |           const colors = ['#00D9FF', '#9D00FF', '#FFD700']; // cyan, purple, yellow from logo
+  747 |
+  748 |           // Left side explosion
+
+
+
+Import traces:
+  Client Component Browser:
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:42:13.235] Server  ERROR    ⨯ ./components/quiz-engine.tsx:745:9
+Module not found: Can't resolve 'canvas-confetti'
+  743 |       const shootConfetti = () => {
+  744 |         // Dynamically import confetti only when needed
+> 745 |         import('canvas-confetti').then((confetti) => {
+      |         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  746 |           const colors = ['#00D9FF', '#9D00FF', '#FFD700']; // cyan, purple, yellow from logo
+  747 |
+  748 |           // Left side explosion
+
+
+
+Import traces:
+  Client Component Browser:
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:42:13.238] Server  ERROR    ⨯ ./components/quiz-engine.tsx:745:9
+Module not found: Can't resolve 'canvas-confetti'
+  743 |       const shootConfetti = () => {
+  744 |         // Dynamically import confetti only when needed
+> 745 |         import('canvas-confetti').then((confetti) => {
+      |         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  746 |           const colors = ['#00D9FF', '#9D00FF', '#FFD700']; // cyan, purple, yellow from logo
+  747 |
+  748 |           // Left side explosion
+
+
+
+Import traces:
+  Client Component Browser:
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:42:13.243] Server  ERROR    ⨯ ./components/quiz-engine.tsx:745:9
+Module not found: Can't resolve 'canvas-confetti'
+  743 |       const shootConfetti = () => {
+  744 |         // Dynamically import confetti only when needed
+> 745 |         import('canvas-confetti').then((confetti) => {
+      |         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  746 |           const colors = ['#00D9FF', '#9D00FF', '#FFD700']; // cyan, purple, yellow from logo
+  747 |
+  748 |           // Left side explosion
+
+
+
+Import traces:
+  Client Component Browser:
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:42:13.247] Server  ERROR    ⨯ ./components/quiz-engine.tsx:745:9
+Module not found: Can't resolve 'canvas-confetti'
+  743 |       const shootConfetti = () => {
+  744 |         // Dynamically import confetti only when needed
+> 745 |         import('canvas-confetti').then((confetti) => {
+      |         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  746 |           const colors = ['#00D9FF', '#9D00FF', '#FFD700']; // cyan, purple, yellow from logo
+  747 |
+  748 |           // Left side explosion
+
+
+
+Import traces:
+  Client Component Browser:
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:42:13.251] Server  ERROR    ⨯ ./components/quiz-engine.tsx:745:9
+Module not found: Can't resolve 'canvas-confetti'
+  743 |       const shootConfetti = () => {
+  744 |         // Dynamically import confetti only when needed
+> 745 |         import('canvas-confetti').then((confetti) => {
+      |         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  746 |           const colors = ['#00D9FF', '#9D00FF', '#FFD700']; // cyan, purple, yellow from logo
+  747 |
+  748 |           // Left side explosion
+
+
+
+Import traces:
+  Client Component Browser:
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:42:13.255] Server  ERROR    ⨯ ./components/quiz-engine.tsx:745:9
+Module not found: Can't resolve 'canvas-confetti'
+  743 |       const shootConfetti = () => {
+  744 |         // Dynamically import confetti only when needed
+> 745 |         import('canvas-confetti').then((confetti) => {
+      |         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  746 |           const colors = ['#00D9FF', '#9D00FF', '#FFD700']; // cyan, purple, yellow from logo
+  747 |
+  748 |           // Left side explosion
+
+
+
+Import traces:
+  Client Component Browser:
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:42:13.257] Browser ERROR   ./components/quiz-engine.tsx:745:9
+Module not found: Can't resolve 'canvas-confetti'
+  743 |       const shootConfetti = () => {
+  744 |         // Dynamically import confetti only when needed
+> 745 |         import('canvas-confetti').then((confetti) => {
+      |         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  746 |           const colors = ['#00D9FF', '#9D00FF', '#FFD700']; // cyan, purple, yellow from logo
+  747 |
+  748 |           // Left side explosion
+
+Import traces:
+  Client Component Browser:
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:42:13.257] Browser ERROR   ./components/quiz-engine.tsx:745:9
+Module not found: Can't resolve 'canvas-confetti'
+  743 |       const shootConfetti = () => {
+  744 |         // Dynamically import confetti only when needed
+> 745 |         import('canvas-confetti').then((confetti) => {
+      |         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  746 |           const colors = ['#00D9FF', '#9D00FF', '#FFD700']; // cyan, purple, yellow from logo
+  747 |
+  748 |           // Left side explosion
+
+Import traces:
+  Client Component Browser:
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:42:13.507] Browser ERROR   ./components/quiz-engine.tsx:745:9
+Module not found: Can't resolve 'canvas-confetti'
+  743 |       const shootConfetti = () => {
+  744 |         // Dynamically import confetti only when needed
+> 745 |         import('canvas-confetti').then((confetti) => {
+      |         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  746 |           const colors = ['#00D9FF', '#9D00FF', '#FFD700']; // cyan, purple, yellow from logo
+  747 |
+  748 |           // Left side explosion
+
+Import traces:
+  Client Component Browser:
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:42:29.499] Server  ERROR    ⨯ ./components/quiz-engine.tsx:746:9
+Module not found: Can't resolve 'canvas-confetti'
+  744 |       const shootConfetti = () => {
+  745 |         // Dynamically import confetti only when needed
+> 746 |         import('canvas-confetti').then((confetti) => {
+      |         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  747 |           const colors = ['#00D9FF', '#9D00FF', '#FFD700']; // cyan, purple, yellow from logo
+  748 |
+  749 |           // Left side explosion
+
+
+
+Import traces:
+  Client Component Browser:
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:42:29.502] Server  ERROR    ⨯ ./components/quiz-engine.tsx:746:9
+Module not found: Can't resolve 'canvas-confetti'
+  744 |       const shootConfetti = () => {
+  745 |         // Dynamically import confetti only when needed
+> 746 |         import('canvas-confetti').then((confetti) => {
+      |         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  747 |           const colors = ['#00D9FF', '#9D00FF', '#FFD700']; // cyan, purple, yellow from logo
+  748 |
+  749 |           // Left side explosion
+
+
+
+Import traces:
+  Client Component Browser:
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:42:29.512] Server  ERROR    ⨯ ./components/quiz-engine.tsx:746:9
+Module not found: Can't resolve 'canvas-confetti'
+  744 |       const shootConfetti = () => {
+  745 |         // Dynamically import confetti only when needed
+> 746 |         import('canvas-confetti').then((confetti) => {
+      |         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  747 |           const colors = ['#00D9FF', '#9D00FF', '#FFD700']; // cyan, purple, yellow from logo
+  748 |
+  749 |           // Left side explosion
+
+
+
+Import traces:
+  Client Component Browser:
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:42:29.516] Server  ERROR    ⨯ ./components/quiz-engine.tsx:746:9
+Module not found: Can't resolve 'canvas-confetti'
+  744 |       const shootConfetti = () => {
+  745 |         // Dynamically import confetti only when needed
+> 746 |         import('canvas-confetti').then((confetti) => {
+      |         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  747 |           const colors = ['#00D9FF', '#9D00FF', '#FFD700']; // cyan, purple, yellow from logo
+  748 |
+  749 |           // Left side explosion
+
+
+
+Import traces:
+  Client Component Browser:
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:42:29.520] Server  ERROR    ⨯ ./components/quiz-engine.tsx:746:9
+Module not found: Can't resolve 'canvas-confetti'
+  744 |       const shootConfetti = () => {
+  745 |         // Dynamically import confetti only when needed
+> 746 |         import('canvas-confetti').then((confetti) => {
+      |         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  747 |           const colors = ['#00D9FF', '#9D00FF', '#FFD700']; // cyan, purple, yellow from logo
+  748 |
+  749 |           // Left side explosion
+
+
+
+Import traces:
+  Client Component Browser:
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:42:29.523] Server  ERROR    ⨯ ./components/quiz-engine.tsx:746:9
+Module not found: Can't resolve 'canvas-confetti'
+  744 |       const shootConfetti = () => {
+  745 |         // Dynamically import confetti only when needed
+> 746 |         import('canvas-confetti').then((confetti) => {
+      |         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  747 |           const colors = ['#00D9FF', '#9D00FF', '#FFD700']; // cyan, purple, yellow from logo
+  748 |
+  749 |           // Left side explosion
+
+
+
+Import traces:
+  Client Component Browser:
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:42:29.528] Server  ERROR    ⨯ ./components/quiz-engine.tsx:746:9
+Module not found: Can't resolve 'canvas-confetti'
+  744 |       const shootConfetti = () => {
+  745 |         // Dynamically import confetti only when needed
+> 746 |         import('canvas-confetti').then((confetti) => {
+      |         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  747 |           const colors = ['#00D9FF', '#9D00FF', '#FFD700']; // cyan, purple, yellow from logo
+  748 |
+  749 |           // Left side explosion
+
+
+
+Import traces:
+  Client Component Browser:
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:42:29.531] Server  ERROR    ⨯ ./components/quiz-engine.tsx:746:9
+Module not found: Can't resolve 'canvas-confetti'
+  744 |       const shootConfetti = () => {
+  745 |         // Dynamically import confetti only when needed
+> 746 |         import('canvas-confetti').then((confetti) => {
+      |         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  747 |           const colors = ['#00D9FF', '#9D00FF', '#FFD700']; // cyan, purple, yellow from logo
+  748 |
+  749 |           // Left side explosion
+
+
+
+Import traces:
+  Client Component Browser:
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:42:29.535] Server  ERROR    ⨯ ./components/quiz-engine.tsx:746:9
+Module not found: Can't resolve 'canvas-confetti'
+  744 |       const shootConfetti = () => {
+  745 |         // Dynamically import confetti only when needed
+> 746 |         import('canvas-confetti').then((confetti) => {
+      |         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  747 |           const colors = ['#00D9FF', '#9D00FF', '#FFD700']; // cyan, purple, yellow from logo
+  748 |
+  749 |           // Left side explosion
+
+
+
+Import traces:
+  Client Component Browser:
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:42:29.538] Server  ERROR    ⨯ ./components/quiz-engine.tsx:746:9
+Module not found: Can't resolve 'canvas-confetti'
+  744 |       const shootConfetti = () => {
+  745 |         // Dynamically import confetti only when needed
+> 746 |         import('canvas-confetti').then((confetti) => {
+      |         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  747 |           const colors = ['#00D9FF', '#9D00FF', '#FFD700']; // cyan, purple, yellow from logo
+  748 |
+  749 |           // Left side explosion
+
+
+
+Import traces:
+  Client Component Browser:
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:42:29.542] Server  ERROR    ⨯ ./components/quiz-engine.tsx:746:9
+Module not found: Can't resolve 'canvas-confetti'
+  744 |       const shootConfetti = () => {
+  745 |         // Dynamically import confetti only when needed
+> 746 |         import('canvas-confetti').then((confetti) => {
+      |         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  747 |           const colors = ['#00D9FF', '#9D00FF', '#FFD700']; // cyan, purple, yellow from logo
+  748 |
+  749 |           // Left side explosion
+
+
+
+Import traces:
+  Client Component Browser:
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:42:29.545] Server  ERROR    ⨯ ./components/quiz-engine.tsx:746:9
+Module not found: Can't resolve 'canvas-confetti'
+  744 |       const shootConfetti = () => {
+  745 |         // Dynamically import confetti only when needed
+> 746 |         import('canvas-confetti').then((confetti) => {
+      |         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  747 |           const colors = ['#00D9FF', '#9D00FF', '#FFD700']; // cyan, purple, yellow from logo
+  748 |
+  749 |           // Left side explosion
+
+
+
+Import traces:
+  Client Component Browser:
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:42:29.549] Server  ERROR    ⨯ ./components/quiz-engine.tsx:746:9
+Module not found: Can't resolve 'canvas-confetti'
+  744 |       const shootConfetti = () => {
+  745 |         // Dynamically import confetti only when needed
+> 746 |         import('canvas-confetti').then((confetti) => {
+      |         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  747 |           const colors = ['#00D9FF', '#9D00FF', '#FFD700']; // cyan, purple, yellow from logo
+  748 |
+  749 |           // Left side explosion
+
+
+
+Import traces:
+  Client Component Browser:
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:42:29.553] Server  ERROR    ⨯ ./components/quiz-engine.tsx:746:9
+Module not found: Can't resolve 'canvas-confetti'
+  744 |       const shootConfetti = () => {
+  745 |         // Dynamically import confetti only when needed
+> 746 |         import('canvas-confetti').then((confetti) => {
+      |         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  747 |           const colors = ['#00D9FF', '#9D00FF', '#FFD700']; // cyan, purple, yellow from logo
+  748 |
+  749 |           // Left side explosion
+
+
+
+Import traces:
+  Client Component Browser:
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:42:29.557] Server  ERROR    ⨯ ./components/quiz-engine.tsx:746:9
+Module not found: Can't resolve 'canvas-confetti'
+  744 |       const shootConfetti = () => {
+  745 |         // Dynamically import confetti only when needed
+> 746 |         import('canvas-confetti').then((confetti) => {
+      |         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  747 |           const colors = ['#00D9FF', '#9D00FF', '#FFD700']; // cyan, purple, yellow from logo
+  748 |
+  749 |           // Left side explosion
+
+
+
+Import traces:
+  Client Component Browser:
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:42:29.560] Server  ERROR    ⨯ ./components/quiz-engine.tsx:746:9
+Module not found: Can't resolve 'canvas-confetti'
+  744 |       const shootConfetti = () => {
+  745 |         // Dynamically import confetti only when needed
+> 746 |         import('canvas-confetti').then((confetti) => {
+      |         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  747 |           const colors = ['#00D9FF', '#9D00FF', '#FFD700']; // cyan, purple, yellow from logo
+  748 |
+  749 |           // Left side explosion
+
+
+
+Import traces:
+  Client Component Browser:
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:42:29.563] Server  ERROR    ⨯ ./components/quiz-engine.tsx:746:9
+Module not found: Can't resolve 'canvas-confetti'
+  744 |       const shootConfetti = () => {
+  745 |         // Dynamically import confetti only when needed
+> 746 |         import('canvas-confetti').then((confetti) => {
+      |         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  747 |           const colors = ['#00D9FF', '#9D00FF', '#FFD700']; // cyan, purple, yellow from logo
+  748 |
+  749 |           // Left side explosion
+
+
+
+Import traces:
+  Client Component Browser:
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:42:29.567] Server  ERROR    ⨯ ./components/quiz-engine.tsx:746:9
+Module not found: Can't resolve 'canvas-confetti'
+  744 |       const shootConfetti = () => {
+  745 |         // Dynamically import confetti only when needed
+> 746 |         import('canvas-confetti').then((confetti) => {
+      |         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  747 |           const colors = ['#00D9FF', '#9D00FF', '#FFD700']; // cyan, purple, yellow from logo
+  748 |
+  749 |           // Left side explosion
+
+
+
+Import traces:
+  Client Component Browser:
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:42:29.571] Server  ERROR    ⨯ ./components/quiz-engine.tsx:746:9
+Module not found: Can't resolve 'canvas-confetti'
+  744 |       const shootConfetti = () => {
+  745 |         // Dynamically import confetti only when needed
+> 746 |         import('canvas-confetti').then((confetti) => {
+      |         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  747 |           const colors = ['#00D9FF', '#9D00FF', '#FFD700']; // cyan, purple, yellow from logo
+  748 |
+  749 |           // Left side explosion
+
+
+
+Import traces:
+  Client Component Browser:
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:42:29.574] Server  ERROR    ⨯ ./components/quiz-engine.tsx:746:9
+Module not found: Can't resolve 'canvas-confetti'
+  744 |       const shootConfetti = () => {
+  745 |         // Dynamically import confetti only when needed
+> 746 |         import('canvas-confetti').then((confetti) => {
+      |         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  747 |           const colors = ['#00D9FF', '#9D00FF', '#FFD700']; // cyan, purple, yellow from logo
+  748 |
+  749 |           // Left side explosion
+
+
+
+Import traces:
+  Client Component Browser:
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:42:29.579] Server  ERROR    ⨯ ./components/quiz-engine.tsx:746:9
+Module not found: Can't resolve 'canvas-confetti'
+  744 |       const shootConfetti = () => {
+  745 |         // Dynamically import confetti only when needed
+> 746 |         import('canvas-confetti').then((confetti) => {
+      |         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  747 |           const colors = ['#00D9FF', '#9D00FF', '#FFD700']; // cyan, purple, yellow from logo
+  748 |
+  749 |           // Left side explosion
+
+
+
+Import traces:
+  Client Component Browser:
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:42:29.582] Server  ERROR    ⨯ ./components/quiz-engine.tsx:746:9
+Module not found: Can't resolve 'canvas-confetti'
+  744 |       const shootConfetti = () => {
+  745 |         // Dynamically import confetti only when needed
+> 746 |         import('canvas-confetti').then((confetti) => {
+      |         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  747 |           const colors = ['#00D9FF', '#9D00FF', '#FFD700']; // cyan, purple, yellow from logo
+  748 |
+  749 |           // Left side explosion
+
+
+
+Import traces:
+  Client Component Browser:
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:42:29.586] Server  ERROR    ⨯ ./components/quiz-engine.tsx:746:9
+Module not found: Can't resolve 'canvas-confetti'
+  744 |       const shootConfetti = () => {
+  745 |         // Dynamically import confetti only when needed
+> 746 |         import('canvas-confetti').then((confetti) => {
+      |         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  747 |           const colors = ['#00D9FF', '#9D00FF', '#FFD700']; // cyan, purple, yellow from logo
+  748 |
+  749 |           // Left side explosion
+
+
+
+Import traces:
+  Client Component Browser:
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:42:29.591] Server  ERROR    ⨯ ./components/quiz-engine.tsx:746:9
+Module not found: Can't resolve 'canvas-confetti'
+  744 |       const shootConfetti = () => {
+  745 |         // Dynamically import confetti only when needed
+> 746 |         import('canvas-confetti').then((confetti) => {
+      |         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  747 |           const colors = ['#00D9FF', '#9D00FF', '#FFD700']; // cyan, purple, yellow from logo
+  748 |
+  749 |           // Left side explosion
+
+
+
+Import traces:
+  Client Component Browser:
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:42:29.594] Server  ERROR    ⨯ ./components/quiz-engine.tsx:746:9
+Module not found: Can't resolve 'canvas-confetti'
+  744 |       const shootConfetti = () => {
+  745 |         // Dynamically import confetti only when needed
+> 746 |         import('canvas-confetti').then((confetti) => {
+      |         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  747 |           const colors = ['#00D9FF', '#9D00FF', '#FFD700']; // cyan, purple, yellow from logo
+  748 |
+  749 |           // Left side explosion
+
+
+
+Import traces:
+  Client Component Browser:
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:42:29.597] Server  ERROR    ⨯ ./components/quiz-engine.tsx:746:9
+Module not found: Can't resolve 'canvas-confetti'
+  744 |       const shootConfetti = () => {
+  745 |         // Dynamically import confetti only when needed
+> 746 |         import('canvas-confetti').then((confetti) => {
+      |         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  747 |           const colors = ['#00D9FF', '#9D00FF', '#FFD700']; // cyan, purple, yellow from logo
+  748 |
+  749 |           // Left side explosion
+
+
+
+Import traces:
+  Client Component Browser:
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:42:29.601] Server  ERROR    ⨯ ./components/quiz-engine.tsx:746:9
+Module not found: Can't resolve 'canvas-confetti'
+  744 |       const shootConfetti = () => {
+  745 |         // Dynamically import confetti only when needed
+> 746 |         import('canvas-confetti').then((confetti) => {
+      |         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  747 |           const colors = ['#00D9FF', '#9D00FF', '#FFD700']; // cyan, purple, yellow from logo
+  748 |
+  749 |           // Left side explosion
+
+
+
+Import traces:
+  Client Component Browser:
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:42:29.605] Server  ERROR    ⨯ ./components/quiz-engine.tsx:746:9
+Module not found: Can't resolve 'canvas-confetti'
+  744 |       const shootConfetti = () => {
+  745 |         // Dynamically import confetti only when needed
+> 746 |         import('canvas-confetti').then((confetti) => {
+      |         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  747 |           const colors = ['#00D9FF', '#9D00FF', '#FFD700']; // cyan, purple, yellow from logo
+  748 |
+  749 |           // Left side explosion
+
+
+
+Import traces:
+  Client Component Browser:
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:42:29.611] Server  ERROR    ⨯ ./components/quiz-engine.tsx:746:9
+Module not found: Can't resolve 'canvas-confetti'
+  744 |       const shootConfetti = () => {
+  745 |         // Dynamically import confetti only when needed
+> 746 |         import('canvas-confetti').then((confetti) => {
+      |         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  747 |           const colors = ['#00D9FF', '#9D00FF', '#FFD700']; // cyan, purple, yellow from logo
+  748 |
+  749 |           // Left side explosion
+
+
+
+Import traces:
+  Client Component Browser:
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:42:29.616] Server  ERROR    ⨯ ./components/quiz-engine.tsx:746:9
+Module not found: Can't resolve 'canvas-confetti'
+  744 |       const shootConfetti = () => {
+  745 |         // Dynamically import confetti only when needed
+> 746 |         import('canvas-confetti').then((confetti) => {
+      |         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  747 |           const colors = ['#00D9FF', '#9D00FF', '#FFD700']; // cyan, purple, yellow from logo
+  748 |
+  749 |           // Left side explosion
+
+
+
+Import traces:
+  Client Component Browser:
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:42:29.622] Server  ERROR    ⨯ ./components/quiz-engine.tsx:746:9
+Module not found: Can't resolve 'canvas-confetti'
+  744 |       const shootConfetti = () => {
+  745 |         // Dynamically import confetti only when needed
+> 746 |         import('canvas-confetti').then((confetti) => {
+      |         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  747 |           const colors = ['#00D9FF', '#9D00FF', '#FFD700']; // cyan, purple, yellow from logo
+  748 |
+  749 |           // Left side explosion
+
+
+
+Import traces:
+  Client Component Browser:
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:42:29.625] Server  ERROR    ⨯ ./components/quiz-engine.tsx:746:9
+Module not found: Can't resolve 'canvas-confetti'
+  744 |       const shootConfetti = () => {
+  745 |         // Dynamically import confetti only when needed
+> 746 |         import('canvas-confetti').then((confetti) => {
+      |         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  747 |           const colors = ['#00D9FF', '#9D00FF', '#FFD700']; // cyan, purple, yellow from logo
+  748 |
+  749 |           // Left side explosion
+
+
+
+Import traces:
+  Client Component Browser:
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:42:29.630] Server  ERROR    ⨯ ./components/quiz-engine.tsx:746:9
+Module not found: Can't resolve 'canvas-confetti'
+  744 |       const shootConfetti = () => {
+  745 |         // Dynamically import confetti only when needed
+> 746 |         import('canvas-confetti').then((confetti) => {
+      |         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  747 |           const colors = ['#00D9FF', '#9D00FF', '#FFD700']; // cyan, purple, yellow from logo
+  748 |
+  749 |           // Left side explosion
+
+
+
+Import traces:
+  Client Component Browser:
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:42:29.634] Server  ERROR    ⨯ ./components/quiz-engine.tsx:746:9
+Module not found: Can't resolve 'canvas-confetti'
+  744 |       const shootConfetti = () => {
+  745 |         // Dynamically import confetti only when needed
+> 746 |         import('canvas-confetti').then((confetti) => {
+      |         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  747 |           const colors = ['#00D9FF', '#9D00FF', '#FFD700']; // cyan, purple, yellow from logo
+  748 |
+  749 |           // Left side explosion
+
+
+
+Import traces:
+  Client Component Browser:
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:42:29.643] Server  ERROR    ⨯ ./components/quiz-engine.tsx:746:9
+Module not found: Can't resolve 'canvas-confetti'
+  744 |       const shootConfetti = () => {
+  745 |         // Dynamically import confetti only when needed
+> 746 |         import('canvas-confetti').then((confetti) => {
+      |         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  747 |           const colors = ['#00D9FF', '#9D00FF', '#FFD700']; // cyan, purple, yellow from logo
+  748 |
+  749 |           // Left side explosion
+
+
+
+Import traces:
+  Client Component Browser:
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:42:29.648] Server  ERROR    ⨯ ./components/quiz-engine.tsx:746:9
+Module not found: Can't resolve 'canvas-confetti'
+  744 |       const shootConfetti = () => {
+  745 |         // Dynamically import confetti only when needed
+> 746 |         import('canvas-confetti').then((confetti) => {
+      |         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  747 |           const colors = ['#00D9FF', '#9D00FF', '#FFD700']; // cyan, purple, yellow from logo
+  748 |
+  749 |           // Left side explosion
+
+
+
+Import traces:
+  Client Component Browser:
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:42:29.653] Server  ERROR    ⨯ ./components/quiz-engine.tsx:746:9
+Module not found: Can't resolve 'canvas-confetti'
+  744 |       const shootConfetti = () => {
+  745 |         // Dynamically import confetti only when needed
+> 746 |         import('canvas-confetti').then((confetti) => {
+      |         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  747 |           const colors = ['#00D9FF', '#9D00FF', '#FFD700']; // cyan, purple, yellow from logo
+  748 |
+  749 |           // Left side explosion
+
+
+
+Import traces:
+  Client Component Browser:
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:42:29.657] Server  ERROR    ⨯ ./components/quiz-engine.tsx:746:9
+Module not found: Can't resolve 'canvas-confetti'
+  744 |       const shootConfetti = () => {
+  745 |         // Dynamically import confetti only when needed
+> 746 |         import('canvas-confetti').then((confetti) => {
+      |         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  747 |           const colors = ['#00D9FF', '#9D00FF', '#FFD700']; // cyan, purple, yellow from logo
+  748 |
+  749 |           // Left side explosion
+
+
+
+Import traces:
+  Client Component Browser:
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:42:29.663] Server  LOG      ✓ Compiled in 71ms
+[00:42:29.772] Browser ERROR   ./components/quiz-engine.tsx:746:9
+Module not found: Can't resolve 'canvas-confetti'
+  744 |       const shootConfetti = () => {
+  745 |         // Dynamically import confetti only when needed
+> 746 |         import('canvas-confetti').then((confetti) => {
+      |         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  747 |           const colors = ['#00D9FF', '#9D00FF', '#FFD700']; // cyan, purple, yellow from logo
+  748 |
+  749 |           // Left side explosion
+
+Import traces:
+  Client Component Browser:
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:42:29.772] Browser ERROR   ./components/quiz-engine.tsx:746:9
+Module not found: Can't resolve 'canvas-confetti'
+  744 |       const shootConfetti = () => {
+  745 |         // Dynamically import confetti only when needed
+> 746 |         import('canvas-confetti').then((confetti) => {
+      |         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  747 |           const colors = ['#00D9FF', '#9D00FF', '#FFD700']; // cyan, purple, yellow from logo
+  748 |
+  749 |           // Left side explosion
+
+Import traces:
+  Client Component Browser:
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:42:30.505] Browser ERROR   ./components/quiz-engine.tsx:746:9
+Module not found: Can't resolve 'canvas-confetti'
+  744 |       const shootConfetti = () => {
+  745 |         // Dynamically import confetti only when needed
+> 746 |         import('canvas-confetti').then((confetti) => {
+      |         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  747 |           const colors = ['#00D9FF', '#9D00FF', '#FFD700']; // cyan, purple, yellow from logo
+  748 |
+  749 |           // Left side explosion
+
+Import traces:
+  Client Component Browser:
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:43:00.831] Server  ERROR    ⨯ ./components/quiz-engine.tsx:746:9
+Module not found: Can't resolve 'canvas-confetti'
+  744 |       const shootConfetti = () => {
+  745 |         // Dynamically import confetti only when needed
+> 746 |         import('canvas-confetti').then((confetti) => {
+      |         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  747 |           const colors = ['#00D9FF', '#9D00FF', '#FFD700']; // cyan, purple, yellow from logo
+  748 |
+  749 |           // Left side explosion
+
+
+
+Import traces:
+  Client Component Browser:
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:43:00.952] Browser ERROR   ./components/quiz-engine.tsx:746:9
+Module not found: Can't resolve 'canvas-confetti'
+  744 |       const shootConfetti = () => {
+  745 |         // Dynamically import confetti only when needed
+> 746 |         import('canvas-confetti').then((confetti) => {
+      |         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  747 |           const colors = ['#00D9FF', '#9D00FF', '#FFD700']; // cyan, purple, yellow from logo
+  748 |
+  749 |           // Left side explosion
+
+Import traces:
+  Client Component Browser:
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:43:00.952] Browser ERROR   ./components/quiz-engine.tsx:746:9
+Module not found: Can't resolve 'canvas-confetti'
+  744 |       const shootConfetti = () => {
+  745 |         // Dynamically import confetti only when needed
+> 746 |         import('canvas-confetti').then((confetti) => {
+      |         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  747 |           const colors = ['#00D9FF', '#9D00FF', '#FFD700']; // cyan, purple, yellow from logo
+  748 |
+  749 |           // Left side explosion
+
+Import traces:
+  Client Component Browser:
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:43:01.484] Browser ERROR   ./components/quiz-engine.tsx:746:9
+Module not found: Can't resolve 'canvas-confetti'
+  744 |       const shootConfetti = () => {
+  745 |         // Dynamically import confetti only when needed
+> 746 |         import('canvas-confetti').then((confetti) => {
+      |         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  747 |           const colors = ['#00D9FF', '#9D00FF', '#FFD700']; // cyan, purple, yellow from logo
+  748 |
+  749 |           // Left side explosion
+
+Import traces:
+  Client Component Browser:
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:43:01.484] Browser ERROR   ./components/quiz-engine.tsx:746:9
+Module not found: Can't resolve 'canvas-confetti'
+  744 |       const shootConfetti = () => {
+  745 |         // Dynamically import confetti only when needed
+> 746 |         import('canvas-confetti').then((confetti) => {
+      |         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  747 |           const colors = ['#00D9FF', '#9D00FF', '#FFD700']; // cyan, purple, yellow from logo
+  748 |
+  749 |           // Left side explosion
+
+Import traces:
+  Client Component Browser:
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:43:01.484] Browser ERROR   ./components/quiz-engine.tsx:746:9
+Module not found: Can't resolve 'canvas-confetti'
+  744 |       const shootConfetti = () => {
+  745 |         // Dynamically import confetti only when needed
+> 746 |         import('canvas-confetti').then((confetti) => {
+      |         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  747 |           const colors = ['#00D9FF', '#9D00FF', '#FFD700']; // cyan, purple, yellow from logo
+  748 |
+  749 |           // Left side explosion
+
+Import traces:
+  Client Component Browser:
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:43:01.484] Browser ERROR   ./components/quiz-engine.tsx:746:9
+Module not found: Can't resolve 'canvas-confetti'
+  744 |       const shootConfetti = () => {
+  745 |         // Dynamically import confetti only when needed
+> 746 |         import('canvas-confetti').then((confetti) => {
+      |         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  747 |           const colors = ['#00D9FF', '#9D00FF', '#FFD700']; // cyan, purple, yellow from logo
+  748 |
+  749 |           // Left side explosion
+
+Import traces:
+  Client Component Browser:
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:43:01.585] Browser ERROR   ./components/quiz-engine.tsx:746:9
+Module not found: Can't resolve 'canvas-confetti'
+  744 |       const shootConfetti = () => {
+  745 |         // Dynamically import confetti only when needed
+> 746 |         import('canvas-confetti').then((confetti) => {
+      |         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  747 |           const colors = ['#00D9FF', '#9D00FF', '#FFD700']; // cyan, purple, yellow from logo
+  748 |
+  749 |           // Left side explosion
+
+Import traces:
+  Client Component Browser:
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:43:01.585] Browser ERROR   ./components/quiz-engine.tsx:746:9
+Module not found: Can't resolve 'canvas-confetti'
+  744 |       const shootConfetti = () => {
+  745 |         // Dynamically import confetti only when needed
+> 746 |         import('canvas-confetti').then((confetti) => {
+      |         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  747 |           const colors = ['#00D9FF', '#9D00FF', '#FFD700']; // cyan, purple, yellow from logo
+  748 |
+  749 |           // Left side explosion
+
+Import traces:
+  Client Component Browser:
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:43:01.977] Browser ERROR   uncaughtError: Error: ./components/quiz-engine.tsx:746:9
+Module not found: Can't resolve 'canvas-confetti'
+  744 |       const shootConfetti = () => {
+  745 |         // Dynamically import confetti only when needed
+> 746 |         import('canvas-confetti').then((confetti) => {
+      |         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  747 |           const colors = ['#00D9FF', '#9D00FF', '#FFD700']; // cyan, purple, yellow from logo
+  748 |
+  749 |           // Left side explosion
+
+
+
+Import traces:
+  Client Component Browser:
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:43:02.331] Browser ERROR   ./components/quiz-engine.tsx:746:9
+Module not found: Can't resolve 'canvas-confetti'
+  744 |       const shootConfetti = () => {
+  745 |         // Dynamically import confetti only when needed
+> 746 |         import('canvas-confetti').then((confetti) => {
+      |         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  747 |           const colors = ['#00D9FF', '#9D00FF', '#FFD700']; // cyan, purple, yellow from logo
+  748 |
+  749 |           // Left side explosion
+
+Import traces:
+  Client Component Browser:
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:43:02.331] Browser ERROR   ./components/quiz-engine.tsx:746:9
+Module not found: Can't resolve 'canvas-confetti'
+  744 |       const shootConfetti = () => {
+  745 |         // Dynamically import confetti only when needed
+> 746 |         import('canvas-confetti').then((confetti) => {
+      |         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  747 |           const colors = ['#00D9FF', '#9D00FF', '#FFD700']; // cyan, purple, yellow from logo
+  748 |
+  749 |           // Left side explosion
+
+Import traces:
+  Client Component Browser:
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:43:02.364] Browser ERROR   ./components/quiz-engine.tsx:746:9
+Module not found: Can't resolve 'canvas-confetti'
+  744 |       const shootConfetti = () => {
+  745 |         // Dynamically import confetti only when needed
+> 746 |         import('canvas-confetti').then((confetti) => {
+      |         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  747 |           const colors = ['#00D9FF', '#9D00FF', '#FFD700']; // cyan, purple, yellow from logo
+  748 |
+  749 |           // Left side explosion
+
+Import traces:
+  Client Component Browser:
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:43:02.364] Browser ERROR   ./components/quiz-engine.tsx:746:9
+Module not found: Can't resolve 'canvas-confetti'
+  744 |       const shootConfetti = () => {
+  745 |         // Dynamically import confetti only when needed
+> 746 |         import('canvas-confetti').then((confetti) => {
+      |         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  747 |           const colors = ['#00D9FF', '#9D00FF', '#FFD700']; // cyan, purple, yellow from logo
+  748 |
+  749 |           // Left side explosion
+
+Import traces:
+  Client Component Browser:
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:43:02.505] Browser ERROR   ./components/quiz-engine.tsx:746:9
+Module not found: Can't resolve 'canvas-confetti'
+  744 |       const shootConfetti = () => {
+  745 |         // Dynamically import confetti only when needed
+> 746 |         import('canvas-confetti').then((confetti) => {
+      |         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  747 |           const colors = ['#00D9FF', '#9D00FF', '#FFD700']; // cyan, purple, yellow from logo
+  748 |
+  749 |           // Left side explosion
+
+Import traces:
+  Client Component Browser:
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:43:02.505] Browser ERROR   ./components/quiz-engine.tsx:746:9
+Module not found: Can't resolve 'canvas-confetti'
+  744 |       const shootConfetti = () => {
+  745 |         // Dynamically import confetti only when needed
+> 746 |         import('canvas-confetti').then((confetti) => {
+      |         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  747 |           const colors = ['#00D9FF', '#9D00FF', '#FFD700']; // cyan, purple, yellow from logo
+  748 |
+  749 |           // Left side explosion
+
+Import traces:
+  Client Component Browser:
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:43:02.505] Browser ERROR   ./components/quiz-engine.tsx:746:9
+Module not found: Can't resolve 'canvas-confetti'
+  744 |       const shootConfetti = () => {
+  745 |         // Dynamically import confetti only when needed
+> 746 |         import('canvas-confetti').then((confetti) => {
+      |         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  747 |           const colors = ['#00D9FF', '#9D00FF', '#FFD700']; // cyan, purple, yellow from logo
+  748 |
+  749 |           // Left side explosion
+
+Import traces:
+  Client Component Browser:
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:43:02.505] Browser ERROR   ./components/quiz-engine.tsx:746:9
+Module not found: Can't resolve 'canvas-confetti'
+  744 |       const shootConfetti = () => {
+  745 |         // Dynamically import confetti only when needed
+> 746 |         import('canvas-confetti').then((confetti) => {
+      |         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  747 |           const colors = ['#00D9FF', '#9D00FF', '#FFD700']; // cyan, purple, yellow from logo
+  748 |
+  749 |           // Left side explosion
+
+Import traces:
+  Client Component Browser:
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:43:02.505] Browser ERROR   ./components/quiz-engine.tsx:746:9
+Module not found: Can't resolve 'canvas-confetti'
+  744 |       const shootConfetti = () => {
+  745 |         // Dynamically import confetti only when needed
+> 746 |         import('canvas-confetti').then((confetti) => {
+      |         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  747 |           const colors = ['#00D9FF', '#9D00FF', '#FFD700']; // cyan, purple, yellow from logo
+  748 |
+  749 |           // Left side explosion
+
+Import traces:
+  Client Component Browser:
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:45:18.504] Server  ERROR    ⨯ ./components/quiz-engine.tsx:746:9
+Module not found: Can't resolve 'canvas-confetti'
+  744 |       const shootConfetti = () => {
+  745 |         // Dynamically import confetti only when needed
+> 746 |         import('canvas-confetti').then((confetti) => {
+      |         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  747 |           const colors = ['#00D9FF', '#9D00FF', '#FFD700']; // cyan, purple, yellow from logo
+  748 |
+  749 |           // Left side explosion
+
+
+
+Import traces:
+  Client Component Browser:
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:45:18.649] Browser ERROR   ./components/quiz-engine.tsx:746:9
+Module not found: Can't resolve 'canvas-confetti'
+  744 |       const shootConfetti = () => {
+  745 |         // Dynamically import confetti only when needed
+> 746 |         import('canvas-confetti').then((confetti) => {
+      |         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  747 |           const colors = ['#00D9FF', '#9D00FF', '#FFD700']; // cyan, purple, yellow from logo
+  748 |
+  749 |           // Left side explosion
+
+Import traces:
+  Client Component Browser:
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:45:18.649] Browser ERROR   ./components/quiz-engine.tsx:746:9
+Module not found: Can't resolve 'canvas-confetti'
+  744 |       const shootConfetti = () => {
+  745 |         // Dynamically import confetti only when needed
+> 746 |         import('canvas-confetti').then((confetti) => {
+      |         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  747 |           const colors = ['#00D9FF', '#9D00FF', '#FFD700']; // cyan, purple, yellow from logo
+  748 |
+  749 |           // Left side explosion
+
+Import traces:
+  Client Component Browser:
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:45:18.666] Browser ERROR   uncaughtError: Error: ./components/quiz-engine.tsx:746:9
+Module not found: Can't resolve 'canvas-confetti'
+  744 |       const shootConfetti = () => {
+  745 |         // Dynamically import confetti only when needed
+> 746 |         import('canvas-confetti').then((confetti) => {
+      |         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  747 |           const colors = ['#00D9FF', '#9D00FF', '#FFD700']; // cyan, purple, yellow from logo
+  748 |
+  749 |           // Left side explosion
+
+
+
+Import traces:
+  Client Component Browser:
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:45:18.847] Browser ERROR   ./components/quiz-engine.tsx:746:9
+Module not found: Can't resolve 'canvas-confetti'
+  744 |       const shootConfetti = () => {
+  745 |         // Dynamically import confetti only when needed
+> 746 |         import('canvas-confetti').then((confetti) => {
+      |         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  747 |           const colors = ['#00D9FF', '#9D00FF', '#FFD700']; // cyan, purple, yellow from logo
+  748 |
+  749 |           // Left side explosion
+
+Import traces:
+  Client Component Browser:
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:45:18.847] Browser ERROR   ./components/quiz-engine.tsx:746:9
+Module not found: Can't resolve 'canvas-confetti'
+  744 |       const shootConfetti = () => {
+  745 |         // Dynamically import confetti only when needed
+> 746 |         import('canvas-confetti').then((confetti) => {
+      |         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  747 |           const colors = ['#00D9FF', '#9D00FF', '#FFD700']; // cyan, purple, yellow from logo
+  748 |
+  749 |           // Left side explosion
+
+Import traces:
+  Client Component Browser:
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:45:18.862] Browser ERROR   ./components/quiz-engine.tsx:746:9
+Module not found: Can't resolve 'canvas-confetti'
+  744 |       const shootConfetti = () => {
+  745 |         // Dynamically import confetti only when needed
+> 746 |         import('canvas-confetti').then((confetti) => {
+      |         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  747 |           const colors = ['#00D9FF', '#9D00FF', '#FFD700']; // cyan, purple, yellow from logo
+  748 |
+  749 |           // Left side explosion
+
+Import traces:
+  Client Component Browser:
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:45:18.862] Browser ERROR   ./components/quiz-engine.tsx:746:9
+Module not found: Can't resolve 'canvas-confetti'
+  744 |       const shootConfetti = () => {
+  745 |         // Dynamically import confetti only when needed
+> 746 |         import('canvas-confetti').then((confetti) => {
+      |         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  747 |           const colors = ['#00D9FF', '#9D00FF', '#FFD700']; // cyan, purple, yellow from logo
+  748 |
+  749 |           // Left side explosion
+
+Import traces:
+  Client Component Browser:
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:45:19.501] Browser ERROR   ./components/quiz-engine.tsx:746:9
+Module not found: Can't resolve 'canvas-confetti'
+  744 |       const shootConfetti = () => {
+  745 |         // Dynamically import confetti only when needed
+> 746 |         import('canvas-confetti').then((confetti) => {
+      |         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  747 |           const colors = ['#00D9FF', '#9D00FF', '#FFD700']; // cyan, purple, yellow from logo
+  748 |
+  749 |           // Left side explosion
+
+Import traces:
+  Client Component Browser:
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:45:19.501] Browser ERROR   ./components/quiz-engine.tsx:746:9
+Module not found: Can't resolve 'canvas-confetti'
+  744 |       const shootConfetti = () => {
+  745 |         // Dynamically import confetti only when needed
+> 746 |         import('canvas-confetti').then((confetti) => {
+      |         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  747 |           const colors = ['#00D9FF', '#9D00FF', '#FFD700']; // cyan, purple, yellow from logo
+  748 |
+  749 |           // Left side explosion
+
+Import traces:
+  Client Component Browser:
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:46:02.157] Browser ERROR   ./components/quiz-engine.tsx:746:9
+Module not found: Can't resolve 'canvas-confetti'
+  744 |       const shootConfetti = () => {
+  745 |         // Dynamically import confetti only when needed
+> 746 |         import('canvas-confetti').then((confetti) => {
+      |         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  747 |           const colors = ['#00D9FF', '#9D00FF', '#FFD700']; // cyan, purple, yellow from logo
+  748 |
+  749 |           // Left side explosion
+
+Import traces:
+  Client Component Browser:
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:46:02.159] Browser ERROR   ./components/quiz-engine.tsx:746:9
+Module not found: Can't resolve 'canvas-confetti'
+  744 |       const shootConfetti = () => {
+  745 |         // Dynamically import confetti only when needed
+> 746 |         import('canvas-confetti').then((confetti) => {
+      |         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  747 |           const colors = ['#00D9FF', '#9D00FF', '#FFD700']; // cyan, purple, yellow from logo
+  748 |
+  749 |           // Left side explosion
+
+Import traces:
+  Client Component Browser:
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:46:02.159] Browser ERROR   ./components/quiz-engine.tsx:746:9
+Module not found: Can't resolve 'canvas-confetti'
+  744 |       const shootConfetti = () => {
+  745 |         // Dynamically import confetti only when needed
+> 746 |         import('canvas-confetti').then((confetti) => {
+      |         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  747 |           const colors = ['#00D9FF', '#9D00FF', '#FFD700']; // cyan, purple, yellow from logo
+  748 |
+  749 |           // Left side explosion
+
+Import traces:
+  Client Component Browser:
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:46:02.504] Browser ERROR   ./components/quiz-engine.tsx:746:9
+Module not found: Can't resolve 'canvas-confetti'
+  744 |       const shootConfetti = () => {
+  745 |         // Dynamically import confetti only when needed
+> 746 |         import('canvas-confetti').then((confetti) => {
+      |         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  747 |           const colors = ['#00D9FF', '#9D00FF', '#FFD700']; // cyan, purple, yellow from logo
+  748 |
+  749 |           // Left side explosion
+
+Import traces:
+  Client Component Browser:
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:46:40.323] Server  LOG      ✓ Compiled in 43ms
+[00:46:40.707] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:46:40.932] Browser ERROR   uncaughtError: ReferenceError: useConfetti is not defined
+[00:46:40.932] Browser ERROR   uncaughtError: ReferenceError: useConfetti is not defined
+[00:46:41.612] Browser ERROR   uncaughtError: ReferenceError: useConfetti is not defined
+[00:46:51.726] Server  LOG      ✓ Compiled in 59ms
+[00:46:51.787] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:46:51.826] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:46:51.827] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:47:12.644] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head>
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="layout.tsx">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <script>
+                      <RootLayout>
+                        <html lang="fr" suppressHydrationWarning={true}>
+                          <body
++                           className="exo_2_660f6e90-module__vF-6DW__variable geist_mono_d6617093-module__z61v7q__var..."
+-                           className="exo_2_660f6e90-module__vF-6DW__variable geist_mono_d6617093-module__z61v7q__var..."
+                          >
+                  ...
+
+[00:47:20.362] Browser ERROR   uncaughtError: Error: Rendered fewer hooks than expected. This may be caused by an accidental early return statement.
+[00:47:33.125] Browser ERROR   uncaughtError: Error: Rendered fewer hooks than expected. This may be caused by an accidental early return statement.
+[01:00:25.042] Browser ERROR   uncaughtError: Error: Rendered fewer hooks than expected. This may be caused by an accidental early return statement.
+[01:00:30.753] Browser ERROR   uncaughtError: Error: Rendered fewer hooks than expected. This may be caused by an accidental early return statement.
+[01:01:43.403] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[01:01:43.403] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[01:01:43.405] Server  LOG      ✓ Compiled in 36ms
+[01:01:56.558] Server  LOG      ✓ Compiled in 30ms
+[01:02:13.183] Server  LOG      ✓ Compiled in 31ms
+[01:02:43.635] Server  LOG      ✓ Compiled in 35ms
+[01:02:43.738] Browser ERROR   ./components/quiz-engine.tsx:252:11
+Parsing ecmascript source code failed
+  250 |     scanResult: null,
+  251 |     showExplanation: false,
+> 252 |     const [state, dispatch] = useReducer(quizReducer, initialState)
+      |           ^
+  253 |
+  254 |   // Destructure state for easier access in the render methods
+  255 |   const {
+
+Unexpected token `[`. Expected ... , *,  (, [, :, , ?, =, an identifier, public, protected, private, readonly, <.
+
+Import traces:
+  Client Component Browser:
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[01:02:43.738] Browser ERROR   ./components/quiz-engine.tsx:252:11
+Parsing ecmascript source code failed
+  250 |     scanResult: null,
+  251 |     showExplanation: false,
+> 252 |     const [state, dispatch] = useReducer(quizReducer, initialState)
+      |           ^
+  253 |
+  254 |   // Destructure state for easier access in the render methods
+  255 |   const {
+
+Unexpected token `[`. Expected ... , *,  (, [, :, , ?, =, an identifier, public, protected, private, readonly, <.
+
+Import traces:
+  Client Component Browser:
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[01:02:43.740] Browser ERROR   ./components/quiz-engine.tsx:252:11
+Parsing ecmascript source code failed
+  250 |     scanResult: null,
+  251 |     showExplanation: false,
+> 252 |     const [state, dispatch] = useReducer(quizReducer, initialState)
+      |           ^
+  253 |
+  254 |   // Destructure state for easier access in the render methods
+  255 |   const {
+
+Unexpected token `[`. Expected ... , *,  (, [, :, , ?, =, an identifier, public, protected, private, readonly, <.
+
+Import traces:
+  Client Component Browser:
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[01:02:43.740] Browser ERROR   ./components/quiz-engine.tsx:252:11
+Parsing ecmascript source code failed
+  250 |     scanResult: null,
+  251 |     showExplanation: false,
+> 252 |     const [state, dispatch] = useReducer(quizReducer, initialState)
+      |           ^
+  253 |
+  254 |   // Destructure state for easier access in the render methods
+  255 |   const {
+
+Unexpected token `[`. Expected ... , *,  (, [, :, , ?, =, an identifier, public, protected, private, readonly, <.
+
+Import traces:
+  Client Component Browser:
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[01:02:44.506] Browser ERROR   ./components/quiz-engine.tsx:252:11
+Parsing ecmascript source code failed
+  250 |     scanResult: null,
+  251 |     showExplanation: false,
+> 252 |     const [state, dispatch] = useReducer(quizReducer, initialState)
+      |           ^
+  253 |
+  254 |   // Destructure state for easier access in the render methods
+  255 |   const {
+
+Unexpected token `[`. Expected ... , *,  (, [, :, , ?, =, an identifier, public, protected, private, readonly, <.
+
+Import traces:
+  Client Component Browser:
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[01:03:32.694] Server  LOG      ✓ Compiled in 114ms
+[01:03:33.524] Browser ERROR   uncaughtError: ReferenceError: allLevelsCompleted is not defined
+[01:03:40.727] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[01:03:40.739] Server  LOG      ✓ Compiled in 23ms
+[01:03:40.743] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[01:03:42.505] Browser ERROR   uncaughtError: ReferenceError: allLevelsCompleted is not defined
+[01:03:48.107] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[01:03:48.214] Server  LOG      ✓ Compiled in 23ms
+[01:03:49.506] Browser ERROR   uncaughtError: ReferenceError: allLevelsCompleted is not defined
+[01:04:00.337] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[01:04:00.448] Server  LOG      ✓ Compiled in 22ms
+[01:04:02.506] Browser ERROR   uncaughtError: ReferenceError: allLevelsCompleted is not defined
+[01:04:41.778] Server  LOG      ✓ Compiled in 49ms
+[01:04:41.878] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[01:04:44.506] Browser ERROR   uncaughtError: ReferenceError: allLevelsCompleted is not defined
+[01:05:26.650] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head>
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="layout.tsx">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <script>
+                      <RootLayout>
+                        <html lang="fr" suppressHydrationWarning={true}>
+                          <body
++                           className="exo_2_660f6e90-module__vF-6DW__variable geist_mono_d6617093-module__z61v7q__var..."
+-                           className="exo_2_660f6e90-module__vF-6DW__variable geist_mono_d6617093-module__z61v7q__var..."
+                          >
+                  ...
+
+[01:05:33.345] Browser ERROR   uncaughtError: ReferenceError: allLevelsCompleted is not defined
+[01:09:44.670] Server  LOG      ✓ Compiled in 44ms
+[01:09:44.793] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[01:09:46.518] Browser ERROR   uncaughtError: ReferenceError: allLevelsCompleted is not defined
+[01:13:12.061] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head>
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="layout.tsx">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <script>
+                      <RootLayout>
+                        <html lang="fr" suppressHydrationWarning={true}>
+                          <body
++                           className="exo_2_660f6e90-module__vF-6DW__variable geist_mono_d6617093-module__z61v7q__var..."
+-                           className="exo_2_660f6e90-module__vF-6DW__variable geist_mono_d6617093-module__z61v7q__var..."
+                          >
+                  ...
+
+[01:13:25.115] Browser ERROR   uncaughtError: ReferenceError: allLevelsCompleted is not defined
+[01:24:15.707] Browser ERROR   uncaughtError: ReferenceError: allLevelsCompleted is not defined
+[01:24:42.158] Server  LOG      ✓ Compiled in 65ms
+[01:24:42.261] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[01:24:42.304] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[01:24:55.268] Server  LOG      ✓ Compiled in 30ms
+[01:25:24.833] Browser ERROR   uncaughtError: Error: Rendered fewer hooks than expected. This may be caused by an accidental early return statement.
+[01:26:02.456] Browser ERROR   uncaughtError: Error: Rendered fewer hooks than expected. This may be caused by an accidental early return statement.
+[01:26:37.065] Server  LOG      ✓ Compiled in 107ms
+[01:26:37.184] Browser ERROR   uncaughtError: Error: Rendered fewer hooks than expected. This may be caused by an accidental early return statement.
+[01:26:37.189] Browser ERROR   uncaughtError: Error: Rendered fewer hooks than expected. This may be caused by an accidental early return statement.
+[01:26:37.189] Browser ERROR   uncaughtError: Error: Rendered fewer hooks than expected. This may be caused by an accidental early return statement.
+[01:26:37.190] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[01:26:37.191] Browser ERROR   uncaughtError: Error: Rendered fewer hooks than expected. This may be caused by an accidental early return statement.
+[01:26:44.150] Server  LOG      ✓ Compiled in 71ms
+[01:26:44.170] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[01:26:44.170] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[01:26:44.170] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[01:26:44.171] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[01:30:08.003] Server  LOG      ✓ Compiled in 79ms
+[01:31:56.569] Server  LOG      ✓ Compiled in 106ms
+[01:33:35.825] Server  LOG      ✓ Compiled in 113ms
+[01:33:46.635] Server  LOG      ✓ Compiled in 5ms
+[01:34:35.373] Server  LOG      ✓ Compiled in 85ms
+[01:35:48.540] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head>
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="layout.tsx">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <script>
+                      <RootLayout>
+                        <html lang="fr" suppressHydrationWarning={true}>
+                          <body
++                           className="exo_2_660f6e90-module__vF-6DW__variable geist_mono_d6617093-module__z61v7q__var..."
+-                           className="exo_2_660f6e90-module__vF-6DW__variable geist_mono_d6617093-module__z61v7q__var..."
+                          >
+                  ...
+
+[01:38:51.352] Server  LOG      ✓ Compiled in 0ms
