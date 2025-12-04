@@ -768,3 +768,5 @@ Import traces:
     ./components/settings-menu.tsx [Client Component SSR]
     ./app/page.tsx [Client Component SSR]
     ./app/page.tsx [Server Component]
+[01:43:21.804] Server  LOG      ✓ Compiled in 91ms
+[02:07:37.215] Server  LOG      ✓ Compiled in 148ms
