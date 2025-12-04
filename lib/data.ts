@@ -67,7 +67,7 @@ export const QUESTIONS: Question[] = [
   {
     id: "N1-01",
     level_id: 1,
-    scenario: "Un utilisateur trouve une app belle, donc il pense qu'elle est facile à utiliser.",
+    scenario: "Un utilisateur trouve une app très esthétique, donc il pense qu'elle est facile à utiliser.",
     options: [
       { text: "Effet de Halo", is_correct: true, bias_id: "halo_effect" },
       { text: "Preuve Sociale", is_correct: false, bias_id: "social_proof" },
@@ -1241,7 +1241,7 @@ export function shuffleArray<T>(array: T[]): T[] {
   const shuffled = [...array]
   for (let i = shuffled.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1))
-    ;[shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]]
+      ;[shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]]
   }
   return shuffled
 }

@@ -2040,7 +2040,7 @@ const QUESTIONS = [
     {
         id: "N1-01",
         level_id: 1,
-        scenario: "Un utilisateur trouve une app belle, donc il pense qu'elle est facile à utiliser.",
+        scenario: "Un utilisateur trouve une app très esthétique, donc il pense qu'elle est facile à utiliser.",
         options: [
             {
                 text: "Effet de Halo",

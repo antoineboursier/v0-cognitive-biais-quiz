@@ -447,3 +447,4 @@ It can also happen if the client has a browser extension installed which messes 
 [03:08:49.121] Browser ERROR   Supabase save error: {"code":"PGRST205","details":null,"hint":null,"message":"Could not find the table 'public.user_scores' in the schema cache"}
 [03:08:49.121] Browser WARN    ⚠️ Assurez-vous que la table "user_scores" existe dans Supabase.
 [03:08:49.121] Browser WARN    📝 Exécutez le fichier supabase_migration.sql dans votre dashboard Supabase.
+[04:08:48.179] Server  LOG      ✓ Compiled in 74ms
