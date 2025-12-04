@@ -5985,10 +5985,12 @@ function Home() {
         setQuizState(newState);
     };
     const handleReset = ()=>{
-        if (quizState && quizState.userProfile) {
-            const newState = createInitialState(quizState.userProfile);
-            (0, __TURBOPACK__imported__module__$5b$project$5d2f$v0$2d$cognitive$2d$biais$2d$quiz$2f$lib$2f$storage$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["saveState"])(newState);
-            setQuizState(newState);
+        if (window.confirm("Êtes-vous sûr de vouloir recommencer ? Toute votre progression sera perdue.")) {
+            if (quizState && quizState.userProfile) {
+                const newState = createInitialState(quizState.userprofile);
+                (0, __TURBOPACK__imported__module__$5b$project$5d2f$v0$2d$cognitive$2d$biais$2d$quiz$2f$lib$2f$storage$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["saveState"])(newState);
+                setQuizState(newState);
+            }
         }
     };
     if (!isReady) {
@@ -6002,7 +6004,7 @@ function Home() {
             onReset: handleReset
         }, void 0, false, {
             fileName: "[project]/v0-cognitive-biais-quiz/app/page.tsx",
-            lineNumber: 69,
+            lineNumber: 71,
             columnNumber: 12
         }, this);
     }
@@ -6010,7 +6012,7 @@ function Home() {
         onComplete: handleOnboardingComplete
     }, void 0, false, {
         fileName: "[project]/v0-cognitive-biais-quiz/app/page.tsx",
-        lineNumber: 72,
+        lineNumber: 74,
         columnNumber: 10
     }, this);
 }

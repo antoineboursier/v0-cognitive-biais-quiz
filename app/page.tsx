@@ -52,10 +52,12 @@ export default function Home() {
   }
   
   const handleReset = () => {
-    if (quizState && quizState.userProfile) {
-      const newState = createInitialState(quizState.userProfile);
-      saveState(newState);
-      setQuizState(newState);
+    if (window.confirm("Êtes-vous sûr de vouloir recommencer ? Toute votre progression sera perdue.")) {
+      if (quizState && quizState.userProfile) {
+        const newState = createInitialState(quizState.userProfile);
+        saveState(newState);
+        setQuizState(newState);
+      }
     }
   }
 

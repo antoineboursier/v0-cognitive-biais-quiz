@@ -802,6 +802,7 @@ export function QuizEngine({ initialState, onReset }: QuizEngineProps) {
             score={totalScoreCalculated}
             totalQuestions={totalQuestionsCalculated}
             onClose={() => setShowCertificate(false)}
+            onReset={onReset}
           />
         )}
       </AnimatePresence>

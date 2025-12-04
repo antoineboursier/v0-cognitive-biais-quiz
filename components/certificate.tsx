@@ -10,9 +10,10 @@ interface CertificateProps {
   score: number
   totalQuestions: number
   onClose: () => void
+  onReset: () => void
 }
 
-export function Certificate({ user, score, totalQuestions, onClose }: CertificateProps) {
+export function Certificate({ user, score, totalQuestions, onClose, onReset }: CertificateProps) {
   const percentage = Math.round((score / totalQuestions) * 100)
   const date = new Date().toLocaleDateString("fr-FR", {
     day: "numeric",
@@ -154,6 +155,16 @@ export function Certificate({ user, score, totalQuestions, onClose }: Certificat
               >
                 <Share2 className="w-4 h-4 mr-2" />
                 Partager
+              </Button>
+            </div>
+            <div className="mt-4">
+              <Button
+                  onClick={onReset}
+                  variant="ghost"
+                  className="text-muted-foreground hover:text-foreground"
+              >
+                  <RotateCcw className="w-4 h-4 mr-2" />
+                  Rédémarrer le jeu
               </Button>
             </div>
           </div>
