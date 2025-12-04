@@ -18,6 +18,7 @@ import { BiasWikiCard } from "./bias-wiki-card"
 import { Certificate } from "./certificate"
 
 import { saveState, type QuizState as BaseQuizState, type UserProfile, type QuestionAnswer } from "@/lib/storage"
+import { useSettings } from "@/lib/settings-context"
 import { LEVELS, QUESTIONS, BIAS_LIBRARY, type Level, type Question, type BiasEntry, shuffleArray } from "@/lib/data"
 import { saveUserScore } from "@/lib/supabase/score-manager"
 import {
@@ -36,7 +37,7 @@ import { BiasCategoryIcon, categoryColors } from "@/components/ui/icons"
 // PROPS
 // ------------------------------
 interface QuizEngineProps {
-  initialState: QuizState
+  initialState: BaseQuizState
   onReset: () => void
 }
 
@@ -189,7 +190,8 @@ function quizReducer(state: QuizState, action: Action): QuizState {
 
     case "COMPLETE_LEVEL": {
       const levelId = state.currentLevelId!
-      const updatedLevelProgress = { ...state.levelProgress,
+      const updatedLevelProgress = {
+        ...state.levelProgress,
         [levelId]: {
           ...state.levelProgress[levelId],
           completed: true,
@@ -234,9 +236,7 @@ function quizReducer(state: QuizState, action: Action): QuizState {
 // ------------------------------
 export function QuizEngine({ initialState, onReset }: QuizEngineProps) {
   const { theme, setTheme } = useTheme()
-  const [settings, setSettings] = useState({
-    animationsEnabled: true,
-  });
+  const { animationsEnabled } = useSettings()
 
   // All state is managed by the reducer, initialized by props
   const [state, dispatch] = useReducer(quizReducer, {
@@ -276,12 +276,17 @@ export function QuizEngine({ initialState, onReset }: QuizEngineProps) {
 
   useEffect(() => {
     if (showExplanation && explanationRef.current) {
-      // Use a timeout to allow the element to render fully before scrolling
-      setTimeout(() => {
-        explanationRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }, 100);
+      if (animationsEnabled) {
+        // Use a timeout to allow the element to render fully before scrolling
+        setTimeout(() => {
+          explanationRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }, 100);
+      } else {
+        // Immediate scroll
+        explanationRef.current?.scrollIntoView({ behavior: 'auto', block: 'start' });
+      }
     }
-  }, [showExplanation]);
+  }, [showExplanation, animationsEnabled]);
 
   // Persist state to localStorage on every change
   useEffect(() => {
@@ -317,6 +322,11 @@ export function QuizEngine({ initialState, onReset }: QuizEngineProps) {
   const handleAnswer = (answerIndex: number) => {
     if (selectedAnswer === null && !isScanning) {
       dispatch({ type: "SELECT_ANSWER", payload: { answerIndex, question: currentQuestion! } })
+
+      if (!animationsEnabled) {
+        // Skip scan animation
+        setTimeout(() => dispatch({ type: "SCAN_COMPLETE" }), 0)
+      }
     }
   }
 
@@ -360,13 +370,18 @@ export function QuizEngine({ initialState, onReset }: QuizEngineProps) {
             animate={{ scale: 1, opacity: 1 }}
             className="inline-flex items-center gap-3 mb-4"
           >
-            <Brain className="w-12 h-12 text-cyan-400" />
-            <h1 className="font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent text-6xl py-4">
+            <Brain className="w-12 h-12 text-neon-cyan" />
+            <h1
+              className="font-bold text-transparent bg-clip-text text-6xl py-4"
+              style={{
+                backgroundImage: 'linear-gradient(to right, var(--neon-cyan), var(--neon-purple), var(--neon-yellow))'
+              }}
+            >
               Cognitive Labs
             </h1>
           </motion.div>
-          <p className="text-gray-400 text-lg max-w-2xl mx-auto mb-0">
-            Bienvenue <span className="text-cyan-400 font-semibold">{userProfile?.firstName}</span> ! Entraînez votre cerveau à
+          <p className="text-muted-foreground text-lg max-w-2xl mx-auto mb-0">
+            Bienvenue <span className="text-neon-cyan font-semibold">{userProfile?.firstName}</span> ! Entraînez votre cerveau à
             détecter les biais cognitifs utilisés en UX Design.
           </p>
         </div>
@@ -374,9 +389,9 @@ export function QuizEngine({ initialState, onReset }: QuizEngineProps) {
         <div className="grid lg:grid-cols-3 gap-8 mt-0 pt-4">
           {/* Progression cérébrale */}
           <div className="lg:col-span-1 space-y-4">
-            <Card className="p-6 bg-gray-900/50 border-gray-800">
-              <h2 className="text-lg font-semibold text-white mb-4 flex items-center gap-2">
-                <Zap className="w-5 h-5 text-yellow-500" />
+            <Card className="p-6 bg-card/50 border-border">
+              <h2 className="text-lg font-semibold text-foreground mb-4 flex items-center gap-2">
+                <Zap className="w-5 h-5 text-neon-yellow" />
                 Votre Progression
               </h2>
               <BrainProgress
@@ -391,9 +406,9 @@ export function QuizEngine({ initialState, onReset }: QuizEngineProps) {
               <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
                 <Card className="p-6 bg-gradient-to-br from-yellow-500/10 to-orange-500/10 border-yellow-500/30">
                   <div className="text-center">
-                    <Award className="w-12 h-12 text-yellow-500 mx-auto mb-3" />
-                    <h3 className="text-lg font-bold text-white mb-2">Formation Terminée !</h3>
-                    <p className="text-gray-400 text-sm mb-4">
+                    <Award className="w-12 h-12 text-neon-yellow mx-auto mb-3" />
+                    <h3 className="text-lg font-bold text-foreground mb-2">Formation Terminée !</h3>
+                    <p className="text-muted-foreground text-sm mb-4">
                       Félicitations {userProfile?.firstName} ! Récupérez votre diplôme.
                     </p>
                     <Button
@@ -410,7 +425,7 @@ export function QuizEngine({ initialState, onReset }: QuizEngineProps) {
             <Button
               variant="outline"
               size="sm"
-              className="w-full mt-6 border-gray-700 hover:border-red-500 hover:bg-red-500/10 bg-transparent"
+              className="w-full mt-6 border-border hover:border-red-500 hover:bg-red-500/10 bg-transparent text-foreground"
               onClick={() => setShowResetDialog(true)}
             >
               <RotateCcw className="w-4 h-4 mr-2" />
@@ -420,7 +435,7 @@ export function QuizEngine({ initialState, onReset }: QuizEngineProps) {
 
           {/* Sélection de niveau */}
           <div className="lg:col-span-2 space-y-4">
-            <h2 className="text-xl font-semibold text-white mb-4">Choisissez votre niveau</h2>
+            <h2 className="text-xl font-semibold text-foreground mb-4">Choisissez votre niveau</h2>
             {LEVELS.map((level, index) => {
               const unlocked = isLevelUnlocked(level)
               const progress = levelProgress[level.id]
@@ -434,8 +449,8 @@ export function QuizEngine({ initialState, onReset }: QuizEngineProps) {
                 >
                   <Card
                     className={`p-6 transition-all duration-300 ${unlocked
-                      ? "bg-gray-900/50 border-gray-700 hover:border-cyan-500/50 cursor-pointer"
-                      : "bg-gray-900/30 border-gray-800 opacity-50"
+                      ? "bg-card/50 border-border hover:border-cyan-500/50 cursor-pointer"
+                      : "bg-card/30 border-border opacity-50"
                       }`}
                     onClick={() => unlocked && startLevel(level)}
                     style={{
@@ -449,14 +464,14 @@ export function QuizEngine({ initialState, onReset }: QuizEngineProps) {
                           <span className="font-bold text-3xl" style={{ color: level.theme_color }}>
                             {level.name_fr}
                           </span>
-                          {progress.completed && <Trophy className="w-5 h-5 text-yellow-500" />}
+                          {progress.completed && <Trophy className="w-5 h-5 text-neon-yellow" />}
                         </div>
-                        <p className="text-gray-400 mb-3 text-lg">{level.description}</p>
+                        <p className="text-muted-foreground mb-3 text-lg">{level.description}</p>
 
                         {unlocked && (
                           <div className="flex items-center gap-4">
                             <Progress value={getLevelPercentage(level.id)} className="flex-1 h-2" />
-                            <span className="text-gray-500 font-mono text-base">
+                            <span className="text-muted-foreground font-mono text-base">
                               {progress.score}/{progress.total}
                             </span>
                           </div>
@@ -471,7 +486,7 @@ export function QuizEngine({ initialState, onReset }: QuizEngineProps) {
                       </div>
 
                       {unlocked && (
-                        <ChevronRight className="w-8 h-8 text-gray-600" style={{ color: level.theme_color }} />
+                        <ChevronRight className="w-8 h-8 text-muted-foreground" style={{ color: level.theme_color }} />
                       )}
                     </div>
                   </Card>
@@ -483,7 +498,7 @@ export function QuizEngine({ initialState, onReset }: QuizEngineProps) {
             <Button
               variant="outline"
               size="lg"
-              className="w-full mt-6 border-gray-700 hover:border-purple-500 hover:bg-purple-500/10 bg-transparent text-lg py-3"
+              className="w-full mt-6 border-border hover:border-purple-500 hover:bg-purple-500/10 bg-transparent text-foreground text-lg py-3"
               onClick={() => setGameState("wiki")}
             >
               <BookOpen className="w-5 h-5 mr-2" />
@@ -509,14 +524,14 @@ export function QuizEngine({ initialState, onReset }: QuizEngineProps) {
         <div className="max-w-4xl mx-auto">
           {/* Header de niveau */}
           <div className="flex items-center justify-between mb-6">
-            <Button variant="ghost" onClick={() => setGameState("menu")} className="text-gray-400 hover:text-white">
+            <Button variant="ghost" onClick={() => setGameState("menu")} className="text-muted-foreground hover:text-foreground">
               ← Retour
             </Button>
             <div className="flex items-center gap-4">
               <span className="font-bold font-mono" style={{ color: currentLevel.theme_color }}>
                 {currentLevel.name_fr}
               </span>
-              <span className="text-gray-500 font-mono">
+              <span className="text-muted-foreground font-mono">
                 {currentQuestionIndex + 1}/{questions.length}
               </span>
             </div>
@@ -535,7 +550,7 @@ export function QuizEngine({ initialState, onReset }: QuizEngineProps) {
               animate={{ x: 0, opacity: 1 }}
               exit={{ x: -50, opacity: 0 }}
             >
-              <Card className="p-6 md:p-8 bg-gray-900/50 border-gray-800 mb-6">
+              <Card className="p-6 md:p-8 bg-card/50 border-border mb-6">
                 <div className="flex items-start gap-4 mb-6">
                   <div
                     className="w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0"
@@ -547,8 +562,8 @@ export function QuizEngine({ initialState, onReset }: QuizEngineProps) {
                     <BiasCategoryIcon category={questionCategory} className="w-5 h-5" style={{ color: categoryColor }} />
                   </div>
                   <div>
-                    <p className="text-xs text-gray-500 font-mono">SITUATION #{currentQuestion.id}</p>
-                    <p className="text-lg md:text-xl text-white leading-relaxed">{currentQuestion.scenario}</p>
+                    <p className="text-xs text-muted-foreground font-mono">SITUATION #{currentQuestion.id}</p>
+                    <p className="text-lg md:text-xl text-foreground leading-relaxed">{currentQuestion.scenario}</p>
                   </div>
                 </div>
 
@@ -566,7 +581,7 @@ export function QuizEngine({ initialState, onReset }: QuizEngineProps) {
                       const isCorrect = option.is_correct
                       const showResult = showExplanation
 
-                      let buttonStyle = "border-gray-700 bg-gray-800/50 hover:border-cyan-500/50 hover:bg-cyan-500/10"
+                      let buttonStyle = "border-border bg-secondary/50 hover:border-neon-cyan/50 hover:bg-neon-cyan/10"
 
                       if (showResult) {
                         if (isCorrect) {
@@ -575,7 +590,7 @@ export function QuizEngine({ initialState, onReset }: QuizEngineProps) {
                           buttonStyle = "border-red-500 bg-red-500/20"
                         }
                       } else if (isSelected) {
-                        buttonStyle = "border-cyan-500 bg-cyan-500/20"
+                        buttonStyle = "border-neon-cyan bg-neon-cyan/20"
                       }
 
                       return (
@@ -592,13 +607,13 @@ export function QuizEngine({ initialState, onReset }: QuizEngineProps) {
                               className={`w-8 h-8 rounded-full flex items-center justify-center font-bold ${showResult && isCorrect
                                 ? "bg-green-500 text-black"
                                 : showResult && isSelected && !isCorrect
-                                  ? "bg-red-500 text-white"
-                                  : "bg-gray-700 text-gray-300"
+                                  ? "bg-destructive text-destructive-foreground"
+                                  : "bg-muted text-muted-foreground"
                                 }`}
                             >
                               {String.fromCharCode(65 + index)}
                             </div>
-                            <span className="text-white">{option.text}</span>
+                            <span className="text-foreground">{option.text}</span>
                           </div>
                         </motion.button>
                       )
@@ -636,7 +651,7 @@ export function QuizEngine({ initialState, onReset }: QuizEngineProps) {
                               ? "Excellente analyse !"
                               : "Biais détecté dans votre raisonnement"}
                           </p>
-                          <p className="text-white text-base leading-relaxed">{currentQuestion.explanation}</p>
+                          <p className="text-foreground text-base leading-relaxed">{currentQuestion.explanation}</p>
 
                           {(() => {
                             const correctOption = currentQuestion.options.find((o) => o.is_correct)
@@ -644,15 +659,15 @@ export function QuizEngine({ initialState, onReset }: QuizEngineProps) {
                               const bias = BIAS_LIBRARY.find((b) => b.bias_id === correctOption.bias_id)
                               if (bias) {
                                 return (
-                                  <div className="mt-4 p-4 rounded-lg bg-gray-900/50 border border-gray-700 flex items-center gap-4">
-                                      <CheckCircle2 className="w-8 h-8 text-cyan-400" aria-hidden="true" />
-                                      <span className="sr-only">Succès</span>
-                                      <div>
-                                        <p className="text-sm text-cyan-400">Ajouté à votre bibliothèque</p>
-                                        <p className="text-base font-semibold text-white">{bias.name}</p>
-                                        <p className="text-xs text-gray-500">{bias.category}</p>
-                                      </div>
+                                  <div className="mt-4 p-4 rounded-lg bg-card/50 border border-border flex items-center gap-4">
+                                    <CheckCircle2 className="w-8 h-8 text-neon-cyan" aria-hidden="true" />
+                                    <span className="sr-only">Succès</span>
+                                    <div>
+                                      <p className="text-sm text-neon-cyan">Ajouté à votre bibliothèque</p>
+                                      <p className="text-base font-semibold text-foreground">{bias.name}</p>
+                                      <p className="text-xs text-muted-foreground">{bias.category}</p>
                                     </div>
+                                  </div>
                                 )
                               }
                             }
@@ -701,7 +716,7 @@ export function QuizEngine({ initialState, onReset }: QuizEngineProps) {
         animate={{ opacity: 1 }}
         className="min-h-screen flex items-center justify-center p-8 pb-20"
       >
-        <Card className="max-w-lg w-full p-8 bg-gray-900/50 border-gray-800 text-center">
+        <Card className="max-w-lg w-full p-8 bg-card/50 border-border text-center">
           <motion.div
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
@@ -710,8 +725,8 @@ export function QuizEngine({ initialState, onReset }: QuizEngineProps) {
             <Trophy className="w-20 h-20 mx-auto mb-6" style={{ color: currentLevel.theme_color }} />
           </motion.div>
 
-          <h2 className="text-3xl font-bold text-white mb-2">Bravo {userProfile?.firstName} !</h2>
-          <p className="text-gray-400 mb-4">Niveau {currentLevel.name_fr} terminé</p>
+          <h2 className="text-3xl font-bold text-foreground mb-2">Bravo {userProfile?.firstName} !</h2>
+          <p className="text-muted-foreground mb-4">Niveau {currentLevel.name_fr} terminé</p>
 
           <div className="my-8">
             <div
@@ -720,7 +735,7 @@ export function QuizEngine({ initialState, onReset }: QuizEngineProps) {
             >
               {Math.round(percentage)}%
             </div>
-            <p className="text-gray-400">
+            <p className="text-muted-foreground">
               {progress.score} / {progress.total} bonnes réponses
             </p>
           </div>
@@ -759,12 +774,12 @@ export function QuizEngine({ initialState, onReset }: QuizEngineProps) {
               </Button>
             )}
 
-            <Button variant="outline" onClick={() => startLevel(currentLevel)} className="border-gray-700 w-full sm:max-w-xs mx-auto">
+            <Button variant="outline" onClick={() => startLevel(currentLevel)} className="border-border w-full sm:max-w-xs mx-auto text-foreground">
               <RotateCcw className="w-4 h-4 mr-2" />
               Refaire ce niveau
             </Button>
 
-            <Button variant="ghost" onClick={() => setGameState("menu")} className="w-full sm:max-w-xs mx-auto">
+            <Button variant="ghost" onClick={() => setGameState("menu")} className="w-full sm:max-w-xs mx-auto text-muted-foreground hover:text-foreground">
               Retour au menu
             </Button>
           </div>
@@ -777,16 +792,16 @@ export function QuizEngine({ initialState, onReset }: QuizEngineProps) {
     <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="min-h-screen p-4 md:p-8 pb-20">
       <div className="max-w-6xl mx-auto">
         <div className="flex items-center justify-between mb-8">
-          <Button variant="ghost" onClick={() => setGameState("menu")} className="text-gray-400 hover:text-white">
+          <Button variant="ghost" onClick={() => setGameState("menu")} className="text-muted-foreground hover:text-foreground">
             ← Retour
           </Button>
           <div className="text-right">
-            <h1 className="text-3xl font-bold text-white flex items-center gap-3 justify-end">
-              <Library className="w-8 h-8 text-purple-500" aria-hidden="true" />
+            <h1 className="text-3xl font-bold text-foreground flex items-center gap-3 justify-end">
+              <Library className="w-8 h-8 text-neon-purple" aria-hidden="true" />
               <span className="sr-only">Bibliothèque</span>
               Bibliothèque des Biais
             </h1>
-            <p className="text-gray-400 mt-2">
+            <p className="text-muted-foreground mt-2">
               {unlockedBiases.length} / {QUESTIONS.length} concepts débloqués
             </p>
           </div>
@@ -837,24 +852,24 @@ export function QuizEngine({ initialState, onReset }: QuizEngineProps) {
               className="max-w-lg w-full"
               onClick={(e) => e.stopPropagation()}
             >
-              <Card className="p-6 bg-gray-900 border-gray-700">
-                <h2 className="text-2xl font-bold text-white mb-2">{selectedBias.name}</h2>
-                <span className="inline-block px-3 py-1 rounded-full text-sm font-mono bg-cyan-500/20 text-cyan-400 border border-cyan-500/40 mb-4">
+              <Card className="p-6 bg-card border-border">
+                <h2 className="text-2xl font-bold text-foreground mb-2">{selectedBias.name}</h2>
+                <span className="inline-block px-3 py-1 rounded-full text-sm font-mono bg-neon-cyan/20 text-neon-cyan border border-neon-cyan/40 mb-4">
                   {selectedBias.category}
                 </span>
 
                 <div className="space-y-4">
                   <div>
-                    <h3 className="text-sm font-semibold text-gray-400 mb-2">DÉFINITION</h3>
-                    <p className="text-gray-300">{selectedBias.definition}</p>
+                    <h3 className="text-sm font-semibold text-muted-foreground mb-2">DÉFINITION</h3>
+                    <p className="text-foreground">{selectedBias.definition}</p>
                   </div>
 
-                  <div className="p-4 rounded-lg bg-gray-800/50 border border-gray-700">
-                    <h3 className="text-sm font-semibold text-yellow-500 mb-2 flex items-center gap-2">
-                      <ArrowLeft className="w-4 h-4" />
-                      CONTRE-TACTIQUE UX
+                  <div className="p-4 rounded-lg bg-secondary/50 border border-border">
+                    <h3 className="text-sm font-semibold text-muted-foreground mb-2 flex items-center gap-2">
+                      <Zap className="w-4 h-4 text-neon-yellow" />
+                      CONTRE-MESURE
                     </h3>
-                    <p className="text-gray-300">{selectedBias.counter_tactic}</p>
+                    <p className="text-foreground">{selectedBias.counter_tactic}</p>
                   </div>
                 </div>
 
@@ -871,10 +886,10 @@ export function QuizEngine({ initialState, onReset }: QuizEngineProps) {
 
   // --- Main Render ---
   return (
-    <div className="min-h-screen bg-gray-950 text-white relative">
+    <div className="min-h-screen bg-background text-foreground relative">
       {/* Background effects */}
       <div className="fixed inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-cyan-500/5 rounded-full blur-3xl" />
+        <div className="absolute top-0 left-1/4 w-96 h-96 bg-neon-cyan/5 rounded-full blur-3xl" />
         <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl" />
         <div
           className="absolute inset-0 opacity-[0.02]"
@@ -907,26 +922,25 @@ export function QuizEngine({ initialState, onReset }: QuizEngineProps) {
 
       {/* Reset Confirmation Dialog */}
       <AlertDialog open={showResetDialog} onOpenChange={setShowResetDialog}>
-        <AlertDialogContent className="bg-gray-900 border-gray-800">
+        <AlertDialogContent className="bg-popover border-border">
           <AlertDialogHeader>
-            <AlertDialogTitle className="text-white">Recommencer le jeu ?</AlertDialogTitle>
-            <AlertDialogDescription className="text-gray-400">
-              Êtes-vous sûr de vouloir recommencer ? Toute votre progression sera perdue.
-              Cette action est irréversible.
+            <AlertDialogTitle className="text-foreground">Recommencer le jeu ?</AlertDialogTitle>
+            <AlertDialogDescription className="text-muted-foreground">
+              Êtes-vous sûr de vouloir tout effacer ? Votre progression et vos biais débloqués seront perdus.
             </AlertDialogDescription>
           </AlertDialogHeader>
           <AlertDialogFooter>
-            <AlertDialogCancel className="bg-gray-800 text-white border-gray-700 hover:bg-gray-700">
+            <AlertDialogCancel className="bg-secondary text-secondary-foreground border-border hover:bg-secondary/80">
               Annuler
             </AlertDialogCancel>
             <AlertDialogAction
               onClick={() => {
-                setShowResetDialog(false);
-                onReset();
+                onReset()
+                setShowResetDialog(false)
               }}
-              className="bg-red-600 hover:bg-red-700 text-white"
+              className="bg-destructive hover:bg-destructive/90 text-destructive-foreground"
             >
-              Oui, recommencer
+              Tout effacer
             </AlertDialogAction>
           </AlertDialogFooter>
         </AlertDialogContent>

@@ -17,8 +17,8 @@ export const LEVELS: Level[] = [
     name: "Novice",
     name_fr: "Novice",
     unlock_criteria: 0,
-    theme_color: "#00FFFF", // Cyan
-    glow_color: "0 0 20px #00FFFF",
+    theme_color: "var(--neon-cyan)", // Cyan
+    glow_color: "0 0 20px var(--neon-cyan)",
     description: "Découvrez les fondamentaux des biais cognitifs",
   },
   {
@@ -26,8 +26,8 @@ export const LEVELS: Level[] = [
     name: "Practitioner",
     name_fr: "Praticien",
     unlock_criteria: 70,
-    theme_color: "#FF6B35", // Orange néon
-    glow_color: "0 0 20px #FF6B35",
+    theme_color: "var(--neon-orange)", // Orange néon
+    glow_color: "0 0 20px var(--neon-orange)",
     description: "Appliquez vos connaissances à des cas UX réels",
   },
   {
@@ -35,8 +35,8 @@ export const LEVELS: Level[] = [
     name: "Expert",
     name_fr: "Expert",
     unlock_criteria: 70,
-    theme_color: "#A855F7", // Violet néon
-    glow_color: "0 0 20px #A855F7",
+    theme_color: "var(--neon-purple)", // Violet néon
+    glow_color: "0 0 20px var(--neon-purple)",
     description: "Maîtrisez les biais avancés et leurs implications stratégiques",
   },
 ]

@@ -12,16 +12,16 @@
   --popover-foreground: oklch(0.145 0 0);
   --primary: oklch(0.205 0 0);
   --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.97 0 0);
+  --secondary: oklch(0.9 0 0);
   --secondary-foreground: oklch(0.205 0 0);
-  --muted: oklch(0.97 0 0);
-  --muted-foreground: oklch(0.556 0 0);
-  --accent: oklch(0.97 0 0);
+  --muted: oklch(0.9 0 0);
+  --muted-foreground: oklch(0.45 0 0);
+  --accent: oklch(0.9 0 0);
   --accent-foreground: oklch(0.205 0 0);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.577 0.245 27.325);
-  --border: oklch(0.922 0 0);
-  --input: oklch(0.922 0 0);
+  --border: oklch(0.85 0 0);
+  --input: oklch(0.85 0 0);
   --ring: oklch(0.708 0 0);
   --chart-1: oklch(0.646 0.222 41.116);
   --chart-2: oklch(0.6 0.118 184.704);
@@ -38,23 +38,23 @@
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
 
-  /* Semantic neon colors for Cognitive Labs */
-  --neon-cyan: oklch(0.85 0.15 195);
-  --neon-green: oklch(0.8 0.2 150);
-  --neon-red: oklch(0.6 0.25 25);
-  --neon-purple: oklch(0.65 0.25 300);
-  --neon-orange: oklch(0.7 0.2 45);
-  --neon-yellow: oklch(0.85 0.18 85);
+  /* Semantic neon colors for Cognitive Labs - Darker for Light Mode visibility (AA Compliant) */
+  --neon-cyan: oklch(0.45 0.15 200);
+  --neon-green: oklch(0.45 0.15 150);
+  --neon-red: oklch(0.5 0.2 25);
+  --neon-purple: oklch(0.45 0.2 300);
+  --neon-orange: oklch(0.5 0.15 45);
+  --neon-yellow: oklch(0.5 0.15 85);
 
   /* Semantic tokens for quiz states */
   --success: var(--neon-green);
-  --success-foreground: oklch(0.13 0.02 260);
+  --success-foreground: oklch(0.985 0 0);
   --error: var(--neon-red);
   --error-foreground: oklch(0.985 0 0);
   --info: var(--neon-cyan);
-  --info-foreground: oklch(0.13 0.02 260);
+  --info-foreground: oklch(0.985 0 0);
   --warning: var(--neon-orange);
-  --warning-foreground: oklch(0.13 0.02 260);
+  --warning-foreground: oklch(0.985 0 0);
 }
 
 .dark {
@@ -172,9 +172,27 @@
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
   }
+
+  button {
+    @apply cursor-pointer;
+  }
+}
+
+/* Reduce shadow intensity in light mode */
+:root {
+  --shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+}
+
+.dark {
+  --shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.3), 0 1px 2px -1px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -2px rgba(0, 0, 0, 0.3);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -4px rgba(0, 0, 0, 0.3);
 }
 
 /* Custom scrollbar for dark theme */

@@ -5,6 +5,7 @@ import { QuizEngine } from "@/components/quiz-engine"
 import { OnboardingForm, type UserProfile } from "@/components/onboarding-form"
 import { loadState, saveState, type QuizState } from "@/lib/storage"
 import { LEVELS } from "@/lib/data"
+import { SettingsMenu } from "@/components/settings-menu"
 
 // Function to create a fresh, initial state for a new user
 const createInitialState = (profile: UserProfile): QuizState => {
@@ -69,11 +70,19 @@ export default function Home() {
     return null
   }
 
-  if (quizState && quizState.userProfile) {
-    // Pass state and a function to update it to the engine
-    // Use resetCounter as key to force remount on reset
-    return <QuizEngine key={resetCounter} initialState={quizState} onReset={handleReset} />
-  }
-
-  return <OnboardingForm onComplete={handleOnboardingComplete} />
+  return (
+    <>
+      {/* Settings Menu - Fixed in top right, hidden during quiz */}
+      {quizState && quizState.gameState !== 'playing' && (
+        <div className="fixed top-4 right-4 z-40">
+          <SettingsMenu />
+        </div>
+      )}
+      {quizState && quizState.userProfile ? (
+        <QuizEngine key={resetCounter} initialState={quizState} onReset={handleReset} />
+      ) : (
+        <OnboardingForm onComplete={handleOnboardingComplete} />
+      )}
+    </>
+  )
 }
