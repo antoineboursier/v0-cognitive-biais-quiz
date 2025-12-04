@@ -1,2 +1,449 @@
-[00:00:02.658] Server  WARN     ⚠ Minimum recommended TypeScript version is v5.1.0, older versions can potentially be incompatible with Next.js. Detected: 5.0.2
-[00:00:02.740] Server  LOG      ✓ Ready in 2.5s
+[00:00:00.660] Server  WARN     ⚠ Minimum recommended TypeScript version is v5.1.0, older versions can potentially be incompatible with Next.js. Detected: 5.0.2
+[00:00:00.746] Server  LOG      ✓ Ready in 514ms
+[00:00:55.179] Browser ERROR   Supabase save error: {"code":"PGRST205","details":null,"hint":null,"message":"Could not find the table 'public.user_scores' in the schema cache"}
+[00:00:55.180] Browser ERROR   Supabase save error: {"code":"PGRST205","details":null,"hint":null,"message":"Could not find the table 'public.user_scores' in the schema cache"}
+[00:01:25.623] Browser ERROR   Supabase save error: {"code":"PGRST205","details":null,"hint":null,"message":"Could not find the table 'public.user_scores' in the schema cache"}
+[00:03:09.016] Browser ERROR   Supabase save error: {"code":"PGRST205","details":null,"hint":null,"message":"Could not find the table 'public.user_scores' in the schema cache"}
+[00:03:10.481] Browser ERROR   Supabase save error: {"code":"PGRST205","details":null,"hint":null,"message":"Could not find the table 'public.user_scores' in the schema cache"}
+[00:03:16.908] Browser ERROR   Supabase save error: {"code":"PGRST205","details":null,"hint":null,"message":"Could not find the table 'public.user_scores' in the schema cache"}
+[00:03:20.445] Browser ERROR   Supabase save error: {"code":"PGRST205","details":null,"hint":null,"message":"Could not find the table 'public.user_scores' in the schema cache"}
+[00:03:23.350] Browser ERROR   Supabase save error: {"code":"PGRST205","details":null,"hint":null,"message":"Could not find the table 'public.user_scores' in the schema cache"}
+[00:03:33.616] Browser ERROR   Supabase save error: {"code":"PGRST205","details":null,"hint":null,"message":"Could not find the table 'public.user_scores' in the schema cache"}
+[00:03:37.134] Browser ERROR   Supabase save error: {"code":"PGRST205","details":null,"hint":null,"message":"Could not find the table 'public.user_scores' in the schema cache"}
+[00:03:47.948] Browser ERROR   Supabase save error: {"code":"PGRST205","details":null,"hint":null,"message":"Could not find the table 'public.user_scores' in the schema cache"}
+[00:03:51.640] Browser ERROR   Supabase save error: {"code":"PGRST205","details":null,"hint":null,"message":"Could not find the table 'public.user_scores' in the schema cache"}
+[00:04:01.003] Browser ERROR   Supabase save error: {"code":"PGRST205","details":null,"hint":null,"message":"Could not find the table 'public.user_scores' in the schema cache"}
+[00:04:04.523] Browser ERROR   Supabase save error: {"code":"PGRST205","details":null,"hint":null,"message":"Could not find the table 'public.user_scores' in the schema cache"}
+[00:04:06.359] Browser ERROR   Supabase save error: {"code":"PGRST205","details":null,"hint":null,"message":"Could not find the table 'public.user_scores' in the schema cache"}
+[00:04:10.476] Browser ERROR   Supabase save error: {"code":"PGRST205","details":null,"hint":null,"message":"Could not find the table 'public.user_scores' in the schema cache"}
+[00:04:13.400] Browser ERROR   Supabase save error: {"code":"PGRST205","details":null,"hint":null,"message":"Could not find the table 'public.user_scores' in the schema cache"}
+[00:04:16.379] Server  LOG      ✓ Compiled in 30ms
+[00:04:16.750] Browser ERROR   Supabase save error: {"code":"PGRST205","details":null,"hint":null,"message":"Could not find the table 'public.user_scores' in the schema cache"}
+[00:04:17.832] Browser ERROR   Supabase save error: {"code":"PGRST205","details":null,"hint":null,"message":"Could not find the table 'public.user_scores' in the schema cache"}
+[00:04:18.999] Browser ERROR   Supabase save error: {"code":"PGRST205","details":null,"hint":null,"message":"Could not find the table 'public.user_scores' in the schema cache"}
+[00:04:25.605] Browser ERROR   Supabase save error: {"code":"PGRST205","details":null,"hint":null,"message":"Could not find the table 'public.user_scores' in the schema cache"}
+[00:04:38.689] Browser ERROR   Supabase save error: {"code":"PGRST205","details":null,"hint":null,"message":"Could not find the table 'public.user_scores' in the schema cache"}
+[00:04:40.252] Server  LOG      ✓ Compiled in 23ms
+[00:04:43.307] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head>
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="layout.tsx">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <RootLayout>
+                        <html
+                          lang="fr"
+                          className="dark"
+-                         data-jetski-tab-id="418219932"
+                        >
+                  ...
+
+[00:04:43.307] Browser ERROR   Error saving user score: {}
+[00:04:43.307] Browser ERROR   Error saving user score: {}
+[00:04:56.330] Browser ERROR   Supabase save error: {"code":"PGRST205","details":null,"hint":null,"message":"Could not find the table 'public.user_scores' in the schema cache"}
+[00:04:56.330] Browser WARN    ⚠️ Assurez-vous que la table "user_scores" existe dans Supabase.
+[00:04:56.330] Browser WARN    📝 Exécutez le fichier supabase_migration.sql dans votre dashboard Supabase.
+[00:04:59.771] Browser ERROR   Supabase save error: {"code":"PGRST205","details":null,"hint":null,"message":"Could not find the table 'public.user_scores' in the schema cache"}
+[00:04:59.771] Browser WARN    ⚠️ Assurez-vous que la table "user_scores" existe dans Supabase.
+[00:04:59.771] Browser WARN    📝 Exécutez le fichier supabase_migration.sql dans votre dashboard Supabase.
+[00:05:22.836] Browser ERROR   Supabase save error: {"code":"PGRST205","details":null,"hint":null,"message":"Could not find the table 'public.user_scores' in the schema cache"}
+[00:05:22.836] Browser WARN    ⚠️ Assurez-vous que la table "user_scores" existe dans Supabase.
+[00:05:22.836] Browser WARN    📝 Exécutez le fichier supabase_migration.sql dans votre dashboard Supabase.
+[00:05:27.568] Browser ERROR   Supabase save error: {"code":"PGRST205","details":null,"hint":null,"message":"Could not find the table 'public.user_scores' in the schema cache"}
+[00:05:27.568] Browser WARN    ⚠️ Assurez-vous que la table "user_scores" existe dans Supabase.
+[00:05:27.568] Browser WARN    📝 Exécutez le fichier supabase_migration.sql dans votre dashboard Supabase.
+[00:05:31.084] Browser ERROR   Supabase save error: {"code":"PGRST205","details":null,"hint":null,"message":"Could not find the table 'public.user_scores' in the schema cache"}
+[00:05:31.084] Browser WARN    ⚠️ Assurez-vous que la table "user_scores" existe dans Supabase.
+[00:05:31.084] Browser WARN    📝 Exécutez le fichier supabase_migration.sql dans votre dashboard Supabase.
+[00:05:47.536] Browser ERROR   Supabase save error: {"code":"PGRST205","details":null,"hint":null,"message":"Could not find the table 'public.user_scores' in the schema cache"}
+[00:05:47.536] Browser WARN    ⚠️ Assurez-vous que la table "user_scores" existe dans Supabase.
+[00:05:47.536] Browser WARN    📝 Exécutez le fichier supabase_migration.sql dans votre dashboard Supabase.
+[00:06:03.527] Browser ERROR   Supabase save error: {"code":"PGRST205","details":null,"hint":null,"message":"Could not find the table 'public.user_scores' in the schema cache"}
+[00:06:03.527] Browser WARN    ⚠️ Assurez-vous que la table "user_scores" existe dans Supabase.
+[00:06:03.527] Browser WARN    📝 Exécutez le fichier supabase_migration.sql dans votre dashboard Supabase.
+[00:06:07.005] Browser ERROR   Supabase save error: {"code":"PGRST205","details":null,"hint":null,"message":"Could not find the table 'public.user_scores' in the schema cache"}
+[00:06:07.005] Browser WARN    ⚠️ Assurez-vous que la table "user_scores" existe dans Supabase.
+[00:06:07.005] Browser WARN    📝 Exécutez le fichier supabase_migration.sql dans votre dashboard Supabase.
+[00:06:13.846] Browser ERROR   Supabase save error: {"code":"PGRST205","details":null,"hint":null,"message":"Could not find the table 'public.user_scores' in the schema cache"}
+[00:06:13.846] Browser WARN    ⚠️ Assurez-vous que la table "user_scores" existe dans Supabase.
+[00:06:13.846] Browser WARN    📝 Exécutez le fichier supabase_migration.sql dans votre dashboard Supabase.
+[00:06:22.951] Browser ERROR   Supabase save error: {"code":"PGRST205","details":null,"hint":null,"message":"Could not find the table 'public.user_scores' in the schema cache"}
+[00:06:22.952] Browser WARN    ⚠️ Assurez-vous que la table "user_scores" existe dans Supabase.
+[00:06:22.952] Browser WARN    📝 Exécutez le fichier supabase_migration.sql dans votre dashboard Supabase.
+[00:06:26.489] Browser ERROR   Supabase save error: {"code":"PGRST205","details":null,"hint":null,"message":"Could not find the table 'public.user_scores' in the schema cache"}
+[00:06:26.489] Browser WARN    ⚠️ Assurez-vous que la table "user_scores" existe dans Supabase.
+[00:06:26.489] Browser WARN    📝 Exécutez le fichier supabase_migration.sql dans votre dashboard Supabase.
+[00:06:40.968] Browser ERROR   Supabase save error: {"code":"PGRST205","details":null,"hint":null,"message":"Could not find the table 'public.user_scores' in the schema cache"}
+[00:06:40.968] Browser WARN    ⚠️ Assurez-vous que la table "user_scores" existe dans Supabase.
+[00:06:40.968] Browser WARN    📝 Exécutez le fichier supabase_migration.sql dans votre dashboard Supabase.
+[00:06:44.123] Browser ERROR   Supabase save error: {"code":"PGRST205","details":null,"hint":null,"message":"Could not find the table 'public.user_scores' in the schema cache"}
+[00:06:44.123] Browser WARN    ⚠️ Assurez-vous que la table "user_scores" existe dans Supabase.
+[00:06:44.123] Browser WARN    📝 Exécutez le fichier supabase_migration.sql dans votre dashboard Supabase.
+[00:06:44.123] Browser ERROR   Supabase save error: {"code":"PGRST205","details":null,"hint":null,"message":"Could not find the table 'public.user_scores' in the schema cache"}
+[00:06:44.123] Browser WARN    ⚠️ Assurez-vous que la table "user_scores" existe dans Supabase.
+[00:06:44.123] Browser WARN    📝 Exécutez le fichier supabase_migration.sql dans votre dashboard Supabase.
+[00:06:51.050] Browser ERROR   Supabase save error: {"code":"PGRST205","details":null,"hint":null,"message":"Could not find the table 'public.user_scores' in the schema cache"}
+[00:06:51.050] Browser WARN    ⚠️ Assurez-vous que la table "user_scores" existe dans Supabase.
+[00:06:51.050] Browser WARN    📝 Exécutez le fichier supabase_migration.sql dans votre dashboard Supabase.
+[00:06:56.910] Browser ERROR   Supabase save error: {"code":"PGRST205","details":null,"hint":null,"message":"Could not find the table 'public.user_scores' in the schema cache"}
+[00:06:56.910] Browser WARN    ⚠️ Assurez-vous que la table "user_scores" existe dans Supabase.
+[00:06:56.910] Browser WARN    📝 Exécutez le fichier supabase_migration.sql dans votre dashboard Supabase.
+[00:07:00.412] Browser ERROR   Supabase save error: {"code":"PGRST205","details":null,"hint":null,"message":"Could not find the table 'public.user_scores' in the schema cache"}
+[00:07:00.412] Browser WARN    ⚠️ Assurez-vous que la table "user_scores" existe dans Supabase.
+[00:07:00.412] Browser WARN    📝 Exécutez le fichier supabase_migration.sql dans votre dashboard Supabase.
+[00:07:06.429] Browser ERROR   Supabase save error: {"code":"PGRST205","details":null,"hint":null,"message":"Could not find the table 'public.user_scores' in the schema cache"}
+[00:07:06.429] Browser WARN    ⚠️ Assurez-vous que la table "user_scores" existe dans Supabase.
+[00:07:06.429] Browser WARN    📝 Exécutez le fichier supabase_migration.sql dans votre dashboard Supabase.
+[00:07:08.471] Browser ERROR   Supabase save error: {"code":"PGRST205","details":null,"hint":null,"message":"Could not find the table 'public.user_scores' in the schema cache"}
+[00:07:08.471] Browser WARN    ⚠️ Assurez-vous que la table "user_scores" existe dans Supabase.
+[00:07:08.471] Browser WARN    📝 Exécutez le fichier supabase_migration.sql dans votre dashboard Supabase.
+[00:07:12.379] Browser ERROR   Supabase save error: {"code":"PGRST205","details":null,"hint":null,"message":"Could not find the table 'public.user_scores' in the schema cache"}
+[00:07:12.379] Browser WARN    ⚠️ Assurez-vous que la table "user_scores" existe dans Supabase.
+[00:07:12.379] Browser WARN    📝 Exécutez le fichier supabase_migration.sql dans votre dashboard Supabase.
+[00:07:16.467] Browser ERROR   Supabase save error: {"code":"PGRST205","details":null,"hint":null,"message":"Could not find the table 'public.user_scores' in the schema cache"}
+[00:07:16.468] Browser WARN    ⚠️ Assurez-vous que la table "user_scores" existe dans Supabase.
+[00:07:16.468] Browser WARN    📝 Exécutez le fichier supabase_migration.sql dans votre dashboard Supabase.
+[00:07:25.695] Browser ERROR   Supabase save error: {"code":"PGRST205","details":null,"hint":null,"message":"Could not find the table 'public.user_scores' in the schema cache"}
+[00:07:25.695] Browser WARN    ⚠️ Assurez-vous que la table "user_scores" existe dans Supabase.
+[00:07:25.695] Browser WARN    📝 Exécutez le fichier supabase_migration.sql dans votre dashboard Supabase.
+[00:07:29.227] Browser ERROR   Supabase save error: {"code":"PGRST205","details":null,"hint":null,"message":"Could not find the table 'public.user_scores' in the schema cache"}
+[00:07:29.227] Browser WARN    ⚠️ Assurez-vous que la table "user_scores" existe dans Supabase.
+[00:07:29.227] Browser WARN    📝 Exécutez le fichier supabase_migration.sql dans votre dashboard Supabase.
+[00:07:32.538] Browser ERROR   Supabase save error: {"code":"PGRST205","details":null,"hint":null,"message":"Could not find the table 'public.user_scores' in the schema cache"}
+[00:07:32.538] Browser WARN    ⚠️ Assurez-vous que la table "user_scores" existe dans Supabase.
+[00:07:32.538] Browser WARN    📝 Exécutez le fichier supabase_migration.sql dans votre dashboard Supabase.
+[00:07:45.879] Browser ERROR   Supabase save error: {"code":"PGRST205","details":null,"hint":null,"message":"Could not find the table 'public.user_scores' in the schema cache"}
+[00:07:45.879] Browser WARN    ⚠️ Assurez-vous que la table "user_scores" existe dans Supabase.
+[00:07:45.879] Browser WARN    📝 Exécutez le fichier supabase_migration.sql dans votre dashboard Supabase.
+[00:07:49.418] Browser ERROR   Supabase save error: {"code":"PGRST205","details":null,"hint":null,"message":"Could not find the table 'public.user_scores' in the schema cache"}
+[00:07:49.418] Browser WARN    ⚠️ Assurez-vous que la table "user_scores" existe dans Supabase.
+[00:07:49.418] Browser WARN    📝 Exécutez le fichier supabase_migration.sql dans votre dashboard Supabase.
+[00:07:51.653] Browser ERROR   Supabase save error: {"code":"PGRST205","details":null,"hint":null,"message":"Could not find the table 'public.user_scores' in the schema cache"}
+[00:07:51.653] Browser WARN    ⚠️ Assurez-vous que la table "user_scores" existe dans Supabase.
+[00:07:51.653] Browser WARN    📝 Exécutez le fichier supabase_migration.sql dans votre dashboard Supabase.
+[00:08:06.912] Browser ERROR   Supabase save error: {"code":"PGRST205","details":null,"hint":null,"message":"Could not find the table 'public.user_scores' in the schema cache"}
+[00:08:06.912] Browser WARN    ⚠️ Assurez-vous que la table "user_scores" existe dans Supabase.
+[00:08:06.912] Browser WARN    📝 Exécutez le fichier supabase_migration.sql dans votre dashboard Supabase.
+[00:08:09.949] Browser ERROR   Supabase save error: {"code":"PGRST205","details":null,"hint":null,"message":"Could not find the table 'public.user_scores' in the schema cache"}
+[00:08:09.949] Browser WARN    ⚠️ Assurez-vous que la table "user_scores" existe dans Supabase.
+[00:08:09.949] Browser WARN    📝 Exécutez le fichier supabase_migration.sql dans votre dashboard Supabase.
+[00:08:13.151] Browser ERROR   Supabase save error: {"code":"PGRST205","details":null,"hint":null,"message":"Could not find the table 'public.user_scores' in the schema cache"}
+[00:08:13.151] Browser WARN    ⚠️ Assurez-vous que la table "user_scores" existe dans Supabase.
+[00:08:13.151] Browser WARN    📝 Exécutez le fichier supabase_migration.sql dans votre dashboard Supabase.
+[00:08:22.443] Browser ERROR   Supabase save error: {"code":"PGRST205","details":null,"hint":null,"message":"Could not find the table 'public.user_scores' in the schema cache"}
+[00:08:22.443] Browser WARN    ⚠️ Assurez-vous que la table "user_scores" existe dans Supabase.
+[00:08:22.443] Browser WARN    📝 Exécutez le fichier supabase_migration.sql dans votre dashboard Supabase.
+[00:08:25.630] Browser ERROR   Supabase save error: {"code":"PGRST205","details":null,"hint":null,"message":"Could not find the table 'public.user_scores' in the schema cache"}
+[00:08:25.630] Browser WARN    ⚠️ Assurez-vous que la table "user_scores" existe dans Supabase.
+[00:08:25.630] Browser WARN    📝 Exécutez le fichier supabase_migration.sql dans votre dashboard Supabase.
+[00:08:36.314] Browser ERROR   Supabase save error: {"code":"PGRST205","details":null,"hint":null,"message":"Could not find the table 'public.user_scores' in the schema cache"}
+[00:08:36.314] Browser WARN    ⚠️ Assurez-vous que la table "user_scores" existe dans Supabase.
+[00:08:36.314] Browser WARN    📝 Exécutez le fichier supabase_migration.sql dans votre dashboard Supabase.
+[00:09:28.015] Browser ERROR   Supabase save error: {"code":"PGRST205","details":null,"hint":null,"message":"Could not find the table 'public.user_scores' in the schema cache"}
+[00:09:28.015] Browser WARN    ⚠️ Assurez-vous que la table "user_scores" existe dans Supabase.
+[00:09:28.015] Browser WARN    📝 Exécutez le fichier supabase_migration.sql dans votre dashboard Supabase.
+[00:09:32.123] Browser ERROR   Supabase save error: {"code":"PGRST205","details":null,"hint":null,"message":"Could not find the table 'public.user_scores' in the schema cache"}
+[00:09:32.123] Browser WARN    ⚠️ Assurez-vous que la table "user_scores" existe dans Supabase.
+[00:09:32.123] Browser WARN    📝 Exécutez le fichier supabase_migration.sql dans votre dashboard Supabase.
+[00:09:34.080] Browser ERROR   Supabase save error: {"code":"PGRST205","details":null,"hint":null,"message":"Could not find the table 'public.user_scores' in the schema cache"}
+[00:09:34.080] Browser WARN    ⚠️ Assurez-vous que la table "user_scores" existe dans Supabase.
+[00:09:34.080] Browser WARN    📝 Exécutez le fichier supabase_migration.sql dans votre dashboard Supabase.
+[00:09:55.175] Browser ERROR   Supabase save error: {"code":"PGRST205","details":null,"hint":null,"message":"Could not find the table 'public.user_scores' in the schema cache"}
+[00:09:55.176] Browser WARN    ⚠️ Assurez-vous que la table "user_scores" existe dans Supabase.
+[00:09:55.176] Browser WARN    📝 Exécutez le fichier supabase_migration.sql dans votre dashboard Supabase.
+[00:10:02.256] Browser ERROR   Supabase save error: {"code":"PGRST205","details":null,"hint":null,"message":"Could not find the table 'public.user_scores' in the schema cache"}
+[00:10:02.256] Browser WARN    ⚠️ Assurez-vous que la table "user_scores" existe dans Supabase.
+[00:10:02.256] Browser WARN    📝 Exécutez le fichier supabase_migration.sql dans votre dashboard Supabase.
+[00:10:08.168] Browser ERROR   Supabase save error: {"code":"PGRST205","details":null,"hint":null,"message":"Could not find the table 'public.user_scores' in the schema cache"}
+[00:10:08.168] Browser WARN    ⚠️ Assurez-vous que la table "user_scores" existe dans Supabase.
+[00:10:08.168] Browser WARN    📝 Exécutez le fichier supabase_migration.sql dans votre dashboard Supabase.
+[00:10:08.168] Browser ERROR   Supabase save error: {"code":"PGRST205","details":null,"hint":null,"message":"Could not find the table 'public.user_scores' in the schema cache"}
+[00:10:08.168] Browser WARN    ⚠️ Assurez-vous que la table "user_scores" existe dans Supabase.
+[00:10:08.168] Browser WARN    📝 Exécutez le fichier supabase_migration.sql dans votre dashboard Supabase.
+[00:10:10.142] Browser ERROR   Supabase save error: {"code":"PGRST205","details":null,"hint":null,"message":"Could not find the table 'public.user_scores' in the schema cache"}
+[00:10:10.142] Browser WARN    ⚠️ Assurez-vous que la table "user_scores" existe dans Supabase.
+[00:10:10.142] Browser WARN    📝 Exécutez le fichier supabase_migration.sql dans votre dashboard Supabase.
+[00:10:12.319] Browser ERROR   Supabase save error: {"code":"PGRST205","details":null,"hint":null,"message":"Could not find the table 'public.user_scores' in the schema cache"}
+[00:10:12.319] Browser WARN    ⚠️ Assurez-vous que la table "user_scores" existe dans Supabase.
+[00:10:12.319] Browser WARN    📝 Exécutez le fichier supabase_migration.sql dans votre dashboard Supabase.
+[00:12:56.151] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head>
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="layout.tsx">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <RootLayout>
+                        <html
+                          lang="fr"
+                          className="dark"
+-                         data-jetski-tab-id="418219975"
+                        >
+                  ...
+
+[00:12:56.151] Browser ERROR   Error saving user score: {}
+[00:12:56.151] Browser ERROR   Error saving user score: {}
+[00:12:57.719] Browser ERROR   Error saving user score: {}
+[00:13:36.115] Server  LOG      ✓ Compiled in 26ms
+[00:13:36.214] Browser ERROR   Error saving user score: {}
+[00:13:36.214] Browser ERROR   Error saving user score: {}
+[00:13:36.225] Browser ERROR   Error saving user score: {}
+[00:13:36.225] Browser ERROR   Error saving user score: {}
+[00:15:48.137] Server  LOG      ✓ Compiled in 49ms
+[00:16:31.105] Browser ERROR   Error saving user score: {}
+[00:16:33.397] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head>
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="layout.tsx">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <RootLayout>
+                        <html
+                          lang="fr"
+                          className="dark"
+-                         data-jetski-tab-id="418219975"
+                        >
+                  ...
+
+[00:16:33.397] Browser ERROR   Error saving user score: {}
+[00:16:33.397] Browser ERROR   Error saving user score: {}
+[00:16:36.850] Browser ERROR   Error saving user score: {}
+[00:16:38.183] Browser ERROR   Error saving user score: {}
+[00:16:41.643] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head>
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="layout.tsx">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <RootLayout>
+                        <html
+                          lang="fr"
+                          className="dark"
+-                         data-jetski-tab-id="418219975"
+                        >
+                  ...
+
+[00:16:41.643] Browser ERROR   Error saving user score: {}
+[00:16:41.643] Browser ERROR   Error saving user score: {}
+[00:17:08.845] Browser ERROR   Error saving user score: {}
+[00:17:10.658] Browser ERROR   Error saving user score: {}
+[00:17:11.999] Browser ERROR   Error saving user score: {}
+[00:17:13.114] Browser ERROR   Error saving user score: {}
+[00:17:25.266] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head>
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="layout.tsx">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <RootLayout>
+                        <html
+                          lang="fr"
+                          className="dark"
+-                         data-jetski-tab-id="418219975"
+                        >
+                  ...
+
+[00:17:25.472] Browser ERROR   Error saving user score: {}
+[00:17:25.472] Browser ERROR   Error saving user score: {}
+[00:17:28.446] Browser ERROR   Error saving user score: {}
+[00:17:29.745] Browser ERROR   Error saving user score: {}
+[00:18:31.719] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/test-supa..." notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head>
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="layout.tsx">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <RootLayout>
+                        <html
+                          lang="fr"
+                          className="dark"
+-                         data-jetski-tab-id="418219987"
+                        >
+                  ...
+
+[00:18:35.993] Browser LOG     🔍 Test de connexion Supabase...
+[00:18:35.993] Browser LOG     ✅ Client Supabase créé
+[00:18:35.993] Browser LOG     
+📊 Test de la table user_scores...
+[00:18:36.367] Browser ERROR   ❌ Erreur lors de l'accès à la table: {"code":"PGRST205","details":null,"hint":null,"message":"Could not find the table 'public.user_scores' in the schema cache"}
+[00:18:36.367] Browser ERROR   
+⚠️ ERREUR INCONNUE: Could not find the table 'public.user_scores' in the schema cache
+[00:21:49.970] Server  LOG      ✓ Compiled in 21ms
+[00:21:50.076] Browser ERROR   Error saving user score: {}
+[00:21:50.076] Browser ERROR   Error saving user score: {}
+[00:21:50.096] Browser ERROR   Error saving user score: {}
+[00:21:50.096] Browser ERROR   Error saving user score: {}
+[00:22:59.387] Server  LOG      ✓ Compiled in 39ms
+[00:36:13.336] Browser ERROR   Error saving user score: {}
+[00:36:13.336] Browser ERROR   Error saving user score: {}
+[00:36:16.327] Browser ERROR   Error saving user score: {}
+[00:36:18.058] Browser ERROR   Supabase save error: {"code":"PGRST205","details":null,"hint":null,"message":"Could not find the table 'public.user_scores' in the schema cache"}
+[00:36:18.058] Browser WARN    ⚠️ Assurez-vous que la table "user_scores" existe dans Supabase.
+[00:36:18.058] Browser WARN    📝 Exécutez le fichier supabase_migration.sql dans votre dashboard Supabase.
+[00:36:18.058] Browser ERROR   Supabase save error: {"code":"PGRST205","details":null,"hint":null,"message":"Could not find the table 'public.user_scores' in the schema cache"}
+[00:36:18.058] Browser WARN    ⚠️ Assurez-vous que la table "user_scores" existe dans Supabase.
+[00:36:18.058] Browser WARN    📝 Exécutez le fichier supabase_migration.sql dans votre dashboard Supabase.
+[00:36:20.442] Browser ERROR   Supabase save error: {"code":"PGRST205","details":null,"hint":null,"message":"Could not find the table 'public.user_scores' in the schema cache"}
+[00:36:20.442] Browser WARN    ⚠️ Assurez-vous que la table "user_scores" existe dans Supabase.
+[00:36:20.442] Browser WARN    📝 Exécutez le fichier supabase_migration.sql dans votre dashboard Supabase.
+[00:38:01.650] Browser ERROR   Supabase save error: {"code":"PGRST205","details":null,"hint":null,"message":"Could not find the table 'public.user_scores' in the schema cache"}
+[00:38:01.650] Browser WARN    ⚠️ Assurez-vous que la table "user_scores" existe dans Supabase.
+[00:38:01.650] Browser WARN    📝 Exécutez le fichier supabase_migration.sql dans votre dashboard Supabase.
+[00:38:04.731] Browser ERROR   Supabase save error: {"code":"PGRST205","details":null,"hint":null,"message":"Could not find the table 'public.user_scores' in the schema cache"}
+[00:38:04.731] Browser WARN    ⚠️ Assurez-vous que la table "user_scores" existe dans Supabase.
+[00:38:04.731] Browser WARN    📝 Exécutez le fichier supabase_migration.sql dans votre dashboard Supabase.
+[00:38:08.088] Browser ERROR   Supabase save error: {"code":"PGRST205","details":null,"hint":null,"message":"Could not find the table 'public.user_scores' in the schema cache"}
+[00:38:08.088] Browser WARN    ⚠️ Assurez-vous que la table "user_scores" existe dans Supabase.
+[00:38:08.088] Browser WARN    📝 Exécutez le fichier supabase_migration.sql dans votre dashboard Supabase.
+[00:38:10.585] Browser ERROR   Supabase save error: {"code":"PGRST205","details":null,"hint":null,"message":"Could not find the table 'public.user_scores' in the schema cache"}
+[00:38:10.586] Browser WARN    ⚠️ Assurez-vous que la table "user_scores" existe dans Supabase.
+[00:38:10.586] Browser WARN    📝 Exécutez le fichier supabase_migration.sql dans votre dashboard Supabase.
+[00:38:12.631] Browser ERROR   Supabase save error: {"code":"PGRST205","details":null,"hint":null,"message":"Could not find the table 'public.user_scores' in the schema cache"}
+[00:38:12.631] Browser WARN    ⚠️ Assurez-vous que la table "user_scores" existe dans Supabase.
+[00:38:12.631] Browser WARN    📝 Exécutez le fichier supabase_migration.sql dans votre dashboard Supabase.
+[00:38:22.843] Browser ERROR   Supabase save error: {"code":"PGRST205","details":null,"hint":null,"message":"Could not find the table 'public.user_scores' in the schema cache"}
+[00:38:22.844] Browser WARN    ⚠️ Assurez-vous que la table "user_scores" existe dans Supabase.
+[00:38:22.844] Browser WARN    📝 Exécutez le fichier supabase_migration.sql dans votre dashboard Supabase.
+[00:38:24.615] Browser ERROR   Supabase save error: {"code":"PGRST205","details":null,"hint":null,"message":"Could not find the table 'public.user_scores' in the schema cache"}
+[00:38:24.615] Browser WARN    ⚠️ Assurez-vous que la table "user_scores" existe dans Supabase.
+[00:38:24.615] Browser WARN    📝 Exécutez le fichier supabase_migration.sql dans votre dashboard Supabase.
+[00:38:24.615] Browser ERROR   Supabase save error: {"code":"PGRST205","details":null,"hint":null,"message":"Could not find the table 'public.user_scores' in the schema cache"}
+[00:38:24.615] Browser WARN    ⚠️ Assurez-vous que la table "user_scores" existe dans Supabase.
+[00:38:24.615] Browser WARN    📝 Exécutez le fichier supabase_migration.sql dans votre dashboard Supabase.
+[03:08:48.619] Browser ERROR   Supabase save error: {"code":"PGRST205","details":null,"hint":null,"message":"Could not find the table 'public.user_scores' in the schema cache"}
+[03:08:48.619] Browser WARN    ⚠️ Assurez-vous que la table "user_scores" existe dans Supabase.
+[03:08:48.619] Browser WARN    📝 Exécutez le fichier supabase_migration.sql dans votre dashboard Supabase.
+[03:08:48.619] Browser ERROR   Supabase save error: {"code":"PGRST205","details":null,"hint":null,"message":"Could not find the table 'public.user_scores' in the schema cache"}
+[03:08:48.619] Browser WARN    ⚠️ Assurez-vous que la table "user_scores" existe dans Supabase.
+[03:08:48.619] Browser WARN    📝 Exécutez le fichier supabase_migration.sql dans votre dashboard Supabase.
+[03:08:49.121] Browser ERROR   Supabase save error: {"code":"PGRST205","details":null,"hint":null,"message":"Could not find the table 'public.user_scores' in the schema cache"}
+[03:08:49.121] Browser WARN    ⚠️ Assurez-vous que la table "user_scores" existe dans Supabase.
+[03:08:49.121] Browser WARN    📝 Exécutez le fichier supabase_migration.sql dans votre dashboard Supabase.
+[03:08:49.121] Browser ERROR   Supabase save error: {"code":"PGRST205","details":null,"hint":null,"message":"Could not find the table 'public.user_scores' in the schema cache"}
+[03:08:49.121] Browser WARN    ⚠️ Assurez-vous que la table "user_scores" existe dans Supabase.
+[03:08:49.121] Browser WARN    📝 Exécutez le fichier supabase_migration.sql dans votre dashboard Supabase.

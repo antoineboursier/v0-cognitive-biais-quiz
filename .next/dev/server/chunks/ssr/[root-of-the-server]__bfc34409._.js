@@ -5985,6 +5985,7 @@ const createInitialState = (profile)=>{
         currentQuestionIndex: 0,
         levelProgress: initialProgress,
         unlockedBiases: [],
+        completedQuestionIds: [],
         allLevelsCompleted: false,
         totalScore: 0,
         totalQuestions: __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$data$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["LEVELS"].length * 20
@@ -6031,7 +6032,7 @@ function Home() {
             onReset: handleReset
         }, void 0, false, {
             fileName: "[project]/app/page.tsx",
-            lineNumber: 71,
+            lineNumber: 72,
             columnNumber: 12
         }, this);
     }
@@ -6039,7 +6040,7 @@ function Home() {
         onComplete: handleOnboardingComplete
     }, void 0, false, {
         fileName: "[project]/app/page.tsx",
-        lineNumber: 74,
+        lineNumber: 75,
         columnNumber: 10
     }, this);
 }

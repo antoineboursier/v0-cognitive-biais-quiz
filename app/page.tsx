@@ -21,6 +21,8 @@ const createInitialState = (profile: UserProfile): QuizState => {
     currentQuestionIndex: 0,
     levelProgress: initialProgress,
     unlockedBiases: [],
+    completedQuestionIds: [],
+    answeredQuestions: [], // New: track all answered questions with correctness
     allLevelsCompleted: false,
     totalScore: 0,
     totalQuestions: LEVELS.length * 20, // Adjust if totals are dynamic
@@ -30,6 +32,7 @@ const createInitialState = (profile: UserProfile): QuizState => {
 export default function Home() {
   const [quizState, setQuizState] = useState<QuizState | null>(null)
   const [isReady, setIsReady] = useState(false)
+  const [resetCounter, setResetCounter] = useState(0) // Counter to force remount on reset
 
   useEffect(() => {
     // This effect runs once on component mount
@@ -50,14 +53,14 @@ export default function Home() {
     saveState(newState)
     setQuizState(newState)
   }
-  
+
   const handleReset = () => {
-    if (window.confirm("Êtes-vous sûr de vouloir recommencer ? Toute votre progression sera perdue.")) {
-      if (quizState && quizState.userProfile) {
-        const newState = createInitialState(quizState.userProfile);
-        saveState(newState);
-        setQuizState(newState);
-      }
+    // Reset is now handled by AlertDialog in QuizEngine component
+    if (quizState && quizState.userProfile) {
+      const newState = createInitialState(quizState.userProfile);
+      saveState(newState);
+      setQuizState(newState);
+      setResetCounter(prev => prev + 1); // Increment to force remount
     }
   }
 
@@ -68,7 +71,8 @@ export default function Home() {
 
   if (quizState && quizState.userProfile) {
     // Pass state and a function to update it to the engine
-    return <QuizEngine initialState={quizState} onReset={handleReset} />
+    // Use resetCounter as key to force remount on reset
+    return <QuizEngine key={resetCounter} initialState={quizState} onReset={handleReset} />
   }
 
   return <OnboardingForm onComplete={handleOnboardingComplete} />

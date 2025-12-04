@@ -13,6 +13,13 @@ export interface LevelProgress {
   completed: boolean;
 }
 
+// Track individual question answers
+export interface QuestionAnswer {
+  questionId: string;
+  isCorrect: boolean;
+  answeredAt: number; // timestamp
+}
+
 // The single, unified state for the entire quiz application
 export interface QuizState {
   userProfile: UserProfile | null;
@@ -22,6 +29,8 @@ export interface QuizState {
   currentQuestionIndex: number;
   levelProgress: Record<number, LevelProgress>;
   unlockedBiases: string[]; // Storing as an array of strings for JSON compatibility
+  completedQuestionIds: string[]; // Deprecated - use answeredQuestions instead
+  answeredQuestions: QuestionAnswer[]; // New: track all answered questions with correctness
   allLevelsCompleted: boolean;
   totalScore: number;
   totalQuestions: number;
@@ -72,11 +81,11 @@ export const loadState = (): QuizState | null => {
  * Clears the user's quiz state from localStorage.
  */
 export const clearState = (): void => {
-    if (typeof window !== 'undefined') {
-        try {
-            window.localStorage.removeItem(STATE_KEY);
-        } catch (error) {
-            console.error("Failed to clear state from localStorage:", error);
-        }
+  if (typeof window !== 'undefined') {
+    try {
+      window.localStorage.removeItem(STATE_KEY);
+    } catch (error) {
+      console.error("Failed to clear state from localStorage:", error);
     }
+  }
 }
