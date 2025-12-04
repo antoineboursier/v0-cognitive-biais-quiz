@@ -236,7 +236,7 @@ function quizReducer(state: QuizState, action: Action): QuizState {
 // ------------------------------
 export function QuizEngine({ initialState, onReset }: QuizEngineProps) {
   const { theme, setTheme } = useTheme()
-  const { animationsEnabled } = useSettings()
+  const { animationsEnabled, cheatMode } = useSettings()
 
   // All state is managed by the reducer, initialized by props
   const [state, dispatch] = useReducer(quizReducer, {
@@ -602,18 +602,29 @@ export function QuizEngine({ initialState, onReset }: QuizEngineProps) {
                           whileHover={selectedAnswer === null ? { scale: 1.02 } : {}}
                           whileTap={selectedAnswer === null ? { scale: 0.98 } : {}}
                         >
-                          <div className="flex items-center gap-3">
-                            <div
-                              className={`w-8 h-8 rounded-full flex items-center justify-center font-bold ${showResult && isCorrect
-                                ? "bg-green-500 text-black"
-                                : showResult && isSelected && !isCorrect
-                                  ? "bg-destructive text-destructive-foreground"
-                                  : "bg-muted text-muted-foreground"
-                                }`}
-                            >
-                              {String.fromCharCode(65 + index)}
+                          <div className="flex items-center gap-3 justify-between">
+                            <div className="flex items-center gap-3">
+                              <div
+                                className={`w-8 h-8 rounded-full flex items-center justify-center font-bold ${showResult && isCorrect
+                                  ? "bg-green-500 text-black"
+                                  : showResult && isSelected && !isCorrect
+                                    ? "bg-destructive text-destructive-foreground"
+                                    : "bg-muted text-muted-foreground"
+                                  }`}
+                              >
+                                {String.fromCharCode(65 + index)}
+                              </div>
+                              <span className="text-foreground">{option.text}</span>
                             </div>
-                            <span className="text-foreground">{option.text}</span>
+                            {/* Cheat mode indicator - only show before answer is revealed */}
+                            {cheatMode && !showExplanation && isCorrect && (
+                              <div
+                                className="flex items-center justify-center w-6 h-6 rounded-full bg-green-500 text-white text-xs font-bold shadow-lg"
+                                title="Bonne réponse (mode triche)"
+                              >
+                                ✓
+                              </div>
+                            )}
                           </div>
                         </motion.button>
                       )

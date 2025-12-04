@@ -1,6 +1,6 @@
 "use client"
 
-import { Settings, Moon, Sun, Zap, ZapOff } from "lucide-react"
+import { Settings, Moon, Sun, Zap, ZapOff, Eye } from "lucide-react"
 import { useTheme } from "next-themes"
 import { useSettings } from "@/lib/settings-context"
 import { Button } from "@/components/ui/button"
@@ -14,7 +14,7 @@ import { Label } from "@/components/ui/label"
 
 export function SettingsMenu() {
     const { theme, setTheme } = useTheme()
-    const { animationsEnabled, setAnimationsEnabled } = useSettings()
+    const { animationsEnabled, setAnimationsEnabled, cheatMode, setCheatMode } = useSettings()
 
     return (
         <Popover>
@@ -79,6 +79,27 @@ export function SettingsMenu() {
                                 </Button>
                             </div>
                         </div>
+
+                        {/* Cheat mode toggle - ONLY in development */}
+                        {process.env.NODE_ENV === 'development' && (
+                            <div className="flex items-center justify-between space-x-2 border-t border-muted/50 pt-4 mt-2">
+                                <div className="flex flex-col space-y-1">
+                                    <Label htmlFor="cheat-mode" className="flex items-center gap-2 text-destructive">
+                                        <Eye className="h-4 w-4" />
+                                        Mode Triche
+                                    </Label>
+                                    <span className="text-xs text-muted-foreground">
+                                        Afficher la bonne réponse pendant le quiz.
+                                    </span>
+                                </div>
+                                <Switch
+                                    id="cheat-mode"
+                                    checked={cheatMode}
+                                    onCheckedChange={setCheatMode}
+                                    className="data-[state=checked]:bg-destructive"
+                                />
+                            </div>
+                        )}
                     </div>
                 </div>
             </PopoverContent>
