@@ -3,7 +3,8 @@
 import { useState, useReducer, useEffect, useRef, useCallback } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import {
-  Brain, Zap, Trophy, RotateCcw, BookOpen, ChevronRight, Lock, CheckCircle, ArrowLeft, Award,
+  Brain, Zap, Trophy, RotateCcw, ChevronRight, Lock, CheckCircle, ArrowLeft, Award,
+  Library, CheckCircle2, BookOpen
 } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
@@ -28,6 +29,7 @@ import {
   AlertDialogHeader,
   AlertDialogTitle,
 } from "@/components/ui/alert-dialog"
+import { BiasCategoryIcon, categoryColors } from "@/components/ui/icons"
 
 // ------------------------------
 // PROPS
@@ -267,6 +269,15 @@ export function QuizEngine({ initialState, onReset }: QuizEngineProps) {
   const [showResetDialogLocal, setShowResetDialogLocal] = useState(showResetDialog);
   const explanationRef = useRef<HTMLDivElement>(null);
 
+  useEffect(() => {
+    if (showExplanation && explanationRef.current) {
+      // Use a timeout to allow the element to render fully before scrolling
+      setTimeout(() => {
+        explanationRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 100);
+    }
+  }, [showExplanation]);
+
   // Persist state to localStorage on every change
   useEffect(() => {
     // We only save the "Base" state, not the volatile UI state
@@ -335,7 +346,7 @@ export function QuizEngine({ initialState, onReset }: QuizEngineProps) {
 
   // ... (The rest of the render methods are identical) ...
   const renderMenu = () => (
-    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="min-h-screen p-8">
+    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="min-h-screen p-8 pb-20">
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <div className="text-center mb-12">
@@ -471,7 +482,7 @@ export function QuizEngine({ initialState, onReset }: QuizEngineProps) {
               onClick={() => setGameState("wiki")}
             >
               <BookOpen className="w-5 h-5 mr-2" />
-              Bibliothèque des Biais ({unlockedBiases.length}/{BIAS_LIBRARY.length})
+              Bibliothèque des Biais ({unlockedBiases.length}/{QUESTIONS.length})
             </Button>
           </div>
         </div>
@@ -482,8 +493,14 @@ export function QuizEngine({ initialState, onReset }: QuizEngineProps) {
   const renderPlaying = () => {
     if (!currentQuestion) return null
 
+    // Find the category and color for the current question's bias
+    const correctOption = currentQuestion.options.find(o => o.is_correct);
+    const bias = correctOption?.bias_id ? BIAS_LIBRARY.find(b => b.bias_id === correctOption.bias_id) : undefined;
+    const questionCategory = bias?.category || 'default';
+    const categoryColor = categoryColors[questionCategory] || 'var(--muted-foreground)';
+
     return (
-      <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="min-h-screen p-4 md:p-8">
+      <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="min-h-screen p-4 md:p-8 pb-20">
         <div className="max-w-4xl mx-auto">
           {/* Header de niveau */}
           <div className="flex items-center justify-between mb-6">
@@ -518,14 +535,14 @@ export function QuizEngine({ initialState, onReset }: QuizEngineProps) {
                   <div
                     className="w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0"
                     style={{
-                      backgroundColor: `${currentLevel.theme_color}20`,
-                      border: `2px solid ${currentLevel.theme_color}`,
+                      backgroundColor: `color-mix(in oklch, ${categoryColor} 10%, transparent)`,
+                      border: `2px solid ${categoryColor}`,
                     }}
                   >
-                    <Brain className="w-5 h-5" style={{ color: currentLevel.theme_color }} />
+                    <BiasCategoryIcon category={questionCategory} className="w-5 h-5" style={{ color: categoryColor }} />
                   </div>
                   <div>
-                    <p className="text-xs text-gray-500 font-mono mb-2">SITUATION #{currentQuestion.id}</p>
+                    <p className="text-xs text-gray-500 font-mono">SITUATION #{currentQuestion.id}</p>
                     <p className="text-lg md:text-xl text-white leading-relaxed">{currentQuestion.scenario}</p>
                   </div>
                 </div>
@@ -589,6 +606,7 @@ export function QuizEngine({ initialState, onReset }: QuizEngineProps) {
               <AnimatePresence>
                 {showExplanation && (
                   <motion.div
+                    ref={explanationRef}
                     initial={{ height: 0, opacity: 0 }}
                     animate={{ height: "auto", opacity: 1 }}
                     exit={{ height: 0, opacity: 0 }}
@@ -607,13 +625,13 @@ export function QuizEngine({ initialState, onReset }: QuizEngineProps) {
                         )}
                         <div>
                           <p
-                            className={`font-bold mb-2 ${scanResult === "success" ? "text-green-400" : "text-red-400"}`}
+                            className={`mb-2 ${scanResult === "success" ? "text-green-400" : "text-red-400"}`}
                           >
                             {scanResult === "success"
                               ? "Excellente analyse !"
                               : "Biais détecté dans votre raisonnement"}
                           </p>
-                          <p className="text-gray-300">{currentQuestion.explanation}</p>
+                          <p className="text-white text-base leading-relaxed">{currentQuestion.explanation}</p>
 
                           {(() => {
                             const correctOption = currentQuestion.options.find((o) => o.is_correct)
@@ -621,13 +639,15 @@ export function QuizEngine({ initialState, onReset }: QuizEngineProps) {
                               const bias = BIAS_LIBRARY.find((b) => b.bias_id === correctOption.bias_id)
                               if (bias) {
                                 return (
-                                  <div className="mt-4 p-3 rounded-lg bg-gray-900/50 border border-gray-700">
-                                    <p className="text-xs text-cyan-400 font-mono mb-1">
-                                      📚 AJOUTÉ À VOTRE BIBLIOTHÈQUE
-                                    </p>
-                                    <p className="text-white font-semibold">{bias.name}</p>
-                                    <p className="text-gray-500 text-sm">{bias.category}</p>
-                                  </div>
+                                  <div className="mt-4 p-4 rounded-lg bg-gray-900/50 border border-gray-700 flex items-center gap-4">
+                                      <CheckCircle2 className="w-8 h-8 text-cyan-400" aria-hidden="true" />
+                                      <span className="sr-only">Succès</span>
+                                      <div>
+                                        <p className="text-sm text-cyan-400">Ajouté à votre bibliothèque</p>
+                                        <p className="text-base font-semibold text-white">{bias.name}</p>
+                                        <p className="text-xs text-gray-500">{bias.category}</p>
+                                      </div>
+                                    </div>
                                 )
                               }
                             }
@@ -637,18 +657,20 @@ export function QuizEngine({ initialState, onReset }: QuizEngineProps) {
                       </div>
                     </Card>
 
-                    <Button
-                      onClick={nextQuestion}
-                      className="w-full"
-                      size="lg"
-                      style={{
-                        backgroundColor: currentLevel.theme_color,
-                        color: "#000",
-                      }}
-                    >
-                      {currentQuestionIndex < questions.length - 1 ? "Question Suivante" : "Voir les Résultats"}
-                      <ChevronRight className="w-5 h-5 ml-2" />
-                    </Button>
+                    <div className="flex justify-end">
+                      <Button
+                        onClick={nextQuestion}
+                        className="w-full sm:max-w-xs"
+                        size="lg"
+                        style={{
+                          backgroundColor: currentLevel.theme_color,
+                          color: "#000",
+                        }}
+                      >
+                        {currentQuestionIndex < questions.length - 1 ? "Question Suivante" : "Voir les Résultats"}
+                        <ChevronRight className="w-5 h-5 ml-2" />
+                      </Button>
+                    </div>
                   </motion.div>
                 )}
               </AnimatePresence>
@@ -672,7 +694,7 @@ export function QuizEngine({ initialState, onReset }: QuizEngineProps) {
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        className="min-h-screen flex items-center justify-center p-8"
+        className="min-h-screen flex items-center justify-center p-8 pb-20"
       >
         <Card className="max-w-lg w-full p-8 bg-gray-900/50 border-gray-800 text-center">
           <motion.div
@@ -722,6 +744,7 @@ export function QuizEngine({ initialState, onReset }: QuizEngineProps) {
               <Button
                 onClick={() => startLevel(nextLevel)}
                 size="lg"
+                className="w-full sm:max-w-xs mx-auto"
                 style={{
                   backgroundColor: nextLevel.theme_color,
                   color: "#000",
@@ -731,12 +754,12 @@ export function QuizEngine({ initialState, onReset }: QuizEngineProps) {
               </Button>
             )}
 
-            <Button variant="outline" onClick={() => startLevel(currentLevel)} className="border-gray-700">
+            <Button variant="outline" onClick={() => startLevel(currentLevel)} className="border-gray-700 w-full sm:max-w-xs mx-auto">
               <RotateCcw className="w-4 h-4 mr-2" />
               Refaire ce niveau
             </Button>
 
-            <Button variant="ghost" onClick={() => setGameState("menu")}>
+            <Button variant="ghost" onClick={() => setGameState("menu")} className="w-full sm:max-w-xs mx-auto">
               Retour au menu
             </Button>
           </div>
@@ -746,21 +769,22 @@ export function QuizEngine({ initialState, onReset }: QuizEngineProps) {
   }
 
   const renderWiki = () => (
-    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="min-h-screen p-4 md:p-8">
+    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="min-h-screen p-4 md:p-8 pb-20">
       <div className="max-w-6xl mx-auto">
         <div className="flex items-center justify-between mb-8">
-          <div>
-            <h1 className="text-3xl font-bold text-white flex items-center gap-3">
-              <BookOpen className="w-8 h-8 text-purple-500" />
+          <Button variant="ghost" onClick={() => setGameState("menu")} className="text-gray-400 hover:text-white">
+            ← Retour
+          </Button>
+          <div className="text-right">
+            <h1 className="text-3xl font-bold text-white flex items-center gap-3 justify-end">
+              <Library className="w-8 h-8 text-purple-500" aria-hidden="true" />
+              <span className="sr-only">Bibliothèque</span>
               Bibliothèque des Biais
             </h1>
             <p className="text-gray-400 mt-2">
-              {unlockedBiases.length} / {BIAS_LIBRARY.length} concepts débloqués
+              {unlockedBiases.length} / {QUESTIONS.length} concepts débloqués
             </p>
           </div>
-          <Button variant="outline" onClick={() => setGameState("menu")} className="border-gray-700">
-            ← Retour
-          </Button>
         </div>
 
         <Progress value={(unlockedBiases.length / BIAS_LIBRARY.length) * 100} className="h-2 mb-8" />

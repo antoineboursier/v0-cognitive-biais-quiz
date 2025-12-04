@@ -3,6 +3,7 @@
 import { motion } from "framer-motion"
 import { AlertTriangle, Lightbulb, Lock } from "lucide-react"
 import type { BiasEntry } from "@/lib/data"
+import { BiasCategoryIcon, categoryColors } from "./ui/icons"
 
 interface BiasWikiCardProps {
   bias: BiasEntry
@@ -11,37 +12,6 @@ interface BiasWikiCardProps {
 }
 
 export function BiasWikiCard({ bias, isUnlocked, onClick }: BiasWikiCardProps) {
-  const categoryColors: Record<string, string> = {
-    Perception: "var(--neon-cyan)",
-    Cognition: "var(--neon-orange)",
-    Décision: "var(--neon-purple)",
-    Mémoire: "var(--neon-yellow)",
-    Social: "var(--accent)",
-    "UX Law": "var(--neon-green)",
-    Persuasion: "var(--neon-red)",
-    "Dark Pattern": "var(--destructive)",
-    Organisation: "var(--primary)",
-    Métacognition: "var(--info)",
-    Probabilité: "var(--accent)",
-    Possession: "var(--success)",
-    Pricing: "var(--warning)",
-    Addiction: "var(--neon-orange)",
-    Motivation: "var(--neon-green)",
-    Émotion: "var(--destructive)",
-    Attention: "var(--neon-cyan)",
-    Technologie: "var(--neon-purple)",
-    Communication: "var(--neon-yellow)",
-    Projection: "var(--warning)",
-    Méthodologie: "var(--success)",
-    Métriques: "var(--primary)",
-    Risque: "var(--destructive)",
-    Estimation: "var(--neon-green)",
-    Jugement: "var(--neon-purple)",
-    Analyse: "var(--muted-foreground)",
-    Recherche: "var(--info)",
-    Comportement: "var(--warning)",
-  }
-
   const color = categoryColors[bias.category] || "var(--muted-foreground)"
 
   return (
@@ -61,17 +31,8 @@ export function BiasWikiCard({ bias, isUnlocked, onClick }: BiasWikiCardProps) {
       )}
 
       <div className="flex items-start justify-between mb-2">
-        <h3 className="font-bold text-foreground">{bias.name}</h3>
-        <span
-          className="text-xs px-2 py-1 rounded-full font-mono"
-          style={{
-            backgroundColor: `color-mix(in oklch, ${color} 20%, transparent)`,
-            color: color,
-            border: `1px solid color-mix(in oklch, ${color} 40%, transparent)`,
-          }}
-        >
-          {bias.category}
-        </span>
+        <h3 className="font-bold text-foreground pr-2">{bias.name}</h3>
+        <BiasCategoryIcon category={bias.category} title={bias.category} className="w-5 h-5 flex-shrink-0" style={{ color }} />
       </div>
 
       <p className="text-muted-foreground text-sm mb-3 line-clamp-2">{bias.definition}</p>

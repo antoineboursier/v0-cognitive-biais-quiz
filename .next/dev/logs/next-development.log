@@ -1,30 +1,2246 @@
-[00:00:00.660] Server  WARN     ⚠ Minimum recommended TypeScript version is v5.1.0, older versions can potentially be incompatible with Next.js. Detected: 5.0.2
-[00:00:00.746] Server  LOG      ✓ Ready in 514ms
-[00:00:55.179] Browser ERROR   Supabase save error: {"code":"PGRST205","details":null,"hint":null,"message":"Could not find the table 'public.user_scores' in the schema cache"}
-[00:00:55.180] Browser ERROR   Supabase save error: {"code":"PGRST205","details":null,"hint":null,"message":"Could not find the table 'public.user_scores' in the schema cache"}
-[00:01:25.623] Browser ERROR   Supabase save error: {"code":"PGRST205","details":null,"hint":null,"message":"Could not find the table 'public.user_scores' in the schema cache"}
-[00:03:09.016] Browser ERROR   Supabase save error: {"code":"PGRST205","details":null,"hint":null,"message":"Could not find the table 'public.user_scores' in the schema cache"}
-[00:03:10.481] Browser ERROR   Supabase save error: {"code":"PGRST205","details":null,"hint":null,"message":"Could not find the table 'public.user_scores' in the schema cache"}
-[00:03:16.908] Browser ERROR   Supabase save error: {"code":"PGRST205","details":null,"hint":null,"message":"Could not find the table 'public.user_scores' in the schema cache"}
-[00:03:20.445] Browser ERROR   Supabase save error: {"code":"PGRST205","details":null,"hint":null,"message":"Could not find the table 'public.user_scores' in the schema cache"}
-[00:03:23.350] Browser ERROR   Supabase save error: {"code":"PGRST205","details":null,"hint":null,"message":"Could not find the table 'public.user_scores' in the schema cache"}
-[00:03:33.616] Browser ERROR   Supabase save error: {"code":"PGRST205","details":null,"hint":null,"message":"Could not find the table 'public.user_scores' in the schema cache"}
-[00:03:37.134] Browser ERROR   Supabase save error: {"code":"PGRST205","details":null,"hint":null,"message":"Could not find the table 'public.user_scores' in the schema cache"}
-[00:03:47.948] Browser ERROR   Supabase save error: {"code":"PGRST205","details":null,"hint":null,"message":"Could not find the table 'public.user_scores' in the schema cache"}
-[00:03:51.640] Browser ERROR   Supabase save error: {"code":"PGRST205","details":null,"hint":null,"message":"Could not find the table 'public.user_scores' in the schema cache"}
-[00:04:01.003] Browser ERROR   Supabase save error: {"code":"PGRST205","details":null,"hint":null,"message":"Could not find the table 'public.user_scores' in the schema cache"}
-[00:04:04.523] Browser ERROR   Supabase save error: {"code":"PGRST205","details":null,"hint":null,"message":"Could not find the table 'public.user_scores' in the schema cache"}
-[00:04:06.359] Browser ERROR   Supabase save error: {"code":"PGRST205","details":null,"hint":null,"message":"Could not find the table 'public.user_scores' in the schema cache"}
-[00:04:10.476] Browser ERROR   Supabase save error: {"code":"PGRST205","details":null,"hint":null,"message":"Could not find the table 'public.user_scores' in the schema cache"}
-[00:04:13.400] Browser ERROR   Supabase save error: {"code":"PGRST205","details":null,"hint":null,"message":"Could not find the table 'public.user_scores' in the schema cache"}
-[00:04:16.379] Server  LOG      ✓ Compiled in 30ms
-[00:04:16.750] Browser ERROR   Supabase save error: {"code":"PGRST205","details":null,"hint":null,"message":"Could not find the table 'public.user_scores' in the schema cache"}
-[00:04:17.832] Browser ERROR   Supabase save error: {"code":"PGRST205","details":null,"hint":null,"message":"Could not find the table 'public.user_scores' in the schema cache"}
-[00:04:18.999] Browser ERROR   Supabase save error: {"code":"PGRST205","details":null,"hint":null,"message":"Could not find the table 'public.user_scores' in the schema cache"}
-[00:04:25.605] Browser ERROR   Supabase save error: {"code":"PGRST205","details":null,"hint":null,"message":"Could not find the table 'public.user_scores' in the schema cache"}
-[00:04:38.689] Browser ERROR   Supabase save error: {"code":"PGRST205","details":null,"hint":null,"message":"Could not find the table 'public.user_scores' in the schema cache"}
-[00:04:40.252] Server  LOG      ✓ Compiled in 23ms
-[00:04:43.307] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+[00:00:00.736] Server  WARN     ⚠ Minimum recommended TypeScript version is v5.1.0, older versions can potentially be incompatible with Next.js. Detected: 5.0.2
+[00:00:00.904] Server  LOG      ✓ Ready in 620ms
+[00:05:20.457] Server  LOG      ✓ Compiled in 32ms
+[00:12:07.075] Server  LOG      ✓ Compiled in 87ms
+[00:12:35.788] Server  LOG      ✓ Compiled in 85ms
+[00:13:11.602] Server  LOG      ✓ Compiled in 74ms
+[00:13:23.044] Server  LOG      ✓ Compiled in 22ms
+[00:14:31.976] Server  LOG      ✓ Compiled in 3s
+[00:14:32.103] Browser ERROR   ./components/quiz-engine.tsx:5:1
+Export Balance doesn't exist in target module
+   3 | import { useState, useReducer, useEffect, useRef, useCallback } from "react"
+   4 | import { motion, AnimatePresence } from "framer-motion"
+>  5 | import {
+     | ^^^^^^^^
+>  6 |   Brain, Zap, Trophy, RotateCcw, BookOpen, ChevronRight, Lock, CheckCircle, ArrowLeft, Award,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 |   Eye, BrainCircuit, GitMerge, Scale, Database, Users, Mic, Lightbulb, Dice3, Hand,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  8 |   BadgePercent, HeartPulse, TrendingUp, Smile, AlertTriangle, MousePointerSquare, Target,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  9 |   Search, PieChart, Building, Cpu, MessageSquare, Video, ClipboardCheck, Gauge, ShieldAlert,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 10 |   Clock, Balance, Library, CheckCircle2, Shapes
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 11 | } from "lucide-react"
+     | ^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | import { Button } from "@/components/ui/button"
+  14 | import { Card } from "@/components/ui/card"
+
+The export Balance was not found in module [project]/node_modules/.pnpm/lucide-react@0.454.0_react@19.2.0/node_modules/lucide-react/dist/esm/lucide-react.js [app-client] (ecmascript).
+Did you mean to import Ban?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:14:32.103] Browser ERROR   ./components/quiz-engine.tsx:5:1
+Export Balance doesn't exist in target module
+   3 | import { useState, useReducer, useEffect, useRef, useCallback } from "react"
+   4 | import { motion, AnimatePresence } from "framer-motion"
+>  5 | import {
+     | ^^^^^^^^
+>  6 |   Brain, Zap, Trophy, RotateCcw, BookOpen, ChevronRight, Lock, CheckCircle, ArrowLeft, Award,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 |   Eye, BrainCircuit, GitMerge, Scale, Database, Users, Mic, Lightbulb, Dice3, Hand,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  8 |   BadgePercent, HeartPulse, TrendingUp, Smile, AlertTriangle, MousePointerSquare, Target,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  9 |   Search, PieChart, Building, Cpu, MessageSquare, Video, ClipboardCheck, Gauge, ShieldAlert,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 10 |   Clock, Balance, Library, CheckCircle2, Shapes
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 11 | } from "lucide-react"
+     | ^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | import { Button } from "@/components/ui/button"
+  14 | import { Card } from "@/components/ui/card"
+
+The export Balance was not found in module [project]/node_modules/.pnpm/lucide-react@0.454.0_react@19.2.0/node_modules/lucide-react/dist/esm/lucide-react.js [app-ssr] (ecmascript).
+Did you mean to import Ban?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:14:32.103] Browser ERROR   ./components/quiz-engine.tsx:5:1
+Export MousePointerSquare doesn't exist in target module
+   3 | import { useState, useReducer, useEffect, useRef, useCallback } from "react"
+   4 | import { motion, AnimatePresence } from "framer-motion"
+>  5 | import {
+     | ^^^^^^^^
+>  6 |   Brain, Zap, Trophy, RotateCcw, BookOpen, ChevronRight, Lock, CheckCircle, ArrowLeft, Award,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 |   Eye, BrainCircuit, GitMerge, Scale, Database, Users, Mic, Lightbulb, Dice3, Hand,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  8 |   BadgePercent, HeartPulse, TrendingUp, Smile, AlertTriangle, MousePointerSquare, Target,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  9 |   Search, PieChart, Building, Cpu, MessageSquare, Video, ClipboardCheck, Gauge, ShieldAlert,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 10 |   Clock, Balance, Library, CheckCircle2, Shapes
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 11 | } from "lucide-react"
+     | ^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | import { Button } from "@/components/ui/button"
+  14 | import { Card } from "@/components/ui/card"
+
+The export MousePointerSquare was not found in module [project]/node_modules/.pnpm/lucide-react@0.454.0_react@19.2.0/node_modules/lucide-react/dist/esm/lucide-react.js [app-client] (ecmascript).
+Did you mean to import MousePointerSquareDashed?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:14:32.103] Browser ERROR   ./components/quiz-engine.tsx:5:1
+Export MousePointerSquare doesn't exist in target module
+   3 | import { useState, useReducer, useEffect, useRef, useCallback } from "react"
+   4 | import { motion, AnimatePresence } from "framer-motion"
+>  5 | import {
+     | ^^^^^^^^
+>  6 |   Brain, Zap, Trophy, RotateCcw, BookOpen, ChevronRight, Lock, CheckCircle, ArrowLeft, Award,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 |   Eye, BrainCircuit, GitMerge, Scale, Database, Users, Mic, Lightbulb, Dice3, Hand,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  8 |   BadgePercent, HeartPulse, TrendingUp, Smile, AlertTriangle, MousePointerSquare, Target,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  9 |   Search, PieChart, Building, Cpu, MessageSquare, Video, ClipboardCheck, Gauge, ShieldAlert,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 10 |   Clock, Balance, Library, CheckCircle2, Shapes
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 11 | } from "lucide-react"
+     | ^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | import { Button } from "@/components/ui/button"
+  14 | import { Card } from "@/components/ui/card"
+
+The export MousePointerSquare was not found in module [project]/node_modules/.pnpm/lucide-react@0.454.0_react@19.2.0/node_modules/lucide-react/dist/esm/lucide-react.js [app-ssr] (ecmascript).
+Did you mean to import MousePointerSquareDashed?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:15:04.300] Browser ERROR   ./components/quiz-engine.tsx:5:1
+Export Balance doesn't exist in target module
+   3 | import { useState, useReducer, useEffect, useRef, useCallback } from "react"
+   4 | import { motion, AnimatePresence } from "framer-motion"
+>  5 | import {
+     | ^^^^^^^^
+>  6 |   Brain, Zap, Trophy, RotateCcw, BookOpen, ChevronRight, Lock, CheckCircle, ArrowLeft, Award,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 |   Eye, BrainCircuit, GitMerge, Scale, Database, Users, Mic, Lightbulb, Dice3, Hand,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  8 |   BadgePercent, HeartPulse, TrendingUp, Smile, AlertTriangle, MousePointerSquare, Target,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  9 |   Search, PieChart, Building, Cpu, MessageSquare, Video, ClipboardCheck, Gauge, ShieldAlert,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 10 |   Clock, Balance, Library, CheckCircle2, Shapes
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 11 | } from "lucide-react"
+     | ^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | import { Button } from "@/components/ui/button"
+  14 | import { Card } from "@/components/ui/card"
+
+The export Balance was not found in module [project]/node_modules/.pnpm/lucide-react@0.454.0_react@19.2.0/node_modules/lucide-react/dist/esm/lucide-react.js [app-client] (ecmascript).
+Did you mean to import Ban?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:15:04.300] Browser ERROR   ./components/quiz-engine.tsx:5:1
+Export Balance doesn't exist in target module
+   3 | import { useState, useReducer, useEffect, useRef, useCallback } from "react"
+   4 | import { motion, AnimatePresence } from "framer-motion"
+>  5 | import {
+     | ^^^^^^^^
+>  6 |   Brain, Zap, Trophy, RotateCcw, BookOpen, ChevronRight, Lock, CheckCircle, ArrowLeft, Award,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 |   Eye, BrainCircuit, GitMerge, Scale, Database, Users, Mic, Lightbulb, Dice3, Hand,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  8 |   BadgePercent, HeartPulse, TrendingUp, Smile, AlertTriangle, MousePointerSquare, Target,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  9 |   Search, PieChart, Building, Cpu, MessageSquare, Video, ClipboardCheck, Gauge, ShieldAlert,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 10 |   Clock, Balance, Library, CheckCircle2, Shapes
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 11 | } from "lucide-react"
+     | ^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | import { Button } from "@/components/ui/button"
+  14 | import { Card } from "@/components/ui/card"
+
+The export Balance was not found in module [project]/node_modules/.pnpm/lucide-react@0.454.0_react@19.2.0/node_modules/lucide-react/dist/esm/lucide-react.js [app-ssr] (ecmascript).
+Did you mean to import Ban?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:15:04.300] Browser ERROR   ./components/quiz-engine.tsx:5:1
+Export MousePointerSquare doesn't exist in target module
+   3 | import { useState, useReducer, useEffect, useRef, useCallback } from "react"
+   4 | import { motion, AnimatePresence } from "framer-motion"
+>  5 | import {
+     | ^^^^^^^^
+>  6 |   Brain, Zap, Trophy, RotateCcw, BookOpen, ChevronRight, Lock, CheckCircle, ArrowLeft, Award,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 |   Eye, BrainCircuit, GitMerge, Scale, Database, Users, Mic, Lightbulb, Dice3, Hand,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  8 |   BadgePercent, HeartPulse, TrendingUp, Smile, AlertTriangle, MousePointerSquare, Target,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  9 |   Search, PieChart, Building, Cpu, MessageSquare, Video, ClipboardCheck, Gauge, ShieldAlert,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 10 |   Clock, Balance, Library, CheckCircle2, Shapes
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 11 | } from "lucide-react"
+     | ^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | import { Button } from "@/components/ui/button"
+  14 | import { Card } from "@/components/ui/card"
+
+The export MousePointerSquare was not found in module [project]/node_modules/.pnpm/lucide-react@0.454.0_react@19.2.0/node_modules/lucide-react/dist/esm/lucide-react.js [app-client] (ecmascript).
+Did you mean to import MousePointerSquareDashed?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:15:04.300] Browser ERROR   ./components/quiz-engine.tsx:5:1
+Export MousePointerSquare doesn't exist in target module
+   3 | import { useState, useReducer, useEffect, useRef, useCallback } from "react"
+   4 | import { motion, AnimatePresence } from "framer-motion"
+>  5 | import {
+     | ^^^^^^^^
+>  6 |   Brain, Zap, Trophy, RotateCcw, BookOpen, ChevronRight, Lock, CheckCircle, ArrowLeft, Award,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 |   Eye, BrainCircuit, GitMerge, Scale, Database, Users, Mic, Lightbulb, Dice3, Hand,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  8 |   BadgePercent, HeartPulse, TrendingUp, Smile, AlertTriangle, MousePointerSquare, Target,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  9 |   Search, PieChart, Building, Cpu, MessageSquare, Video, ClipboardCheck, Gauge, ShieldAlert,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 10 |   Clock, Balance, Library, CheckCircle2, Shapes
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 11 | } from "lucide-react"
+     | ^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | import { Button } from "@/components/ui/button"
+  14 | import { Card } from "@/components/ui/card"
+
+The export MousePointerSquare was not found in module [project]/node_modules/.pnpm/lucide-react@0.454.0_react@19.2.0/node_modules/lucide-react/dist/esm/lucide-react.js [app-ssr] (ecmascript).
+Did you mean to import MousePointerSquareDashed?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:15:11.697] Server  ERROR    ⨯ ./components/quiz-engine.tsx:5:1
+Export Balance doesn't exist in target module
+   3 | import { useState, useReducer, useEffect, useRef, useCallback } from "react"
+   4 | import { motion, AnimatePresence } from "framer-motion"
+>  5 | import {
+     | ^^^^^^^^
+>  6 |   Brain, Zap, Trophy, RotateCcw, BookOpen, ChevronRight, Lock, CheckCircle, ArrowLeft, Award,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 |   Eye, BrainCircuit, GitMerge, Scale, Database, Users, Mic, Lightbulb, Dice3, Hand,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  8 |   BadgePercent, HeartPulse, TrendingUp, Smile, AlertTriangle, MousePointerSquare, Target,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  9 |   Search, PieChart, Building, Cpu, MessageSquare, Video, ClipboardCheck, Gauge, ShieldAlert,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 10 |   Clock, Balance, Library, CheckCircle2, Shapes
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 11 | } from "lucide-react"
+     | ^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | import { Button } from "@/components/ui/button"
+  14 | import { Card } from "@/components/ui/card"
+
+The export Balance was not found in module [project]/node_modules/.pnpm/lucide-react@0.454.0_react@19.2.0/node_modules/lucide-react/dist/esm/lucide-react.js [app-client] (ecmascript).
+Did you mean to import Ban?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+
+
+./components/quiz-engine.tsx:5:1
+Export Balance doesn't exist in target module
+   3 | import { useState, useReducer, useEffect, useRef, useCallback } from "react"
+   4 | import { motion, AnimatePresence } from "framer-motion"
+>  5 | import {
+     | ^^^^^^^^
+>  6 |   Brain, Zap, Trophy, RotateCcw, BookOpen, ChevronRight, Lock, CheckCircle, ArrowLeft, Award,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 |   Eye, BrainCircuit, GitMerge, Scale, Database, Users, Mic, Lightbulb, Dice3, Hand,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  8 |   BadgePercent, HeartPulse, TrendingUp, Smile, AlertTriangle, MousePointerSquare, Target,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  9 |   Search, PieChart, Building, Cpu, MessageSquare, Video, ClipboardCheck, Gauge, ShieldAlert,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 10 |   Clock, Balance, Library, CheckCircle2, Shapes
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 11 | } from "lucide-react"
+     | ^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | import { Button } from "@/components/ui/button"
+  14 | import { Card } from "@/components/ui/card"
+
+The export Balance was not found in module [project]/node_modules/.pnpm/lucide-react@0.454.0_react@19.2.0/node_modules/lucide-react/dist/esm/lucide-react.js [app-ssr] (ecmascript).
+Did you mean to import Ban?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+
+
+./components/quiz-engine.tsx:5:1
+Export MousePointerSquare doesn't exist in target module
+   3 | import { useState, useReducer, useEffect, useRef, useCallback } from "react"
+   4 | import { motion, AnimatePresence } from "framer-motion"
+>  5 | import {
+     | ^^^^^^^^
+>  6 |   Brain, Zap, Trophy, RotateCcw, BookOpen, ChevronRight, Lock, CheckCircle, ArrowLeft, Award,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 |   Eye, BrainCircuit, GitMerge, Scale, Database, Users, Mic, Lightbulb, Dice3, Hand,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  8 |   BadgePercent, HeartPulse, TrendingUp, Smile, AlertTriangle, MousePointerSquare, Target,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  9 |   Search, PieChart, Building, Cpu, MessageSquare, Video, ClipboardCheck, Gauge, ShieldAlert,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 10 |   Clock, Balance, Library, CheckCircle2, Shapes
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 11 | } from "lucide-react"
+     | ^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | import { Button } from "@/components/ui/button"
+  14 | import { Card } from "@/components/ui/card"
+
+The export MousePointerSquare was not found in module [project]/node_modules/.pnpm/lucide-react@0.454.0_react@19.2.0/node_modules/lucide-react/dist/esm/lucide-react.js [app-client] (ecmascript).
+Did you mean to import MousePointerSquareDashed?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+
+
+./components/quiz-engine.tsx:5:1
+Export MousePointerSquare doesn't exist in target module
+   3 | import { useState, useReducer, useEffect, useRef, useCallback } from "react"
+   4 | import { motion, AnimatePresence } from "framer-motion"
+>  5 | import {
+     | ^^^^^^^^
+>  6 |   Brain, Zap, Trophy, RotateCcw, BookOpen, ChevronRight, Lock, CheckCircle, ArrowLeft, Award,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 |   Eye, BrainCircuit, GitMerge, Scale, Database, Users, Mic, Lightbulb, Dice3, Hand,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  8 |   BadgePercent, HeartPulse, TrendingUp, Smile, AlertTriangle, MousePointerSquare, Target,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  9 |   Search, PieChart, Building, Cpu, MessageSquare, Video, ClipboardCheck, Gauge, ShieldAlert,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 10 |   Clock, Balance, Library, CheckCircle2, Shapes
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 11 | } from "lucide-react"
+     | ^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | import { Button } from "@/components/ui/button"
+  14 | import { Card } from "@/components/ui/card"
+
+The export MousePointerSquare was not found in module [project]/node_modules/.pnpm/lucide-react@0.454.0_react@19.2.0/node_modules/lucide-react/dist/esm/lucide-react.js [app-ssr] (ecmascript).
+Did you mean to import MousePointerSquareDashed?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+
+[00:15:12.362] Browser ERROR   ./components/quiz-engine.tsx:5:1
+Export Balance doesn't exist in target module
+   3 | import { useState, useReducer, useEffect, useRef, useCallback } from "react"
+   4 | import { motion, AnimatePresence } from "framer-motion"
+>  5 | import {
+     | ^^^^^^^^
+>  6 |   Brain, Zap, Trophy, RotateCcw, BookOpen, ChevronRight, Lock, CheckCircle, ArrowLeft, Award,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 |   Eye, BrainCircuit, GitMerge, Scale, Database, Users, Mic, Lightbulb, Dice3, Hand,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  8 |   BadgePercent, HeartPulse, TrendingUp, Smile, AlertTriangle, MousePointerSquare, Target,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  9 |   Search, PieChart, Building, Cpu, MessageSquare, Video, ClipboardCheck, Gauge, ShieldAlert,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 10 |   Clock, Balance, Library, CheckCircle2, Shapes
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 11 | } from "lucide-react"
+     | ^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | import { Button } from "@/components/ui/button"
+  14 | import { Card } from "@/components/ui/card"
+
+The export Balance was not found in module [project]/node_modules/.pnpm/lucide-react@0.454.0_react@19.2.0/node_modules/lucide-react/dist/esm/lucide-react.js [app-client] (ecmascript).
+Did you mean to import Ban?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:15:12.362] Browser ERROR   ./components/quiz-engine.tsx:5:1
+Export Balance doesn't exist in target module
+   3 | import { useState, useReducer, useEffect, useRef, useCallback } from "react"
+   4 | import { motion, AnimatePresence } from "framer-motion"
+>  5 | import {
+     | ^^^^^^^^
+>  6 |   Brain, Zap, Trophy, RotateCcw, BookOpen, ChevronRight, Lock, CheckCircle, ArrowLeft, Award,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 |   Eye, BrainCircuit, GitMerge, Scale, Database, Users, Mic, Lightbulb, Dice3, Hand,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  8 |   BadgePercent, HeartPulse, TrendingUp, Smile, AlertTriangle, MousePointerSquare, Target,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  9 |   Search, PieChart, Building, Cpu, MessageSquare, Video, ClipboardCheck, Gauge, ShieldAlert,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 10 |   Clock, Balance, Library, CheckCircle2, Shapes
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 11 | } from "lucide-react"
+     | ^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | import { Button } from "@/components/ui/button"
+  14 | import { Card } from "@/components/ui/card"
+
+The export Balance was not found in module [project]/node_modules/.pnpm/lucide-react@0.454.0_react@19.2.0/node_modules/lucide-react/dist/esm/lucide-react.js [app-ssr] (ecmascript).
+Did you mean to import Ban?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:15:12.362] Browser ERROR   ./components/quiz-engine.tsx:5:1
+Export MousePointerSquare doesn't exist in target module
+   3 | import { useState, useReducer, useEffect, useRef, useCallback } from "react"
+   4 | import { motion, AnimatePresence } from "framer-motion"
+>  5 | import {
+     | ^^^^^^^^
+>  6 |   Brain, Zap, Trophy, RotateCcw, BookOpen, ChevronRight, Lock, CheckCircle, ArrowLeft, Award,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 |   Eye, BrainCircuit, GitMerge, Scale, Database, Users, Mic, Lightbulb, Dice3, Hand,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  8 |   BadgePercent, HeartPulse, TrendingUp, Smile, AlertTriangle, MousePointerSquare, Target,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  9 |   Search, PieChart, Building, Cpu, MessageSquare, Video, ClipboardCheck, Gauge, ShieldAlert,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 10 |   Clock, Balance, Library, CheckCircle2, Shapes
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 11 | } from "lucide-react"
+     | ^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | import { Button } from "@/components/ui/button"
+  14 | import { Card } from "@/components/ui/card"
+
+The export MousePointerSquare was not found in module [project]/node_modules/.pnpm/lucide-react@0.454.0_react@19.2.0/node_modules/lucide-react/dist/esm/lucide-react.js [app-client] (ecmascript).
+Did you mean to import MousePointerSquareDashed?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:15:12.362] Browser ERROR   ./components/quiz-engine.tsx:5:1
+Export MousePointerSquare doesn't exist in target module
+   3 | import { useState, useReducer, useEffect, useRef, useCallback } from "react"
+   4 | import { motion, AnimatePresence } from "framer-motion"
+>  5 | import {
+     | ^^^^^^^^
+>  6 |   Brain, Zap, Trophy, RotateCcw, BookOpen, ChevronRight, Lock, CheckCircle, ArrowLeft, Award,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 |   Eye, BrainCircuit, GitMerge, Scale, Database, Users, Mic, Lightbulb, Dice3, Hand,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  8 |   BadgePercent, HeartPulse, TrendingUp, Smile, AlertTriangle, MousePointerSquare, Target,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  9 |   Search, PieChart, Building, Cpu, MessageSquare, Video, ClipboardCheck, Gauge, ShieldAlert,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 10 |   Clock, Balance, Library, CheckCircle2, Shapes
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 11 | } from "lucide-react"
+     | ^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | import { Button } from "@/components/ui/button"
+  14 | import { Card } from "@/components/ui/card"
+
+The export MousePointerSquare was not found in module [project]/node_modules/.pnpm/lucide-react@0.454.0_react@19.2.0/node_modules/lucide-react/dist/esm/lucide-react.js [app-ssr] (ecmascript).
+Did you mean to import MousePointerSquareDashed?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:15:12.362] Browser ERROR   ./components/quiz-engine.tsx:5:1
+Export Balance doesn't exist in target module
+   3 | import { useState, useReducer, useEffect, useRef, useCallback } from "react"
+   4 | import { motion, AnimatePresence } from "framer-motion"
+>  5 | import {
+     | ^^^^^^^^
+>  6 |   Brain, Zap, Trophy, RotateCcw, BookOpen, ChevronRight, Lock, CheckCircle, ArrowLeft, Award,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 |   Eye, BrainCircuit, GitMerge, Scale, Database, Users, Mic, Lightbulb, Dice3, Hand,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  8 |   BadgePercent, HeartPulse, TrendingUp, Smile, AlertTriangle, MousePointerSquare, Target,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  9 |   Search, PieChart, Building, Cpu, MessageSquare, Video, ClipboardCheck, Gauge, ShieldAlert,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 10 |   Clock, Balance, Library, CheckCircle2, Shapes
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 11 | } from "lucide-react"
+     | ^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | import { Button } from "@/components/ui/button"
+  14 | import { Card } from "@/components/ui/card"
+
+The export Balance was not found in module [project]/node_modules/.pnpm/lucide-react@0.454.0_react@19.2.0/node_modules/lucide-react/dist/esm/lucide-react.js [app-client] (ecmascript).
+Did you mean to import Ban?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:15:12.362] Browser ERROR   ./components/quiz-engine.tsx:5:1
+Export Balance doesn't exist in target module
+   3 | import { useState, useReducer, useEffect, useRef, useCallback } from "react"
+   4 | import { motion, AnimatePresence } from "framer-motion"
+>  5 | import {
+     | ^^^^^^^^
+>  6 |   Brain, Zap, Trophy, RotateCcw, BookOpen, ChevronRight, Lock, CheckCircle, ArrowLeft, Award,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 |   Eye, BrainCircuit, GitMerge, Scale, Database, Users, Mic, Lightbulb, Dice3, Hand,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  8 |   BadgePercent, HeartPulse, TrendingUp, Smile, AlertTriangle, MousePointerSquare, Target,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  9 |   Search, PieChart, Building, Cpu, MessageSquare, Video, ClipboardCheck, Gauge, ShieldAlert,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 10 |   Clock, Balance, Library, CheckCircle2, Shapes
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 11 | } from "lucide-react"
+     | ^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | import { Button } from "@/components/ui/button"
+  14 | import { Card } from "@/components/ui/card"
+
+The export Balance was not found in module [project]/node_modules/.pnpm/lucide-react@0.454.0_react@19.2.0/node_modules/lucide-react/dist/esm/lucide-react.js [app-ssr] (ecmascript).
+Did you mean to import Ban?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:15:12.362] Browser ERROR   ./components/quiz-engine.tsx:5:1
+Export MousePointerSquare doesn't exist in target module
+   3 | import { useState, useReducer, useEffect, useRef, useCallback } from "react"
+   4 | import { motion, AnimatePresence } from "framer-motion"
+>  5 | import {
+     | ^^^^^^^^
+>  6 |   Brain, Zap, Trophy, RotateCcw, BookOpen, ChevronRight, Lock, CheckCircle, ArrowLeft, Award,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 |   Eye, BrainCircuit, GitMerge, Scale, Database, Users, Mic, Lightbulb, Dice3, Hand,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  8 |   BadgePercent, HeartPulse, TrendingUp, Smile, AlertTriangle, MousePointerSquare, Target,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  9 |   Search, PieChart, Building, Cpu, MessageSquare, Video, ClipboardCheck, Gauge, ShieldAlert,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 10 |   Clock, Balance, Library, CheckCircle2, Shapes
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 11 | } from "lucide-react"
+     | ^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | import { Button } from "@/components/ui/button"
+  14 | import { Card } from "@/components/ui/card"
+
+The export MousePointerSquare was not found in module [project]/node_modules/.pnpm/lucide-react@0.454.0_react@19.2.0/node_modules/lucide-react/dist/esm/lucide-react.js [app-client] (ecmascript).
+Did you mean to import MousePointerSquareDashed?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:15:12.362] Browser ERROR   ./components/quiz-engine.tsx:5:1
+Export MousePointerSquare doesn't exist in target module
+   3 | import { useState, useReducer, useEffect, useRef, useCallback } from "react"
+   4 | import { motion, AnimatePresence } from "framer-motion"
+>  5 | import {
+     | ^^^^^^^^
+>  6 |   Brain, Zap, Trophy, RotateCcw, BookOpen, ChevronRight, Lock, CheckCircle, ArrowLeft, Award,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 |   Eye, BrainCircuit, GitMerge, Scale, Database, Users, Mic, Lightbulb, Dice3, Hand,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  8 |   BadgePercent, HeartPulse, TrendingUp, Smile, AlertTriangle, MousePointerSquare, Target,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  9 |   Search, PieChart, Building, Cpu, MessageSquare, Video, ClipboardCheck, Gauge, ShieldAlert,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 10 |   Clock, Balance, Library, CheckCircle2, Shapes
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 11 | } from "lucide-react"
+     | ^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | import { Button } from "@/components/ui/button"
+  14 | import { Card } from "@/components/ui/card"
+
+The export MousePointerSquare was not found in module [project]/node_modules/.pnpm/lucide-react@0.454.0_react@19.2.0/node_modules/lucide-react/dist/esm/lucide-react.js [app-ssr] (ecmascript).
+Did you mean to import MousePointerSquareDashed?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:15:12.362] Browser ERROR   ./components/quiz-engine.tsx:5:1
+Export Balance doesn't exist in target module
+   3 | import { useState, useReducer, useEffect, useRef, useCallback } from "react"
+   4 | import { motion, AnimatePresence } from "framer-motion"
+>  5 | import {
+     | ^^^^^^^^
+>  6 |   Brain, Zap, Trophy, RotateCcw, BookOpen, ChevronRight, Lock, CheckCircle, ArrowLeft, Award,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 |   Eye, BrainCircuit, GitMerge, Scale, Database, Users, Mic, Lightbulb, Dice3, Hand,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  8 |   BadgePercent, HeartPulse, TrendingUp, Smile, AlertTriangle, MousePointerSquare, Target,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  9 |   Search, PieChart, Building, Cpu, MessageSquare, Video, ClipboardCheck, Gauge, ShieldAlert,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 10 |   Clock, Balance, Library, CheckCircle2, Shapes
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 11 | } from "lucide-react"
+     | ^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | import { Button } from "@/components/ui/button"
+  14 | import { Card } from "@/components/ui/card"
+
+The export Balance was not found in module [project]/node_modules/.pnpm/lucide-react@0.454.0_react@19.2.0/node_modules/lucide-react/dist/esm/lucide-react.js [app-client] (ecmascript).
+Did you mean to import Ban?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:15:12.362] Browser ERROR   ./components/quiz-engine.tsx:5:1
+Export Balance doesn't exist in target module
+   3 | import { useState, useReducer, useEffect, useRef, useCallback } from "react"
+   4 | import { motion, AnimatePresence } from "framer-motion"
+>  5 | import {
+     | ^^^^^^^^
+>  6 |   Brain, Zap, Trophy, RotateCcw, BookOpen, ChevronRight, Lock, CheckCircle, ArrowLeft, Award,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 |   Eye, BrainCircuit, GitMerge, Scale, Database, Users, Mic, Lightbulb, Dice3, Hand,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  8 |   BadgePercent, HeartPulse, TrendingUp, Smile, AlertTriangle, MousePointerSquare, Target,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  9 |   Search, PieChart, Building, Cpu, MessageSquare, Video, ClipboardCheck, Gauge, ShieldAlert,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 10 |   Clock, Balance, Library, CheckCircle2, Shapes
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 11 | } from "lucide-react"
+     | ^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | import { Button } from "@/components/ui/button"
+  14 | import { Card } from "@/components/ui/card"
+
+The export Balance was not found in module [project]/node_modules/.pnpm/lucide-react@0.454.0_react@19.2.0/node_modules/lucide-react/dist/esm/lucide-react.js [app-ssr] (ecmascript).
+Did you mean to import Ban?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:15:12.362] Browser ERROR   ./components/quiz-engine.tsx:5:1
+Export MousePointerSquare doesn't exist in target module
+   3 | import { useState, useReducer, useEffect, useRef, useCallback } from "react"
+   4 | import { motion, AnimatePresence } from "framer-motion"
+>  5 | import {
+     | ^^^^^^^^
+>  6 |   Brain, Zap, Trophy, RotateCcw, BookOpen, ChevronRight, Lock, CheckCircle, ArrowLeft, Award,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 |   Eye, BrainCircuit, GitMerge, Scale, Database, Users, Mic, Lightbulb, Dice3, Hand,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  8 |   BadgePercent, HeartPulse, TrendingUp, Smile, AlertTriangle, MousePointerSquare, Target,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  9 |   Search, PieChart, Building, Cpu, MessageSquare, Video, ClipboardCheck, Gauge, ShieldAlert,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 10 |   Clock, Balance, Library, CheckCircle2, Shapes
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 11 | } from "lucide-react"
+     | ^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | import { Button } from "@/components/ui/button"
+  14 | import { Card } from "@/components/ui/card"
+
+The export MousePointerSquare was not found in module [project]/node_modules/.pnpm/lucide-react@0.454.0_react@19.2.0/node_modules/lucide-react/dist/esm/lucide-react.js [app-client] (ecmascript).
+Did you mean to import MousePointerSquareDashed?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:15:12.362] Browser ERROR   ./components/quiz-engine.tsx:5:1
+Export MousePointerSquare doesn't exist in target module
+   3 | import { useState, useReducer, useEffect, useRef, useCallback } from "react"
+   4 | import { motion, AnimatePresence } from "framer-motion"
+>  5 | import {
+     | ^^^^^^^^
+>  6 |   Brain, Zap, Trophy, RotateCcw, BookOpen, ChevronRight, Lock, CheckCircle, ArrowLeft, Award,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 |   Eye, BrainCircuit, GitMerge, Scale, Database, Users, Mic, Lightbulb, Dice3, Hand,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  8 |   BadgePercent, HeartPulse, TrendingUp, Smile, AlertTriangle, MousePointerSquare, Target,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  9 |   Search, PieChart, Building, Cpu, MessageSquare, Video, ClipboardCheck, Gauge, ShieldAlert,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 10 |   Clock, Balance, Library, CheckCircle2, Shapes
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 11 | } from "lucide-react"
+     | ^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | import { Button } from "@/components/ui/button"
+  14 | import { Card } from "@/components/ui/card"
+
+The export MousePointerSquare was not found in module [project]/node_modules/.pnpm/lucide-react@0.454.0_react@19.2.0/node_modules/lucide-react/dist/esm/lucide-react.js [app-ssr] (ecmascript).
+Did you mean to import MousePointerSquareDashed?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:15:13.296] Browser ERROR   ./components/quiz-engine.tsx:5:1
+Export Balance doesn't exist in target module
+   3 | import { useState, useReducer, useEffect, useRef, useCallback } from "react"
+   4 | import { motion, AnimatePresence } from "framer-motion"
+>  5 | import {
+     | ^^^^^^^^
+>  6 |   Brain, Zap, Trophy, RotateCcw, BookOpen, ChevronRight, Lock, CheckCircle, ArrowLeft, Award,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 |   Eye, BrainCircuit, GitMerge, Scale, Database, Users, Mic, Lightbulb, Dice3, Hand,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  8 |   BadgePercent, HeartPulse, TrendingUp, Smile, AlertTriangle, MousePointerSquare, Target,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  9 |   Search, PieChart, Building, Cpu, MessageSquare, Video, ClipboardCheck, Gauge, ShieldAlert,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 10 |   Clock, Balance, Library, CheckCircle2, Shapes
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 11 | } from "lucide-react"
+     | ^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | import { Button } from "@/components/ui/button"
+  14 | import { Card } from "@/components/ui/card"
+
+The export Balance was not found in module [project]/node_modules/.pnpm/lucide-react@0.454.0_react@19.2.0/node_modules/lucide-react/dist/esm/lucide-react.js [app-client] (ecmascript).
+Did you mean to import Ban?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:15:13.296] Browser ERROR   ./components/quiz-engine.tsx:5:1
+Export Balance doesn't exist in target module
+   3 | import { useState, useReducer, useEffect, useRef, useCallback } from "react"
+   4 | import { motion, AnimatePresence } from "framer-motion"
+>  5 | import {
+     | ^^^^^^^^
+>  6 |   Brain, Zap, Trophy, RotateCcw, BookOpen, ChevronRight, Lock, CheckCircle, ArrowLeft, Award,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 |   Eye, BrainCircuit, GitMerge, Scale, Database, Users, Mic, Lightbulb, Dice3, Hand,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  8 |   BadgePercent, HeartPulse, TrendingUp, Smile, AlertTriangle, MousePointerSquare, Target,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  9 |   Search, PieChart, Building, Cpu, MessageSquare, Video, ClipboardCheck, Gauge, ShieldAlert,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 10 |   Clock, Balance, Library, CheckCircle2, Shapes
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 11 | } from "lucide-react"
+     | ^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | import { Button } from "@/components/ui/button"
+  14 | import { Card } from "@/components/ui/card"
+
+The export Balance was not found in module [project]/node_modules/.pnpm/lucide-react@0.454.0_react@19.2.0/node_modules/lucide-react/dist/esm/lucide-react.js [app-ssr] (ecmascript).
+Did you mean to import Ban?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:15:13.296] Browser ERROR   ./components/quiz-engine.tsx:5:1
+Export MousePointerSquare doesn't exist in target module
+   3 | import { useState, useReducer, useEffect, useRef, useCallback } from "react"
+   4 | import { motion, AnimatePresence } from "framer-motion"
+>  5 | import {
+     | ^^^^^^^^
+>  6 |   Brain, Zap, Trophy, RotateCcw, BookOpen, ChevronRight, Lock, CheckCircle, ArrowLeft, Award,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 |   Eye, BrainCircuit, GitMerge, Scale, Database, Users, Mic, Lightbulb, Dice3, Hand,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  8 |   BadgePercent, HeartPulse, TrendingUp, Smile, AlertTriangle, MousePointerSquare, Target,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  9 |   Search, PieChart, Building, Cpu, MessageSquare, Video, ClipboardCheck, Gauge, ShieldAlert,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 10 |   Clock, Balance, Library, CheckCircle2, Shapes
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 11 | } from "lucide-react"
+     | ^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | import { Button } from "@/components/ui/button"
+  14 | import { Card } from "@/components/ui/card"
+
+The export MousePointerSquare was not found in module [project]/node_modules/.pnpm/lucide-react@0.454.0_react@19.2.0/node_modules/lucide-react/dist/esm/lucide-react.js [app-client] (ecmascript).
+Did you mean to import MousePointerSquareDashed?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:15:13.296] Browser ERROR   ./components/quiz-engine.tsx:5:1
+Export MousePointerSquare doesn't exist in target module
+   3 | import { useState, useReducer, useEffect, useRef, useCallback } from "react"
+   4 | import { motion, AnimatePresence } from "framer-motion"
+>  5 | import {
+     | ^^^^^^^^
+>  6 |   Brain, Zap, Trophy, RotateCcw, BookOpen, ChevronRight, Lock, CheckCircle, ArrowLeft, Award,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 |   Eye, BrainCircuit, GitMerge, Scale, Database, Users, Mic, Lightbulb, Dice3, Hand,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  8 |   BadgePercent, HeartPulse, TrendingUp, Smile, AlertTriangle, MousePointerSquare, Target,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  9 |   Search, PieChart, Building, Cpu, MessageSquare, Video, ClipboardCheck, Gauge, ShieldAlert,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 10 |   Clock, Balance, Library, CheckCircle2, Shapes
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 11 | } from "lucide-react"
+     | ^^^^^^^^^^^^^^^^^^^^^^
+  12 |
+  13 | import { Button } from "@/components/ui/button"
+  14 | import { Card } from "@/components/ui/card"
+
+The export MousePointerSquare was not found in module [project]/node_modules/.pnpm/lucide-react@0.454.0_react@19.2.0/node_modules/lucide-react/dist/esm/lucide-react.js [app-ssr] (ecmascript).
+Did you mean to import MousePointerSquareDashed?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:15:37.288] Server  LOG      ✓ Compiled in 254ms
+[00:17:10.317] Server  LOG      ✓ Compiled in 611ms
+[00:17:10.425] Browser ERROR   ./components/ui/icons.tsx:2:1
+Export Balance doesn't exist in target module
+   1 | import React from "react";
+>  2 | import {
+     | ^^^^^^^^
+>  3 |   Eye, BrainCircuit, GitMerge, Scale, Database, Users, Mic, Lightbulb, Dice3, Hand,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  4 |   BadgePercent, HeartPulse, TrendingUp, Smile, AlertTriangle, MousePointerSquare, Target,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  5 |   Search, PieChart, Building, Cpu, MessageSquare, Video, ClipboardCheck, Gauge, ShieldAlert,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  6 |   Clock, Balance, Shapes
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 | } from "lucide-react";
+     | ^^^^^^^^^^^^^^^^^^^^^^^
+   8 |
+   9 | // Icon Mapping for Bias Categories
+  10 | const iconMap: { [key: string]: React.ElementType } = {
+
+The export Balance was not found in module [project]/node_modules/.pnpm/lucide-react@0.454.0_react@19.2.0/node_modules/lucide-react/dist/esm/lucide-react.js [app-client] (ecmascript).
+Did you mean to import Ban?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/ui/icons.tsx [Client Component Browser]
+    ./components/bias-wiki-card.tsx [Client Component Browser]
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/ui/icons.tsx [Client Component SSR]
+    ./components/bias-wiki-card.tsx [Client Component SSR]
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:17:10.425] Browser ERROR   ./components/ui/icons.tsx:2:1
+Export Balance doesn't exist in target module
+   1 | import React from "react";
+>  2 | import {
+     | ^^^^^^^^
+>  3 |   Eye, BrainCircuit, GitMerge, Scale, Database, Users, Mic, Lightbulb, Dice3, Hand,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  4 |   BadgePercent, HeartPulse, TrendingUp, Smile, AlertTriangle, MousePointerSquare, Target,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  5 |   Search, PieChart, Building, Cpu, MessageSquare, Video, ClipboardCheck, Gauge, ShieldAlert,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  6 |   Clock, Balance, Shapes
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 | } from "lucide-react";
+     | ^^^^^^^^^^^^^^^^^^^^^^^
+   8 |
+   9 | // Icon Mapping for Bias Categories
+  10 | const iconMap: { [key: string]: React.ElementType } = {
+
+The export Balance was not found in module [project]/node_modules/.pnpm/lucide-react@0.454.0_react@19.2.0/node_modules/lucide-react/dist/esm/lucide-react.js [app-ssr] (ecmascript).
+Did you mean to import Ban?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/ui/icons.tsx [Client Component Browser]
+    ./components/bias-wiki-card.tsx [Client Component Browser]
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/ui/icons.tsx [Client Component SSR]
+    ./components/bias-wiki-card.tsx [Client Component SSR]
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:17:10.425] Browser ERROR   ./components/ui/icons.tsx:2:1
+Export MousePointerSquare doesn't exist in target module
+   1 | import React from "react";
+>  2 | import {
+     | ^^^^^^^^
+>  3 |   Eye, BrainCircuit, GitMerge, Scale, Database, Users, Mic, Lightbulb, Dice3, Hand,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  4 |   BadgePercent, HeartPulse, TrendingUp, Smile, AlertTriangle, MousePointerSquare, Target,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  5 |   Search, PieChart, Building, Cpu, MessageSquare, Video, ClipboardCheck, Gauge, ShieldAlert,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  6 |   Clock, Balance, Shapes
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 | } from "lucide-react";
+     | ^^^^^^^^^^^^^^^^^^^^^^^
+   8 |
+   9 | // Icon Mapping for Bias Categories
+  10 | const iconMap: { [key: string]: React.ElementType } = {
+
+The export MousePointerSquare was not found in module [project]/node_modules/.pnpm/lucide-react@0.454.0_react@19.2.0/node_modules/lucide-react/dist/esm/lucide-react.js [app-client] (ecmascript).
+Did you mean to import MousePointerSquareDashed?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/ui/icons.tsx [Client Component Browser]
+    ./components/bias-wiki-card.tsx [Client Component Browser]
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/ui/icons.tsx [Client Component SSR]
+    ./components/bias-wiki-card.tsx [Client Component SSR]
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:17:10.425] Browser ERROR   ./components/ui/icons.tsx:2:1
+Export MousePointerSquare doesn't exist in target module
+   1 | import React from "react";
+>  2 | import {
+     | ^^^^^^^^
+>  3 |   Eye, BrainCircuit, GitMerge, Scale, Database, Users, Mic, Lightbulb, Dice3, Hand,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  4 |   BadgePercent, HeartPulse, TrendingUp, Smile, AlertTriangle, MousePointerSquare, Target,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  5 |   Search, PieChart, Building, Cpu, MessageSquare, Video, ClipboardCheck, Gauge, ShieldAlert,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  6 |   Clock, Balance, Shapes
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 | } from "lucide-react";
+     | ^^^^^^^^^^^^^^^^^^^^^^^
+   8 |
+   9 | // Icon Mapping for Bias Categories
+  10 | const iconMap: { [key: string]: React.ElementType } = {
+
+The export MousePointerSquare was not found in module [project]/node_modules/.pnpm/lucide-react@0.454.0_react@19.2.0/node_modules/lucide-react/dist/esm/lucide-react.js [app-ssr] (ecmascript).
+Did you mean to import MousePointerSquareDashed?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/ui/icons.tsx [Client Component Browser]
+    ./components/bias-wiki-card.tsx [Client Component Browser]
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/ui/icons.tsx [Client Component SSR]
+    ./components/bias-wiki-card.tsx [Client Component SSR]
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:17:52.228] Server  LOG      ✓ Compiled in 780ms
+[00:17:52.340] Browser ERROR   ./components/ui/icons.tsx:2:1
+Export Balance doesn't exist in target module
+   1 | import React from "react";
+>  2 | import {
+     | ^^^^^^^^
+>  3 |   Eye, BrainCircuit, GitMerge, Scale, Database, Users, Mic, Lightbulb, Dice3, Hand,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  4 |   BadgePercent, HeartPulse, TrendingUp, Smile, AlertTriangle, MousePointerSquare, Target,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  5 |   Search, PieChart, Building, Cpu, MessageSquare, Video, ClipboardCheck, Gauge, ShieldAlert,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  6 |   Clock, Balance, Shapes
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 | } from "lucide-react";
+     | ^^^^^^^^^^^^^^^^^^^^^^^
+   8 |
+   9 | // Icon Mapping for Bias Categories
+  10 | const iconMap: { [key: string]: React.ElementType } = {
+
+The export Balance was not found in module [project]/node_modules/.pnpm/lucide-react@0.454.0_react@19.2.0/node_modules/lucide-react/dist/esm/lucide-react.js [app-client] (ecmascript).
+Did you mean to import Ban?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/ui/icons.tsx [Client Component Browser]
+    ./components/bias-wiki-card.tsx [Client Component Browser]
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/ui/icons.tsx [Client Component SSR]
+    ./components/bias-wiki-card.tsx [Client Component SSR]
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:17:52.340] Browser ERROR   ./components/ui/icons.tsx:2:1
+Export Balance doesn't exist in target module
+   1 | import React from "react";
+>  2 | import {
+     | ^^^^^^^^
+>  3 |   Eye, BrainCircuit, GitMerge, Scale, Database, Users, Mic, Lightbulb, Dice3, Hand,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  4 |   BadgePercent, HeartPulse, TrendingUp, Smile, AlertTriangle, MousePointerSquare, Target,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  5 |   Search, PieChart, Building, Cpu, MessageSquare, Video, ClipboardCheck, Gauge, ShieldAlert,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  6 |   Clock, Balance, Shapes
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 | } from "lucide-react";
+     | ^^^^^^^^^^^^^^^^^^^^^^^
+   8 |
+   9 | // Icon Mapping for Bias Categories
+  10 | const iconMap: { [key: string]: React.ElementType } = {
+
+The export Balance was not found in module [project]/node_modules/.pnpm/lucide-react@0.454.0_react@19.2.0/node_modules/lucide-react/dist/esm/lucide-react.js [app-ssr] (ecmascript).
+Did you mean to import Ban?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/ui/icons.tsx [Client Component Browser]
+    ./components/bias-wiki-card.tsx [Client Component Browser]
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/ui/icons.tsx [Client Component SSR]
+    ./components/bias-wiki-card.tsx [Client Component SSR]
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:17:52.340] Browser ERROR   ./components/ui/icons.tsx:2:1
+Export MousePointerSquare doesn't exist in target module
+   1 | import React from "react";
+>  2 | import {
+     | ^^^^^^^^
+>  3 |   Eye, BrainCircuit, GitMerge, Scale, Database, Users, Mic, Lightbulb, Dice3, Hand,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  4 |   BadgePercent, HeartPulse, TrendingUp, Smile, AlertTriangle, MousePointerSquare, Target,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  5 |   Search, PieChart, Building, Cpu, MessageSquare, Video, ClipboardCheck, Gauge, ShieldAlert,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  6 |   Clock, Balance, Shapes
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 | } from "lucide-react";
+     | ^^^^^^^^^^^^^^^^^^^^^^^
+   8 |
+   9 | // Icon Mapping for Bias Categories
+  10 | const iconMap: { [key: string]: React.ElementType } = {
+
+The export MousePointerSquare was not found in module [project]/node_modules/.pnpm/lucide-react@0.454.0_react@19.2.0/node_modules/lucide-react/dist/esm/lucide-react.js [app-client] (ecmascript).
+Did you mean to import MousePointerSquareDashed?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/ui/icons.tsx [Client Component Browser]
+    ./components/bias-wiki-card.tsx [Client Component Browser]
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/ui/icons.tsx [Client Component SSR]
+    ./components/bias-wiki-card.tsx [Client Component SSR]
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:17:52.340] Browser ERROR   ./components/ui/icons.tsx:2:1
+Export MousePointerSquare doesn't exist in target module
+   1 | import React from "react";
+>  2 | import {
+     | ^^^^^^^^
+>  3 |   Eye, BrainCircuit, GitMerge, Scale, Database, Users, Mic, Lightbulb, Dice3, Hand,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  4 |   BadgePercent, HeartPulse, TrendingUp, Smile, AlertTriangle, MousePointerSquare, Target,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  5 |   Search, PieChart, Building, Cpu, MessageSquare, Video, ClipboardCheck, Gauge, ShieldAlert,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  6 |   Clock, Balance, Shapes
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 | } from "lucide-react";
+     | ^^^^^^^^^^^^^^^^^^^^^^^
+   8 |
+   9 | // Icon Mapping for Bias Categories
+  10 | const iconMap: { [key: string]: React.ElementType } = {
+
+The export MousePointerSquare was not found in module [project]/node_modules/.pnpm/lucide-react@0.454.0_react@19.2.0/node_modules/lucide-react/dist/esm/lucide-react.js [app-ssr] (ecmascript).
+Did you mean to import MousePointerSquareDashed?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/ui/icons.tsx [Client Component Browser]
+    ./components/bias-wiki-card.tsx [Client Component Browser]
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/ui/icons.tsx [Client Component SSR]
+    ./components/bias-wiki-card.tsx [Client Component SSR]
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:18:39.071] Server  ERROR    ⨯ ./components/ui/icons.tsx:2:1
+Export Balance doesn't exist in target module
+   1 | import React from "react";
+>  2 | import {
+     | ^^^^^^^^
+>  3 |   Eye, BrainCircuit, GitMerge, Scale, Database, Users, Mic, Lightbulb, Dice3, Hand,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  4 |   BadgePercent, HeartPulse, TrendingUp, Smile, AlertTriangle, MousePointerSquare, Target,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  5 |   Search, PieChart, Building, Cpu, MessageSquare, Video, ClipboardCheck, Gauge, ShieldAlert,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  6 |   Clock, Balance, Shapes
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 | } from "lucide-react";
+     | ^^^^^^^^^^^^^^^^^^^^^^^
+   8 |
+   9 | // Icon Mapping for Bias Categories
+  10 | const iconMap: { [key: string]: React.ElementType } = {
+
+The export Balance was not found in module [project]/node_modules/.pnpm/lucide-react@0.454.0_react@19.2.0/node_modules/lucide-react/dist/esm/lucide-react.js [app-client] (ecmascript).
+Did you mean to import Ban?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/ui/icons.tsx [Client Component Browser]
+    ./components/bias-wiki-card.tsx [Client Component Browser]
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/ui/icons.tsx [Client Component SSR]
+    ./components/bias-wiki-card.tsx [Client Component SSR]
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+
+
+./components/ui/icons.tsx:2:1
+Export Balance doesn't exist in target module
+   1 | import React from "react";
+>  2 | import {
+     | ^^^^^^^^
+>  3 |   Eye, BrainCircuit, GitMerge, Scale, Database, Users, Mic, Lightbulb, Dice3, Hand,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  4 |   BadgePercent, HeartPulse, TrendingUp, Smile, AlertTriangle, MousePointerSquare, Target,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  5 |   Search, PieChart, Building, Cpu, MessageSquare, Video, ClipboardCheck, Gauge, ShieldAlert,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  6 |   Clock, Balance, Shapes
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 | } from "lucide-react";
+     | ^^^^^^^^^^^^^^^^^^^^^^^
+   8 |
+   9 | // Icon Mapping for Bias Categories
+  10 | const iconMap: { [key: string]: React.ElementType } = {
+
+The export Balance was not found in module [project]/node_modules/.pnpm/lucide-react@0.454.0_react@19.2.0/node_modules/lucide-react/dist/esm/lucide-react.js [app-ssr] (ecmascript).
+Did you mean to import Ban?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/ui/icons.tsx [Client Component Browser]
+    ./components/bias-wiki-card.tsx [Client Component Browser]
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/ui/icons.tsx [Client Component SSR]
+    ./components/bias-wiki-card.tsx [Client Component SSR]
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+
+
+./components/ui/icons.tsx:2:1
+Export MousePointerSquare doesn't exist in target module
+   1 | import React from "react";
+>  2 | import {
+     | ^^^^^^^^
+>  3 |   Eye, BrainCircuit, GitMerge, Scale, Database, Users, Mic, Lightbulb, Dice3, Hand,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  4 |   BadgePercent, HeartPulse, TrendingUp, Smile, AlertTriangle, MousePointerSquare, Target,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  5 |   Search, PieChart, Building, Cpu, MessageSquare, Video, ClipboardCheck, Gauge, ShieldAlert,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  6 |   Clock, Balance, Shapes
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 | } from "lucide-react";
+     | ^^^^^^^^^^^^^^^^^^^^^^^
+   8 |
+   9 | // Icon Mapping for Bias Categories
+  10 | const iconMap: { [key: string]: React.ElementType } = {
+
+The export MousePointerSquare was not found in module [project]/node_modules/.pnpm/lucide-react@0.454.0_react@19.2.0/node_modules/lucide-react/dist/esm/lucide-react.js [app-client] (ecmascript).
+Did you mean to import MousePointerSquareDashed?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/ui/icons.tsx [Client Component Browser]
+    ./components/bias-wiki-card.tsx [Client Component Browser]
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/ui/icons.tsx [Client Component SSR]
+    ./components/bias-wiki-card.tsx [Client Component SSR]
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+
+
+./components/ui/icons.tsx:2:1
+Export MousePointerSquare doesn't exist in target module
+   1 | import React from "react";
+>  2 | import {
+     | ^^^^^^^^
+>  3 |   Eye, BrainCircuit, GitMerge, Scale, Database, Users, Mic, Lightbulb, Dice3, Hand,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  4 |   BadgePercent, HeartPulse, TrendingUp, Smile, AlertTriangle, MousePointerSquare, Target,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  5 |   Search, PieChart, Building, Cpu, MessageSquare, Video, ClipboardCheck, Gauge, ShieldAlert,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  6 |   Clock, Balance, Shapes
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 | } from "lucide-react";
+     | ^^^^^^^^^^^^^^^^^^^^^^^
+   8 |
+   9 | // Icon Mapping for Bias Categories
+  10 | const iconMap: { [key: string]: React.ElementType } = {
+
+The export MousePointerSquare was not found in module [project]/node_modules/.pnpm/lucide-react@0.454.0_react@19.2.0/node_modules/lucide-react/dist/esm/lucide-react.js [app-ssr] (ecmascript).
+Did you mean to import MousePointerSquareDashed?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/ui/icons.tsx [Client Component Browser]
+    ./components/bias-wiki-card.tsx [Client Component Browser]
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/ui/icons.tsx [Client Component SSR]
+    ./components/bias-wiki-card.tsx [Client Component SSR]
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+
+[00:18:39.686] Browser ERROR   uncaughtError: Error: ./components/ui/icons.tsx:2:1
+Export Balance doesn't exist in target module
+   1 | import React from "react";
+>  2 | import {
+     | ^^^^^^^^
+>  3 |   Eye, BrainCircuit, GitMerge, Scale, Database, Users, Mic, Lightbulb, Dice3, Hand,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  4 |   BadgePercent, HeartPulse, TrendingUp, Smile, AlertTriangle, MousePointerSquare, Target,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  5 |   Search, PieChart, Building, Cpu, MessageSquare, Video, ClipboardCheck, Gauge, ShieldAlert,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  6 |   Clock, Balance, Shapes
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 | } from "lucide-react";
+     | ^^^^^^^^^^^^^^^^^^^^^^^
+   8 |
+   9 | // Icon Mapping for Bias Categories
+  10 | const iconMap: { [key: string]: React.ElementType } = {
+
+The export Balance was not found in module [project]/node_modules/.pnpm/lucide-react@0.454.0_react@19.2.0/node_modules/lucide-react/dist/esm/lucide-react.js [app-client] (ecmascript).
+Did you mean to import Ban?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/ui/icons.tsx [Client Component Browser]
+    ./components/bias-wiki-card.tsx [Client Component Browser]
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/ui/icons.tsx [Client Component SSR]
+    ./components/bias-wiki-card.tsx [Client Component SSR]
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+
+[00:18:40.018] Browser ERROR   ./components/ui/icons.tsx:2:1
+Export Balance doesn't exist in target module
+   1 | import React from "react";
+>  2 | import {
+     | ^^^^^^^^
+>  3 |   Eye, BrainCircuit, GitMerge, Scale, Database, Users, Mic, Lightbulb, Dice3, Hand,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  4 |   BadgePercent, HeartPulse, TrendingUp, Smile, AlertTriangle, MousePointerSquare, Target,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  5 |   Search, PieChart, Building, Cpu, MessageSquare, Video, ClipboardCheck, Gauge, ShieldAlert,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  6 |   Clock, Balance, Shapes
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 | } from "lucide-react";
+     | ^^^^^^^^^^^^^^^^^^^^^^^
+   8 |
+   9 | // Icon Mapping for Bias Categories
+  10 | const iconMap: { [key: string]: React.ElementType } = {
+
+The export Balance was not found in module [project]/node_modules/.pnpm/lucide-react@0.454.0_react@19.2.0/node_modules/lucide-react/dist/esm/lucide-react.js [app-client] (ecmascript).
+Did you mean to import Ban?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/ui/icons.tsx [Client Component Browser]
+    ./components/bias-wiki-card.tsx [Client Component Browser]
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/ui/icons.tsx [Client Component SSR]
+    ./components/bias-wiki-card.tsx [Client Component SSR]
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:18:40.027] Browser ERROR   ./components/ui/icons.tsx:2:1
+Export Balance doesn't exist in target module
+   1 | import React from "react";
+>  2 | import {
+     | ^^^^^^^^
+>  3 |   Eye, BrainCircuit, GitMerge, Scale, Database, Users, Mic, Lightbulb, Dice3, Hand,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  4 |   BadgePercent, HeartPulse, TrendingUp, Smile, AlertTriangle, MousePointerSquare, Target,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  5 |   Search, PieChart, Building, Cpu, MessageSquare, Video, ClipboardCheck, Gauge, ShieldAlert,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  6 |   Clock, Balance, Shapes
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 | } from "lucide-react";
+     | ^^^^^^^^^^^^^^^^^^^^^^^
+   8 |
+   9 | // Icon Mapping for Bias Categories
+  10 | const iconMap: { [key: string]: React.ElementType } = {
+
+The export Balance was not found in module [project]/node_modules/.pnpm/lucide-react@0.454.0_react@19.2.0/node_modules/lucide-react/dist/esm/lucide-react.js [app-ssr] (ecmascript).
+Did you mean to import Ban?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/ui/icons.tsx [Client Component Browser]
+    ./components/bias-wiki-card.tsx [Client Component Browser]
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/ui/icons.tsx [Client Component SSR]
+    ./components/bias-wiki-card.tsx [Client Component SSR]
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:18:40.027] Browser ERROR   ./components/ui/icons.tsx:2:1
+Export MousePointerSquare doesn't exist in target module
+   1 | import React from "react";
+>  2 | import {
+     | ^^^^^^^^
+>  3 |   Eye, BrainCircuit, GitMerge, Scale, Database, Users, Mic, Lightbulb, Dice3, Hand,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  4 |   BadgePercent, HeartPulse, TrendingUp, Smile, AlertTriangle, MousePointerSquare, Target,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  5 |   Search, PieChart, Building, Cpu, MessageSquare, Video, ClipboardCheck, Gauge, ShieldAlert,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  6 |   Clock, Balance, Shapes
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 | } from "lucide-react";
+     | ^^^^^^^^^^^^^^^^^^^^^^^
+   8 |
+   9 | // Icon Mapping for Bias Categories
+  10 | const iconMap: { [key: string]: React.ElementType } = {
+
+The export MousePointerSquare was not found in module [project]/node_modules/.pnpm/lucide-react@0.454.0_react@19.2.0/node_modules/lucide-react/dist/esm/lucide-react.js [app-client] (ecmascript).
+Did you mean to import MousePointerSquareDashed?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/ui/icons.tsx [Client Component Browser]
+    ./components/bias-wiki-card.tsx [Client Component Browser]
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/ui/icons.tsx [Client Component SSR]
+    ./components/bias-wiki-card.tsx [Client Component SSR]
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:18:40.027] Browser ERROR   ./components/ui/icons.tsx:2:1
+Export MousePointerSquare doesn't exist in target module
+   1 | import React from "react";
+>  2 | import {
+     | ^^^^^^^^
+>  3 |   Eye, BrainCircuit, GitMerge, Scale, Database, Users, Mic, Lightbulb, Dice3, Hand,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  4 |   BadgePercent, HeartPulse, TrendingUp, Smile, AlertTriangle, MousePointerSquare, Target,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  5 |   Search, PieChart, Building, Cpu, MessageSquare, Video, ClipboardCheck, Gauge, ShieldAlert,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  6 |   Clock, Balance, Shapes
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 | } from "lucide-react";
+     | ^^^^^^^^^^^^^^^^^^^^^^^
+   8 |
+   9 | // Icon Mapping for Bias Categories
+  10 | const iconMap: { [key: string]: React.ElementType } = {
+
+The export MousePointerSquare was not found in module [project]/node_modules/.pnpm/lucide-react@0.454.0_react@19.2.0/node_modules/lucide-react/dist/esm/lucide-react.js [app-ssr] (ecmascript).
+Did you mean to import MousePointerSquareDashed?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/ui/icons.tsx [Client Component Browser]
+    ./components/bias-wiki-card.tsx [Client Component Browser]
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/ui/icons.tsx [Client Component SSR]
+    ./components/bias-wiki-card.tsx [Client Component SSR]
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:18:40.027] Browser ERROR   ./components/ui/icons.tsx:2:1
+Export Balance doesn't exist in target module
+   1 | import React from "react";
+>  2 | import {
+     | ^^^^^^^^
+>  3 |   Eye, BrainCircuit, GitMerge, Scale, Database, Users, Mic, Lightbulb, Dice3, Hand,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  4 |   BadgePercent, HeartPulse, TrendingUp, Smile, AlertTriangle, MousePointerSquare, Target,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  5 |   Search, PieChart, Building, Cpu, MessageSquare, Video, ClipboardCheck, Gauge, ShieldAlert,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  6 |   Clock, Balance, Shapes
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 | } from "lucide-react";
+     | ^^^^^^^^^^^^^^^^^^^^^^^
+   8 |
+   9 | // Icon Mapping for Bias Categories
+  10 | const iconMap: { [key: string]: React.ElementType } = {
+
+The export Balance was not found in module [project]/node_modules/.pnpm/lucide-react@0.454.0_react@19.2.0/node_modules/lucide-react/dist/esm/lucide-react.js [app-client] (ecmascript).
+Did you mean to import Ban?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/ui/icons.tsx [Client Component Browser]
+    ./components/bias-wiki-card.tsx [Client Component Browser]
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/ui/icons.tsx [Client Component SSR]
+    ./components/bias-wiki-card.tsx [Client Component SSR]
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:18:40.027] Browser ERROR   ./components/ui/icons.tsx:2:1
+Export Balance doesn't exist in target module
+   1 | import React from "react";
+>  2 | import {
+     | ^^^^^^^^
+>  3 |   Eye, BrainCircuit, GitMerge, Scale, Database, Users, Mic, Lightbulb, Dice3, Hand,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  4 |   BadgePercent, HeartPulse, TrendingUp, Smile, AlertTriangle, MousePointerSquare, Target,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  5 |   Search, PieChart, Building, Cpu, MessageSquare, Video, ClipboardCheck, Gauge, ShieldAlert,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  6 |   Clock, Balance, Shapes
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 | } from "lucide-react";
+     | ^^^^^^^^^^^^^^^^^^^^^^^
+   8 |
+   9 | // Icon Mapping for Bias Categories
+  10 | const iconMap: { [key: string]: React.ElementType } = {
+
+The export Balance was not found in module [project]/node_modules/.pnpm/lucide-react@0.454.0_react@19.2.0/node_modules/lucide-react/dist/esm/lucide-react.js [app-ssr] (ecmascript).
+Did you mean to import Ban?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/ui/icons.tsx [Client Component Browser]
+    ./components/bias-wiki-card.tsx [Client Component Browser]
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/ui/icons.tsx [Client Component SSR]
+    ./components/bias-wiki-card.tsx [Client Component SSR]
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:18:40.027] Browser ERROR   ./components/ui/icons.tsx:2:1
+Export MousePointerSquare doesn't exist in target module
+   1 | import React from "react";
+>  2 | import {
+     | ^^^^^^^^
+>  3 |   Eye, BrainCircuit, GitMerge, Scale, Database, Users, Mic, Lightbulb, Dice3, Hand,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  4 |   BadgePercent, HeartPulse, TrendingUp, Smile, AlertTriangle, MousePointerSquare, Target,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  5 |   Search, PieChart, Building, Cpu, MessageSquare, Video, ClipboardCheck, Gauge, ShieldAlert,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  6 |   Clock, Balance, Shapes
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 | } from "lucide-react";
+     | ^^^^^^^^^^^^^^^^^^^^^^^
+   8 |
+   9 | // Icon Mapping for Bias Categories
+  10 | const iconMap: { [key: string]: React.ElementType } = {
+
+The export MousePointerSquare was not found in module [project]/node_modules/.pnpm/lucide-react@0.454.0_react@19.2.0/node_modules/lucide-react/dist/esm/lucide-react.js [app-client] (ecmascript).
+Did you mean to import MousePointerSquareDashed?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/ui/icons.tsx [Client Component Browser]
+    ./components/bias-wiki-card.tsx [Client Component Browser]
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/ui/icons.tsx [Client Component SSR]
+    ./components/bias-wiki-card.tsx [Client Component SSR]
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:18:40.027] Browser ERROR   ./components/ui/icons.tsx:2:1
+Export MousePointerSquare doesn't exist in target module
+   1 | import React from "react";
+>  2 | import {
+     | ^^^^^^^^
+>  3 |   Eye, BrainCircuit, GitMerge, Scale, Database, Users, Mic, Lightbulb, Dice3, Hand,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  4 |   BadgePercent, HeartPulse, TrendingUp, Smile, AlertTriangle, MousePointerSquare, Target,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  5 |   Search, PieChart, Building, Cpu, MessageSquare, Video, ClipboardCheck, Gauge, ShieldAlert,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  6 |   Clock, Balance, Shapes
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 | } from "lucide-react";
+     | ^^^^^^^^^^^^^^^^^^^^^^^
+   8 |
+   9 | // Icon Mapping for Bias Categories
+  10 | const iconMap: { [key: string]: React.ElementType } = {
+
+The export MousePointerSquare was not found in module [project]/node_modules/.pnpm/lucide-react@0.454.0_react@19.2.0/node_modules/lucide-react/dist/esm/lucide-react.js [app-ssr] (ecmascript).
+Did you mean to import MousePointerSquareDashed?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/ui/icons.tsx [Client Component Browser]
+    ./components/bias-wiki-card.tsx [Client Component Browser]
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/ui/icons.tsx [Client Component SSR]
+    ./components/bias-wiki-card.tsx [Client Component SSR]
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:19:09.000] Browser ERROR   ./components/ui/icons.tsx:2:1
+Export MousePointerSquare doesn't exist in target module
+   1 | import React from "react";
+>  2 | import {
+     | ^^^^^^^^
+>  3 |   Eye, BrainCircuit, GitMerge, Scale, Database, Users, Mic, Lightbulb, Dice3, Hand,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  4 |   BadgePercent, HeartPulse, TrendingUp, Smile, AlertTriangle, MousePointerSquare, Target,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  5 |   Search, PieChart, Building, Cpu, MessageSquare, Video, ClipboardCheck, Gauge, ShieldAlert,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  6 |   Clock, Gavel, Shapes
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 | } from "lucide-react";
+     | ^^^^^^^^^^^^^^^^^^^^^^^
+   8 |
+   9 | // Icon Mapping for Bias Categories
+  10 | const iconMap: { [key: string]: React.ElementType } = {
+
+The export MousePointerSquare was not found in module [project]/node_modules/.pnpm/lucide-react@0.454.0_react@19.2.0/node_modules/lucide-react/dist/esm/lucide-react.js [app-client] (ecmascript).
+Did you mean to import MousePointerSquareDashed?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/ui/icons.tsx [Client Component Browser]
+    ./components/bias-wiki-card.tsx [Client Component Browser]
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/ui/icons.tsx [Client Component SSR]
+    ./components/bias-wiki-card.tsx [Client Component SSR]
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:19:09.000] Browser ERROR   ./components/ui/icons.tsx:2:1
+Export MousePointerSquare doesn't exist in target module
+   1 | import React from "react";
+>  2 | import {
+     | ^^^^^^^^
+>  3 |   Eye, BrainCircuit, GitMerge, Scale, Database, Users, Mic, Lightbulb, Dice3, Hand,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  4 |   BadgePercent, HeartPulse, TrendingUp, Smile, AlertTriangle, MousePointerSquare, Target,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  5 |   Search, PieChart, Building, Cpu, MessageSquare, Video, ClipboardCheck, Gauge, ShieldAlert,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  6 |   Clock, Gavel, Shapes
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 | } from "lucide-react";
+     | ^^^^^^^^^^^^^^^^^^^^^^^
+   8 |
+   9 | // Icon Mapping for Bias Categories
+  10 | const iconMap: { [key: string]: React.ElementType } = {
+
+The export MousePointerSquare was not found in module [project]/node_modules/.pnpm/lucide-react@0.454.0_react@19.2.0/node_modules/lucide-react/dist/esm/lucide-react.js [app-ssr] (ecmascript).
+Did you mean to import MousePointerSquareDashed?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/ui/icons.tsx [Client Component Browser]
+    ./components/bias-wiki-card.tsx [Client Component Browser]
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/ui/icons.tsx [Client Component SSR]
+    ./components/bias-wiki-card.tsx [Client Component SSR]
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:21:28.234] Server  ERROR    ⨯ ./components/ui/icons.tsx:2:1
+Export MousePointerSquare doesn't exist in target module
+   1 | import React from "react";
+>  2 | import {
+     | ^^^^^^^^
+>  3 |   Eye, BrainCircuit, GitMerge, Scale, Database, Users, Mic, Lightbulb, Dice3, Hand,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  4 |   BadgePercent, HeartPulse, TrendingUp, Smile, AlertTriangle, MousePointerSquare, Target,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  5 |   Search, PieChart, Building, Cpu, MessageSquare, Video, ClipboardCheck, Gauge, ShieldAlert,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  6 |   Clock, Gavel, Shapes
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 | } from "lucide-react";
+     | ^^^^^^^^^^^^^^^^^^^^^^^
+   8 |
+   9 | // Icon Mapping for Bias Categories
+  10 | const iconMap: { [key: string]: React.ElementType } = {
+
+The export MousePointerSquare was not found in module [project]/node_modules/.pnpm/lucide-react@0.454.0_react@19.2.0/node_modules/lucide-react/dist/esm/lucide-react.js [app-client] (ecmascript).
+Did you mean to import MousePointerSquareDashed?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/ui/icons.tsx [Client Component Browser]
+    ./components/bias-wiki-card.tsx [Client Component Browser]
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/ui/icons.tsx [Client Component SSR]
+    ./components/bias-wiki-card.tsx [Client Component SSR]
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+
+
+./components/ui/icons.tsx:2:1
+Export MousePointerSquare doesn't exist in target module
+   1 | import React from "react";
+>  2 | import {
+     | ^^^^^^^^
+>  3 |   Eye, BrainCircuit, GitMerge, Scale, Database, Users, Mic, Lightbulb, Dice3, Hand,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  4 |   BadgePercent, HeartPulse, TrendingUp, Smile, AlertTriangle, MousePointerSquare, Target,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  5 |   Search, PieChart, Building, Cpu, MessageSquare, Video, ClipboardCheck, Gauge, ShieldAlert,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  6 |   Clock, Gavel, Shapes
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 | } from "lucide-react";
+     | ^^^^^^^^^^^^^^^^^^^^^^^
+   8 |
+   9 | // Icon Mapping for Bias Categories
+  10 | const iconMap: { [key: string]: React.ElementType } = {
+
+The export MousePointerSquare was not found in module [project]/node_modules/.pnpm/lucide-react@0.454.0_react@19.2.0/node_modules/lucide-react/dist/esm/lucide-react.js [app-ssr] (ecmascript).
+Did you mean to import MousePointerSquareDashed?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/ui/icons.tsx [Client Component Browser]
+    ./components/bias-wiki-card.tsx [Client Component Browser]
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/ui/icons.tsx [Client Component SSR]
+    ./components/bias-wiki-card.tsx [Client Component SSR]
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+
+[00:23:15.875] Server  ERROR    ⨯ ./components/ui/icons.tsx:2:1
+Export MousePointerSquare doesn't exist in target module
+   1 | import React from "react";
+>  2 | import {
+     | ^^^^^^^^
+>  3 |   Eye, BrainCircuit, GitMerge, Scale, Database, Users, Mic, Lightbulb, Dice3, Hand,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  4 |   BadgePercent, HeartPulse, TrendingUp, Smile, AlertTriangle, MousePointerSquare, Target,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  5 |   Search, PieChart, Building, Cpu, MessageSquare, Video, ClipboardCheck, Gauge, ShieldAlert,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  6 |   Clock, Gavel, Shapes
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 | } from "lucide-react";
+     | ^^^^^^^^^^^^^^^^^^^^^^^
+   8 |
+   9 | // Icon Mapping for Bias Categories
+  10 | const iconMap: { [key: string]: React.ElementType } = {
+
+The export MousePointerSquare was not found in module [project]/node_modules/.pnpm/lucide-react@0.454.0_react@19.2.0/node_modules/lucide-react/dist/esm/lucide-react.js [app-client] (ecmascript).
+Did you mean to import MousePointerSquareDashed?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/ui/icons.tsx [Client Component Browser]
+    ./components/bias-wiki-card.tsx [Client Component Browser]
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/ui/icons.tsx [Client Component SSR]
+    ./components/bias-wiki-card.tsx [Client Component SSR]
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+
+
+./components/ui/icons.tsx:2:1
+Export MousePointerSquare doesn't exist in target module
+   1 | import React from "react";
+>  2 | import {
+     | ^^^^^^^^
+>  3 |   Eye, BrainCircuit, GitMerge, Scale, Database, Users, Mic, Lightbulb, Dice3, Hand,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  4 |   BadgePercent, HeartPulse, TrendingUp, Smile, AlertTriangle, MousePointerSquare, Target,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  5 |   Search, PieChart, Building, Cpu, MessageSquare, Video, ClipboardCheck, Gauge, ShieldAlert,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  6 |   Clock, Gavel, Shapes
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 | } from "lucide-react";
+     | ^^^^^^^^^^^^^^^^^^^^^^^
+   8 |
+   9 | // Icon Mapping for Bias Categories
+  10 | const iconMap: { [key: string]: React.ElementType } = {
+
+The export MousePointerSquare was not found in module [project]/node_modules/.pnpm/lucide-react@0.454.0_react@19.2.0/node_modules/lucide-react/dist/esm/lucide-react.js [app-ssr] (ecmascript).
+Did you mean to import MousePointerSquareDashed?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/ui/icons.tsx [Client Component Browser]
+    ./components/bias-wiki-card.tsx [Client Component Browser]
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/ui/icons.tsx [Client Component SSR]
+    ./components/bias-wiki-card.tsx [Client Component SSR]
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+
+[00:23:16.212] Browser ERROR   uncaughtError: Error: ./components/ui/icons.tsx:2:1
+Export MousePointerSquare doesn't exist in target module
+   1 | import React from "react";
+>  2 | import {
+     | ^^^^^^^^
+>  3 |   Eye, BrainCircuit, GitMerge, Scale, Database, Users, Mic, Lightbulb, Dice3, Hand,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  4 |   BadgePercent, HeartPulse, TrendingUp, Smile, AlertTriangle, MousePointerSquare, Target,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  5 |   Search, PieChart, Building, Cpu, MessageSquare, Video, ClipboardCheck, Gauge, ShieldAlert,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  6 |   Clock, Gavel, Shapes
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 | } from "lucide-react";
+     | ^^^^^^^^^^^^^^^^^^^^^^^
+   8 |
+   9 | // Icon Mapping for Bias Categories
+  10 | const iconMap: { [key: string]: React.ElementType } = {
+
+The export MousePointerSquare was not found in module [project]/node_modules/.pnpm/lucide-react@0.454.0_react@19.2.0/node_modules/lucide-react/dist/esm/lucide-react.js [app-client] (ecmascript).
+Did you mean to import MousePointerSquareDashed?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/ui/icons.tsx [Client Component Browser]
+    ./components/bias-wiki-card.tsx [Client Component Browser]
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/ui/icons.tsx [Client Component SSR]
+    ./components/bias-wiki-card.tsx [Client Component SSR]
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+
+[00:23:16.530] Browser ERROR   ./components/ui/icons.tsx:2:1
+Export MousePointerSquare doesn't exist in target module
+   1 | import React from "react";
+>  2 | import {
+     | ^^^^^^^^
+>  3 |   Eye, BrainCircuit, GitMerge, Scale, Database, Users, Mic, Lightbulb, Dice3, Hand,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  4 |   BadgePercent, HeartPulse, TrendingUp, Smile, AlertTriangle, MousePointerSquare, Target,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  5 |   Search, PieChart, Building, Cpu, MessageSquare, Video, ClipboardCheck, Gauge, ShieldAlert,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  6 |   Clock, Gavel, Shapes
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 | } from "lucide-react";
+     | ^^^^^^^^^^^^^^^^^^^^^^^
+   8 |
+   9 | // Icon Mapping for Bias Categories
+  10 | const iconMap: { [key: string]: React.ElementType } = {
+
+The export MousePointerSquare was not found in module [project]/node_modules/.pnpm/lucide-react@0.454.0_react@19.2.0/node_modules/lucide-react/dist/esm/lucide-react.js [app-client] (ecmascript).
+Did you mean to import MousePointerSquareDashed?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/ui/icons.tsx [Client Component Browser]
+    ./components/bias-wiki-card.tsx [Client Component Browser]
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/ui/icons.tsx [Client Component SSR]
+    ./components/bias-wiki-card.tsx [Client Component SSR]
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:23:16.530] Browser ERROR   ./components/ui/icons.tsx:2:1
+Export MousePointerSquare doesn't exist in target module
+   1 | import React from "react";
+>  2 | import {
+     | ^^^^^^^^
+>  3 |   Eye, BrainCircuit, GitMerge, Scale, Database, Users, Mic, Lightbulb, Dice3, Hand,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  4 |   BadgePercent, HeartPulse, TrendingUp, Smile, AlertTriangle, MousePointerSquare, Target,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  5 |   Search, PieChart, Building, Cpu, MessageSquare, Video, ClipboardCheck, Gauge, ShieldAlert,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  6 |   Clock, Gavel, Shapes
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 | } from "lucide-react";
+     | ^^^^^^^^^^^^^^^^^^^^^^^
+   8 |
+   9 | // Icon Mapping for Bias Categories
+  10 | const iconMap: { [key: string]: React.ElementType } = {
+
+The export MousePointerSquare was not found in module [project]/node_modules/.pnpm/lucide-react@0.454.0_react@19.2.0/node_modules/lucide-react/dist/esm/lucide-react.js [app-ssr] (ecmascript).
+Did you mean to import MousePointerSquareDashed?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/ui/icons.tsx [Client Component Browser]
+    ./components/bias-wiki-card.tsx [Client Component Browser]
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/ui/icons.tsx [Client Component SSR]
+    ./components/bias-wiki-card.tsx [Client Component SSR]
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:23:16.530] Browser ERROR   ./components/ui/icons.tsx:2:1
+Export MousePointerSquare doesn't exist in target module
+   1 | import React from "react";
+>  2 | import {
+     | ^^^^^^^^
+>  3 |   Eye, BrainCircuit, GitMerge, Scale, Database, Users, Mic, Lightbulb, Dice3, Hand,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  4 |   BadgePercent, HeartPulse, TrendingUp, Smile, AlertTriangle, MousePointerSquare, Target,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  5 |   Search, PieChart, Building, Cpu, MessageSquare, Video, ClipboardCheck, Gauge, ShieldAlert,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  6 |   Clock, Gavel, Shapes
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 | } from "lucide-react";
+     | ^^^^^^^^^^^^^^^^^^^^^^^
+   8 |
+   9 | // Icon Mapping for Bias Categories
+  10 | const iconMap: { [key: string]: React.ElementType } = {
+
+The export MousePointerSquare was not found in module [project]/node_modules/.pnpm/lucide-react@0.454.0_react@19.2.0/node_modules/lucide-react/dist/esm/lucide-react.js [app-client] (ecmascript).
+Did you mean to import MousePointerSquareDashed?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/ui/icons.tsx [Client Component Browser]
+    ./components/bias-wiki-card.tsx [Client Component Browser]
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/ui/icons.tsx [Client Component SSR]
+    ./components/bias-wiki-card.tsx [Client Component SSR]
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:23:16.530] Browser ERROR   ./components/ui/icons.tsx:2:1
+Export MousePointerSquare doesn't exist in target module
+   1 | import React from "react";
+>  2 | import {
+     | ^^^^^^^^
+>  3 |   Eye, BrainCircuit, GitMerge, Scale, Database, Users, Mic, Lightbulb, Dice3, Hand,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  4 |   BadgePercent, HeartPulse, TrendingUp, Smile, AlertTriangle, MousePointerSquare, Target,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  5 |   Search, PieChart, Building, Cpu, MessageSquare, Video, ClipboardCheck, Gauge, ShieldAlert,
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  6 |   Clock, Gavel, Shapes
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 | } from "lucide-react";
+     | ^^^^^^^^^^^^^^^^^^^^^^^
+   8 |
+   9 | // Icon Mapping for Bias Categories
+  10 | const iconMap: { [key: string]: React.ElementType } = {
+
+The export MousePointerSquare was not found in module [project]/node_modules/.pnpm/lucide-react@0.454.0_react@19.2.0/node_modules/lucide-react/dist/esm/lucide-react.js [app-ssr] (ecmascript).
+Did you mean to import MousePointerSquareDashed?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/ui/icons.tsx [Client Component Browser]
+    ./components/bias-wiki-card.tsx [Client Component Browser]
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/ui/icons.tsx [Client Component SSR]
+    ./components/bias-wiki-card.tsx [Client Component SSR]
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:23:57.305] Server  LOG      ✓ Compiled in 148ms
+[00:28:32.872] Server  LOG      ✓ Compiled in 92ms
+[00:28:58.216] Server  LOG      ✓ Compiled in 28ms
+[00:30:00.698] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
 
 - A server/client branch `if (typeof window !== 'undefined')`.
 - Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
@@ -59,532 +2275,19 @@ It can also happen if the client has a browser extension installed which messes 
                         >
                   ...
 
-[00:04:43.307] Browser ERROR   Error saving user score: {}
-[00:04:43.307] Browser ERROR   Error saving user score: {}
-[00:04:56.330] Browser ERROR   Supabase save error: {"code":"PGRST205","details":null,"hint":null,"message":"Could not find the table 'public.user_scores' in the schema cache"}
-[00:04:56.330] Browser WARN    ⚠️ Assurez-vous que la table "user_scores" existe dans Supabase.
-[00:04:56.330] Browser WARN    📝 Exécutez le fichier supabase_migration.sql dans votre dashboard Supabase.
-[00:04:59.771] Browser ERROR   Supabase save error: {"code":"PGRST205","details":null,"hint":null,"message":"Could not find the table 'public.user_scores' in the schema cache"}
-[00:04:59.771] Browser WARN    ⚠️ Assurez-vous que la table "user_scores" existe dans Supabase.
-[00:04:59.771] Browser WARN    📝 Exécutez le fichier supabase_migration.sql dans votre dashboard Supabase.
-[00:05:22.836] Browser ERROR   Supabase save error: {"code":"PGRST205","details":null,"hint":null,"message":"Could not find the table 'public.user_scores' in the schema cache"}
-[00:05:22.836] Browser WARN    ⚠️ Assurez-vous que la table "user_scores" existe dans Supabase.
-[00:05:22.836] Browser WARN    📝 Exécutez le fichier supabase_migration.sql dans votre dashboard Supabase.
-[00:05:27.568] Browser ERROR   Supabase save error: {"code":"PGRST205","details":null,"hint":null,"message":"Could not find the table 'public.user_scores' in the schema cache"}
-[00:05:27.568] Browser WARN    ⚠️ Assurez-vous que la table "user_scores" existe dans Supabase.
-[00:05:27.568] Browser WARN    📝 Exécutez le fichier supabase_migration.sql dans votre dashboard Supabase.
-[00:05:31.084] Browser ERROR   Supabase save error: {"code":"PGRST205","details":null,"hint":null,"message":"Could not find the table 'public.user_scores' in the schema cache"}
-[00:05:31.084] Browser WARN    ⚠️ Assurez-vous que la table "user_scores" existe dans Supabase.
-[00:05:31.084] Browser WARN    📝 Exécutez le fichier supabase_migration.sql dans votre dashboard Supabase.
-[00:05:47.536] Browser ERROR   Supabase save error: {"code":"PGRST205","details":null,"hint":null,"message":"Could not find the table 'public.user_scores' in the schema cache"}
-[00:05:47.536] Browser WARN    ⚠️ Assurez-vous que la table "user_scores" existe dans Supabase.
-[00:05:47.536] Browser WARN    📝 Exécutez le fichier supabase_migration.sql dans votre dashboard Supabase.
-[00:06:03.527] Browser ERROR   Supabase save error: {"code":"PGRST205","details":null,"hint":null,"message":"Could not find the table 'public.user_scores' in the schema cache"}
-[00:06:03.527] Browser WARN    ⚠️ Assurez-vous que la table "user_scores" existe dans Supabase.
-[00:06:03.527] Browser WARN    📝 Exécutez le fichier supabase_migration.sql dans votre dashboard Supabase.
-[00:06:07.005] Browser ERROR   Supabase save error: {"code":"PGRST205","details":null,"hint":null,"message":"Could not find the table 'public.user_scores' in the schema cache"}
-[00:06:07.005] Browser WARN    ⚠️ Assurez-vous que la table "user_scores" existe dans Supabase.
-[00:06:07.005] Browser WARN    📝 Exécutez le fichier supabase_migration.sql dans votre dashboard Supabase.
-[00:06:13.846] Browser ERROR   Supabase save error: {"code":"PGRST205","details":null,"hint":null,"message":"Could not find the table 'public.user_scores' in the schema cache"}
-[00:06:13.846] Browser WARN    ⚠️ Assurez-vous que la table "user_scores" existe dans Supabase.
-[00:06:13.846] Browser WARN    📝 Exécutez le fichier supabase_migration.sql dans votre dashboard Supabase.
-[00:06:22.951] Browser ERROR   Supabase save error: {"code":"PGRST205","details":null,"hint":null,"message":"Could not find the table 'public.user_scores' in the schema cache"}
-[00:06:22.952] Browser WARN    ⚠️ Assurez-vous que la table "user_scores" existe dans Supabase.
-[00:06:22.952] Browser WARN    📝 Exécutez le fichier supabase_migration.sql dans votre dashboard Supabase.
-[00:06:26.489] Browser ERROR   Supabase save error: {"code":"PGRST205","details":null,"hint":null,"message":"Could not find the table 'public.user_scores' in the schema cache"}
-[00:06:26.489] Browser WARN    ⚠️ Assurez-vous que la table "user_scores" existe dans Supabase.
-[00:06:26.489] Browser WARN    📝 Exécutez le fichier supabase_migration.sql dans votre dashboard Supabase.
-[00:06:40.968] Browser ERROR   Supabase save error: {"code":"PGRST205","details":null,"hint":null,"message":"Could not find the table 'public.user_scores' in the schema cache"}
-[00:06:40.968] Browser WARN    ⚠️ Assurez-vous que la table "user_scores" existe dans Supabase.
-[00:06:40.968] Browser WARN    📝 Exécutez le fichier supabase_migration.sql dans votre dashboard Supabase.
-[00:06:44.123] Browser ERROR   Supabase save error: {"code":"PGRST205","details":null,"hint":null,"message":"Could not find the table 'public.user_scores' in the schema cache"}
-[00:06:44.123] Browser WARN    ⚠️ Assurez-vous que la table "user_scores" existe dans Supabase.
-[00:06:44.123] Browser WARN    📝 Exécutez le fichier supabase_migration.sql dans votre dashboard Supabase.
-[00:06:44.123] Browser ERROR   Supabase save error: {"code":"PGRST205","details":null,"hint":null,"message":"Could not find the table 'public.user_scores' in the schema cache"}
-[00:06:44.123] Browser WARN    ⚠️ Assurez-vous que la table "user_scores" existe dans Supabase.
-[00:06:44.123] Browser WARN    📝 Exécutez le fichier supabase_migration.sql dans votre dashboard Supabase.
-[00:06:51.050] Browser ERROR   Supabase save error: {"code":"PGRST205","details":null,"hint":null,"message":"Could not find the table 'public.user_scores' in the schema cache"}
-[00:06:51.050] Browser WARN    ⚠️ Assurez-vous que la table "user_scores" existe dans Supabase.
-[00:06:51.050] Browser WARN    📝 Exécutez le fichier supabase_migration.sql dans votre dashboard Supabase.
-[00:06:56.910] Browser ERROR   Supabase save error: {"code":"PGRST205","details":null,"hint":null,"message":"Could not find the table 'public.user_scores' in the schema cache"}
-[00:06:56.910] Browser WARN    ⚠️ Assurez-vous que la table "user_scores" existe dans Supabase.
-[00:06:56.910] Browser WARN    📝 Exécutez le fichier supabase_migration.sql dans votre dashboard Supabase.
-[00:07:00.412] Browser ERROR   Supabase save error: {"code":"PGRST205","details":null,"hint":null,"message":"Could not find the table 'public.user_scores' in the schema cache"}
-[00:07:00.412] Browser WARN    ⚠️ Assurez-vous que la table "user_scores" existe dans Supabase.
-[00:07:00.412] Browser WARN    📝 Exécutez le fichier supabase_migration.sql dans votre dashboard Supabase.
-[00:07:06.429] Browser ERROR   Supabase save error: {"code":"PGRST205","details":null,"hint":null,"message":"Could not find the table 'public.user_scores' in the schema cache"}
-[00:07:06.429] Browser WARN    ⚠️ Assurez-vous que la table "user_scores" existe dans Supabase.
-[00:07:06.429] Browser WARN    📝 Exécutez le fichier supabase_migration.sql dans votre dashboard Supabase.
-[00:07:08.471] Browser ERROR   Supabase save error: {"code":"PGRST205","details":null,"hint":null,"message":"Could not find the table 'public.user_scores' in the schema cache"}
-[00:07:08.471] Browser WARN    ⚠️ Assurez-vous que la table "user_scores" existe dans Supabase.
-[00:07:08.471] Browser WARN    📝 Exécutez le fichier supabase_migration.sql dans votre dashboard Supabase.
-[00:07:12.379] Browser ERROR   Supabase save error: {"code":"PGRST205","details":null,"hint":null,"message":"Could not find the table 'public.user_scores' in the schema cache"}
-[00:07:12.379] Browser WARN    ⚠️ Assurez-vous que la table "user_scores" existe dans Supabase.
-[00:07:12.379] Browser WARN    📝 Exécutez le fichier supabase_migration.sql dans votre dashboard Supabase.
-[00:07:16.467] Browser ERROR   Supabase save error: {"code":"PGRST205","details":null,"hint":null,"message":"Could not find the table 'public.user_scores' in the schema cache"}
-[00:07:16.468] Browser WARN    ⚠️ Assurez-vous que la table "user_scores" existe dans Supabase.
-[00:07:16.468] Browser WARN    📝 Exécutez le fichier supabase_migration.sql dans votre dashboard Supabase.
-[00:07:25.695] Browser ERROR   Supabase save error: {"code":"PGRST205","details":null,"hint":null,"message":"Could not find the table 'public.user_scores' in the schema cache"}
-[00:07:25.695] Browser WARN    ⚠️ Assurez-vous que la table "user_scores" existe dans Supabase.
-[00:07:25.695] Browser WARN    📝 Exécutez le fichier supabase_migration.sql dans votre dashboard Supabase.
-[00:07:29.227] Browser ERROR   Supabase save error: {"code":"PGRST205","details":null,"hint":null,"message":"Could not find the table 'public.user_scores' in the schema cache"}
-[00:07:29.227] Browser WARN    ⚠️ Assurez-vous que la table "user_scores" existe dans Supabase.
-[00:07:29.227] Browser WARN    📝 Exécutez le fichier supabase_migration.sql dans votre dashboard Supabase.
-[00:07:32.538] Browser ERROR   Supabase save error: {"code":"PGRST205","details":null,"hint":null,"message":"Could not find the table 'public.user_scores' in the schema cache"}
-[00:07:32.538] Browser WARN    ⚠️ Assurez-vous que la table "user_scores" existe dans Supabase.
-[00:07:32.538] Browser WARN    📝 Exécutez le fichier supabase_migration.sql dans votre dashboard Supabase.
-[00:07:45.879] Browser ERROR   Supabase save error: {"code":"PGRST205","details":null,"hint":null,"message":"Could not find the table 'public.user_scores' in the schema cache"}
-[00:07:45.879] Browser WARN    ⚠️ Assurez-vous que la table "user_scores" existe dans Supabase.
-[00:07:45.879] Browser WARN    📝 Exécutez le fichier supabase_migration.sql dans votre dashboard Supabase.
-[00:07:49.418] Browser ERROR   Supabase save error: {"code":"PGRST205","details":null,"hint":null,"message":"Could not find the table 'public.user_scores' in the schema cache"}
-[00:07:49.418] Browser WARN    ⚠️ Assurez-vous que la table "user_scores" existe dans Supabase.
-[00:07:49.418] Browser WARN    📝 Exécutez le fichier supabase_migration.sql dans votre dashboard Supabase.
-[00:07:51.653] Browser ERROR   Supabase save error: {"code":"PGRST205","details":null,"hint":null,"message":"Could not find the table 'public.user_scores' in the schema cache"}
-[00:07:51.653] Browser WARN    ⚠️ Assurez-vous que la table "user_scores" existe dans Supabase.
-[00:07:51.653] Browser WARN    📝 Exécutez le fichier supabase_migration.sql dans votre dashboard Supabase.
-[00:08:06.912] Browser ERROR   Supabase save error: {"code":"PGRST205","details":null,"hint":null,"message":"Could not find the table 'public.user_scores' in the schema cache"}
-[00:08:06.912] Browser WARN    ⚠️ Assurez-vous que la table "user_scores" existe dans Supabase.
-[00:08:06.912] Browser WARN    📝 Exécutez le fichier supabase_migration.sql dans votre dashboard Supabase.
-[00:08:09.949] Browser ERROR   Supabase save error: {"code":"PGRST205","details":null,"hint":null,"message":"Could not find the table 'public.user_scores' in the schema cache"}
-[00:08:09.949] Browser WARN    ⚠️ Assurez-vous que la table "user_scores" existe dans Supabase.
-[00:08:09.949] Browser WARN    📝 Exécutez le fichier supabase_migration.sql dans votre dashboard Supabase.
-[00:08:13.151] Browser ERROR   Supabase save error: {"code":"PGRST205","details":null,"hint":null,"message":"Could not find the table 'public.user_scores' in the schema cache"}
-[00:08:13.151] Browser WARN    ⚠️ Assurez-vous que la table "user_scores" existe dans Supabase.
-[00:08:13.151] Browser WARN    📝 Exécutez le fichier supabase_migration.sql dans votre dashboard Supabase.
-[00:08:22.443] Browser ERROR   Supabase save error: {"code":"PGRST205","details":null,"hint":null,"message":"Could not find the table 'public.user_scores' in the schema cache"}
-[00:08:22.443] Browser WARN    ⚠️ Assurez-vous que la table "user_scores" existe dans Supabase.
-[00:08:22.443] Browser WARN    📝 Exécutez le fichier supabase_migration.sql dans votre dashboard Supabase.
-[00:08:25.630] Browser ERROR   Supabase save error: {"code":"PGRST205","details":null,"hint":null,"message":"Could not find the table 'public.user_scores' in the schema cache"}
-[00:08:25.630] Browser WARN    ⚠️ Assurez-vous que la table "user_scores" existe dans Supabase.
-[00:08:25.630] Browser WARN    📝 Exécutez le fichier supabase_migration.sql dans votre dashboard Supabase.
-[00:08:36.314] Browser ERROR   Supabase save error: {"code":"PGRST205","details":null,"hint":null,"message":"Could not find the table 'public.user_scores' in the schema cache"}
-[00:08:36.314] Browser WARN    ⚠️ Assurez-vous que la table "user_scores" existe dans Supabase.
-[00:08:36.314] Browser WARN    📝 Exécutez le fichier supabase_migration.sql dans votre dashboard Supabase.
-[00:09:28.015] Browser ERROR   Supabase save error: {"code":"PGRST205","details":null,"hint":null,"message":"Could not find the table 'public.user_scores' in the schema cache"}
-[00:09:28.015] Browser WARN    ⚠️ Assurez-vous que la table "user_scores" existe dans Supabase.
-[00:09:28.015] Browser WARN    📝 Exécutez le fichier supabase_migration.sql dans votre dashboard Supabase.
-[00:09:32.123] Browser ERROR   Supabase save error: {"code":"PGRST205","details":null,"hint":null,"message":"Could not find the table 'public.user_scores' in the schema cache"}
-[00:09:32.123] Browser WARN    ⚠️ Assurez-vous que la table "user_scores" existe dans Supabase.
-[00:09:32.123] Browser WARN    📝 Exécutez le fichier supabase_migration.sql dans votre dashboard Supabase.
-[00:09:34.080] Browser ERROR   Supabase save error: {"code":"PGRST205","details":null,"hint":null,"message":"Could not find the table 'public.user_scores' in the schema cache"}
-[00:09:34.080] Browser WARN    ⚠️ Assurez-vous que la table "user_scores" existe dans Supabase.
-[00:09:34.080] Browser WARN    📝 Exécutez le fichier supabase_migration.sql dans votre dashboard Supabase.
-[00:09:55.175] Browser ERROR   Supabase save error: {"code":"PGRST205","details":null,"hint":null,"message":"Could not find the table 'public.user_scores' in the schema cache"}
-[00:09:55.176] Browser WARN    ⚠️ Assurez-vous que la table "user_scores" existe dans Supabase.
-[00:09:55.176] Browser WARN    📝 Exécutez le fichier supabase_migration.sql dans votre dashboard Supabase.
-[00:10:02.256] Browser ERROR   Supabase save error: {"code":"PGRST205","details":null,"hint":null,"message":"Could not find the table 'public.user_scores' in the schema cache"}
-[00:10:02.256] Browser WARN    ⚠️ Assurez-vous que la table "user_scores" existe dans Supabase.
-[00:10:02.256] Browser WARN    📝 Exécutez le fichier supabase_migration.sql dans votre dashboard Supabase.
-[00:10:08.168] Browser ERROR   Supabase save error: {"code":"PGRST205","details":null,"hint":null,"message":"Could not find the table 'public.user_scores' in the schema cache"}
-[00:10:08.168] Browser WARN    ⚠️ Assurez-vous que la table "user_scores" existe dans Supabase.
-[00:10:08.168] Browser WARN    📝 Exécutez le fichier supabase_migration.sql dans votre dashboard Supabase.
-[00:10:08.168] Browser ERROR   Supabase save error: {"code":"PGRST205","details":null,"hint":null,"message":"Could not find the table 'public.user_scores' in the schema cache"}
-[00:10:08.168] Browser WARN    ⚠️ Assurez-vous que la table "user_scores" existe dans Supabase.
-[00:10:08.168] Browser WARN    📝 Exécutez le fichier supabase_migration.sql dans votre dashboard Supabase.
-[00:10:10.142] Browser ERROR   Supabase save error: {"code":"PGRST205","details":null,"hint":null,"message":"Could not find the table 'public.user_scores' in the schema cache"}
-[00:10:10.142] Browser WARN    ⚠️ Assurez-vous que la table "user_scores" existe dans Supabase.
-[00:10:10.142] Browser WARN    📝 Exécutez le fichier supabase_migration.sql dans votre dashboard Supabase.
-[00:10:12.319] Browser ERROR   Supabase save error: {"code":"PGRST205","details":null,"hint":null,"message":"Could not find the table 'public.user_scores' in the schema cache"}
-[00:10:12.319] Browser WARN    ⚠️ Assurez-vous que la table "user_scores" existe dans Supabase.
-[00:10:12.319] Browser WARN    📝 Exécutez le fichier supabase_migration.sql dans votre dashboard Supabase.
-[00:12:56.151] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
-
-- A server/client branch `if (typeof window !== 'undefined')`.
-- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
-- Date formatting in a user's locale which doesn't match the server.
-- External changing data without sending a snapshot of it along with the HTML.
-- Invalid HTML tag nesting.
-
-It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
-
-%s%s https://react.dev/link/hydration-mismatch 
-
-  ...
-    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
-      <AppDevOverlayErrorBoundary globalError={[...]}>
-        <ReplaySsrOnlyErrors>
-        <DevRootHTTPAccessFallbackBoundary>
-          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
-            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} ...>
-              <RedirectBoundary>
-                <RedirectErrorBoundary router={{...}}>
-                  <Head>
-                  <__next_root_layout_boundary__>
-                    <SegmentViewNode type="layout" pagePath="layout.tsx">
-                      <SegmentTrieNode>
-                      <link>
-                      <script>
-                      <RootLayout>
-                        <html
-                          lang="fr"
-                          className="dark"
--                         data-jetski-tab-id="418219975"
-                        >
-                  ...
-
-[00:12:56.151] Browser ERROR   Error saving user score: {}
-[00:12:56.151] Browser ERROR   Error saving user score: {}
-[00:12:57.719] Browser ERROR   Error saving user score: {}
-[00:13:36.115] Server  LOG      ✓ Compiled in 26ms
-[00:13:36.214] Browser ERROR   Error saving user score: {}
-[00:13:36.214] Browser ERROR   Error saving user score: {}
-[00:13:36.225] Browser ERROR   Error saving user score: {}
-[00:13:36.225] Browser ERROR   Error saving user score: {}
-[00:15:48.137] Server  LOG      ✓ Compiled in 49ms
-[00:16:31.105] Browser ERROR   Error saving user score: {}
-[00:16:33.397] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
-
-- A server/client branch `if (typeof window !== 'undefined')`.
-- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
-- Date formatting in a user's locale which doesn't match the server.
-- External changing data without sending a snapshot of it along with the HTML.
-- Invalid HTML tag nesting.
-
-It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
-
-%s%s https://react.dev/link/hydration-mismatch 
-
-  ...
-    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
-      <AppDevOverlayErrorBoundary globalError={[...]}>
-        <ReplaySsrOnlyErrors>
-        <DevRootHTTPAccessFallbackBoundary>
-          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
-            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} ...>
-              <RedirectBoundary>
-                <RedirectErrorBoundary router={{...}}>
-                  <Head>
-                  <__next_root_layout_boundary__>
-                    <SegmentViewNode type="layout" pagePath="layout.tsx">
-                      <SegmentTrieNode>
-                      <link>
-                      <script>
-                      <RootLayout>
-                        <html
-                          lang="fr"
-                          className="dark"
--                         data-jetski-tab-id="418219975"
-                        >
-                  ...
-
-[00:16:33.397] Browser ERROR   Error saving user score: {}
-[00:16:33.397] Browser ERROR   Error saving user score: {}
-[00:16:36.850] Browser ERROR   Error saving user score: {}
-[00:16:38.183] Browser ERROR   Error saving user score: {}
-[00:16:41.643] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
-
-- A server/client branch `if (typeof window !== 'undefined')`.
-- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
-- Date formatting in a user's locale which doesn't match the server.
-- External changing data without sending a snapshot of it along with the HTML.
-- Invalid HTML tag nesting.
-
-It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
-
-%s%s https://react.dev/link/hydration-mismatch 
-
-  ...
-    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
-      <AppDevOverlayErrorBoundary globalError={[...]}>
-        <ReplaySsrOnlyErrors>
-        <DevRootHTTPAccessFallbackBoundary>
-          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
-            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} ...>
-              <RedirectBoundary>
-                <RedirectErrorBoundary router={{...}}>
-                  <Head>
-                  <__next_root_layout_boundary__>
-                    <SegmentViewNode type="layout" pagePath="layout.tsx">
-                      <SegmentTrieNode>
-                      <link>
-                      <script>
-                      <RootLayout>
-                        <html
-                          lang="fr"
-                          className="dark"
--                         data-jetski-tab-id="418219975"
-                        >
-                  ...
-
-[00:16:41.643] Browser ERROR   Error saving user score: {}
-[00:16:41.643] Browser ERROR   Error saving user score: {}
-[00:17:08.845] Browser ERROR   Error saving user score: {}
-[00:17:10.658] Browser ERROR   Error saving user score: {}
-[00:17:11.999] Browser ERROR   Error saving user score: {}
-[00:17:13.114] Browser ERROR   Error saving user score: {}
-[00:17:25.266] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
-
-- A server/client branch `if (typeof window !== 'undefined')`.
-- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
-- Date formatting in a user's locale which doesn't match the server.
-- External changing data without sending a snapshot of it along with the HTML.
-- Invalid HTML tag nesting.
-
-It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
-
-%s%s https://react.dev/link/hydration-mismatch 
-
-  ...
-    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
-      <AppDevOverlayErrorBoundary globalError={[...]}>
-        <ReplaySsrOnlyErrors>
-        <DevRootHTTPAccessFallbackBoundary>
-          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
-            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} ...>
-              <RedirectBoundary>
-                <RedirectErrorBoundary router={{...}}>
-                  <Head>
-                  <__next_root_layout_boundary__>
-                    <SegmentViewNode type="layout" pagePath="layout.tsx">
-                      <SegmentTrieNode>
-                      <link>
-                      <script>
-                      <RootLayout>
-                        <html
-                          lang="fr"
-                          className="dark"
--                         data-jetski-tab-id="418219975"
-                        >
-                  ...
-
-[00:17:25.472] Browser ERROR   Error saving user score: {}
-[00:17:25.472] Browser ERROR   Error saving user score: {}
-[00:17:28.446] Browser ERROR   Error saving user score: {}
-[00:17:29.745] Browser ERROR   Error saving user score: {}
-[00:18:31.719] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
-
-- A server/client branch `if (typeof window !== 'undefined')`.
-- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
-- Date formatting in a user's locale which doesn't match the server.
-- External changing data without sending a snapshot of it along with the HTML.
-- Invalid HTML tag nesting.
-
-It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
-
-%s%s https://react.dev/link/hydration-mismatch 
-
-  ...
-    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
-      <AppDevOverlayErrorBoundary globalError={[...]}>
-        <ReplaySsrOnlyErrors>
-        <DevRootHTTPAccessFallbackBoundary>
-          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
-            <HTTPAccessFallbackErrorBoundary pathname="/test-supa..." notFound={<NotAllowedRootHTTPFallbackError>} ...>
-              <RedirectBoundary>
-                <RedirectErrorBoundary router={{...}}>
-                  <Head>
-                  <__next_root_layout_boundary__>
-                    <SegmentViewNode type="layout" pagePath="layout.tsx">
-                      <SegmentTrieNode>
-                      <link>
-                      <script>
-                      <RootLayout>
-                        <html
-                          lang="fr"
-                          className="dark"
--                         data-jetski-tab-id="418219987"
-                        >
-                  ...
-
-[00:18:35.993] Browser LOG     🔍 Test de connexion Supabase...
-[00:18:35.993] Browser LOG     ✅ Client Supabase créé
-[00:18:35.993] Browser LOG     
-📊 Test de la table user_scores...
-[00:18:36.367] Browser ERROR   ❌ Erreur lors de l'accès à la table: {"code":"PGRST205","details":null,"hint":null,"message":"Could not find the table 'public.user_scores' in the schema cache"}
-[00:18:36.367] Browser ERROR   
-⚠️ ERREUR INCONNUE: Could not find the table 'public.user_scores' in the schema cache
-[00:21:49.970] Server  LOG      ✓ Compiled in 21ms
-[00:21:50.076] Browser ERROR   Error saving user score: {}
-[00:21:50.076] Browser ERROR   Error saving user score: {}
-[00:21:50.096] Browser ERROR   Error saving user score: {}
-[00:21:50.096] Browser ERROR   Error saving user score: {}
-[00:22:59.387] Server  LOG      ✓ Compiled in 39ms
-[00:36:13.336] Browser ERROR   Error saving user score: {}
-[00:36:13.336] Browser ERROR   Error saving user score: {}
-[00:36:16.327] Browser ERROR   Error saving user score: {}
-[00:36:18.058] Browser ERROR   Supabase save error: {"code":"PGRST205","details":null,"hint":null,"message":"Could not find the table 'public.user_scores' in the schema cache"}
-[00:36:18.058] Browser WARN    ⚠️ Assurez-vous que la table "user_scores" existe dans Supabase.
-[00:36:18.058] Browser WARN    📝 Exécutez le fichier supabase_migration.sql dans votre dashboard Supabase.
-[00:36:18.058] Browser ERROR   Supabase save error: {"code":"PGRST205","details":null,"hint":null,"message":"Could not find the table 'public.user_scores' in the schema cache"}
-[00:36:18.058] Browser WARN    ⚠️ Assurez-vous que la table "user_scores" existe dans Supabase.
-[00:36:18.058] Browser WARN    📝 Exécutez le fichier supabase_migration.sql dans votre dashboard Supabase.
-[00:36:20.442] Browser ERROR   Supabase save error: {"code":"PGRST205","details":null,"hint":null,"message":"Could not find the table 'public.user_scores' in the schema cache"}
-[00:36:20.442] Browser WARN    ⚠️ Assurez-vous que la table "user_scores" existe dans Supabase.
-[00:36:20.442] Browser WARN    📝 Exécutez le fichier supabase_migration.sql dans votre dashboard Supabase.
-[00:38:01.650] Browser ERROR   Supabase save error: {"code":"PGRST205","details":null,"hint":null,"message":"Could not find the table 'public.user_scores' in the schema cache"}
-[00:38:01.650] Browser WARN    ⚠️ Assurez-vous que la table "user_scores" existe dans Supabase.
-[00:38:01.650] Browser WARN    📝 Exécutez le fichier supabase_migration.sql dans votre dashboard Supabase.
-[00:38:04.731] Browser ERROR   Supabase save error: {"code":"PGRST205","details":null,"hint":null,"message":"Could not find the table 'public.user_scores' in the schema cache"}
-[00:38:04.731] Browser WARN    ⚠️ Assurez-vous que la table "user_scores" existe dans Supabase.
-[00:38:04.731] Browser WARN    📝 Exécutez le fichier supabase_migration.sql dans votre dashboard Supabase.
-[00:38:08.088] Browser ERROR   Supabase save error: {"code":"PGRST205","details":null,"hint":null,"message":"Could not find the table 'public.user_scores' in the schema cache"}
-[00:38:08.088] Browser WARN    ⚠️ Assurez-vous que la table "user_scores" existe dans Supabase.
-[00:38:08.088] Browser WARN    📝 Exécutez le fichier supabase_migration.sql dans votre dashboard Supabase.
-[00:38:10.585] Browser ERROR   Supabase save error: {"code":"PGRST205","details":null,"hint":null,"message":"Could not find the table 'public.user_scores' in the schema cache"}
-[00:38:10.586] Browser WARN    ⚠️ Assurez-vous que la table "user_scores" existe dans Supabase.
-[00:38:10.586] Browser WARN    📝 Exécutez le fichier supabase_migration.sql dans votre dashboard Supabase.
-[00:38:12.631] Browser ERROR   Supabase save error: {"code":"PGRST205","details":null,"hint":null,"message":"Could not find the table 'public.user_scores' in the schema cache"}
-[00:38:12.631] Browser WARN    ⚠️ Assurez-vous que la table "user_scores" existe dans Supabase.
-[00:38:12.631] Browser WARN    📝 Exécutez le fichier supabase_migration.sql dans votre dashboard Supabase.
-[00:38:22.843] Browser ERROR   Supabase save error: {"code":"PGRST205","details":null,"hint":null,"message":"Could not find the table 'public.user_scores' in the schema cache"}
-[00:38:22.844] Browser WARN    ⚠️ Assurez-vous que la table "user_scores" existe dans Supabase.
-[00:38:22.844] Browser WARN    📝 Exécutez le fichier supabase_migration.sql dans votre dashboard Supabase.
-[00:38:24.615] Browser ERROR   Supabase save error: {"code":"PGRST205","details":null,"hint":null,"message":"Could not find the table 'public.user_scores' in the schema cache"}
-[00:38:24.615] Browser WARN    ⚠️ Assurez-vous que la table "user_scores" existe dans Supabase.
-[00:38:24.615] Browser WARN    📝 Exécutez le fichier supabase_migration.sql dans votre dashboard Supabase.
-[00:38:24.615] Browser ERROR   Supabase save error: {"code":"PGRST205","details":null,"hint":null,"message":"Could not find the table 'public.user_scores' in the schema cache"}
-[00:38:24.615] Browser WARN    ⚠️ Assurez-vous que la table "user_scores" existe dans Supabase.
-[00:38:24.615] Browser WARN    📝 Exécutez le fichier supabase_migration.sql dans votre dashboard Supabase.
-[03:08:48.619] Browser ERROR   Supabase save error: {"code":"PGRST205","details":null,"hint":null,"message":"Could not find the table 'public.user_scores' in the schema cache"}
-[03:08:48.619] Browser WARN    ⚠️ Assurez-vous que la table "user_scores" existe dans Supabase.
-[03:08:48.619] Browser WARN    📝 Exécutez le fichier supabase_migration.sql dans votre dashboard Supabase.
-[03:08:48.619] Browser ERROR   Supabase save error: {"code":"PGRST205","details":null,"hint":null,"message":"Could not find the table 'public.user_scores' in the schema cache"}
-[03:08:48.619] Browser WARN    ⚠️ Assurez-vous que la table "user_scores" existe dans Supabase.
-[03:08:48.619] Browser WARN    📝 Exécutez le fichier supabase_migration.sql dans votre dashboard Supabase.
-[03:08:49.121] Browser ERROR   Supabase save error: {"code":"PGRST205","details":null,"hint":null,"message":"Could not find the table 'public.user_scores' in the schema cache"}
-[03:08:49.121] Browser WARN    ⚠️ Assurez-vous que la table "user_scores" existe dans Supabase.
-[03:08:49.121] Browser WARN    📝 Exécutez le fichier supabase_migration.sql dans votre dashboard Supabase.
-[03:08:49.121] Browser ERROR   Supabase save error: {"code":"PGRST205","details":null,"hint":null,"message":"Could not find the table 'public.user_scores' in the schema cache"}
-[03:08:49.121] Browser WARN    ⚠️ Assurez-vous que la table "user_scores" existe dans Supabase.
-[03:08:49.121] Browser WARN    📝 Exécutez le fichier supabase_migration.sql dans votre dashboard Supabase.
-[04:08:48.179] Server  LOG      ✓ Compiled in 74ms
-[04:17:32.527] Server  LOG      ✓ Compiled in 50ms
-[04:18:32.683] Server  LOG      ✓ Compiled in 43ms
-[04:18:41.805] Server  LOG      ✓ Compiled in 19ms
-[04:18:55.524] Server  LOG      ✓ Compiled in 31ms
-[04:45:48.899] Server  LOG      ✓ Compiled in 165ms
-[04:45:49.262] Browser ERROR   ./components/quiz-engine.tsx:425:33
-Parsing ecmascript source code failed
-  423 |                 >
-  424 |                   <Card
-> 425 |                     className={`p - 6 transition - all duration - 300 ${
-      |                                 ^
-  426 |   unlocked
-  427 |     ? "bg-gray-900/50 border-gray-700 hover:border-cyan-500/50 cursor-pointer"
-  428 |     : "bg-gray-900/30 border-gray-800 opacity-50"
-
-Expected ';', '}' or <eof>
-
-Import traces:
-  Client Component Browser:
-    ./components/quiz-engine.tsx [Client Component Browser]
-    ./app/page.tsx [Client Component Browser]
-    ./app/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./components/quiz-engine.tsx [Client Component SSR]
-    ./app/page.tsx [Client Component SSR]
-    ./app/page.tsx [Server Component]
-[04:45:49.264] Browser ERROR   ./components/quiz-engine.tsx:425:33
-Parsing ecmascript source code failed
-  423 |                 >
-  424 |                   <Card
-> 425 |                     className={`p - 6 transition - all duration - 300 ${
-      |                                 ^
-  426 |   unlocked
-  427 |     ? "bg-gray-900/50 border-gray-700 hover:border-cyan-500/50 cursor-pointer"
-  428 |     : "bg-gray-900/30 border-gray-800 opacity-50"
-
-Expected ';', '}' or <eof>
-
-Import traces:
-  Client Component Browser:
-    ./components/quiz-engine.tsx [Client Component Browser]
-    ./app/page.tsx [Client Component Browser]
-    ./app/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./components/quiz-engine.tsx [Client Component SSR]
-    ./app/page.tsx [Client Component SSR]
-    ./app/page.tsx [Server Component]
-[04:45:49.265] Browser ERROR   ./components/quiz-engine.tsx:425:33
-Parsing ecmascript source code failed
-  423 |                 >
-  424 |                   <Card
-> 425 |                     className={`p - 6 transition - all duration - 300 ${
-      |                                 ^
-  426 |   unlocked
-  427 |     ? "bg-gray-900/50 border-gray-700 hover:border-cyan-500/50 cursor-pointer"
-  428 |     : "bg-gray-900/30 border-gray-800 opacity-50"
-
-Expected ';', '}' or <eof>
-
-Import traces:
-  Client Component Browser:
-    ./components/quiz-engine.tsx [Client Component Browser]
-    ./app/page.tsx [Client Component Browser]
-    ./app/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./components/quiz-engine.tsx [Client Component SSR]
-    ./app/page.tsx [Client Component SSR]
-    ./app/page.tsx [Server Component]
-[04:45:49.269] Browser ERROR   ./components/quiz-engine.tsx:425:33
-Parsing ecmascript source code failed
-  423 |                 >
-  424 |                   <Card
-> 425 |                     className={`p - 6 transition - all duration - 300 ${
-      |                                 ^
-  426 |   unlocked
-  427 |     ? "bg-gray-900/50 border-gray-700 hover:border-cyan-500/50 cursor-pointer"
-  428 |     : "bg-gray-900/30 border-gray-800 opacity-50"
-
-Expected ';', '}' or <eof>
-
-Import traces:
-  Client Component Browser:
-    ./components/quiz-engine.tsx [Client Component Browser]
-    ./app/page.tsx [Client Component Browser]
-    ./app/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./components/quiz-engine.tsx [Client Component SSR]
-    ./app/page.tsx [Client Component SSR]
-    ./app/page.tsx [Server Component]
-[04:45:49.975] Browser ERROR   ./components/quiz-engine.tsx:425:33
-Parsing ecmascript source code failed
-  423 |                 >
-  424 |                   <Card
-> 425 |                     className={`p - 6 transition - all duration - 300 ${
-      |                                 ^
-  426 |   unlocked
-  427 |     ? "bg-gray-900/50 border-gray-700 hover:border-cyan-500/50 cursor-pointer"
-  428 |     : "bg-gray-900/30 border-gray-800 opacity-50"
-
-Expected ';', '}' or <eof>
-
-Import traces:
-  Client Component Browser:
-    ./components/quiz-engine.tsx [Client Component Browser]
-    ./app/page.tsx [Client Component Browser]
-    ./app/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./components/quiz-engine.tsx [Client Component SSR]
-    ./app/page.tsx [Client Component SSR]
-    ./app/page.tsx [Server Component]
-[04:48:44.713] Server  LOG      ✓ Compiled in 175ms
-[04:48:44.767] Browser ERROR   ./components/quiz-engine.tsx:425:33
-Parsing ecmascript source code failed
-  423 |                 >
-  424 |                   <Card
-> 425 |                     className={`p - 6 transition - all duration - 300 ${
-      |                                 ^
-  426 |   unlocked
-  427 |     ? "bg-gray-900/50 border-gray-700 hover:border-cyan-500/50 cursor-pointer"
-  428 |     : "bg-gray-900/30 border-gray-800 opacity-50"
-
-Expected ';', '}' or <eof>
-
-Import traces:
-  Client Component Browser:
-    ./components/quiz-engine.tsx [Client Component Browser]
-    ./app/page.tsx [Client Component Browser]
-    ./app/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./components/quiz-engine.tsx [Client Component SSR]
-    ./app/page.tsx [Client Component SSR]
-    ./app/page.tsx [Server Component]
-[04:49:24.126] Server  LOG      ✓ Compiled in 85ms
-[04:49:24.365] Browser ERROR   Error saving user score: {}
+[00:33:03.543] Server  LOG      ✓ Compiled in 223ms
+[00:33:18.403] Server  LOG      ✓ Compiled in 162ms
+[00:33:36.764] Server  LOG      ✓ Compiled in 90ms
+[00:33:40.102] Server  LOG      ✓ Compiled in 33ms
+[00:33:52.623] Server  LOG      ✓ Compiled in 44ms
+[00:34:18.234] Server  LOG      ✓ Compiled in 34ms
+[00:34:28.552] Server  LOG      ✓ Compiled in 50ms
+[00:34:48.297] Server  LOG      ✓ Compiled in 17ms
+[00:36:04.258] Server  LOG      ✓ Compiled in 55ms
+[00:37:48.085] Server  LOG      ✓ Compiled in 233ms
+[00:44:49.872] Server  LOG      ✓ Compiled in 68ms
+[00:45:01.264] Server  LOG      ✓ Compiled in 41ms
+[00:46:22.426] Server  LOG      ✓ Compiled in 89ms
+[00:49:10.313] Server  LOG      ✓ Compiled in 38ms
+[00:53:01.918] Server  LOG      ✓ Compiled in 70ms
+[00:56:27.941] Server  LOG      ✓ Compiled in 24ms
