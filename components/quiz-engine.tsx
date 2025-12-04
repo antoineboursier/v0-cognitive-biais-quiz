@@ -1,6 +1,6 @@
 "use client"
 
-import { useReducer, useEffect, useCallback } from "react"
+import { useState, useReducer, useEffect, useRef, useCallback } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import {
   Brain, Zap, Trophy, RotateCcw, BookOpen, ChevronRight, Lock, CheckCircle, ArrowLeft, Award,
@@ -262,6 +262,10 @@ export function QuizEngine({ initialState, onReset }: QuizEngineProps) {
     showCertificate,
     showResetDialog,
   } = state;
+
+  // Local state for reset dialog and ref for auto-scroll
+  const [showResetDialogLocal, setShowResetDialogLocal] = useState(showResetDialog);
+  const explanationRef = useRef<HTMLDivElement>(null);
 
   // Persist state to localStorage on every change
   useEffect(() => {

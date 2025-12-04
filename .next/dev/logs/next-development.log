@@ -448,3 +448,143 @@ It can also happen if the client has a browser extension installed which messes 
 [03:08:49.121] Browser WARN    ⚠️ Assurez-vous que la table "user_scores" existe dans Supabase.
 [03:08:49.121] Browser WARN    📝 Exécutez le fichier supabase_migration.sql dans votre dashboard Supabase.
 [04:08:48.179] Server  LOG      ✓ Compiled in 74ms
+[04:17:32.527] Server  LOG      ✓ Compiled in 50ms
+[04:18:32.683] Server  LOG      ✓ Compiled in 43ms
+[04:18:41.805] Server  LOG      ✓ Compiled in 19ms
+[04:18:55.524] Server  LOG      ✓ Compiled in 31ms
+[04:45:48.899] Server  LOG      ✓ Compiled in 165ms
+[04:45:49.262] Browser ERROR   ./components/quiz-engine.tsx:425:33
+Parsing ecmascript source code failed
+  423 |                 >
+  424 |                   <Card
+> 425 |                     className={`p - 6 transition - all duration - 300 ${
+      |                                 ^
+  426 |   unlocked
+  427 |     ? "bg-gray-900/50 border-gray-700 hover:border-cyan-500/50 cursor-pointer"
+  428 |     : "bg-gray-900/30 border-gray-800 opacity-50"
+
+Expected ';', '}' or <eof>
+
+Import traces:
+  Client Component Browser:
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[04:45:49.264] Browser ERROR   ./components/quiz-engine.tsx:425:33
+Parsing ecmascript source code failed
+  423 |                 >
+  424 |                   <Card
+> 425 |                     className={`p - 6 transition - all duration - 300 ${
+      |                                 ^
+  426 |   unlocked
+  427 |     ? "bg-gray-900/50 border-gray-700 hover:border-cyan-500/50 cursor-pointer"
+  428 |     : "bg-gray-900/30 border-gray-800 opacity-50"
+
+Expected ';', '}' or <eof>
+
+Import traces:
+  Client Component Browser:
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[04:45:49.265] Browser ERROR   ./components/quiz-engine.tsx:425:33
+Parsing ecmascript source code failed
+  423 |                 >
+  424 |                   <Card
+> 425 |                     className={`p - 6 transition - all duration - 300 ${
+      |                                 ^
+  426 |   unlocked
+  427 |     ? "bg-gray-900/50 border-gray-700 hover:border-cyan-500/50 cursor-pointer"
+  428 |     : "bg-gray-900/30 border-gray-800 opacity-50"
+
+Expected ';', '}' or <eof>
+
+Import traces:
+  Client Component Browser:
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[04:45:49.269] Browser ERROR   ./components/quiz-engine.tsx:425:33
+Parsing ecmascript source code failed
+  423 |                 >
+  424 |                   <Card
+> 425 |                     className={`p - 6 transition - all duration - 300 ${
+      |                                 ^
+  426 |   unlocked
+  427 |     ? "bg-gray-900/50 border-gray-700 hover:border-cyan-500/50 cursor-pointer"
+  428 |     : "bg-gray-900/30 border-gray-800 opacity-50"
+
+Expected ';', '}' or <eof>
+
+Import traces:
+  Client Component Browser:
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[04:45:49.975] Browser ERROR   ./components/quiz-engine.tsx:425:33
+Parsing ecmascript source code failed
+  423 |                 >
+  424 |                   <Card
+> 425 |                     className={`p - 6 transition - all duration - 300 ${
+      |                                 ^
+  426 |   unlocked
+  427 |     ? "bg-gray-900/50 border-gray-700 hover:border-cyan-500/50 cursor-pointer"
+  428 |     : "bg-gray-900/30 border-gray-800 opacity-50"
+
+Expected ';', '}' or <eof>
+
+Import traces:
+  Client Component Browser:
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[04:48:44.713] Server  LOG      ✓ Compiled in 175ms
+[04:48:44.767] Browser ERROR   ./components/quiz-engine.tsx:425:33
+Parsing ecmascript source code failed
+  423 |                 >
+  424 |                   <Card
+> 425 |                     className={`p - 6 transition - all duration - 300 ${
+      |                                 ^
+  426 |   unlocked
+  427 |     ? "bg-gray-900/50 border-gray-700 hover:border-cyan-500/50 cursor-pointer"
+  428 |     : "bg-gray-900/30 border-gray-800 opacity-50"
+
+Expected ';', '}' or <eof>
+
+Import traces:
+  Client Component Browser:
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[04:49:24.126] Server  LOG      ✓ Compiled in 85ms
+[04:49:24.365] Browser ERROR   Error saving user score: {}
