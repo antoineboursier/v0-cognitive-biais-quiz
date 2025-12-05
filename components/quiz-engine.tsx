@@ -47,7 +47,7 @@ interface QuizEngineProps {
 // ------------------------------
 // REDUCER AND STATE
 // ------------------------------
-type GameState = "menu" | "playing" | "levelComplete" | "wiki" | "certificate"
+type GameState = "menu" | "playing" | "levelComplete" | "wiki" | "certificate" | "onboarding"
 
 // Extend the base state with the volatile, non-persistent UI state
 interface QuizState extends BaseQuizState {
@@ -57,7 +57,8 @@ interface QuizState extends BaseQuizState {
   showExplanation: boolean;
   selectedBias: BiasEntry | null;
   showCertificate: boolean;
-  showResetDialog: boolean; // New: control AlertDialog visibility
+  showResetDialog: boolean;
+  showNoviceIntro: boolean; // New: control Novice tutorial visibility
 }
 
 
@@ -71,6 +72,7 @@ type Action =
   | { type: "SELECT_WIKI_BIAS"; payload: BiasEntry | null }
   | { type: "SHOW_CERTIFICATE"; payload: boolean }
   | { type: "SHOW_RESET_DIALOG"; payload: boolean }
+  | { type: "CLOSE_NOVICE_INTRO" } // New action
   | { type: "RESET" }
 
 // The reducer function handles all state transitions
@@ -101,6 +103,7 @@ function quizReducer(state: QuizState, action: Action): QuizState {
           isScanning: false,
           scanResult: null,
           showExplanation: false,
+          showNoviceIntro: false,
         }
       }
 
@@ -121,6 +124,8 @@ function quizReducer(state: QuizState, action: Action): QuizState {
         isScanning: false,
         scanResult: null,
         showExplanation: false,
+        // Show intro ONLY if starting Level 1 (Novice) and it's the first question
+        showNoviceIntro: action.payload.id === 1,
       }
     }
 
@@ -229,7 +234,7 @@ function quizReducer(state: QuizState, action: Action): QuizState {
     }
 
     case "CHANGE_GAME_STATE":
-      return { ...state, gameState: action.payload, selectedAnswer: null, showExplanation: false, scanResult: null, isScanning: false }
+      return { ...state, gameState: action.payload, selectedAnswer: null, showExplanation: false, scanResult: null, isScanning: false, showNoviceIntro: false }
 
     case "SELECT_WIKI_BIAS":
       return { ...state, selectedBias: action.payload }
@@ -240,9 +245,12 @@ function quizReducer(state: QuizState, action: Action): QuizState {
     case "SHOW_RESET_DIALOG":
       return { ...state, showResetDialog: action.payload };
 
+    case "CLOSE_NOVICE_INTRO":
+      return { ...state, showNoviceIntro: false };
+
     case "RESET":
       // This action is handled by the parent component, but we can reset volatile state here
-      return { ...state, gameState: 'menu', showResetDialog: false };
+      return { ...state, gameState: 'menu', showResetDialog: false, showNoviceIntro: false };
 
     default:
       return state
@@ -267,6 +275,7 @@ export function QuizEngine({ initialState, onReset, onGameStateChange }: QuizEng
     selectedBias: null,
     showCertificate: false,
     showResetDialog: false,
+    showNoviceIntro: false,
   } as QuizState)
 
   // Destructure state for easier access in the render methods
@@ -286,11 +295,13 @@ export function QuizEngine({ initialState, onReset, onGameStateChange }: QuizEng
     showExplanation,
     selectedBias,
     showCertificate,
-    showResetDialog
+    showResetDialog,
+    showNoviceIntro
   } = state
 
   // Local state for reset dialog and ref for auto-scroll
   const explanationRef = useRef<HTMLDivElement>(null);
+  const lastNotifiedGameState = useRef<GameState>(state.gameState);
 
   // Confetti effect - only active when level is complete and animations are enabled
   useConfetti(animationsEnabled && gameState === 'levelComplete', 4000)
@@ -334,7 +345,13 @@ export function QuizEngine({ initialState, onReset, onGameStateChange }: QuizEng
         console.error('Failed to save to Supabase:', err);
       });
     }
-  }, [state])
+
+    // Notify parent of game state change if it changed
+    if (onGameStateChange && state.gameState !== lastNotifiedGameState.current) {
+      onGameStateChange(state.gameState)
+      lastNotifiedGameState.current = state.gameState
+    }
+  }, [state, onGameStateChange])
 
   const currentLevel = LEVELS.find(l => l.id === currentLevelId) || LEVELS[0];
   const currentQuestion = questions?.[currentQuestionIndex];
@@ -358,6 +375,7 @@ export function QuizEngine({ initialState, onReset, onGameStateChange }: QuizEng
   const setSelectedBias = (bias: BiasEntry | null) => dispatch({ type: "SELECT_WIKI_BIAS", payload: bias });
   const setShowCertificate = (show: boolean) => dispatch({ type: "SHOW_CERTIFICATE", payload: show });
   const setShowResetDialog = (show: boolean) => dispatch({ type: "SHOW_RESET_DIALOG", payload: show });
+  const closeNoviceIntro = () => dispatch({ type: "CLOSE_NOVICE_INTRO" });
 
   // --- Computed Values ---
   const getLevelPercentage = (levelId: number) => {
@@ -401,15 +419,106 @@ export function QuizEngine({ initialState, onReset, onGameStateChange }: QuizEng
               Cognitive Labs
             </h1>
           </motion.div>
-          <p className="text-muted-foreground text-lg max-w-2xl mx-auto mb-0">
-            Bienvenue <span className="text-neon-cyan font-semibold">{userProfile?.firstName}</span> ! Entraînez votre cerveau à
-            détecter les biais cognitifs utilisés en UX Design.
+          <p className="text-lg max-w-2xl mx-auto mb-4">
+            Bienvenue <span className="text-neon-cyan font-semibold">{userProfile?.firstName}</span> ! Entraînez votre cerveau à détecter les biais cognitifs et les phénomènes comportementaux...
+          </p>
+          <p className="text-muted-foreground/80 text-base max-w-2xl mx-auto">
+            Chaque niveau comporte 20 questions. Pas de panique : si vous vous trompez sur une question, elle vous sera reproposée par la suite.
+            Prenez votre temps et recommencez autant que nécessaire : le but est d'apprendre, sans stress !
           </p>
         </div>
 
         <div className="grid lg:grid-cols-3 gap-8 mt-0 pt-4">
-          {/* Progression cérébrale */}
-          <div className="lg:col-span-1 space-y-4">
+          {/* Sélection de niveau - First on mobile (default order), Second on Desktop (col-span-2) */}
+          <div className="lg:col-span-2 space-y-4 lg:order-2">
+            <h2 className="text-xl font-semibold text-foreground mb-4">Choisissez votre niveau</h2>
+            {LEVELS.map((level, index) => {
+              const unlocked = isLevelUnlocked(level)
+              const progress = levelProgress[level.id]
+
+              return (
+                <motion.div
+                  key={level.id}
+                  initial={{ x: -20, opacity: 0 }}
+                  animate={{ x: 0, opacity: 1 }}
+                  transition={{ delay: index * 0.1 }}
+                >
+                  <Card
+                    className={`p-6 transition-all duration-300 ${unlocked
+                      ? "bg-card/50 border-border hover:border-cyan-500/50 cursor-pointer focus-within:border-cyan-500 focus-within:ring-2 focus-within:ring-cyan-500/20"
+                      : "bg-muted/50 border-border"
+                      }`}
+                    style={{
+                      borderLeftWidth: "4px",
+                      borderLeftColor: unlocked ? level.theme_color : "#333",
+                    }}
+                    tabIndex={-1}
+                  >
+                    <div
+                      role="button"
+                      tabIndex={unlocked ? 0 : -1}
+                      aria-disabled={!unlocked}
+                      aria-label={`${level.name_fr}: ${level.description}. ${unlocked ? `${progress.score} sur ${progress.total} complétés` : 'Niveau verrouillé, requiert 70% au niveau précédent'}`}
+                      onClick={() => unlocked && startLevel(level)}
+                      onKeyDown={(e) => {
+                        if (unlocked && (e.key === 'Enter' || e.key === ' ')) {
+                          e.preventDefault()
+                          startLevel(level)
+                        }
+                      }}
+                      className="outline-none w-full"
+                    >
+                      <div className="flex items-center justify-between">
+                        <div className="flex-1">
+                          <div className="flex items-center gap-3 mb-2">
+                            <span className="font-bold text-3xl" style={{ color: level.theme_color }}>
+                              {level.name_fr}
+                            </span>
+                            {progress.completed && <Trophy className="w-5 h-5 text-neon-yellow" aria-label="Niveau complété" />}
+                          </div>
+                          <p className="text-muted-foreground mb-3 text-lg">{level.description}</p>
+
+                          {unlocked && (
+                            <div className="flex items-center gap-4">
+                              <Progress value={getLevelPercentage(level.id)} className="flex-1 h-2" indicatorColor={level.theme_color} aria-label={`Progression: ${Math.round(getLevelPercentage(level.id))}%`} />
+                              <span className="text-muted-foreground font-mono text-base" aria-label={`${progress.score} questions réussies sur ${progress.total}`}>
+                                {progress.score}/{progress.total}
+                              </span>
+                            </div>
+                          )}
+
+                          {!unlocked && (
+                            <p className="text-muted-foreground flex items-center gap-2 text-lg font-medium">
+                              <Lock className="w-4 h-4" aria-hidden="true" />
+                              Bloqué - Requiert 70% au niveau précédent
+                            </p>
+                          )}
+                        </div>
+
+                        {unlocked && (
+                          <ChevronRight className="w-8 h-8 text-muted-foreground" style={{ color: level.theme_color }} aria-hidden="true" />
+                        )}
+                      </div>
+                    </div>
+                  </Card>
+                </motion.div>
+              )
+            })}
+
+            {/* Bouton Wiki */}
+            <Button
+              variant="outline"
+              size="lg"
+              className="w-full mt-6 border-border hover:border-purple-500 hover:bg-purple-500/10 bg-transparent text-foreground text-lg py-3"
+              onClick={() => setGameState("wiki")}
+            >
+              <BookOpen className="w-5 h-5 mr-2" />
+              Bibliothèque des biais ({unlockedBiases.length}/{QUESTIONS.length})
+            </Button>
+          </div>
+
+          {/* Progression cérébrale - Second on mobile, First on Desktop (col-span-1) */}
+          <div className="lg:col-span-1 space-y-4 lg:order-1">
             <Card className="p-6 bg-card/50 border-border">
               <h2 className="text-lg font-semibold text-foreground mb-4 flex items-center gap-2">
                 <Zap className="w-5 h-5 text-neon-yellow" />
@@ -453,97 +562,9 @@ export function QuizEngine({ initialState, onReset, onGameStateChange }: QuizEng
               Recommencer le jeu
             </Button>
           </div>
-
-          {/* Sélection de niveau */}
-          <div className="lg:col-span-2 space-y-4">
-            <h2 className="text-xl font-semibold text-foreground mb-4">Choisissez votre niveau</h2>
-            {LEVELS.map((level, index) => {
-              const unlocked = isLevelUnlocked(level)
-              const progress = levelProgress[level.id]
-
-              return (
-                <motion.div
-                  key={level.id}
-                  initial={{ x: -20, opacity: 0 }}
-                  animate={{ x: 0, opacity: 1 }}
-                  transition={{ delay: index * 0.1 }}
-                >
-                  <Card
-                    className={`p-6 transition-all duration-300 ${unlocked
-                      ? "bg-card/50 border-border hover:border-cyan-500/50 cursor-pointer focus-within:border-cyan-500 focus-within:ring-2 focus-within:ring-cyan-500/20"
-                      : "bg-card/30 border-border opacity-50"
-                      }`}
-                    style={{
-                      borderLeftWidth: "4px",
-                      borderLeftColor: unlocked ? level.theme_color : "#333",
-                    }}
-                    tabIndex={-1}
-                  >
-                    <div
-                      role="button"
-                      tabIndex={unlocked ? 0 : -1}
-                      aria-disabled={!unlocked}
-                      aria-label={`${level.name_fr}: ${level.description}. ${unlocked ? `${progress.score} sur ${progress.total} complétés` : 'Niveau verrouillé, requiert 70% au niveau précédent'}`}
-                      onClick={() => unlocked && startLevel(level)}
-                      onKeyDown={(e) => {
-                        if (unlocked && (e.key === 'Enter' || e.key === ' ')) {
-                          e.preventDefault()
-                          startLevel(level)
-                        }
-                      }}
-                      className="outline-none w-full"
-                    >
-                      <div className="flex items-center justify-between">
-                        <div className="flex-1">
-                          <div className="flex items-center gap-3 mb-2">
-                            <span className="font-bold text-3xl" style={{ color: level.theme_color }}>
-                              {level.name_fr}
-                            </span>
-                            {progress.completed && <Trophy className="w-5 h-5 text-neon-yellow" aria-label="Niveau complété" />}
-                          </div>
-                          <p className="text-muted-foreground mb-3 text-lg">{level.description}</p>
-
-                          {unlocked && (
-                            <div className="flex items-center gap-4">
-                              <Progress value={getLevelPercentage(level.id)} className="flex-1 h-2" aria-label={`Progression: ${Math.round(getLevelPercentage(level.id))}%`} />
-                              <span className="text-muted-foreground font-mono text-base" aria-label={`${progress.score} questions réussies sur ${progress.total}`}>
-                                {progress.score}/{progress.total}
-                              </span>
-                            </div>
-                          )}
-
-                          {!unlocked && (
-                            <p className="text-red-400/70 flex items-center gap-2 text-lg">
-                              <Lock className="w-4 h-4" aria-hidden="true" />
-                              Requiert 70% au niveau précédent
-                            </p>
-                          )}
-                        </div>
-
-                        {unlocked && (
-                          <ChevronRight className="w-8 h-8 text-muted-foreground" style={{ color: level.theme_color }} aria-hidden="true" />
-                        )}
-                      </div>
-                    </div>
-                  </Card>
-                </motion.div>
-              )
-            })}
-
-            {/* Bouton Wiki */}
-            <Button
-              variant="outline"
-              size="lg"
-              className="w-full mt-6 border-border hover:border-purple-500 hover:bg-purple-500/10 bg-transparent text-foreground text-lg py-3"
-              onClick={() => setGameState("wiki")}
-            >
-              <BookOpen className="w-5 h-5 mr-2" />
-              Bibliothèque des Biais ({unlockedBiases.length}/{QUESTIONS.length})
-            </Button>
-          </div>
         </div>
       </div>
-    </motion.div>
+    </motion.div >
   )
 
   const renderPlaying = () => {
@@ -747,6 +768,58 @@ export function QuizEngine({ initialState, onReset, onGameStateChange }: QuizEng
 
         {/* Animation de scan */}
         <ScanAnimation isScanning={isScanning} result={scanResult} onComplete={handleScanComplete} />
+
+        {/* Novice Intro Overlay */}
+        <AnimatePresence>
+          {showNoviceIntro && (
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm"
+            >
+              <motion.div
+                initial={{ scale: 0.9, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                exit={{ scale: 0.9, opacity: 0 }}
+                className="max-w-md w-full"
+              >
+                <Card className="p-6 bg-card border-border shadow-2xl">
+                  <div className="flex flex-col items-center text-center space-y-4">
+                    <div className="w-16 h-16 rounded-full bg-neon-cyan/20 flex items-center justify-center mb-2">
+                      <Brain className="w-8 h-8 text-neon-cyan" />
+                    </div>
+
+                    <h2 className="text-2xl font-bold text-foreground">Mode Novice : Apprentissage</h2>
+
+                    <div className="space-y-4 text-muted-foreground">
+                      <p>
+                        Nous allons vous proposer une situation du quotidien et 3 options (biais ou effets psychologiques).
+                      </p>
+                      <p className="font-medium text-foreground">
+                        À vous de trouver la bonne réponse !
+                      </p>
+                      <p className="text-sm bg-secondary/50 p-3 rounded-lg border border-border">
+                        <span className="flex items-center justify-center gap-2 mb-1 text-neon-yellow font-semibold">
+                          <Zap className="w-4 h-4" /> Pas d'inquiétude
+                        </span>
+                        On est là pour apprendre. En cas d'erreur, la question vous sera représentée ultérieurement.
+                      </p>
+                    </div>
+
+                    <Button
+                      className="w-full mt-4 bg-neon-cyan text-black hover:bg-neon-cyan/90 font-bold"
+                      size="lg"
+                      onClick={closeNoviceIntro}
+                    >
+                      C'est parti !
+                    </Button>
+                  </div>
+                </Card>
+              </motion.div>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </motion.div>
     )
   }
