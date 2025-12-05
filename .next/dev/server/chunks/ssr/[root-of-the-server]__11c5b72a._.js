@@ -158,6 +158,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$settings$2d$context$2
 ;
 ;
 const metadata = {
+    metadataBase: new URL('https://cognitive-labs.vercel.app'),
     title: "Cognitive Labs - Maîtrisez les Biais Cognitifs",
     description: "Entraînez votre cerveau à détecter les biais cognitifs utilisés en UX Design. Quiz interactif gamifié pour devenir expert en psychologie cognitive.",
     keywords: [
@@ -171,6 +172,31 @@ const metadata = {
     generator: 'v0.app',
     icons: {
         icon: '/icon.svg'
+    },
+    openGraph: {
+        type: "website",
+        locale: "fr_FR",
+        url: "https://cognitive-labs.vercel.app",
+        title: "Cognitive Labs - Maîtrisez les Biais Cognitifs",
+        description: "Entraînez votre cerveau à détecter les biais cognitifs. Quiz interactif pour devenir expert en psychologie cognitive.",
+        siteName: "Cognitive Labs",
+        images: [
+            {
+                url: "/og-image.png",
+                width: 1200,
+                height: 630,
+                alt: "Cognitive Labs Banner"
+            }
+        ]
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "Cognitive Labs - Maîtrisez les Biais Cognitifs",
+        description: "Entraînez votre cerveau à détecter les biais cognitifs. Quiz interactif gamifié.",
+        images: [
+            "/og-image.png"
+        ],
+        creator: "@CognitiveLabs"
     }
 };
 ;
@@ -196,22 +222,22 @@ function RootLayout({ children }) {
                     children: children
                 }, void 0, false, {
                     fileName: "[project]/app/layout.tsx",
-                    lineNumber: 58,
+                    lineNumber: 82,
                     columnNumber: 11
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/app/layout.tsx",
-                lineNumber: 52,
+                lineNumber: 76,
                 columnNumber: 9
             }, this)
         }, void 0, false, {
             fileName: "[project]/app/layout.tsx",
-            lineNumber: 48,
+            lineNumber: 72,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/app/layout.tsx",
-        lineNumber: 47,
+        lineNumber: 71,
         columnNumber: 5
     }, this);
 }

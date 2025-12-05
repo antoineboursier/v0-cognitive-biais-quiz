@@ -129,3 +129,7 @@ Import traces:
     ./app/page.tsx [Client Component SSR]
     ./app/page.tsx [Server Component]
 [02:19:24.580] Server  LOG      ✓ Compiled in 36ms
+[03:10:52.930] Server  WARN     ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+[03:23:44.591] Server  LOG      ✓ Compiled in 211ms
+[03:42:14.507] Server  LOG      ✓ Compiled in 74ms
+[03:44:43.871] Server  LOG      ✓ Compiled in 60ms

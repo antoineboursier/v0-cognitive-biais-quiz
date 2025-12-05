@@ -19,6 +19,7 @@ const geistMono = Geist_Mono({
 })
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://cognitive-labs.vercel.app'), // Replace with your actual production URL
   title: "Cognitive Labs - Maîtrisez les Biais Cognitifs",
   description:
     "Entraînez votre cerveau à détecter les biais cognitifs utilisés en UX Design. Quiz interactif gamifié pour devenir expert en psychologie cognitive.",
@@ -27,10 +28,34 @@ export const metadata: Metadata = {
   icons: {
     icon: '/icon.svg',
   },
+  openGraph: {
+    type: "website",
+    locale: "fr_FR",
+    url: "https://cognitive-labs.vercel.app", // Replace with actual URL if known, or leave generic
+    title: "Cognitive Labs - Maîtrisez les Biais Cognitifs",
+    description: "Entraînez votre cerveau à détecter les biais cognitifs. Quiz interactif pour devenir expert en psychologie cognitive.",
+    siteName: "Cognitive Labs",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Cognitive Labs Banner",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Cognitive Labs - Maîtrisez les Biais Cognitifs",
+    description: "Entraînez votre cerveau à détecter les biais cognitifs. Quiz interactif gamifié.",
+    images: ["/og-image.png"],
+    creator: "@CognitiveLabs", // Optional placeholder
+  },
 }
 
 import { ThemeProvider } from "@/components/theme-provider"
 import { SettingsProvider } from "@/lib/settings-context"
+import { Toaster } from "sonner"
 
 export const viewport: Viewport = {
   themeColor: "#0a0a1a",
@@ -57,6 +82,7 @@ export default function RootLayout({
         >
           <SettingsProvider>
             {children}
+            <Toaster />
           </SettingsProvider>
         </ThemeProvider>
       </body>

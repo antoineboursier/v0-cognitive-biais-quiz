@@ -7,6 +7,7 @@ import {
   Library, CheckCircle2, BookOpen, Settings, Linkedin
 } from "lucide-react"
 import { useTheme } from "next-themes"
+import { toast } from "sonner"
 
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
@@ -567,7 +568,14 @@ export function QuizEngine({ initialState, onReset, onGameStateChange, onDemoPag
                 className="flex-1 bg-[#0077b5]/10 hover:bg-[#0077b5]/20 text-[#0077b5] border-[#0077b5]/20"
                 onClick={() => {
                   const url = window.location.href;
-                  window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}`, '_blank');
+                  const shareText = `🧠 Je m'entraîne à détecter les biais cognitifs et les phénomènes comportementauxsur Cognitive Labs !\n\nJ'ai atteint le niveau ${currentLevelId} (${currentLevel.name_fr}).\n Tentez de faire mieux ! ${url}`;
+
+                  navigator.clipboard.writeText(shareText).then(() => {
+                    toast.success("Texte copié ! Collez-le dans votre post LinkedIn.");
+                    setTimeout(() => {
+                      window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}`, '_blank');
+                    }, 1000);
+                  });
                 }}
               >
                 <Linkedin className="w-4 h-4 mr-2" />
@@ -578,7 +586,8 @@ export function QuizEngine({ initialState, onReset, onGameStateChange, onDemoPag
                 size="sm"
                 className="flex-1 bg-[#25D366]/10 hover:bg-[#25D366]/20 text-[#25D366] border-[#25D366]/20"
                 onClick={() => {
-                  const text = `J'ai atteint le niveau ${currentLevelId} sur Cognitive Labs ! Testez vos biais cognitifs ici : ${window.location.href}`;
+                  const url = window.location.href;
+                  const text = `🧠 Je m'entraîne et j'apprend plein de trucs sur Cognitive Labs, sur les biais et les phénomènes comportementaux !\n\nJ'ai atteint le niveau ${currentLevelId} : ${currentLevel.name_fr}.\n Viens essayer de battre mon score 👉 ${url}`;
                   window.open(`https://wa.me/?text=${encodeURIComponent(text)}`, '_blank');
                 }}
               >
