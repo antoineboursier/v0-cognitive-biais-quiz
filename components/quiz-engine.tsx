@@ -443,13 +443,14 @@ export function QuizEngine({ initialState, onReset, onGameStateChange, onDemoPag
                 >
                   <Card
                     className={`p-6 transition-all duration-300 ${unlocked
-                      ? "bg-card/50 border-border hover:border-cyan-500/50 cursor-pointer focus-within:border-cyan-500 focus-within:ring-2 focus-within:ring-cyan-500/20"
-                      : "bg-muted/50 border-border"
+                      ? "bg-card/50 cursor-pointer focus-within:ring-2 focus-within:ring-cyan-500/20"
+                      : "bg-muted/50 border-border cursor-not-allowed"
                       }`}
                     style={{
                       borderLeftWidth: "4px",
                       borderLeftColor: unlocked ? level.theme_color : "#333",
                       backgroundColor: unlocked ? `color-mix(in oklab, ${level.theme_color} 8%, transparent)` : undefined,
+                      borderColor: unlocked ? level.theme_color : undefined,
                     }}
                     tabIndex={-1}
                   >
@@ -465,7 +466,7 @@ export function QuizEngine({ initialState, onReset, onGameStateChange, onDemoPag
                           startLevel(level)
                         }
                       }}
-                      className="outline-none w-full"
+                      className={`outline-none w-full ${!unlocked ? 'pointer-events-none' : ''}`}
                     >
                       <div className="flex items-center justify-between">
                         <div className="flex-1">
@@ -476,12 +477,12 @@ export function QuizEngine({ initialState, onReset, onGameStateChange, onDemoPag
                             </p>
                           )}
                           <div className="flex items-center gap-3 mb-2">
-                            <span className="font-bold text-3xl" style={{ color: level.theme_color }}>
+                            <span className="font-bold text-3xl" style={{ color: unlocked ? level.theme_color : 'var(--muted-foreground)' }}>
                               {level.name_fr}
                             </span>
                             {progress.completed && <Trophy className="w-5 h-5 text-neon-yellow" aria-label="Niveau complété" />}
                           </div>
-                          <p className="text-muted-foreground mb-3 text-lg">{level.description}</p>
+                          <p className="text-muted-foreground mb-3 text-lg opacity-80" style={{ color: unlocked ? level.theme_color : undefined }}>{level.description}</p>
 
                           {unlocked && (
                             <div className="flex items-center gap-4">
@@ -492,7 +493,7 @@ export function QuizEngine({ initialState, onReset, onGameStateChange, onDemoPag
                                 indicatorColor={level.theme_color}
                                 aria-label={`Progression: ${Math.round(getLevelPercentage(level.id))}%`}
                               />
-                              <span className="text-muted-foreground font-mono text-base" aria-label={`${progress.score} questions réussies sur ${progress.total}`}>
+                              <span className="font-mono text-base" style={{ color: level.theme_color }} aria-label={`${progress.score} questions réussies sur ${progress.total}`}>
                                 {progress.score}/{progress.total}
                               </span>
                             </div>
@@ -538,26 +539,37 @@ export function QuizEngine({ initialState, onReset, onGameStateChange, onDemoPag
               />
             </Card>
 
-            {allLevelsCompleted && (
-              <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
-                <Card className="p-6 bg-gradient-to-br from-yellow-500/10 to-orange-500/10 border-yellow-500/30">
-                  <div className="text-center">
-                    <Award className="w-12 h-12 text-neon-yellow mx-auto mb-3" />
-                    <h3 className="text-lg font-bold text-foreground mb-2">Formation terminée !</h3>
-                    <p className="text-muted-foreground text-sm mb-4">
-                      Félicitations {userProfile?.firstName} ! Récupérez votre diplôme.
-                    </p>
-                    <Button
-                      onClick={() => setShowCertificate(true)}
-                      className="w-full bg-gradient-to-r from-yellow-500 to-orange-500 hover:from-yellow-600 hover:to-orange-600 text-black font-semibold"
-                    >
-                      <Award className="w-4 h-4 mr-2" />
-                      Obtenir mon diplôme
-                    </Button>
-                  </div>
-                </Card>
-              </motion.div>
-            )}
+            {/* Certificate Card - Always visible, locked until all levels completed */}
+            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
+              <Card className={`p-6 ${allLevelsCompleted
+                  ? "bg-gradient-to-br from-yellow-500/10 to-orange-500/10 border-yellow-500/30"
+                  : "bg-muted/50 border-border"
+                }`}>
+                <div className="text-center">
+                  <Award className={`w-12 h-12 mx-auto mb-3 ${allLevelsCompleted ? "text-neon-yellow" : "text-muted-foreground"
+                    }`} />
+                  {allLevelsCompleted && (
+                    <>
+                      <h3 className="text-lg font-bold text-foreground mb-2">Formation terminée !</h3>
+                      <p className="text-muted-foreground text-sm mb-4">
+                        Félicitations {userProfile?.firstName} ! Récupérez votre diplôme.
+                      </p>
+                    </>
+                  )}
+                  <Button
+                    onClick={() => allLevelsCompleted && setGameState('certificate')}
+                    disabled={!allLevelsCompleted}
+                    className={`w-full font-semibold ${allLevelsCompleted
+                        ? "bg-gradient-to-r from-yellow-500 to-orange-500 hover:from-yellow-600 hover:to-orange-600 text-black"
+                        : "bg-muted text-muted-foreground cursor-not-allowed opacity-50"
+                      }`}
+                  >
+                    <Award className="w-4 h-4 mr-2" />
+                    Obtenir mon diplôme
+                  </Button>
+                </div>
+              </Card>
+            </motion.div>
 
 
             {/* Share Buttons */}
@@ -1095,19 +1107,16 @@ export function QuizEngine({ initialState, onReset, onGameStateChange, onDemoPag
         {gameState === "playing" && renderPlaying()}
         {gameState === "levelComplete" && renderLevelComplete()}
         {gameState === "wiki" && renderWiki()}
-      </div>
-
-      <AnimatePresence>
-        {showCertificate && userProfile && (
+        {gameState === "certificate" && userProfile && (
           <Certificate
             user={userProfile}
             score={totalScoreCalculated}
             totalQuestions={totalQuestionsCalculated}
-            onClose={() => setShowCertificate(false)}
+            onClose={() => setGameState('menu')}
             onReset={onReset}
           />
         )}
-      </AnimatePresence>
+      </div>
 
       {/* Reset Confirmation Dialog */}
       <AlertDialog open={showResetDialog} onOpenChange={setShowResetDialog}>

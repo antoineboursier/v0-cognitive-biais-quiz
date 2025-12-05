@@ -133,3 +133,71 @@ Import traces:
 [03:23:44.591] Server  LOG      ✓ Compiled in 211ms
 [03:42:14.507] Server  LOG      ✓ Compiled in 74ms
 [03:44:43.871] Server  LOG      ✓ Compiled in 60ms
+[03:50:23.304] Server  LOG      ✓ Compiled in 74ms
+[04:34:39.437] Browser ERROR   uncaughtError: ReferenceError: RotateCcw is not defined
+[04:41:15.277] Server  LOG      ✓ Compiled in 66ms
+[04:41:24.638] Server  LOG      ✓ Compiled in 68ms
+[04:42:19.500] Server  LOG      ✓ Compiled in 144ms
+[07:08:37.929] Server  LOG      ✓ Compiled in 94ms
+[07:12:55.890] Server  LOG      ✓ Compiled in 92ms
+[07:23:03.741] Server  WARN    Error: Route "/certificate/[id]" used `params.id`. `params` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[07:30:09.516] Server  LOG      ✓ Compiled in 53ms
+[07:30:43.862] Server  LOG      ✓ Compiled in 68ms
+[07:30:44.079] Browser ERROR   ./app/certificate/[id]/page.tsx:166:8
+Next.js can't recognize the exported `generateStaticParams` field in route. App pages cannot use both "use client" and export function "generateStaticParams()".
+  164 |
+  165 | // Generate static params for known certificates (optional)
+> 166 | export function generateStaticParams() {
+      |        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 167 |     return []
+      | ^^^^^^^^^^^^^
+> 168 | }
+      | ^^
+  169 |
+
+The exported configuration object in a source file needs to have a very specific format from which some properties can be statically parsed at compiled-time.
+
+Import traces:
+  Client Component Browser:
+    ./app/certificate/[id]/page.tsx [Client Component Browser]
+    ./app/certificate/[id]/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/certificate/[id]/page.tsx [Client Component SSR]
+    ./app/certificate/[id]/page.tsx [Server Component]
+
+https://nextjs.org/docs/app/api-reference/file-conventions/route-segment-config
+[07:39:54.087] Server  LOG      ✓ Compiled in 49ms
+[07:44:41.366] Server  LOG      ✓ Compiled in 42ms
+[07:44:56.864] Server  LOG      ✓ Compiled in 32ms
+[07:45:07.923] Server  LOG      ✓ Compiled in 40ms
+[07:51:00.358] Server  LOG      ✓ Compiled in 23ms
+[07:54:28.531] Server  LOG      ✓ Compiled in 54ms
+[07:59:10.253] Server  LOG      ✓ Compiled in 22ms
+[07:59:10.360] Browser ERROR   ./components/certificate.tsx:315:20
+Parsing ecmascript source code failed
+  313 |                   </div>
+  314 |                 </div>
+> 315 |             </Card>
+      |                    ^
+> 316 |           </div>
+      | ^^^^^^^^^^^
+  317 |         </Card>
+  318 |       </div>
+  319 |     </motion.div>
+
+Expected '</', got 'jsx text (
+          )'
+
+Import traces:
+  Client Component Browser:
+    ./components/certificate.tsx [Client Component Browser]
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/certificate.tsx [Client Component SSR]
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]

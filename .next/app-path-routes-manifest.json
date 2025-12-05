@@ -2,6 +2,7 @@
   "/_global-error/page": "/_global-error",
   "/_not-found/page": "/_not-found",
   "/auth/callback/route": "/auth/callback",
+  "/certificate/[id]/page": "/certificate/[id]",
   "/page": "/",
   "/test-supabase/page": "/test-supabase"
 }
