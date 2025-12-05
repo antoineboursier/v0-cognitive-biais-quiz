@@ -32,7 +32,7 @@ export function Logo({ size = 'large', className = '' }: LogoProps) {
     const currentSize = sizes[size]
 
     return (
-        <div className={`inline-flex items-center ${currentSize.gap} ${className}`}>
+        <div className={`inline-flex flex-col md:flex-row items-center ${currentSize.gap} ${className}`}>
             <Brain className={`${currentSize.icon} text-neon-cyan`} />
             <h1
                 className={`font-bold text-transparent bg-clip-text ${currentSize.text} ${currentSize.padding}`}

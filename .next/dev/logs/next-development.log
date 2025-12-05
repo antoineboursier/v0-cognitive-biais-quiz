@@ -59,3 +59,73 @@ Import traces:
 [00:24:13.632] Server  LOG      ✓ Compiled in 21ms
 [00:24:33.819] Server  LOG      ✓ Compiled in 143ms
 [00:24:59.150] Server  LOG      ✓ Compiled in 44ms
+[00:32:42.036] Server  LOG      ✓ Compiled in 57ms
+[00:38:02.890] Server  LOG      ✓ Compiled in 39ms
+[01:06:22.838] Server  LOG      ✓ Compiled in 30ms
+[01:06:37.355] Server  LOG      ✓ Compiled in 23ms
+[01:06:50.536] Server  LOG      ✓ Compiled in 31ms
+[01:06:55.281] Server  LOG      ✓ Compiled in 25ms
+[01:12:46.859] Server  LOG      ✓ Compiled in 32ms
+[01:24:10.430] Server  LOG      ✓ Compiled in 25ms
+[01:24:17.664] Server  LOG      ✓ Compiled in 19ms
+[01:24:47.770] Server  LOG      ✓ Compiled in 23ms
+[01:24:53.832] Server  LOG      ✓ Compiled in 32ms
+[01:24:59.159] Server  LOG      ✓ Compiled in 27ms
+[01:25:05.136] Server  LOG      ✓ Compiled in 29ms
+[01:27:18.840] Server  LOG      ✓ Compiled in 24ms
+[01:30:37.844] Server  LOG      ✓ Compiled in 26ms
+[01:31:03.691] Server  LOG      ✓ Compiled in 21ms
+[01:31:13.510] Server  LOG      ✓ Compiled in 26ms
+[01:31:17.465] Server  LOG      ✓ Compiled in 23ms
+[01:31:22.643] Server  LOG      ✓ Compiled in 20ms
+[01:31:27.295] Server  LOG      ✓ Compiled in 24ms
+[01:34:15.356] Server  LOG      ✓ Compiled in 25ms
+[01:34:25.396] Server  LOG      ✓ Compiled in 36ms
+[01:35:24.028] Server  LOG      ✓ Compiled in 23ms
+[01:47:24.757] Server  LOG      ✓ Compiled in 81ms
+[01:53:50.700] Server  LOG      ✓ Compiled in 68ms
+[01:53:51.115] Browser ERROR   ./components/quiz-engine.tsx:560:14
+Parsing ecmascript source code failed
+  558 |               </motion.div>
+  559 |             )}
+> 560 |             )}
+      |              ^
+  561 |
+  562 |             {/* Share Buttons */}
+  563 |             <div className="flex gap-2 mt-4">
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+Import traces:
+  Client Component Browser:
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[01:53:51.116] Browser ERROR   ./components/quiz-engine.tsx:560:14
+Parsing ecmascript source code failed
+  558 |               </motion.div>
+  559 |             )}
+> 560 |             )}
+      |              ^
+  561 |
+  562 |             {/* Share Buttons */}
+  563 |             <div className="flex gap-2 mt-4">
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+Import traces:
+  Client Component Browser:
+    ./components/quiz-engine.tsx [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/quiz-engine.tsx [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[02:19:24.580] Server  LOG      ✓ Compiled in 36ms

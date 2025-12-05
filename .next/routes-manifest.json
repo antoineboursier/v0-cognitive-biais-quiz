@@ -44,6 +44,12 @@
       "regex": "^/auth/callback(?:/)?$",
       "routeKeys": {},
       "namedRegex": "^/auth/callback(?:/)?$"
+    },
+    {
+      "page": "/test-supabase",
+      "regex": "^/test\\-supabase(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/test\\-supabase(?:/)?$"
     }
   ],
   "dataRoutes": [],
